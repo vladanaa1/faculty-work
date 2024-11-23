@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Express - Glavna jela</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="../js/scripts.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand yell" href="../index.html">
+                <img src="../images/logo.png" alt="Logo" class="logo">
+                Kineski Restoran "Panda Express"
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Početna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Galerija</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Jelovnik
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item active" href="predjela.html">Predjela</a></li>
+                            <li><a class="dropdown-item" href="glavna-jela.html">Glavna jela</a></li>
+                            <li><a class="dropdown-item" href="desert.html">Deserti</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="my-account.html">Moj Nalog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">O Nama</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Početna</a></li>
+                <li id="det" class="breadcrumb-item active" aria-current="page">Jelovnik / Glavna jela</li>
+            </ol>
+        </nav>
+    </div>
+
+    <main class="container mt-4 mb-5">
+        <h1>Glavna jela</h1>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Pretraga" id="searchAppetizers" onkeyup="filterAppetizers()">
+                    <button class="btn btn-outline-secondary" type="button" onclick="filterAppetizers()">Pretraga</button>
+                </div>
+                <select class="form-select mb-3" id="sortAppetizers" onchange="sortAppetizers()">
+                    <option selected>Sortiraj po</option>
+                    <option value="name">Nazivu</option>
+                    <option value="price">Ceni</option>
+                </select>
+            </div>
+        </div>
+        <div class="row" id="appetizersList">
+            <!-- Dinamički генерисано садржајем JavaScript-a -->
+        </div>
+        <button id="downloadMenuBtn" class="btn btn-custom">Preuzmi jelovnik</button>
+    </main>
+
+    <footer class="text-white text-center p-3">
+        <p>&copy; 2024, Nikola Trivanović & Vladana Babić, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu</p>
+    </footer>
+</body>
+</html>

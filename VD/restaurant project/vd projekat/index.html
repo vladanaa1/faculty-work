@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Express - Početna</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+</head>
+<body>    
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand yell" href="index.html">
+                <img src="images/logo.png" alt="Logo" class="logo">
+                Kineski Restoran "Panda Express"
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Početna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/gallery.html">Galerija</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Jelovnik
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="pages/predjela.html">Predjela</a></li>
+                            <li><a class="dropdown-item" href="pages/glavna-jela.html">Glavna jela</a></li>
+                            <li><a class="dropdown-item" href="pages/desert.html">Desert</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/my-account.html">Moj Nalog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/about-us.html">O Nama</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                        
+                           
+                    <select name="lang" id="lang">
+                        <option value="sr" >SR</option>
+                        <option value="en" >EN</option>
+                    </select>
+                
+                <br>
+                
+            </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li id="det" class="breadcrumb-item active" aria-current="page">Početna</li>
+            </ol>
+        </nav>
+    </div>
+
+    <main class="container mt-4 mb-5">
+        <div class="bg-outline p-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+                <h2 class="display-5 fw-bold">Dobrodošli u Panda Express!</h2>
+                <p class="col-md-8 fs-4">Otkrijte naš ukusni jelovnik i uživajte u specijalnim ponudama.</p>
+            </div>
+        </div>
+        
+        <section>
+            <h3>Najnovije Vesti</h3>
+            <ul>
+                <li>Nova specijalna jela šefa kuhinje!</li>
+                <li>Happy Hour svakog petka!</li>
+                <li>Pridružite se našim časovima kuvanja!</li>
+            </ul>
+        </section>
+        <h3>Najbolje ocenjena jela</h3>
+        <section class="mt-4" id="topRatedDishes">
+            
+        </section>
+
+            
+        </section>
+    </main>
+
+    <footer class="text-white text-center p-3">
+        <p>&copy; 2024, Nikola Trivanović & Vladana Babić, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

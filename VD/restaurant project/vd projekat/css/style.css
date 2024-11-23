@@ -1,0 +1,123 @@
+body {
+    background-image: fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header, footer {
+    background-color: #b22222;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.logo {
+    max-width: 50px;
+}
+
+.card-title, .card-text {
+    color: #b22222;
+}
+
+.navbar {
+    background-color: #b22222;
+}
+
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover, .yell:hover {
+    color: #ffd700;
+}
+
+.btn-custom {
+    background-image: linear-gradient(135deg, #b22222 30%, #ffd700);
+    border: none;
+    transition: background-color 0.9s ease; /* Dodajte ovu liniju */
+    color: #fff;
+    /* Ostali stilovi dugmeta */
+}
+
+.btn-custom:hover {
+    background-image: linear-gradient(135deg, #b22222 1%, #ffd700);
+    color: #fff;
+    /* Ostali hover stilovi dugmeta */
+}
+
+.account-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.account-form h2 {
+    color: #b22222;
+    margin-bottom: 1.5rem;
+}
+
+.account-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.account-form .form-group label {
+    color: #b22222;
+}
+
+.account-form .form-control {
+    border: 1px solid #b22222;
+}
+
+.account-form .form-control:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.dropdown-item, .dropdown-item:hover {
+    color: #b22222;
+    border-color: #ffd700;
+}
+
+.bg-outline {
+    background-image: url('../images/outline.jpg');
+    background-size: cover;
+    color: black; 
+    padding: 20px; 
+}
+
+.bg-outline p, .bg-outline h2 {
+    background-color: white; 
+    padding: 10px; 
+}
+
+.carousel-control-prev, .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5); /* Poluprovidna crna pozadina */
+    border-radius: 5px; /* Zaobljeni uglovi */
+    width: auto; /* Automatska širina */
+    height: auto; /* Automatska visina */
+    opacity: 1; /* Povećava vidljivost */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(100%); /* Invertovanje boje ikona za bolju vidljivost */
+}
+
+.carousel-control-prev {
+    left: 0; /* Pozicioniranje strelice za prethodni slajd */
+}
+
+.carousel-control-next {
+    right: 0; /* Pozicioniranje strelice za sledeći slajd */
+}
+
+.btn-outline-custom {
+    border-color: linear-gradient(135deg, #b22222 30%, #ffd700);
+    border-image: linear-gradient(135deg, #b22222 30%, #ffd700);
+}
