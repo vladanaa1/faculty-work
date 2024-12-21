@@ -1,0 +1,9 @@
+INFO  22:55:42,639 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:55:42,702 - #50 MJProgram
+INFO  22:55:42,702 - #41 (
+INFO  22:55:42,702 - #42 )
+INFO  22:55:42,703 - #45 {
+INFO  22:55:42,716 - #46 }
+INFO  22:55:42,753 - Print calls = 0
+INFO  22:55:42,754 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  22:55:42,770 - Parsiranje uspesno zavrseno!

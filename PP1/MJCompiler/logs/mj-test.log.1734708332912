@@ -1,0 +1,56 @@
+INFO  16:24:56,680 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:24:57,092 - #50 MyProgram
+INFO  16:24:57,093 - #50 int
+INFO  16:24:57,093 - #50 jaja
+INFO  16:24:57,094 - #34 =
+INFO  16:24:57,094 - #47 5
+INFO  16:24:57,094 - #37 ;
+INFO  16:24:57,094 - #50 int
+INFO  16:24:57,095 - #50 jajaja
+INFO  16:24:57,095 - #43 [
+INFO  16:24:57,095 - #44 ]
+INFO  16:24:57,095 - #37 ;
+INFO  16:24:57,096 - #50 nesto
+INFO  16:24:57,096 - #50 nesto
+INFO  16:24:57,096 - #37 ;
+INFO  16:24:57,097 - #50 bool
+INFO  16:24:57,097 - #50 sinemoj
+INFO  16:24:57,097 - #34 =
+INFO  16:24:57,097 - #48 true
+INFO  16:24:57,098 - #37 ;
+INFO  16:24:57,098 - #45 {
+INFO  16:24:57,099 - #50 main
+INFO  16:24:57,104 - #41 (
+INFO  16:24:57,104 - #42 )
+INFO  16:24:57,107 - #45 {
+INFO  16:24:57,107 - #50 designator1
+INFO  16:24:57,111 - #37 ;
+INFO  16:24:57,112 - #50 designator2
+INFO  16:24:57,112 - #37 ;
+INFO  16:24:57,113 - #41 (
+INFO  16:24:57,113 - #42 )
+INFO  16:24:57,113 - #37 ;
+INFO  16:24:57,125 - #37 ;
+INFO  16:24:57,126 - #46 }
+INFO  16:24:57,132 - #50 fun1
+INFO  16:24:57,132 - #41 (
+INFO  16:24:57,132 - #42 )
+INFO  16:24:57,132 - #45 {
+INFO  16:24:57,133 - #46 }
+INFO  16:24:57,133 - #50 bilosta1
+INFO  16:24:57,134 - #50 fun2
+INFO  16:24:57,134 - #41 (
+INFO  16:24:57,134 - #50 bilosta
+INFO  16:24:57,135 - #50 bilosta
+INFO  16:24:57,135 - #39 ,
+INFO  16:24:57,135 - #50 bilo
+INFO  16:24:57,135 - #50 sta
+INFO  16:24:57,136 - #43 [
+INFO  16:24:57,136 - #44 ]
+INFO  16:24:57,136 - #42 )
+INFO  16:24:57,137 - #45 {
+INFO  16:24:57,137 - #46 }
+INFO  16:24:57,138 - #46 }
+INFO  16:24:57,160 - Print calls = 0
+INFO  16:24:57,162 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  16:24:57,167 - Parsiranje uspesno zavrseno!

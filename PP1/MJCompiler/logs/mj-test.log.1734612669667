@@ -1,0 +1,11 @@
+INFO  13:49:03,060 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  13:49:03,102 - #50 MyProgram
+INFO  13:49:03,103 - #45 {
+INFO  13:49:03,104 - #50 int
+INFO  13:49:03,104 - #50 decl1
+INFO  13:49:03,104 - #37 ;
+ERROR 13:49:03,104 - 
+Sintaksna greska na liniji 2
+ERROR 13:49:03,105 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2
+INFO  13:49:03,114 - Print calls = 0
+ERROR 13:49:03,115 - Parsiranje NIJE uspesno zavrseno!

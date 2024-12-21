@@ -1,0 +1,30 @@
+INFO  13:22:53,594 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  13:22:53,628 - #50 MyProgram
+INFO  13:22:53,629 - #45 {
+INFO  13:22:53,629 - #50 main
+INFO  13:22:53,630 - #41 (
+INFO  13:22:53,631 - #42 )
+INFO  13:22:53,632 - #45 {
+INFO  13:22:53,632 - #46 }
+INFO  13:22:53,633 - #50 fun1
+INFO  13:22:53,633 - #41 (
+INFO  13:22:53,633 - #42 )
+INFO  13:22:53,633 - #45 {
+INFO  13:22:53,633 - #46 }
+INFO  13:22:53,634 - #50 bilosta1
+INFO  13:22:53,634 - #50 fun2
+INFO  13:22:53,634 - #41 (
+INFO  13:22:53,635 - #50 bilosta
+INFO  13:22:53,635 - #50 bilosta
+INFO  13:22:53,635 - #39 ,
+INFO  13:22:53,636 - #50 bilo
+INFO  13:22:53,636 - #50 sta
+INFO  13:22:53,636 - #43 [
+INFO  13:22:53,639 - #44 ]
+INFO  13:22:53,640 - #42 )
+INFO  13:22:53,642 - #45 {
+INFO  13:22:53,643 - #46 }
+INFO  13:22:53,643 - #46 }
+INFO  13:22:53,653 - Print calls = 0
+INFO  13:22:53,655 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  13:22:53,660 - Parsiranje uspesno zavrseno!

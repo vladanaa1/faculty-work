@@ -1,0 +1,59 @@
+INFO  17:37:18,972 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  17:37:19,031 - #50 MyProgram
+INFO  17:37:19,031 - #50 int
+INFO  17:37:19,032 - #50 jaja
+INFO  17:37:19,032 - #34 =
+INFO  17:37:19,032 - #47 5
+INFO  17:37:19,032 - #37 ;
+INFO  17:37:19,033 - #50 int
+INFO  17:37:19,034 - #50 jajaja
+INFO  17:37:19,034 - #43 [
+INFO  17:37:19,034 - #44 ]
+INFO  17:37:19,035 - #37 ;
+INFO  17:37:19,035 - #50 nesto
+INFO  17:37:19,036 - #50 nesto
+INFO  17:37:19,036 - #37 ;
+INFO  17:37:19,037 - #50 bool
+INFO  17:37:19,037 - #50 sinemoj
+INFO  17:37:19,037 - #34 =
+INFO  17:37:19,037 - #48 true
+INFO  17:37:19,038 - #37 ;
+INFO  17:37:19,038 - #45 {
+INFO  17:37:19,038 - #50 main
+INFO  17:37:19,042 - #41 (
+INFO  17:37:19,042 - #42 )
+INFO  17:37:19,043 - #45 {
+INFO  17:37:19,044 - #41 (
+INFO  17:37:19,044 - #50 designator1
+INFO  17:37:19,045 - #42 )
+INFO  17:37:19,045 - #37 ;
+INFO  17:37:19,046 - #41 (
+INFO  17:37:19,046 - #50 designator3
+INFO  17:37:19,046 - #32 &&
+INFO  17:37:19,048 - #50 designator4
+INFO  17:37:19,048 - #42 )
+INFO  17:37:19,049 - #41 (
+INFO  17:37:19,050 - #50 designator1
+INFO  17:37:19,050 - #42 )
+INFO  17:37:19,050 - #37 ;
+INFO  17:37:19,050 - #45 {
+INFO  17:37:19,050 - #41 (
+INFO  17:37:19,051 - #50 designator1
+INFO  17:37:19,051 - #42 )
+INFO  17:37:19,051 - #37 ;
+INFO  17:37:19,051 - #41 (
+INFO  17:37:19,052 - #50 designator3
+INFO  17:37:19,052 - #32 &&
+INFO  17:37:19,052 - #50 designator4
+INFO  17:37:19,052 - #41 (
+INFO  17:37:19,052 - #42 )
+INFO  17:37:19,053 - #33 ||
+INFO  17:37:19,053 - #48 false
+INFO  17:37:19,053 - #32 &&
+INFO  17:37:19,054 - #50 broj1
+INFO  17:37:19,054 - #25 %
+ERROR 17:37:19,054 - 
+Sintaksna greska na liniji 14
+ERROR 17:37:19,055 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 14
+INFO  17:37:19,065 - Print calls = 0
+ERROR 17:37:19,066 - Parsiranje NIJE uspesno zavrseno!

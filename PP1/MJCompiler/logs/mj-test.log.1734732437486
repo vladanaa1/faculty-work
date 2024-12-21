@@ -1,0 +1,48 @@
+INFO  23:05:48,497 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:05:48,570 - #50 MyProgram
+INFO  23:05:48,570 - #50 int
+INFO  23:05:48,571 - #50 jaja
+INFO  23:05:48,571 - #34 =
+INFO  23:05:48,571 - #47 5
+INFO  23:05:48,571 - #37 ;
+INFO  23:05:48,572 - #50 int
+INFO  23:05:48,572 - #50 jajaja
+INFO  23:05:48,573 - #43 [
+INFO  23:05:48,573 - #44 ]
+INFO  23:05:48,573 - #37 ;
+INFO  23:05:48,573 - #50 nesto
+INFO  23:05:48,574 - #50 nesto
+INFO  23:05:48,574 - #37 ;
+INFO  23:05:48,574 - #50 bool
+INFO  23:05:48,574 - #50 sinemoj
+INFO  23:05:48,575 - #34 =
+INFO  23:05:48,575 - #48 true
+INFO  23:05:48,575 - #37 ;
+INFO  23:05:48,576 - #45 {
+INFO  23:05:48,576 - #50 main
+INFO  23:05:48,581 - #41 (
+INFO  23:05:48,581 - #42 )
+INFO  23:05:48,582 - #45 {
+INFO  23:05:48,584 - #41 (
+INFO  23:05:48,584 - #50 designator1
+INFO  23:05:48,584 - #42 )
+INFO  23:05:48,584 - #37 ;
+INFO  23:05:48,584 - #50 designator
+INFO  23:05:48,585 - #35 ++
+INFO  23:05:48,585 - #37 ;
+INFO  23:05:48,585 - #50 volimte
+INFO  23:05:48,586 - #35 ++
+INFO  23:05:48,586 - #37 ;
+INFO  23:05:48,586 - #50 funcCall
+INFO  23:05:48,586 - #41 (
+INFO  23:05:48,586 - #42 )
+INFO  23:05:48,587 - #37 ;
+INFO  23:05:48,587 - #50 funcCallWithArgs
+INFO  23:05:48,587 - #41 (
+INFO  23:05:48,587 - #50 param1
+INFO  23:05:48,588 - #39 ,
+ERROR 23:05:48,588 - 
+Sintaksna greska na liniji 13
+ERROR 23:05:48,588 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 13
+INFO  23:05:48,600 - Print calls = 0
+ERROR 23:05:48,601 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,22 @@
+INFO  23:40:41,425 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:40:41,458 - #50 MyProgram
+INFO  23:40:41,458 - #45 {
+INFO  23:40:41,459 - #50 main
+INFO  23:40:41,459 - #41 (
+INFO  23:40:41,459 - #42 )
+INFO  23:40:41,459 - #45 {
+INFO  23:40:41,460 - #46 }
+INFO  23:40:41,460 - #50 fun1
+INFO  23:40:41,461 - #41 (
+INFO  23:40:41,461 - #42 )
+INFO  23:40:41,461 - #45 {
+INFO  23:40:41,461 - #46 }
+INFO  23:40:41,462 - #50 fun2
+INFO  23:40:41,462 - #41 (
+INFO  23:40:41,462 - #42 )
+INFO  23:40:41,462 - #45 {
+INFO  23:40:41,463 - #46 }
+INFO  23:40:41,463 - #46 }
+INFO  23:40:41,471 - Print calls = 0
+INFO  23:40:41,471 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  23:40:41,476 - Parsiranje uspesno zavrseno!

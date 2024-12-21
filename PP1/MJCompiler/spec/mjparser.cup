@@ -1,0 +1,275 @@
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+
+// import java.io.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+
+parser code {:
+	
+	boolean errorDetected = false;
+	
+	Logger log = Logger.getLogger(getClass());
+   
+   
+    // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
+     
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("\nSintaksna greska", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatalna greska, parsiranje se ne moze nastaviti", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+    	errorDetected = true;
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+    
+    public void report_info(String message, Object info) {
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.info(msg.toString());
+    }
+    
+:}
+
+scan with {:
+	Symbol s = this.getScanner().next_token();
+	if (s != null && s.value != null) 
+		log.info(s.toString() + " " + s.value.toString());
+	return s;
+:}
+
+/* Nazivi terminala se poklapaju sa nazivima iz mjlexer.flex */
+
+/* *************** TERMINAL SYMBOLS (TERMINALNI SIMBOLI) *************** */
+
+terminal PROGRAM;
+terminal BREAK;
+terminal CLASS;
+terminal ELSE;
+terminal IF;
+terminal NEW;
+terminal PRINT;
+terminal READ;
+terminal RETURN;
+terminal VOID;
+terminal EXTENDS;
+terminal CONTINUE;
+terminal SET;
+terminal UNION;
+terminal DO;
+terminal WHILE;
+terminal MAP;
+terminal INTERFACE;
+terminal CONST;
+
+terminal PLUS;
+terminal MINUS;
+terminal MULT;
+terminal DIV;
+terminal MOD;
+
+terminal EQUALS;
+terminal NOTEQUAL;
+terminal GREATER;
+terminal GREATEREQ;
+terminal LESS;
+terminal LESSEQ;
+
+terminal AND;
+terminal OR;
+
+terminal ASSIGN;
+terminal INC;
+terminal DEC;
+
+terminal SEMI;
+terminal COLON;
+terminal COMMA;
+terminal DOT;
+
+terminal LPAREN;
+terminal RPAREN;
+terminal LBRACKET;
+terminal RBRACKET;
+terminal LBRACE;
+terminal RBRACE;
+
+terminal Integer NUMBER;
+terminal Boolean BOOL;
+terminal Character CHAR;
+terminal String IDENT;
+
+nonterminal Program;
+nonterminal ProgramName;
+nonterminal DeclarationsOptional;
+nonterminal DeclarationsList;
+nonterminal Declaration;
+nonterminal ConstDecl;
+nonterminal ConstDeclList;
+nonterminal VarDecl;
+nonterminal VarDeclList;
+nonterminal Literal;
+nonterminal MethodDeclarationsOptional;
+nonterminal MethodDeclarationList;
+nonterminal MethodDeclaration;
+nonterminal MethodSignature;
+nonterminal MethodName;
+nonterminal MethodReturnType;
+nonterminal MethodParametersOptional;
+nonterminal MethodParametersList;
+nonterminal MethodParameter;
+nonterminal StatementList;
+nonterminal Statement;
+nonterminal Matched;
+nonterminal Unmatched;
+nonterminal DesignatorStatement;
+nonterminal Designator;
+nonterminal DesignatorsOptional;
+nonterminal DesignatorList;
+nonterminal Selector;
+nonterminal PrintStatement;
+nonterminal ReturnStatement;
+nonterminal Condition;
+nonterminal CondTermList;
+nonterminal CondTerm;
+nonterminal CondFactList;
+nonterminal CondFact;
+nonterminal Expr2;
+nonterminal AddopGroup;
+nonterminal Relop;
+nonterminal Term;
+nonterminal Factor;
+nonterminal Mulop;
+nonterminal Addop;
+nonterminal MethodArgumentsOptional;
+nonterminal MethodArgumentList;
+nonterminal MethodArgument;
+nonterminal Type;
+nonterminal Des1, Des2;
+
+
+Program ::= PROGRAM ProgramName DeclarationsOptional LBRACE MethodDeclarationsOptional RBRACE;
+
+ProgramName ::= IDENT;
+
+DeclarationsOptional ::= DeclarationsList | /*epsilon*/;
+
+DeclarationsList ::= DeclarationsList Declaration | Declaration;
+
+Declaration ::= ConstDecl | VarDecl;
+
+ConstDecl ::= CONST Type ConstDeclList SEMI;
+
+ConstDeclList ::= IDENT ASSIGN Literal | ConstDeclList COMMA IDENT ASSIGN Literal;
+
+VarDecl ::= Type VarDeclList SEMI;
+
+VarDeclList ::= IDENT | IDENT LBRACKET RBRACKET | VarDeclList COMMA IDENT | VarDeclList COMMA IDENT LBRACKET RBRACKET;
+
+Literal ::= NUMBER | BOOL | CHAR;
+
+MethodDeclarationsOptional ::= MethodDeclarationList | /*epsilon*/;
+
+MethodDeclarationList ::= MethodDeclarationList MethodDeclaration | MethodDeclaration;
+
+MethodDeclaration ::= MethodSignature LBRACE StatementList RBRACE;
+
+StatementList ::= StatementList Statement | /*epsilon*/;
+
+Statement ::= Matched | Unmatched;
+
+Unmatched ::= IF LPAREN Condition RPAREN Statement | IF LPAREN Condition RPAREN Matched ELSE Unmatched;
+
+Matched ::=  DesignatorStatement SEMI
+	| PRINT LPAREN Expr2 RPAREN SEMI
+	| PRINT LPAREN Expr2 COMMA NUMBER RPAREN SEMI
+        | RETURN Expr2 SEMI // prolazi i slucaj return(designator); sto ne bi trebalo, prepozna return kao designator?
+        | RETURN SEMI
+	| READ LPAREN Designator RPAREN SEMI
+        | CONTINUE SEMI
+        | BREAK SEMI
+        | IF LPAREN Condition RPAREN Matched ELSE Matched
+	| DO Statement WHILE LPAREN RPAREN SEMI
+	| DO Statement WHILE LPAREN Condition RPAREN SEMI
+	| DO Statement WHILE LPAREN Condition COMMA DesignatorStatement RPAREN SEMI
+        | LBRACE StatementList RBRACE;
+
+DesignatorStatement ::= Designator ASSIGN Expr2
+	| Designator LPAREN MethodArgumentsOptional RPAREN
+	| Designator INC
+	| Designator DEC
+	| Designator ASSIGN Designator UNION Designator;
+
+Designator ::= IDENT | Designator Selector;
+
+Selector ::= DOT IDENT | LBRACKET Expr2 RBRACKET;
+
+PrintStatement ::= PRINT LPAREN RPAREN SEMI;
+
+ReturnStatement ::= RETURN SEMI;
+
+Condition ::=  CondTerm CondTermList ;
+
+CondTermList ::= CondTermList OR CondTerm | /*epsilon*/;
+
+CondTerm ::= CondFactList;
+
+CondFactList ::= CondFactList AND CondFact | CondFact;
+
+CondFact ::= Expr2 | Expr2 Relop Expr2;
+
+Expr2 ::= MINUS Term AddopGroup | Term AddopGroup | Term | MINUS Term;
+
+AddopGroup ::= AddopGroup Addop Term | Addop Term;
+
+Relop ::= EQUALS | NOTEQUAL | GREATER | GREATEREQ | LESS | LESSEQ;
+
+Term ::= Factor | Factor Mulop Factor;
+
+Factor ::= Designator 
+         | Designator LBRACKET RBRACKET
+         | Designator LPAREN MethodArgumentsOptional RPAREN
+         | Literal
+	| NEW Type LBRACKET Expr2 RBRACKET
+	| NEW Type LPAREN MethodArgumentList RPAREN
+	| LPAREN Expr2 RPAREN;
+
+Mulop ::= MULT | DIV | MOD;
+
+Addop ::= MINUS | PLUS;
+
+MethodSignature ::= MethodReturnType MethodName LPAREN MethodParametersOptional RPAREN;
+
+MethodName ::= IDENT;
+
+MethodReturnType ::= VOID | IDENT;
+
+MethodParametersOptional ::= MethodParametersList | /*epsilon*/;
+
+MethodParametersList ::= MethodParametersList COMMA MethodParameter | MethodParameter;
+
+MethodParameter ::= Type IDENT | Type IDENT LBRACKET RBRACKET;
+
+MethodArgumentsOptional ::= MethodArgumentList | /*epsilon*/;
+
+MethodArgumentList ::= MethodArgumentList COMMA MethodArgument | MethodArgument;
+
+MethodArgument ::= IDENT | IDENT LBRACKET RBRACKET | Literal;
+
+Type ::= IDENT;
+

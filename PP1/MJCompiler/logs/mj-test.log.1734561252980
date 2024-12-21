@@ -1,0 +1,10 @@
+INFO  23:33:52,080 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:33:52,388 - #50 MJProgram
+INFO  23:33:52,388 - #45 {
+INFO  23:33:52,389 - #50 methodName
+INFO  23:33:52,401 - #41 (
+ERROR 23:33:52,401 - 
+Sintaksna greska na liniji 3
+ERROR 23:33:52,402 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 3
+INFO  23:33:52,439 - Print calls = 0
+ERROR 23:33:52,440 - Parsiranje NIJE uspesno zavrseno!
