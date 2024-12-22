@@ -1,16 +1,21 @@
 program MyProgram
-const int jaja = 5;
-int jaja2,jaja1,jaja567;
 {
-    void main() 
-    	int x, i;
-    	char c[], d;
-    {
-	    if(a && b && c || true) return;
-	    fun(a[],b[]);
+
+	int fun1(int c)
+		int a,x;
+	{
+		a++;
+		
+		return 5; // return a;
 	}
 	
-	int fun1(){
-		
+    void main() 
+    	int x, a;
+    	char c[], d;
+    {
+	    if(d/c) return;
+	    fun1(a[],b[]);
 	}
+	
+
 }

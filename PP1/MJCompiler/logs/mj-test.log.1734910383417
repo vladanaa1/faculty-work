@@ -1,0 +1,70 @@
+INFO  00:32:51,690 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  00:32:51,770 - #50 MyProgram
+INFO  00:32:51,770 - #45 {
+INFO  00:32:51,772 - #50 int
+INFO  00:32:51,774 - #50 fun1
+INFO  00:32:51,776 - #41 (
+INFO  00:32:51,779 - #50 int
+INFO  00:32:51,779 - #50 c
+INFO  00:32:51,779 - #42 )
+INFO  00:32:51,780 - #50 int
+INFO  00:32:51,782 - #50 a
+INFO  00:32:51,783 - #39 ,
+INFO  00:32:51,784 - #50 x
+INFO  00:32:51,785 - #37 ;
+INFO  00:32:51,785 - #45 {
+INFO  00:32:51,787 - #50 a
+INFO  00:32:51,789 - #35 ++
+INFO  00:32:51,789 - #37 ;
+INFO  00:32:51,791 - #47 5
+INFO  00:32:51,792 - #37 ;
+INFO  00:32:51,792 - #46 }
+INFO  00:32:51,794 - #50 main
+INFO  00:32:51,795 - #41 (
+INFO  00:32:51,798 - #42 )
+INFO  00:32:51,802 - #50 int
+INFO  00:32:51,802 - #50 x
+INFO  00:32:51,802 - #39 ,
+INFO  00:32:51,802 - #50 a
+INFO  00:32:51,803 - #37 ;
+INFO  00:32:51,803 - #50 char
+INFO  00:32:51,804 - #50 c
+INFO  00:32:51,804 - #43 [
+INFO  00:32:51,804 - #44 ]
+INFO  00:32:51,806 - #39 ,
+INFO  00:32:51,806 - #50 d
+INFO  00:32:51,806 - #37 ;
+INFO  00:32:51,806 - #45 {
+INFO  00:32:51,807 - #41 (
+INFO  00:32:51,807 - #50 a
+INFO  00:32:51,807 - #32 &&
+INFO  00:32:51,808 - #50 b
+INFO  00:32:51,809 - #32 &&
+INFO  00:32:51,810 - #50 c
+INFO  00:32:51,812 - #33 ||
+INFO  00:32:51,814 - #48 true
+INFO  00:32:51,814 - #33 ||
+INFO  00:32:51,815 - #50 x
+INFO  00:32:51,815 - #23 *
+INFO  00:32:51,815 - #50 a
+INFO  00:32:51,847 - #42 )
+INFO  00:32:51,848 - #37 ;
+INFO  00:32:51,848 - #50 fun1
+INFO  00:32:51,849 - #41 (
+INFO  00:32:51,850 - #50 a
+INFO  00:32:51,851 - #43 [
+INFO  00:32:51,851 - #44 ]
+INFO  00:32:51,851 - #39 ,
+INFO  00:32:51,852 - #50 b
+INFO  00:32:51,852 - #43 [
+INFO  00:32:51,853 - #44 ]
+INFO  00:32:51,853 - #42 )
+INFO  00:32:51,854 - #37 ;
+INFO  00:32:51,854 - #46 }
+INFO  00:32:51,854 - #46 }
+INFO  00:32:51,872 - Otvoren opseg za program MyProgram na liniji 1
+INFO  00:32:51,872 - Obradjuje se funkcija fun1 na liniji 4
+INFO  00:32:51,873 - Obradjuje se funkcija main na liniji 12
+INFO  00:32:51,875 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 16
+INFO  00:32:51,876 - Print calls = 0
+ERROR 00:32:51,879 - Parsiranje NIJE uspesno zavrseno!

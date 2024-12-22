@@ -1,0 +1,63 @@
+INFO  00:39:18,261 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  00:39:18,325 - #50 MyProgram
+INFO  00:39:18,325 - #45 {
+INFO  00:39:18,326 - #50 int
+INFO  00:39:18,327 - #50 fun1
+INFO  00:39:18,328 - #41 (
+INFO  00:39:18,330 - #50 int
+INFO  00:39:18,331 - #50 c
+INFO  00:39:18,331 - #42 )
+INFO  00:39:18,332 - #50 int
+INFO  00:39:18,334 - #50 a
+INFO  00:39:18,334 - #39 ,
+INFO  00:39:18,335 - #50 x
+INFO  00:39:18,335 - #37 ;
+INFO  00:39:18,335 - #45 {
+INFO  00:39:18,335 - #50 a
+INFO  00:39:18,336 - #35 ++
+INFO  00:39:18,337 - #37 ;
+INFO  00:39:18,338 - #47 5
+INFO  00:39:18,338 - #37 ;
+INFO  00:39:18,338 - #46 }
+INFO  00:39:18,340 - #50 main
+INFO  00:39:18,341 - #41 (
+INFO  00:39:18,345 - #42 )
+INFO  00:39:18,346 - #50 int
+INFO  00:39:18,347 - #50 x
+INFO  00:39:18,347 - #39 ,
+INFO  00:39:18,347 - #50 a
+INFO  00:39:18,347 - #37 ;
+INFO  00:39:18,348 - #50 char
+INFO  00:39:18,348 - #50 c
+INFO  00:39:18,348 - #43 [
+INFO  00:39:18,348 - #44 ]
+INFO  00:39:18,349 - #39 ,
+INFO  00:39:18,349 - #50 d
+INFO  00:39:18,349 - #37 ;
+INFO  00:39:18,349 - #45 {
+INFO  00:39:18,350 - #41 (
+INFO  00:39:18,350 - #50 d
+INFO  00:39:18,350 - #24 /
+INFO  00:39:18,351 - #50 c
+INFO  00:39:18,353 - #42 )
+INFO  00:39:18,355 - #37 ;
+INFO  00:39:18,355 - #50 fun1
+INFO  00:39:18,357 - #41 (
+INFO  00:39:18,360 - #50 a
+INFO  00:39:18,360 - #43 [
+INFO  00:39:18,360 - #44 ]
+INFO  00:39:18,361 - #39 ,
+INFO  00:39:18,362 - #50 b
+INFO  00:39:18,362 - #43 [
+INFO  00:39:18,363 - #44 ]
+INFO  00:39:18,364 - #42 )
+INFO  00:39:18,364 - #37 ;
+INFO  00:39:18,365 - #46 }
+INFO  00:39:18,366 - #46 }
+INFO  00:39:18,399 - Otvoren opseg za program MyProgram na liniji 1
+INFO  00:39:18,399 - Obradjuje se funkcija fun1 na liniji 4
+INFO  00:39:18,400 - Obradjuje se funkcija main na liniji 12
+INFO  00:39:18,400 - Iz nekog razloga je Factor Object null na liniji 16
+INFO  00:39:18,400 - Print calls = 0
+INFO  00:39:18,401 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  00:39:18,402 - Parsiranje uspesno zavrseno!

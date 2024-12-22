@@ -18,6 +18,7 @@ public class SemanticPass extends VisitorAdaptor {
 	Obj currentMethod = null;
 	Struct currentMethodReturnType = Tab.noType;
 	boolean returnFound = false;
+	boolean mainDeclared = false;
 	int nVars;
 	private Struct currentType = Tab.noType;
 	
@@ -49,6 +50,18 @@ public class SemanticPass extends VisitorAdaptor {
         }
         return result;
 	}
+	
+	private Obj findInOuterScope(String identName) {
+        Obj result = Tab.currentScope.getOuter().findSymbol(identName);
+        if (result == null) {
+            result = Tab.noObj;
+        }
+        return result;
+    }
+	
+	private Obj findInCurrentOrSomeOuterScope(String identName) {
+        return Tab.find(identName);
+    }
 
 	@Override
 	public void visit(ProgramName programName) {
@@ -60,6 +73,7 @@ public class SemanticPass extends VisitorAdaptor {
 	@Override
 	public void visit(MethodSignature2 methodSignature) {
 		String ident = methodSignature.getName().getIdent();
+		Struct retType = currentMethodReturnType;
 		
 		Obj methodObj = findInCurrentScope(ident);
 		// Pretražuju se PROGRAM i UNIVERSE opsezi.
@@ -69,11 +83,159 @@ public class SemanticPass extends VisitorAdaptor {
 			currentMethod = methodSignature.obj;
 			Tab.openScope();
 			report_info("Obradjuje se funkcija " + ident, methodSignature);
+			
+			if(ident.equals("main")) {
+				if(currentMethodReturnType.getKind() == 0) {
+					mainDeclared = true;
+				}
+				else {
+					report_info("Neispravan povratni tip funkcije main. Očekivan je void. Semantička greška", methodSignature);
+					errorDetected = true;
+				}
+			}
 		}
 		else {
-			report_info("Semanticka greska: Dvostruka definicija funkcije " + ident, methodSignature);
+			report_info("Dvostruka definicija funkcije. Semantička greška" + ident, methodSignature);
 			errorDetected = true;
 		}
+	}
+	
+	@Override
+	public void visit(ScalarMethodParameter scalarMethodParameter) {
+		String ident = scalarMethodParameter.getIdent();
+		Tab.insert(1, ident, currentType);
+	}
+	
+	@Override
+	public void visit(VectorMethodParameter vectorMethodParameter) {
+		String ident = vectorMethodParameter.getIdent();
+		Tab.insert(1, ident, currentType);
+	}
+	
+	@Override
+	public void visit(DesignatorAssign designatorAssign) {
+		Obj designatorObj = designatorAssign.getDesignator().obj;
+		Obj expressionObj = designatorAssign.getExpr2().obj;
+		
+		if(designatorObj == null || expressionObj == null) {
+			return;
+		}
+		
+		Struct designatorType = designatorObj.getType();
+		Struct expressionType = expressionObj.getType();
+		
+		if(designatorType.equals(expressionType)) {
+			// Ok
+		}
+		else {
+			// Error
+			report_info("Nepoklapanje tipova u dodeli vrednosti. Semantička greška", designatorAssign);
+			errorDetected = true;
+		}
+	}
+	
+	@Override
+	public void visit(FunctionCall functionCall) {
+		Obj functionCallObj = functionCall.getDesignator().obj;
+		
+		if(functionCallObj == null) {
+			// Error
+			return;
+		}
+		
+		Obj designatorObj = findInCurrentOrSomeOuterScope(functionCall.getDesignator().obj.getName());
+		
+		if(designatorObj == Tab.noObj) {
+			// Error
+			report_info("Nedeklarisana funkcija. Semantička greška", functionCall);
+			errorDetected = true;
+		}
+		else {
+			if(designatorObj.getKind() == 3) {
+				// OK
+			}
+			else {
+				// Error
+				report_info("Nedeklarisana funkcija. Semantička greška", functionCall);
+				errorDetected = true;
+			}
+		}
+	}
+	
+	@Override
+	public void visit(DesignatorInc designatorInc) {
+		Obj designatorObj = designatorInc.getDesignator().obj;
+		
+		if(designatorObj == null) {
+			// Error
+		}
+		else {
+			Struct designatorType = designatorObj.getType();
+			if(designatorType.getKind() == 1) {
+				// OK
+			}
+			else {
+				// Error
+				report_info("Nepoklapanje tipova. Semantička greška", designatorInc);
+				errorDetected = true;
+			}
+		}
+	}
+	
+	@Override
+	public void visit(DesignatorDec designatorDec) {
+		Obj designatorObj = designatorDec.getDesignator().obj;
+		
+		if(designatorObj == null) {
+			// Error
+		}
+		else {
+			Struct designatorType = designatorObj.getType();
+			if(designatorType.getKind() == 1) {
+				// OK
+			}
+			else {
+				// Error
+				report_info("Nepoklapanje tipova. Semantička greška", designatorDec);
+				errorDetected = true;
+			}
+		}
+	}
+	
+	@Override
+	public void visit(DesignatorIdent designatorIdent) {
+		String ident = designatorIdent.getIdent();
+		
+		Obj designatorObj = findInCurrentScope(ident);
+		
+		if(designatorObj == Tab.noObj) {
+			designatorObj = findInOuterScope(ident);
+			if(designatorObj == Tab.noObj) {
+				// Not Found
+				report_info("Promenljiva " + ident + " mora biti deklarisana pre upotrebe. Semantička greška", designatorIdent);
+				errorDetected = true;
+			}
+			else {
+				// Found in global scope
+				designatorIdent.obj = new Obj(designatorObj.getKind(), ident, designatorObj.getType());
+			}
+		}
+		else {
+			// Found in local scope
+			designatorIdent.obj = new Obj(designatorObj.getKind(), ident, designatorObj.getType());
+		}
+	}
+	
+	@Override
+	public void visit(DesignatorFactor desfact) {
+		Obj desfactObj = desfact.getDesignator().obj;
+		
+		if(desfactObj == null) {
+			// ERROR
+			return;
+		}
+		
+		desfact.obj = desfactObj;
 	}
 	
 	@Override
@@ -99,7 +261,7 @@ public class SemanticPass extends VisitorAdaptor {
 	@Override
 	public void visit(Return ret) {
 		if(currentMethodReturnType != Tab.noType) {
-			report_info("Semanticka greska: return naredba mora sadržati povratnu vrednost", ret);
+			report_info("Semantička greška: return naredba mora sadržati povratnu vrednost", ret);
 			errorDetected = true;
 		}
 	}
@@ -107,7 +269,7 @@ public class SemanticPass extends VisitorAdaptor {
 	@Override
 	public void visit(ReturnWithExpr ret) {
 		if(currentMethodReturnType == Tab.noType) {
-			report_info("Semanticka greska: void metoda ne sme imati povratnu vrednost u return naredbi", ret);
+			report_info("Semantička greška: void metoda ne sme imati povratnu vrednost u return naredbi", ret);
 			errorDetected = true;
 			return;
 		}
@@ -115,7 +277,7 @@ public class SemanticPass extends VisitorAdaptor {
 		Struct retType = ret.getExpr2().obj.getType();
 		
 		if(retType != currentMethodReturnType) {
-			report_info("Semanticka greska: neslaganje povratnog tipa funkcije sa predeklarisanim", ret);
+			report_info("Semantička greška: neslaganje povratnog tipa funkcije sa predeklarisanim", ret);
 			errorDetected = true;
 		}
 		else {
@@ -134,7 +296,7 @@ public class SemanticPass extends VisitorAdaptor {
 		if(constantObj == Tab.noObj) {
 			Struct constantType = constant.getLiteral().obj.getType();
 			if(constantType != currentType) {
-				report_info("Semantička greška: Tip konstante nije u skladu sa dodeljenom vrednošću. " + ident, constant);
+				report_info("Tip konstante nije u skladu sa dodeljenom vrednošću. Semantička greška", constant);
 				errorDetected  = true;
 			}
 			else {
@@ -143,7 +305,7 @@ public class SemanticPass extends VisitorAdaptor {
 			}
 		}
 		else {
-			report_info("Semantička greška: Detektovana dvostruka definicija konstante " + ident, constant);
+			report_info("Detektovana dvostruka definicija konstante. Semantička greška" + ident, constant);
 			errorDetected  = true;
 		}
 	}
@@ -175,7 +337,7 @@ public class SemanticPass extends VisitorAdaptor {
 			varObj = Tab.insert(1, ident, currentType);
 		}
 		else {
-			report_info("Semantička greška: Detektovana dvostruka deklaracija promenljive " + ident, singleVarDecl);
+			report_info("Detektovana dvostruka deklaracija promenljive " + ident + " .Semantička greška", singleVarDecl);
 			errorDetected  = true;
 		}
 	}
@@ -192,7 +354,7 @@ public class SemanticPass extends VisitorAdaptor {
 			varObj = Tab.insert(1, ident, currentType);
 		}
 		else {
-			report_info("Semantička greška: Detektovana dvostruka deklaracija promenljive " + ident, singleVarDeclVector);
+			report_info("Detektovana dvostruka deklaracija promenljive " + ident + " .Semantička greška", singleVarDeclVector);
 			errorDetected  = true;
 		}
 	}
@@ -208,7 +370,7 @@ public class SemanticPass extends VisitorAdaptor {
 			varObj = Tab.insert(1, ident, currentType);
 		}
 		else {
-			report_info("Semantička greška: Detektovana dvostruka deklaracija promenljive " + ident, multipleVarDecl);
+			report_info("Detektovana dvostruka deklaracija promenljive " + ident + " .Semantička greška", multipleVarDecl);
 			errorDetected  = true;
 		}
 	}
@@ -225,7 +387,25 @@ public class SemanticPass extends VisitorAdaptor {
 			varObj = Tab.insert(1, ident, currentType);
 		}
 		else {
-			report_info("Semantička greška: Detektovana dvostruka deklaracija promenljive " + ident, multipleVarDeclVector);
+			report_info("Detektovana dvostruka deklaracija promenljive " + ident + " .Semantička greška", multipleVarDeclVector);
+			errorDetected  = true;
+		}
+	}
+	
+	@Override
+	public void visit(MulopTerm mulopTerm) {
+		Obj factor = mulopTerm.getFactor().obj;
+		
+		if(factor == null) {
+			// ERROR
+			return;
+		}
+		
+		if(factor.getKind() == Obj.Con && factor.getType().equals(Tab.intType)) {
+			// OK
+		}
+		else {
+			report_info("Nepoklapanje tipova u izrazu. Semantička greška", mulopTerm);
 			errorDetected  = true;
 		}
 	}
@@ -275,6 +455,11 @@ public class SemanticPass extends VisitorAdaptor {
 	*/
 
 	public void visit(Program program) {
+		if(!mainDeclared) {
+			report_info("Semantička greška: Funkcija main nije definisana", program);
+			errorDetected  = true;
+		}
+		
 		Tab.chainLocalSymbols(program.getProgramName().obj);
 		Tab.closeScope();
 	}

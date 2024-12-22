@@ -1,0 +1,23 @@
+INFO  00:32:05,123 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  00:32:05,203 - #50 MyProgram
+INFO  00:32:05,204 - #45 {
+INFO  00:32:05,205 - #50 int
+INFO  00:32:05,206 - #50 fun1
+INFO  00:32:05,207 - #41 (
+INFO  00:32:05,210 - #50 int
+INFO  00:32:05,210 - #50 c
+INFO  00:32:05,211 - #42 )
+INFO  00:32:05,211 - #50 int
+INFO  00:32:05,214 - #50 a
+INFO  00:32:05,214 - #39 ,
+INFO  00:32:05,215 - #50 x
+INFO  00:32:05,216 - #37 ;
+INFO  00:32:05,217 - #45 {
+INFO  00:32:05,218 - #50 a
+INFO  00:32:05,219 - #35 ++
+INFO  00:32:05,220 - #37 ;
+INFO  00:32:05,220 - #50 a
+INFO  00:32:05,221 - #23 *
+ERROR 00:32:05,222 - 
+Sintaksna greska na liniji 8
+ERROR 00:32:05,222 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 8

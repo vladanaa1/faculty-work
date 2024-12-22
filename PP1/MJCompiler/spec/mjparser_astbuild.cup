@@ -123,6 +123,7 @@ nonterminal rs.etf.pp1.symboltable.concepts.Obj Literal;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj MethodSignature2;
 
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Expr2;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Term;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Factor;
@@ -148,7 +149,6 @@ nonterminal Statement Statement;
 nonterminal Matched Matched;
 nonterminal Unmatched Unmatched;
 nonterminal DesignatorStatement DesignatorStatement;
-nonterminal Designator Designator;
 nonterminal DesignatorsOptional DesignatorsOptional;
 nonterminal DesignatorList DesignatorList;
 nonterminal Selector Selector;
@@ -239,7 +239,7 @@ DesignatorStatement   ::= (DesignatorAssign) Designator:D1 ASSIGN Expr2:E2 {: RE
                        |  (DesignatorDec) Designator:D1 DEC {: RESULT=new DesignatorDec(D1); RESULT.setLine(D1left); :}
                        |  (DesignatorUnion) Designator:D1 ASSIGN Designator:D2 UNION Designator:D3 {: RESULT=new DesignatorUnion(D1, D2, D3); RESULT.setLine(D1left); :};
 
-Designator            ::= (DesignatorIdent) IDENT:I1 {: RESULT=new DesignatorIdent(I1); RESULT.setLine(I1left); :} 
+Designator            ::= (DesignatorIdent) IDENT:ident {: RESULT=new DesignatorIdent(ident); RESULT.setLine(identleft); :}
                        |  (DesignatorSelect) Designator:D1 Selector:S2 {: RESULT=new DesignatorSelect(D1, S2); RESULT.setLine(D1left); :};
 
 Selector              ::= (DesignatorAttribute) DOT IDENT:I1 {: RESULT=new DesignatorAttribute(I1); RESULT.setLine(I1left); :} 
@@ -276,7 +276,7 @@ Relop                 ::= EQUALS {: RESULT=new RelopDerived1(); :}
 Term                  ::= (FactorTerm) Factor:F1 {: RESULT=new FactorTerm(F1); RESULT.setLine(F1left); :} 
                        |  (MulopTerm) Term:T1 Mulop:M2 Factor:F3 {: RESULT=new MulopTerm(T1, M2, F3); RESULT.setLine(T1left); :};
 
-Factor                ::= (DesignatorFactor) Designator:D1 {: RESULT=new DesignatorFactor(D1); RESULT.setLine(D1left); :} 
+Factor                ::= (DesignatorFactor) Designator:D1 {: RESULT=new DesignatorFactor(D1); RESULT.setLine(D1left); :}
                        |  (VectorFactor) Designator:D1 LBRACKET RBRACKET {: RESULT=new VectorFactor(D1); RESULT.setLine(D1left); :}
                        |  (MethodCallFactor) Designator:D1 LPAREN MethodArgumentsOptional:M2 RPAREN {: RESULT=new MethodCallFactor(D1, M2); RESULT.setLine(D1left); :}
                        |  (NumberFactor) NUMBER:value {: RESULT=new NumberFactor(value); RESULT.setLine(valueleft); :}
@@ -306,8 +306,8 @@ MethodParametersOptional ::= MethodParametersList:M1 {: RESULT=new MethodParamet
 MethodParametersList  ::= MethodParametersList:M1 COMMA MethodParameter:M2 {: RESULT=new MethodParametersListDerived1(M1, M2); RESULT.setLine(M1left); :} 
                        |  MethodParameter:M1 {: RESULT=new MethodParametersListDerived2(M1); RESULT.setLine(M1left); :};
 
-MethodParameter       ::= Type:T1 IDENT:I2 {: RESULT=new MethodParameterDerived1(T1, I2); RESULT.setLine(T1left); :} 
-                       |  Type:T1 IDENT:I2 LBRACKET RBRACKET {: RESULT=new MethodParameterDerived2(T1, I2); RESULT.setLine(T1left); :};
+MethodParameter       ::= (ScalarMethodParameter) Type:T1 IDENT:ident {: RESULT=new ScalarMethodParameter(T1, ident); RESULT.setLine(T1left); :} 
+                       |  (VectorMethodParameter) Type:T1 IDENT:ident LBRACKET RBRACKET {: RESULT=new VectorMethodParameter(T1, ident); RESULT.setLine(T1left); :};
 
 MethodArgumentsOptional ::= MethodArgumentList:M1 {: RESULT=new MethodArgumentsOptionalDerived1(M1); RESULT.setLine(M1left); :} 
                           | {: RESULT=new MethodArgumentsOptionalDerived2(); :}  /*epsilon*/;

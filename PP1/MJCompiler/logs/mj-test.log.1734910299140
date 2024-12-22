@@ -1,0 +1,66 @@
+INFO  00:22:55,392 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  00:22:55,472 - #50 MyProgram
+INFO  00:22:55,472 - #45 {
+INFO  00:22:55,474 - #50 int
+INFO  00:22:55,475 - #50 fun1
+INFO  00:22:55,477 - #41 (
+INFO  00:22:55,479 - #50 int
+INFO  00:22:55,479 - #50 c
+INFO  00:22:55,480 - #42 )
+INFO  00:22:55,480 - #50 char
+INFO  00:22:55,482 - #50 a
+INFO  00:22:55,482 - #39 ,
+INFO  00:22:55,483 - #50 x
+INFO  00:22:55,483 - #37 ;
+INFO  00:22:55,484 - #45 {
+INFO  00:22:55,484 - #50 a
+INFO  00:22:55,486 - #35 ++
+INFO  00:22:55,487 - #37 ;
+INFO  00:22:55,489 - #47 5
+INFO  00:22:55,489 - #37 ;
+INFO  00:22:55,490 - #46 }
+INFO  00:22:55,493 - #50 main
+INFO  00:22:55,494 - #41 (
+INFO  00:22:55,497 - #42 )
+INFO  00:22:55,499 - #50 int
+INFO  00:22:55,500 - #50 x
+INFO  00:22:55,500 - #37 ;
+INFO  00:22:55,501 - #50 char
+INFO  00:22:55,501 - #50 c
+INFO  00:22:55,501 - #43 [
+INFO  00:22:55,502 - #44 ]
+INFO  00:22:55,502 - #39 ,
+INFO  00:22:55,503 - #50 d
+INFO  00:22:55,504 - #37 ;
+INFO  00:22:55,505 - #45 {
+INFO  00:22:55,506 - #41 (
+INFO  00:22:55,506 - #50 a
+INFO  00:22:55,507 - #32 &&
+INFO  00:22:55,510 - #50 b
+INFO  00:22:55,510 - #32 &&
+INFO  00:22:55,512 - #50 c
+INFO  00:22:55,512 - #33 ||
+INFO  00:22:55,514 - #48 true
+INFO  00:22:55,516 - #42 )
+INFO  00:22:55,519 - #37 ;
+INFO  00:22:55,519 - #50 fun1
+INFO  00:22:55,521 - #41 (
+INFO  00:22:55,521 - #50 a
+INFO  00:22:55,522 - #43 [
+INFO  00:22:55,522 - #44 ]
+INFO  00:22:55,523 - #39 ,
+INFO  00:22:55,523 - #50 b
+INFO  00:22:55,523 - #43 [
+INFO  00:22:55,524 - #44 ]
+INFO  00:22:55,526 - #42 )
+INFO  00:22:55,527 - #37 ;
+INFO  00:22:55,529 - #46 }
+INFO  00:22:55,530 - #46 }
+INFO  00:22:55,547 - Otvoren opseg za program MyProgram na liniji 1
+INFO  00:22:55,548 - Obradjuje se funkcija fun1 na liniji 4
+INFO  00:22:55,552 - Nepoklapanje tipova. Semantička greška na liniji 7
+INFO  00:22:55,553 - Obradjuje se funkcija main na liniji 11
+INFO  00:22:55,555 - Promenljiva a mora biti deklarisana pre upotrebe. Semantička greška na liniji 15
+INFO  00:22:55,556 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 15
+INFO  00:22:55,557 - Print calls = 0
+ERROR 00:22:55,561 - Parsiranje NIJE uspesno zavrseno!

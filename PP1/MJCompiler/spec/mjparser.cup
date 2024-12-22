@@ -123,6 +123,7 @@ nonterminal rs.etf.pp1.symboltable.concepts.Obj Literal;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj MethodSignature2;
 
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Expr2;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Term;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Factor;
@@ -148,7 +149,6 @@ nonterminal Statement;
 nonterminal Matched;
 nonterminal Unmatched;
 nonterminal DesignatorStatement;
-nonterminal Designator;
 nonterminal DesignatorsOptional;
 nonterminal DesignatorList;
 nonterminal Selector;
@@ -238,7 +238,7 @@ DesignatorStatement   ::= (DesignatorAssign) Designator ASSIGN Expr2
                        |  (DesignatorDec) Designator DEC
                        |  (DesignatorUnion) Designator ASSIGN Designator UNION Designator;
 
-Designator            ::= (DesignatorIdent) IDENT 
+Designator            ::= (DesignatorIdent) IDENT:ident
                        |  (DesignatorSelect) Designator Selector;
 
 Selector              ::= (DesignatorAttribute) DOT IDENT 
@@ -275,7 +275,7 @@ Relop                 ::= EQUALS
 Term                  ::= (FactorTerm) Factor 
                        |  (MulopTerm) Term Mulop Factor;
 
-Factor                ::= (DesignatorFactor) Designator 
+Factor                ::= (DesignatorFactor) Designator
                        |  (VectorFactor) Designator LBRACKET RBRACKET
                        |  (MethodCallFactor) Designator LPAREN MethodArgumentsOptional RPAREN
                        |  (NumberFactor) NUMBER:value
@@ -305,8 +305,8 @@ MethodParametersOptional ::= MethodParametersList
 MethodParametersList  ::= MethodParametersList COMMA MethodParameter 
                        |  MethodParameter;
 
-MethodParameter       ::= Type IDENT 
-                       |  Type IDENT LBRACKET RBRACKET;
+MethodParameter       ::= (ScalarMethodParameter) Type IDENT:ident 
+                       |  (VectorMethodParameter) Type IDENT:ident LBRACKET RBRACKET;
 
 MethodArgumentsOptional ::= MethodArgumentList 
                           |  /*epsilon*/;

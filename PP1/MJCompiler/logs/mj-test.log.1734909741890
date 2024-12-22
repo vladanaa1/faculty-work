@@ -1,0 +1,4595 @@
+INFO  18:47:07,750 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  18:47:07,816 - #50 MyProgram
+INFO  18:47:07,817 - #50 int
+INFO  18:47:07,817 - #50 jaja
+INFO  18:47:07,818 - #34 =
+INFO  18:47:07,820 - #47 5
+INFO  18:47:07,820 - #39 ,
+INFO  18:47:07,821 - #50 jaja1
+INFO  18:47:07,822 - #34 =
+INFO  18:47:07,822 - #47 6
+INFO  18:47:07,822 - #37 ;
+INFO  18:47:07,823 - #50 int
+INFO  18:47:07,823 - #50 jajaja
+INFO  18:47:07,823 - #43 [
+INFO  18:47:07,823 - #44 ]
+INFO  18:47:07,824 - #39 ,
+INFO  18:47:07,824 - #50 jaja
+INFO  18:47:07,824 - #37 ;
+INFO  18:47:07,825 - #50 nesto
+INFO  18:47:07,825 - #50 nesto
+INFO  18:47:07,825 - #37 ;
+INFO  18:47:07,826 - #45 {
+INFO  18:47:07,829 - #50 main
+INFO  18:47:07,831 - #41 (
+INFO  18:47:07,832 - #42 )
+INFO  18:47:07,834 - #50 int
+INFO  18:47:07,836 - #50 x
+INFO  18:47:07,836 - #39 ,
+INFO  18:47:07,837 - #50 i
+INFO  18:47:07,837 - #37 ;
+INFO  18:47:07,837 - #50 char
+INFO  18:47:07,838 - #50 c
+INFO  18:47:07,838 - #43 [
+INFO  18:47:07,838 - #44 ]
+INFO  18:47:07,838 - #39 ,
+INFO  18:47:07,838 - #50 d
+INFO  18:47:07,839 - #37 ;
+INFO  18:47:07,839 - #45 {
+INFO  18:47:07,840 - #41 (
+INFO  18:47:07,840 - #50 a
+INFO  18:47:07,841 - #42 )
+INFO  18:47:07,843 - #37 ;
+INFO  18:47:07,843 - #50 fun
+INFO  18:47:07,845 - #41 (
+INFO  18:47:07,846 - #50 a
+INFO  18:47:07,846 - #43 [
+INFO  18:47:07,846 - #44 ]
+INFO  18:47:07,846 - #39 ,
+INFO  18:47:07,847 - #50 b
+INFO  18:47:07,847 - #43 [
+INFO  18:47:07,847 - #44 ]
+INFO  18:47:07,848 - #42 )
+INFO  18:47:07,849 - #37 ;
+INFO  18:47:07,850 - #46 }
+INFO  18:47:07,850 - #46 }
+INFO  18:47:07,878 - Otvoren opseg za program MyProgram na liniji 1
+INFO  18:47:07,878 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  18:47:07,879 - Konstanta jaja1 sa vrednoscu 6 na liniji 3
+ERROR 18:47:07,879 - Nedefinisan tip konstante  na liniji 3
+INFO  18:47:26,674 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  18:47:26,762 - #50 MyProgram
+INFO  18:47:26,764 - #50 int
+INFO  18:47:26,765 - #50 jaja
+INFO  18:47:26,766 - #34 =
+INFO  18:47:26,767 - #47 5
+INFO  18:47:26,767 - #39 ,
+INFO  18:47:26,768 - #50 jaja1
+INFO  18:47:26,768 - #34 =
+INFO  18:47:26,769 - #47 6
+INFO  18:47:26,769 - #37 ;
+INFO  18:47:26,769 - #50 int
+INFO  18:47:26,770 - #50 jajaja
+INFO  18:47:26,770 - #43 [
+INFO  18:47:26,770 - #44 ]
+INFO  18:47:26,770 - #39 ,
+INFO  18:47:26,770 - #50 jaja
+INFO  18:47:26,770 - #37 ;
+INFO  18:47:26,771 - #45 {
+INFO  18:47:26,772 - #50 main
+INFO  18:47:26,773 - #41 (
+INFO  18:47:26,774 - #42 )
+INFO  18:47:26,775 - #50 int
+INFO  18:47:26,777 - #50 x
+INFO  18:47:26,777 - #39 ,
+INFO  18:47:26,779 - #50 i
+INFO  18:47:26,780 - #37 ;
+INFO  18:47:26,781 - #50 char
+INFO  18:47:26,781 - #50 c
+INFO  18:47:26,782 - #43 [
+INFO  18:47:26,782 - #44 ]
+INFO  18:47:26,782 - #39 ,
+INFO  18:47:26,782 - #50 d
+INFO  18:47:26,783 - #37 ;
+INFO  18:47:26,783 - #45 {
+INFO  18:47:26,784 - #41 (
+INFO  18:47:26,784 - #50 a
+INFO  18:47:26,785 - #42 )
+INFO  18:47:26,787 - #37 ;
+INFO  18:47:26,787 - #50 fun
+INFO  18:47:26,790 - #41 (
+INFO  18:47:26,790 - #50 a
+INFO  18:47:26,791 - #43 [
+INFO  18:47:26,791 - #44 ]
+INFO  18:47:26,791 - #39 ,
+INFO  18:47:26,792 - #50 b
+INFO  18:47:26,792 - #43 [
+INFO  18:47:26,794 - #44 ]
+INFO  18:47:26,795 - #42 )
+INFO  18:47:26,795 - #37 ;
+INFO  18:47:26,796 - #46 }
+INFO  18:47:26,796 - #46 }
+INFO  18:47:26,808 - Otvoren opseg za program MyProgram na liniji 1
+INFO  18:47:26,808 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  18:47:26,809 - Konstanta jaja1 sa vrednoscu 6 na liniji 3
+ERROR 18:47:26,809 - Nedefinisan tip konstante  na liniji 3
+INFO  18:49:03,708 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  18:49:03,783 - #50 MyProgram
+INFO  18:49:03,785 - #50 int
+INFO  18:49:03,785 - #50 jaja
+INFO  18:49:03,786 - #34 =
+INFO  18:49:03,787 - #47 5
+INFO  18:49:03,787 - #39 ,
+INFO  18:49:03,789 - #50 jaja1
+INFO  18:49:03,790 - #34 =
+INFO  18:49:03,790 - #47 6
+INFO  18:49:03,790 - #37 ;
+INFO  18:49:03,791 - #50 int
+INFO  18:49:03,791 - #50 jajaja
+INFO  18:49:03,791 - #43 [
+INFO  18:49:03,792 - #44 ]
+INFO  18:49:03,792 - #39 ,
+INFO  18:49:03,792 - #50 jaja
+INFO  18:49:03,792 - #37 ;
+INFO  18:49:03,793 - #45 {
+INFO  18:49:03,794 - #50 main
+INFO  18:49:03,795 - #41 (
+INFO  18:49:03,795 - #42 )
+INFO  18:49:03,796 - #50 int
+INFO  18:49:03,799 - #50 x
+INFO  18:49:03,799 - #39 ,
+INFO  18:49:03,800 - #50 i
+INFO  18:49:03,800 - #37 ;
+INFO  18:49:03,800 - #50 char
+INFO  18:49:03,800 - #50 c
+INFO  18:49:03,801 - #43 [
+INFO  18:49:03,801 - #44 ]
+INFO  18:49:03,801 - #39 ,
+INFO  18:49:03,801 - #50 d
+INFO  18:49:03,802 - #37 ;
+INFO  18:49:03,802 - #45 {
+INFO  18:49:03,803 - #41 (
+INFO  18:49:03,804 - #50 a
+INFO  18:49:03,805 - #42 )
+INFO  18:49:03,807 - #37 ;
+INFO  18:49:03,807 - #50 fun
+INFO  18:49:03,810 - #41 (
+INFO  18:49:03,810 - #50 a
+INFO  18:49:03,815 - #43 [
+INFO  18:49:03,815 - #44 ]
+INFO  18:49:03,815 - #39 ,
+INFO  18:49:03,816 - #50 b
+INFO  18:49:03,816 - #43 [
+INFO  18:49:03,816 - #44 ]
+INFO  18:49:03,816 - #42 )
+INFO  18:49:03,817 - #37 ;
+INFO  18:49:03,817 - #46 }
+INFO  18:49:03,818 - #46 }
+INFO  18:49:03,849 - Otvoren opseg za program MyProgram na liniji 1
+INFO  18:49:03,849 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  18:49:03,850 - Konstanta jaja1 sa vrednoscu 6 na liniji 3
+INFO  18:49:03,850 - Tip konstante int na liniji 3
+INFO  18:49:03,850 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  18:49:03,851 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  18:49:03,851 - Globalna promenljiva x dodata u program na liniji 9
+INFO  18:49:03,851 - Globalna promenljiva i dodata u program na liniji 9
+INFO  18:49:03,852 - Globalna promenljiva (vektor) c dodata u program na liniji 10
+INFO  18:49:03,852 - Globalna promenljiva d dodata u program na liniji 10
+INFO  18:49:03,852 - Print calls = 0
+INFO  18:49:03,855 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  18:49:03,856 - Parsiranje uspesno zavrseno!
+INFO  18:49:39,763 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  18:49:39,841 - #50 MyProgram
+INFO  18:49:39,843 - #50 int
+INFO  18:49:39,843 - #50 jaja
+INFO  18:49:39,844 - #34 =
+INFO  18:49:39,846 - #47 5
+INFO  18:49:39,846 - #39 ,
+INFO  18:49:39,848 - #50 jaja1
+INFO  18:49:39,848 - #34 =
+INFO  18:49:39,848 - #47 6
+INFO  18:49:39,849 - #37 ;
+INFO  18:49:39,849 - #50 int
+INFO  18:49:39,849 - #50 jajaja
+INFO  18:49:39,850 - #43 [
+INFO  18:49:39,850 - #44 ]
+INFO  18:49:39,850 - #39 ,
+INFO  18:49:39,850 - #50 jaja
+INFO  18:49:39,851 - #37 ;
+INFO  18:49:39,851 - #45 {
+INFO  18:49:39,852 - #50 main
+INFO  18:49:39,853 - #41 (
+INFO  18:49:39,854 - #42 )
+INFO  18:49:39,855 - #50 int
+INFO  18:49:39,856 - #50 x
+INFO  18:49:39,857 - #39 ,
+INFO  18:49:39,857 - #50 i
+INFO  18:49:39,857 - #37 ;
+INFO  18:49:39,857 - #50 char
+INFO  18:49:39,858 - #50 c
+INFO  18:49:39,858 - #43 [
+INFO  18:49:39,858 - #44 ]
+INFO  18:49:39,858 - #39 ,
+INFO  18:49:39,859 - #50 d
+INFO  18:49:39,859 - #37 ;
+INFO  18:49:39,859 - #45 {
+INFO  18:49:39,861 - #41 (
+INFO  18:49:39,862 - #50 a
+INFO  18:49:39,863 - #42 )
+INFO  18:49:39,865 - #37 ;
+INFO  18:49:39,868 - #50 fun
+INFO  18:49:39,870 - #41 (
+INFO  18:49:39,870 - #50 a
+INFO  18:49:39,870 - #43 [
+INFO  18:49:39,871 - #44 ]
+INFO  18:49:39,871 - #39 ,
+INFO  18:49:39,871 - #50 b
+INFO  18:49:39,872 - #43 [
+INFO  18:49:39,872 - #44 ]
+INFO  18:49:39,872 - #42 )
+INFO  18:49:39,873 - #37 ;
+INFO  18:49:39,874 - #46 }
+INFO  18:49:39,874 - #46 }
+INFO  18:49:39,910 - Otvoren opseg za program MyProgram na liniji 1
+INFO  18:49:39,910 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  18:49:39,910 - Konstanta jaja1 sa vrednoscu 6 na liniji 3
+INFO  18:49:39,911 - Tip konstante(i) int na liniji 3
+INFO  18:49:39,911 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  18:49:39,913 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  18:49:39,914 - Globalna promenljiva x dodata u program na liniji 9
+INFO  18:49:39,914 - Globalna promenljiva i dodata u program na liniji 9
+INFO  18:49:39,914 - Globalna promenljiva (vektor) c dodata u program na liniji 10
+INFO  18:49:39,914 - Globalna promenljiva d dodata u program na liniji 10
+INFO  18:49:39,915 - Print calls = 0
+INFO  18:49:39,916 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  18:49:39,917 - Parsiranje uspesno zavrseno!
+INFO  18:49:57,000 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  18:49:57,078 - #50 MyProgram
+INFO  18:49:57,080 - #50 int
+INFO  18:49:57,080 - #50 jaja
+INFO  18:49:57,081 - #34 =
+INFO  18:49:57,083 - #47 5
+INFO  18:49:57,083 - #39 ,
+INFO  18:49:57,085 - #50 jaja1
+INFO  18:49:57,086 - #34 =
+INFO  18:49:57,086 - #47 6
+INFO  18:49:57,086 - #37 ;
+INFO  18:49:57,088 - #50 int
+INFO  18:49:57,089 - #50 jajaja
+INFO  18:49:57,090 - #43 [
+INFO  18:49:57,090 - #44 ]
+INFO  18:49:57,090 - #39 ,
+INFO  18:49:57,091 - #50 jaja
+INFO  18:49:57,091 - #37 ;
+INFO  18:49:57,092 - #45 {
+INFO  18:49:57,094 - #50 main
+INFO  18:49:57,096 - #41 (
+INFO  18:49:57,097 - #42 )
+INFO  18:49:57,098 - #50 int
+INFO  18:49:57,099 - #50 x
+INFO  18:49:57,100 - #39 ,
+INFO  18:49:57,101 - #50 i
+INFO  18:49:57,101 - #37 ;
+INFO  18:49:57,101 - #50 char
+INFO  18:49:57,102 - #50 c
+INFO  18:49:57,102 - #43 [
+INFO  18:49:57,102 - #44 ]
+INFO  18:49:57,102 - #39 ,
+INFO  18:49:57,102 - #50 d
+INFO  18:49:57,103 - #37 ;
+INFO  18:49:57,103 - #45 {
+INFO  18:49:57,104 - #41 (
+INFO  18:49:57,104 - #50 a
+INFO  18:49:57,105 - #42 )
+INFO  18:49:57,107 - #37 ;
+INFO  18:49:57,107 - #50 fun
+INFO  18:49:57,110 - #41 (
+INFO  18:49:57,111 - #50 a
+INFO  18:49:57,111 - #43 [
+INFO  18:49:57,111 - #44 ]
+INFO  18:49:57,111 - #39 ,
+INFO  18:49:57,112 - #50 b
+INFO  18:49:57,112 - #43 [
+INFO  18:49:57,112 - #44 ]
+INFO  18:49:57,112 - #42 )
+INFO  18:49:57,113 - #37 ;
+INFO  18:49:57,113 - #46 }
+INFO  18:49:57,114 - #46 }
+INFO  18:49:57,145 - Otvoren opseg za program MyProgram na liniji 1
+INFO  18:49:57,147 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  18:49:57,149 - Konstanta jaja1 sa vrednoscu 6 na liniji 3
+INFO  18:49:57,150 - Tip konstante(i) int na liniji 3
+INFO  18:49:57,150 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  18:49:57,150 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  18:49:57,151 - Globalna promenljiva x dodata u program na liniji 9
+INFO  18:49:57,151 - Globalna promenljiva i dodata u program na liniji 9
+INFO  18:49:57,151 - Globalna promenljiva (vektor) c dodata u program na liniji 10
+INFO  18:49:57,151 - Globalna promenljiva d dodata u program na liniji 10
+INFO  18:49:57,152 - Print calls = 0
+INFO  18:49:57,153 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  18:49:57,153 - Parsiranje uspesno zavrseno!
+INFO  18:52:37,770 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  18:52:37,849 - #50 MyProgram
+INFO  18:52:37,851 - #50 int
+INFO  18:52:37,851 - #50 jaja
+INFO  18:52:37,852 - #34 =
+INFO  18:52:37,854 - #47 5
+INFO  18:52:37,854 - #39 ,
+INFO  18:52:37,855 - #50 jaja1
+INFO  18:52:37,855 - #34 =
+INFO  18:52:37,856 - #47 6
+INFO  18:52:37,856 - #37 ;
+INFO  18:52:37,856 - #50 int
+INFO  18:52:37,857 - #50 jajaja
+INFO  18:52:37,857 - #43 [
+INFO  18:52:37,857 - #44 ]
+INFO  18:52:37,857 - #39 ,
+INFO  18:52:37,858 - #50 jaja
+INFO  18:52:37,858 - #37 ;
+INFO  18:52:37,858 - #45 {
+INFO  18:52:37,859 - #50 main
+INFO  18:52:37,860 - #41 (
+INFO  18:52:37,861 - #42 )
+INFO  18:52:37,862 - #50 int
+INFO  18:52:37,863 - #50 x
+INFO  18:52:37,863 - #39 ,
+INFO  18:52:37,864 - #50 i
+INFO  18:52:37,864 - #37 ;
+INFO  18:52:37,864 - #50 char
+INFO  18:52:37,865 - #50 c
+INFO  18:52:37,865 - #43 [
+INFO  18:52:37,866 - #44 ]
+INFO  18:52:37,866 - #39 ,
+INFO  18:52:37,867 - #50 d
+INFO  18:52:37,867 - #37 ;
+INFO  18:52:37,868 - #45 {
+INFO  18:52:37,871 - #41 (
+INFO  18:52:37,871 - #50 a
+INFO  18:52:37,871 - #42 )
+INFO  18:52:37,874 - #37 ;
+INFO  18:52:37,874 - #50 fun
+INFO  18:52:37,878 - #41 (
+INFO  18:52:37,879 - #50 a
+INFO  18:52:37,880 - #43 [
+INFO  18:52:37,880 - #44 ]
+INFO  18:52:37,880 - #39 ,
+INFO  18:52:37,881 - #50 b
+INFO  18:52:37,881 - #43 [
+INFO  18:52:37,881 - #44 ]
+INFO  18:52:37,881 - #42 )
+INFO  18:52:37,882 - #37 ;
+INFO  18:52:37,882 - #46 }
+INFO  18:52:37,882 - #46 }
+INFO  18:52:37,922 - Otvoren opseg za program MyProgram na liniji 1
+INFO  18:52:37,922 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  18:52:37,922 - Konstanta jaja1 sa vrednoscu 6 na liniji 3
+INFO  18:52:37,923 - Tip konstante(i) int na liniji 3
+INFO  18:52:37,923 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  18:52:37,923 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  18:52:37,924 - Globalna promenljiva x dodata u program na liniji 9
+INFO  18:52:37,924 - Globalna promenljiva i dodata u program na liniji 9
+INFO  18:52:37,924 - Globalna promenljiva (vektor) c dodata u program na liniji 10
+INFO  18:52:37,924 - Globalna promenljiva d dodata u program na liniji 10
+INFO  18:52:37,925 - Print calls = 0
+INFO  18:52:37,926 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  18:52:37,926 - Parsiranje uspesno zavrseno!
+INFO  18:54:56,094 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  18:54:56,181 - #50 MyProgram
+INFO  18:54:56,183 - #50 int
+INFO  18:54:56,183 - #50 jaja
+INFO  18:54:56,184 - #34 =
+INFO  18:54:56,186 - #47 5
+INFO  18:54:56,186 - #39 ,
+INFO  18:54:56,188 - #50 jaja1
+INFO  18:54:56,188 - #34 =
+INFO  18:54:56,189 - #47 6
+INFO  18:54:56,189 - #37 ;
+INFO  18:54:56,189 - #50 int
+INFO  18:54:56,190 - #50 jajaja
+INFO  18:54:56,190 - #43 [
+INFO  18:54:56,190 - #44 ]
+INFO  18:54:56,191 - #39 ,
+INFO  18:54:56,191 - #50 jaja
+INFO  18:54:56,191 - #37 ;
+INFO  18:54:56,193 - #45 {
+INFO  18:54:56,200 - #50 main
+INFO  18:54:56,201 - #41 (
+INFO  18:54:56,201 - #42 )
+INFO  18:54:56,202 - #50 int
+INFO  18:54:56,205 - #50 x
+INFO  18:54:56,205 - #39 ,
+INFO  18:54:56,205 - #50 i
+INFO  18:54:56,205 - #37 ;
+INFO  18:54:56,205 - #50 char
+INFO  18:54:56,206 - #50 c
+INFO  18:54:56,206 - #43 [
+INFO  18:54:56,206 - #44 ]
+INFO  18:54:56,206 - #39 ,
+INFO  18:54:56,206 - #50 d
+INFO  18:54:56,206 - #37 ;
+INFO  18:54:56,207 - #45 {
+INFO  18:54:56,208 - #41 (
+INFO  18:54:56,208 - #50 a
+INFO  18:54:56,208 - #42 )
+INFO  18:54:56,210 - #37 ;
+INFO  18:54:56,210 - #50 fun
+INFO  18:54:56,213 - #41 (
+INFO  18:54:56,213 - #50 a
+INFO  18:54:56,214 - #43 [
+INFO  18:54:56,214 - #44 ]
+INFO  18:54:56,214 - #39 ,
+INFO  18:54:56,214 - #50 b
+INFO  18:54:56,214 - #43 [
+INFO  18:54:56,214 - #44 ]
+INFO  18:54:56,215 - #42 )
+INFO  18:54:56,215 - #37 ;
+INFO  18:54:56,215 - #46 }
+INFO  18:54:56,216 - #46 }
+INFO  18:54:56,250 - Otvoren opseg za program MyProgram na liniji 1
+INFO  18:54:56,250 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  18:54:56,251 - Konstanta jaja1 sa vrednoscu 6 na liniji 3
+INFO  18:54:56,251 - Tip konstante(i) int na liniji 3
+INFO  18:54:56,251 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  18:54:56,252 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  18:54:56,253 - Globalna promenljiva x dodata u program na liniji 9
+INFO  18:54:56,254 - Globalna promenljiva i dodata u program na liniji 9
+INFO  18:54:56,254 - Globalna promenljiva (vektor) c dodata u program na liniji 10
+INFO  18:54:56,255 - Globalna promenljiva d dodata u program na liniji 10
+INFO  18:54:56,255 - Print calls = 0
+INFO  18:54:56,257 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  18:54:56,257 - Parsiranje uspesno zavrseno!
+INFO  19:10:53,611 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:10:53,722 - #50 MyProgram
+INFO  19:10:53,724 - #50 int
+INFO  19:10:53,724 - #50 jaja
+INFO  19:10:53,725 - #34 =
+INFO  19:10:53,726 - #47 5
+INFO  19:10:53,727 - #39 ,
+INFO  19:10:53,728 - #50 jaja1
+INFO  19:10:53,728 - #34 =
+INFO  19:10:53,729 - #47 6
+INFO  19:10:53,729 - #37 ;
+INFO  19:10:53,729 - #50 int
+INFO  19:10:53,729 - #50 jajaja
+INFO  19:10:53,730 - #43 [
+INFO  19:10:53,730 - #44 ]
+INFO  19:10:53,730 - #39 ,
+INFO  19:10:53,730 - #50 jaja
+INFO  19:10:53,730 - #37 ;
+INFO  19:10:53,731 - #45 {
+INFO  19:10:53,732 - #50 main
+INFO  19:10:53,734 - #41 (
+INFO  19:10:53,734 - #42 )
+INFO  19:10:53,735 - #50 int
+INFO  19:10:53,737 - #50 x
+INFO  19:10:53,737 - #39 ,
+INFO  19:10:53,737 - #50 i
+INFO  19:10:53,737 - #37 ;
+INFO  19:10:53,738 - #50 char
+INFO  19:10:53,738 - #50 c
+INFO  19:10:53,738 - #43 [
+INFO  19:10:53,738 - #44 ]
+INFO  19:10:53,738 - #39 ,
+INFO  19:10:53,739 - #50 d
+INFO  19:10:53,739 - #37 ;
+INFO  19:10:53,739 - #45 {
+INFO  19:10:53,740 - #41 (
+INFO  19:10:53,740 - #50 a
+INFO  19:10:53,740 - #42 )
+INFO  19:10:53,743 - #37 ;
+INFO  19:10:53,743 - #50 fun
+INFO  19:10:53,745 - #41 (
+INFO  19:10:53,745 - #50 a
+INFO  19:10:53,746 - #43 [
+INFO  19:10:53,746 - #44 ]
+INFO  19:10:53,746 - #39 ,
+INFO  19:10:53,746 - #50 b
+INFO  19:10:53,747 - #43 [
+INFO  19:10:53,747 - #44 ]
+INFO  19:10:53,747 - #42 )
+INFO  19:10:53,748 - #37 ;
+INFO  19:10:53,748 - #46 }
+INFO  19:10:53,749 - #46 }
+INFO  19:10:53,801 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:10:53,803 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  19:10:53,810 - Konstanta jaja1 sa vrednoscu 6 na liniji 3
+INFO  19:10:53,810 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  19:10:53,811 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  19:10:53,811 - Globalna promenljiva x dodata u program na liniji 9
+INFO  19:10:53,811 - Globalna promenljiva i dodata u program na liniji 9
+INFO  19:10:53,811 - Globalna promenljiva (vektor) c dodata u program na liniji 10
+INFO  19:10:53,811 - Globalna promenljiva d dodata u program na liniji 10
+INFO  19:10:53,811 - Print calls = 0
+INFO  19:10:53,812 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  19:10:53,813 - Parsiranje uspesno zavrseno!
+INFO  19:11:21,038 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:11:21,129 - #50 MyProgram
+INFO  19:11:21,131 - #50 int
+INFO  19:11:21,131 - #50 jaja
+INFO  19:11:21,132 - #34 =
+INFO  19:11:21,133 - #47 5
+INFO  19:11:21,133 - #39 ,
+INFO  19:11:21,135 - #50 jaja1
+INFO  19:11:21,135 - #34 =
+INFO  19:11:21,135 - #47 6
+INFO  19:11:21,135 - #37 ;
+INFO  19:11:21,136 - #50 int
+INFO  19:11:21,137 - #50 jaja
+INFO  19:11:21,137 - #34 =
+INFO  19:11:21,137 - #47 7
+INFO  19:11:21,137 - #37 ;
+INFO  19:11:21,138 - #50 int
+INFO  19:11:21,138 - #50 jajaja
+INFO  19:11:21,138 - #43 [
+INFO  19:11:21,138 - #44 ]
+INFO  19:11:21,139 - #39 ,
+INFO  19:11:21,139 - #50 jaja
+INFO  19:11:21,139 - #37 ;
+INFO  19:11:21,140 - #45 {
+INFO  19:11:21,141 - #50 main
+INFO  19:11:21,142 - #41 (
+INFO  19:11:21,142 - #42 )
+INFO  19:11:21,143 - #50 int
+INFO  19:11:21,145 - #50 x
+INFO  19:11:21,145 - #39 ,
+INFO  19:11:21,145 - #50 i
+INFO  19:11:21,145 - #37 ;
+INFO  19:11:21,146 - #50 char
+INFO  19:11:21,146 - #50 c
+INFO  19:11:21,147 - #43 [
+INFO  19:11:21,147 - #44 ]
+INFO  19:11:21,147 - #39 ,
+INFO  19:11:21,147 - #50 d
+INFO  19:11:21,147 - #37 ;
+INFO  19:11:21,148 - #45 {
+INFO  19:11:21,149 - #41 (
+INFO  19:11:21,150 - #50 a
+INFO  19:11:21,150 - #42 )
+INFO  19:11:21,155 - #37 ;
+INFO  19:11:21,155 - #50 fun
+INFO  19:11:21,157 - #41 (
+INFO  19:11:21,157 - #50 a
+INFO  19:11:21,157 - #43 [
+INFO  19:11:21,157 - #44 ]
+INFO  19:11:21,158 - #39 ,
+INFO  19:11:21,158 - #50 b
+INFO  19:11:21,159 - #43 [
+INFO  19:11:21,159 - #44 ]
+INFO  19:11:21,159 - #42 )
+INFO  19:11:21,160 - #37 ;
+INFO  19:11:21,160 - #46 }
+INFO  19:11:21,161 - #46 }
+INFO  19:11:21,175 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:11:21,176 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  19:11:21,177 - Konstanta jaja1 sa vrednoscu 6 na liniji 3
+INFO  19:11:21,177 - Konstanta jaja sa vrednoscu 7 na liniji 4
+INFO  19:11:21,177 - Semantička greška: Detektovana dvostruka definicija konstante jaja na liniji 4
+INFO  19:11:21,177 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 5
+INFO  19:11:21,180 - Globalna promenljiva jaja dodata u program na liniji 5
+INFO  19:11:21,182 - Globalna promenljiva x dodata u program na liniji 10
+INFO  19:11:21,183 - Globalna promenljiva i dodata u program na liniji 10
+INFO  19:11:21,183 - Globalna promenljiva (vektor) c dodata u program na liniji 11
+INFO  19:11:21,184 - Globalna promenljiva d dodata u program na liniji 11
+INFO  19:11:21,184 - Print calls = 0
+INFO  19:11:21,188 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  19:11:21,188 - Parsiranje uspesno zavrseno!
+INFO  19:11:53,149 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:11:53,239 - #50 MyProgram
+INFO  19:11:53,241 - #50 int
+INFO  19:11:53,241 - #50 jaja
+INFO  19:11:53,242 - #34 =
+INFO  19:11:53,244 - #47 5
+INFO  19:11:53,244 - #39 ,
+INFO  19:11:53,246 - #50 jaja
+INFO  19:11:53,247 - #34 =
+INFO  19:11:53,248 - #47 6
+INFO  19:11:53,248 - #37 ;
+INFO  19:11:53,248 - #50 int
+INFO  19:11:53,249 - #50 jajaja
+INFO  19:11:53,249 - #43 [
+INFO  19:11:53,249 - #44 ]
+INFO  19:11:53,249 - #39 ,
+INFO  19:11:53,250 - #50 jaja
+INFO  19:11:53,250 - #37 ;
+INFO  19:11:53,250 - #45 {
+INFO  19:11:53,252 - #50 main
+INFO  19:11:53,253 - #41 (
+INFO  19:11:53,253 - #42 )
+INFO  19:11:53,255 - #50 int
+INFO  19:11:53,260 - #50 x
+INFO  19:11:53,260 - #39 ,
+INFO  19:11:53,261 - #50 i
+INFO  19:11:53,262 - #37 ;
+INFO  19:11:53,263 - #50 char
+INFO  19:11:53,263 - #50 c
+INFO  19:11:53,264 - #43 [
+INFO  19:11:53,264 - #44 ]
+INFO  19:11:53,264 - #39 ,
+INFO  19:11:53,264 - #50 d
+INFO  19:11:53,264 - #37 ;
+INFO  19:11:53,265 - #45 {
+INFO  19:11:53,266 - #41 (
+INFO  19:11:53,266 - #50 a
+INFO  19:11:53,266 - #42 )
+INFO  19:11:53,268 - #37 ;
+INFO  19:11:53,269 - #50 fun
+INFO  19:11:53,271 - #41 (
+INFO  19:11:53,272 - #50 a
+INFO  19:11:53,272 - #43 [
+INFO  19:11:53,272 - #44 ]
+INFO  19:11:53,273 - #39 ,
+INFO  19:11:53,273 - #50 b
+INFO  19:11:53,274 - #43 [
+INFO  19:11:53,274 - #44 ]
+INFO  19:11:53,274 - #42 )
+INFO  19:11:53,274 - #37 ;
+INFO  19:11:53,275 - #46 }
+INFO  19:11:53,275 - #46 }
+INFO  19:11:53,291 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:11:53,293 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  19:11:53,301 - Konstanta jaja sa vrednoscu 6 na liniji 3
+INFO  19:11:53,302 - Semantička greška: Detektovana dvostruka definicija konstante jaja na liniji 3
+INFO  19:11:53,304 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  19:11:53,304 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  19:11:53,305 - Globalna promenljiva x dodata u program na liniji 9
+INFO  19:11:53,305 - Globalna promenljiva i dodata u program na liniji 9
+INFO  19:11:53,305 - Globalna promenljiva (vektor) c dodata u program na liniji 10
+INFO  19:11:53,306 - Globalna promenljiva d dodata u program na liniji 10
+INFO  19:11:53,306 - Print calls = 0
+INFO  19:11:53,308 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  19:11:53,308 - Parsiranje uspesno zavrseno!
+INFO  19:12:40,073 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:12:40,194 - #50 MyProgram
+INFO  19:12:40,196 - #50 int
+INFO  19:12:40,196 - #50 jaja
+INFO  19:12:40,197 - #34 =
+INFO  19:12:40,198 - #47 5
+INFO  19:12:40,198 - #39 ,
+INFO  19:12:40,199 - #50 jaja
+INFO  19:12:40,200 - #34 =
+INFO  19:12:40,200 - #47 6
+INFO  19:12:40,200 - #37 ;
+INFO  19:12:40,202 - #50 int
+INFO  19:12:40,203 - #50 jajaja
+INFO  19:12:40,203 - #43 [
+INFO  19:12:40,204 - #44 ]
+INFO  19:12:40,204 - #39 ,
+INFO  19:12:40,205 - #50 jaja
+INFO  19:12:40,205 - #37 ;
+INFO  19:12:40,205 - #45 {
+INFO  19:12:40,208 - #50 main
+INFO  19:12:40,210 - #41 (
+INFO  19:12:40,210 - #42 )
+INFO  19:12:40,213 - #50 int
+INFO  19:12:40,230 - #50 x
+INFO  19:12:40,231 - #39 ,
+INFO  19:12:40,232 - #50 i
+INFO  19:12:40,232 - #37 ;
+INFO  19:12:40,233 - #50 char
+INFO  19:12:40,234 - #50 c
+INFO  19:12:40,235 - #43 [
+INFO  19:12:40,235 - #44 ]
+INFO  19:12:40,236 - #39 ,
+INFO  19:12:40,236 - #50 d
+INFO  19:12:40,236 - #37 ;
+INFO  19:12:40,236 - #45 {
+INFO  19:12:40,237 - #41 (
+INFO  19:12:40,237 - #50 a
+INFO  19:12:40,238 - #42 )
+INFO  19:12:40,240 - #37 ;
+INFO  19:12:40,240 - #50 fun
+INFO  19:12:40,242 - #41 (
+INFO  19:12:40,242 - #50 a
+INFO  19:12:40,242 - #43 [
+INFO  19:12:40,242 - #44 ]
+INFO  19:12:40,242 - #39 ,
+INFO  19:12:40,243 - #50 b
+INFO  19:12:40,243 - #43 [
+INFO  19:12:40,243 - #44 ]
+INFO  19:12:40,243 - #42 )
+INFO  19:12:40,244 - #37 ;
+INFO  19:12:40,244 - #46 }
+INFO  19:12:40,244 - #46 }
+INFO  19:12:40,286 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:12:40,286 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  19:12:40,287 - Konstanta jaja sa vrednoscu 6 na liniji 3
+INFO  19:12:40,288 - Semantička greška: Detektovana dvostruka definicija konstante jaja na liniji 3
+INFO  19:12:40,289 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  19:12:40,289 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  19:12:40,291 - Globalna promenljiva x dodata u program na liniji 9
+INFO  19:12:40,291 - Globalna promenljiva i dodata u program na liniji 9
+INFO  19:12:40,292 - Globalna promenljiva (vektor) c dodata u program na liniji 10
+INFO  19:12:40,292 - Globalna promenljiva d dodata u program na liniji 10
+INFO  19:12:40,293 - Print calls = 0
+ERROR 19:12:40,296 - Parsiranje NIJE uspesno zavrseno!
+INFO  19:15:26,368 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:15:26,447 - #50 MyProgram
+INFO  19:15:26,449 - #50 int
+INFO  19:15:26,450 - #50 jaja
+INFO  19:15:26,451 - #34 =
+INFO  19:15:26,452 - #47 5
+INFO  19:15:26,452 - #39 ,
+INFO  19:15:26,454 - #50 jaja
+INFO  19:15:26,454 - #34 =
+INFO  19:15:26,454 - #47 6
+INFO  19:15:26,454 - #37 ;
+INFO  19:15:26,455 - #50 int
+INFO  19:15:26,456 - #50 jajaja
+INFO  19:15:26,456 - #43 [
+INFO  19:15:26,457 - #44 ]
+INFO  19:15:26,457 - #39 ,
+INFO  19:15:26,457 - #50 jaja
+INFO  19:15:26,458 - #37 ;
+INFO  19:15:26,458 - #45 {
+INFO  19:15:26,461 - #50 main
+INFO  19:15:26,462 - #41 (
+INFO  19:15:26,462 - #42 )
+INFO  19:15:26,463 - #50 int
+INFO  19:15:26,465 - #50 x
+INFO  19:15:26,465 - #39 ,
+INFO  19:15:26,466 - #50 i
+INFO  19:15:26,466 - #37 ;
+INFO  19:15:26,466 - #50 char
+INFO  19:15:26,467 - #50 c
+INFO  19:15:26,467 - #43 [
+INFO  19:15:26,467 - #44 ]
+INFO  19:15:26,467 - #39 ,
+INFO  19:15:26,468 - #50 d
+INFO  19:15:26,468 - #37 ;
+INFO  19:15:26,468 - #45 {
+INFO  19:15:26,469 - #41 (
+INFO  19:15:26,470 - #50 a
+INFO  19:15:26,470 - #42 )
+INFO  19:15:26,472 - #37 ;
+INFO  19:15:26,472 - #50 fun
+INFO  19:15:26,474 - #41 (
+INFO  19:15:26,474 - #50 a
+INFO  19:15:26,475 - #43 [
+INFO  19:15:26,475 - #44 ]
+INFO  19:15:26,475 - #39 ,
+INFO  19:15:26,476 - #50 b
+INFO  19:15:26,477 - #43 [
+INFO  19:15:26,478 - #44 ]
+INFO  19:15:26,478 - #42 )
+INFO  19:15:26,479 - #37 ;
+INFO  19:15:26,479 - #46 }
+INFO  19:15:26,480 - #46 }
+INFO  19:15:26,515 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:15:26,515 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  19:15:26,516 - Konstanta jaja sa vrednoscu 6 na liniji 3
+INFO  19:15:26,516 - Semantička greška: Detektovana dvostruka definicija konstante jaja na liniji 3
+INFO  19:15:26,517 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  19:15:26,517 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  19:15:26,518 - Globalna promenljiva x dodata u program na liniji 9
+INFO  19:15:26,518 - Globalna promenljiva i dodata u program na liniji 9
+INFO  19:15:26,519 - Globalna promenljiva (vektor) c dodata u program na liniji 10
+INFO  19:15:26,519 - Globalna promenljiva d dodata u program na liniji 10
+INFO  19:15:26,519 - Print calls = 0
+ERROR 19:15:26,521 - Parsiranje NIJE uspesno zavrseno!
+INFO  19:16:02,606 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:16:02,689 - #50 MyProgram
+INFO  19:16:02,691 - #50 int
+INFO  19:16:02,691 - #50 jaja
+INFO  19:16:02,693 - #34 =
+INFO  19:16:02,695 - #47 5
+INFO  19:16:02,695 - #37 ;
+INFO  19:16:02,696 - #50 int
+INFO  19:16:02,697 - #50 jajaja
+INFO  19:16:02,697 - #43 [
+INFO  19:16:02,697 - #44 ]
+INFO  19:16:02,697 - #39 ,
+INFO  19:16:02,698 - #50 jaja
+INFO  19:16:02,698 - #37 ;
+INFO  19:16:02,698 - #45 {
+INFO  19:16:02,699 - #50 main
+INFO  19:16:02,700 - #41 (
+INFO  19:16:02,701 - #42 )
+INFO  19:16:02,702 - #50 int
+INFO  19:16:02,705 - #50 x
+INFO  19:16:02,705 - #39 ,
+INFO  19:16:02,706 - #50 i
+INFO  19:16:02,706 - #37 ;
+INFO  19:16:02,706 - #50 char
+INFO  19:16:02,707 - #50 c
+INFO  19:16:02,707 - #43 [
+INFO  19:16:02,707 - #44 ]
+INFO  19:16:02,707 - #39 ,
+INFO  19:16:02,708 - #50 d
+INFO  19:16:02,708 - #37 ;
+INFO  19:16:02,708 - #45 {
+INFO  19:16:02,709 - #41 (
+INFO  19:16:02,709 - #50 a
+INFO  19:16:02,710 - #42 )
+INFO  19:16:02,712 - #37 ;
+INFO  19:16:02,712 - #50 fun
+INFO  19:16:02,714 - #41 (
+INFO  19:16:02,714 - #50 a
+INFO  19:16:02,714 - #43 [
+INFO  19:16:02,714 - #44 ]
+INFO  19:16:02,714 - #39 ,
+INFO  19:16:02,715 - #50 b
+INFO  19:16:02,715 - #43 [
+INFO  19:16:02,716 - #44 ]
+INFO  19:16:02,716 - #42 )
+INFO  19:16:02,716 - #37 ;
+INFO  19:16:02,717 - #46 }
+INFO  19:16:02,718 - #46 }
+INFO  19:16:02,735 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:16:02,736 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  19:16:02,737 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  19:16:02,737 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  19:16:02,737 - Globalna promenljiva x dodata u program na liniji 9
+INFO  19:16:02,738 - Globalna promenljiva i dodata u program na liniji 9
+INFO  19:16:02,738 - Globalna promenljiva (vektor) c dodata u program na liniji 10
+INFO  19:16:02,738 - Globalna promenljiva d dodata u program na liniji 10
+INFO  19:16:02,739 - Print calls = 0
+INFO  19:16:02,740 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  19:16:02,740 - Parsiranje uspesno zavrseno!
+INFO  19:21:48,896 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:21:48,970 - #50 MyProgram
+INFO  19:21:48,972 - #50 int
+INFO  19:21:48,972 - #50 jaja
+INFO  19:21:48,974 - #34 =
+INFO  19:21:48,975 - #47 5
+INFO  19:21:48,975 - #37 ;
+INFO  19:21:48,976 - #50 int
+INFO  19:21:48,978 - #50 jajaja
+INFO  19:21:48,978 - #43 [
+INFO  19:21:48,978 - #44 ]
+INFO  19:21:48,978 - #39 ,
+INFO  19:21:48,979 - #50 jaja
+INFO  19:21:48,979 - #37 ;
+INFO  19:21:48,979 - #45 {
+INFO  19:21:48,980 - #50 main
+INFO  19:21:48,981 - #41 (
+INFO  19:21:48,981 - #42 )
+INFO  19:21:48,982 - #50 int
+INFO  19:21:48,985 - #50 x
+INFO  19:21:48,985 - #39 ,
+INFO  19:21:48,985 - #50 i
+INFO  19:21:48,986 - #37 ;
+INFO  19:21:48,986 - #50 char
+INFO  19:21:48,987 - #50 c
+INFO  19:21:48,987 - #43 [
+INFO  19:21:48,987 - #44 ]
+INFO  19:21:48,988 - #39 ,
+INFO  19:21:48,988 - #50 d
+INFO  19:21:48,988 - #37 ;
+INFO  19:21:48,988 - #45 {
+INFO  19:21:48,989 - #41 (
+INFO  19:21:48,990 - #50 a
+INFO  19:21:48,990 - #42 )
+INFO  19:21:48,992 - #37 ;
+INFO  19:21:48,993 - #50 fun
+INFO  19:21:48,994 - #41 (
+INFO  19:21:48,995 - #50 a
+INFO  19:21:48,995 - #43 [
+INFO  19:21:48,995 - #44 ]
+INFO  19:21:48,996 - #39 ,
+INFO  19:21:48,996 - #50 b
+INFO  19:21:48,997 - #43 [
+INFO  19:21:48,997 - #44 ]
+INFO  19:21:48,997 - #42 )
+INFO  19:21:48,998 - #37 ;
+INFO  19:21:48,998 - #46 }
+INFO  19:21:48,999 - #46 }
+INFO  19:21:49,046 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:21:49,046 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  19:21:49,046 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  19:21:49,047 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  19:21:49,047 - Globalna promenljiva x dodata u program na liniji 9
+INFO  19:21:49,047 - Globalna promenljiva i dodata u program na liniji 9
+INFO  19:21:49,047 - Globalna promenljiva (vektor) c dodata u program na liniji 10
+INFO  19:21:49,048 - Globalna promenljiva d dodata u program na liniji 10
+INFO  19:21:49,048 - Print calls = 0
+INFO  19:21:49,049 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  19:21:49,050 - Parsiranje uspesno zavrseno!
+INFO  19:33:57,552 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:33:57,667 - #50 MyProgram
+INFO  19:33:57,669 - #50 int
+INFO  19:33:57,669 - #50 jaja
+INFO  19:33:57,671 - #34 =
+INFO  19:33:57,672 - #47 5
+INFO  19:33:57,672 - #37 ;
+INFO  19:33:57,674 - #50 int
+INFO  19:33:57,674 - #50 jajaja
+INFO  19:33:57,674 - #43 [
+INFO  19:33:57,675 - #44 ]
+INFO  19:33:57,675 - #39 ,
+INFO  19:33:57,676 - #50 jaja
+INFO  19:33:57,676 - #37 ;
+INFO  19:33:57,676 - #45 {
+INFO  19:33:57,677 - #50 main
+INFO  19:33:57,678 - #41 (
+INFO  19:33:57,679 - #42 )
+INFO  19:33:57,680 - #50 int
+INFO  19:33:57,683 - #50 x
+INFO  19:33:57,683 - #39 ,
+INFO  19:33:57,684 - #50 i
+INFO  19:33:57,684 - #37 ;
+INFO  19:33:57,684 - #50 char
+INFO  19:33:57,685 - #50 c
+INFO  19:33:57,686 - #43 [
+INFO  19:33:57,686 - #44 ]
+INFO  19:33:57,686 - #39 ,
+INFO  19:33:57,686 - #50 d
+INFO  19:33:57,687 - #37 ;
+INFO  19:33:57,687 - #45 {
+INFO  19:33:57,688 - #41 (
+INFO  19:33:57,689 - #50 a
+INFO  19:33:57,689 - #42 )
+INFO  19:33:57,691 - #37 ;
+INFO  19:33:57,692 - #50 fun
+INFO  19:33:57,694 - #41 (
+INFO  19:33:57,695 - #50 a
+INFO  19:33:57,695 - #43 [
+INFO  19:33:57,695 - #44 ]
+INFO  19:33:57,696 - #39 ,
+INFO  19:33:57,697 - #50 b
+INFO  19:33:57,700 - #43 [
+INFO  19:33:57,701 - #44 ]
+INFO  19:33:57,701 - #42 )
+INFO  19:33:57,702 - #37 ;
+INFO  19:33:57,702 - #46 }
+INFO  19:33:57,703 - #46 }
+INFO  19:33:57,754 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:33:57,755 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  19:33:57,755 - Semantička greška: Tip konstante nije u skladu sa dodeljenom vrednošću. jaja na liniji 3
+INFO  19:33:57,755 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  19:33:57,756 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  19:33:57,756 - Globalna promenljiva x dodata u program na liniji 9
+INFO  19:33:57,756 - Globalna promenljiva i dodata u program na liniji 9
+INFO  19:33:57,757 - Globalna promenljiva (vektor) c dodata u program na liniji 10
+INFO  19:33:57,757 - Globalna promenljiva d dodata u program na liniji 10
+INFO  19:33:57,757 - Print calls = 0
+ERROR 19:33:57,758 - Parsiranje NIJE uspesno zavrseno!
+INFO  19:40:44,300 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:40:44,414 - #50 MyProgram
+INFO  19:40:44,416 - #50 int
+INFO  19:40:44,416 - #50 jaja
+INFO  19:40:44,417 - #34 =
+INFO  19:40:44,418 - #47 5
+INFO  19:40:44,418 - #37 ;
+INFO  19:40:44,420 - #50 int
+INFO  19:40:44,420 - #50 jajaja
+INFO  19:40:44,420 - #43 [
+INFO  19:40:44,421 - #44 ]
+INFO  19:40:44,421 - #39 ,
+INFO  19:40:44,421 - #50 jaja
+INFO  19:40:44,421 - #37 ;
+INFO  19:40:44,421 - #45 {
+INFO  19:40:44,423 - #50 main
+INFO  19:40:44,424 - #41 (
+INFO  19:40:44,424 - #42 )
+INFO  19:40:44,425 - #50 int
+INFO  19:40:44,427 - #50 x
+INFO  19:40:44,427 - #39 ,
+INFO  19:40:44,427 - #50 i
+INFO  19:40:44,427 - #37 ;
+INFO  19:40:44,428 - #50 char
+INFO  19:40:44,428 - #50 c
+INFO  19:40:44,429 - #43 [
+INFO  19:40:44,429 - #44 ]
+INFO  19:40:44,429 - #39 ,
+INFO  19:40:44,429 - #50 d
+INFO  19:40:44,429 - #37 ;
+INFO  19:40:44,429 - #45 {
+INFO  19:40:44,430 - #41 (
+INFO  19:40:44,431 - #50 a
+INFO  19:40:44,431 - #42 )
+INFO  19:40:44,441 - #37 ;
+INFO  19:40:44,442 - #50 fun
+INFO  19:40:44,443 - #41 (
+INFO  19:40:44,443 - #50 a
+INFO  19:40:44,443 - #43 [
+INFO  19:40:44,443 - #44 ]
+INFO  19:40:44,444 - #39 ,
+INFO  19:40:44,444 - #50 b
+INFO  19:40:44,444 - #43 [
+INFO  19:40:44,444 - #44 ]
+INFO  19:40:44,444 - #42 )
+INFO  19:40:44,445 - #37 ;
+INFO  19:40:44,445 - #46 }
+INFO  19:40:44,446 - #46 }
+INFO  19:40:44,492 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:40:44,493 - Semantička greška: Nedefinisan tip int na liniji 2
+INFO  19:40:44,493 - Konstanta jaja sa vrednoscu 5 na liniji 2
+INFO  19:40:44,494 - Semantička greška: Tip konstante nije u skladu sa dodeljenom vrednošću. jaja na liniji 2
+INFO  19:40:44,494 - Semantička greška: Nedefinisan tip int na liniji 3
+INFO  19:40:44,494 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 3
+INFO  19:40:44,496 - Globalna promenljiva jaja dodata u program na liniji 3
+INFO  19:40:44,498 - Semantička greška: Nedefinisan tip int na liniji 6
+INFO  19:40:44,499 - Globalna promenljiva x dodata u program na liniji 6
+INFO  19:40:44,499 - Globalna promenljiva i dodata u program na liniji 6
+INFO  19:40:44,500 - Semantička greška: Nedefinisan tip char na liniji 7
+INFO  19:40:44,501 - Globalna promenljiva (vektor) c dodata u program na liniji 7
+INFO  19:40:44,502 - Globalna promenljiva d dodata u program na liniji 7
+INFO  19:40:44,503 - Print calls = 0
+ERROR 19:40:44,505 - Parsiranje NIJE uspesno zavrseno!
+INFO  19:42:03,115 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:42:03,190 - #50 MyProgram
+INFO  19:42:03,191 - #50 int
+INFO  19:42:03,192 - #50 jaja
+INFO  19:42:03,192 - #34 =
+INFO  19:42:03,193 - #47 5
+INFO  19:42:03,194 - #37 ;
+INFO  19:42:03,195 - #50 int
+INFO  19:42:03,196 - #50 jajaja
+INFO  19:42:03,196 - #43 [
+INFO  19:42:03,196 - #44 ]
+INFO  19:42:03,196 - #39 ,
+INFO  19:42:03,196 - #50 jaja
+INFO  19:42:03,197 - #37 ;
+INFO  19:42:03,197 - #45 {
+INFO  19:42:03,198 - #50 main
+INFO  19:42:03,200 - #41 (
+INFO  19:42:03,201 - #42 )
+INFO  19:42:03,203 - #50 int
+INFO  19:42:03,204 - #50 x
+INFO  19:42:03,205 - #39 ,
+INFO  19:42:03,205 - #50 i
+INFO  19:42:03,205 - #37 ;
+INFO  19:42:03,205 - #50 char
+INFO  19:42:03,206 - #50 c
+INFO  19:42:03,207 - #43 [
+INFO  19:42:03,207 - #44 ]
+INFO  19:42:03,207 - #39 ,
+INFO  19:42:03,207 - #50 d
+INFO  19:42:03,208 - #37 ;
+INFO  19:42:03,208 - #45 {
+INFO  19:42:03,212 - #41 (
+INFO  19:42:03,215 - #50 a
+INFO  19:42:03,216 - #42 )
+INFO  19:42:03,218 - #37 ;
+INFO  19:42:03,218 - #50 fun
+INFO  19:42:03,220 - #41 (
+INFO  19:42:03,220 - #50 a
+INFO  19:42:03,221 - #43 [
+INFO  19:42:03,221 - #44 ]
+INFO  19:42:03,221 - #39 ,
+INFO  19:42:03,222 - #50 b
+INFO  19:42:03,222 - #43 [
+INFO  19:42:03,222 - #44 ]
+INFO  19:42:03,222 - #42 )
+INFO  19:42:03,223 - #37 ;
+INFO  19:42:03,223 - #46 }
+INFO  19:42:03,223 - #46 }
+INFO  19:42:03,260 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:42:03,260 - Semantička greška: Nedefinisan tip int na liniji 2
+INFO  19:42:03,261 - Konstanta jaja sa vrednoscu 5 na liniji 2
+INFO  19:42:03,261 - Semantička greška: Tip konstante nije u skladu sa dodeljenom vrednošću. jaja na liniji 2
+INFO  19:42:03,261 - Semantička greška: Nedefinisan tip int na liniji 3
+INFO  19:42:03,262 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 3
+INFO  19:42:03,262 - Globalna promenljiva jaja dodata u program na liniji 3
+INFO  19:42:03,263 - Semantička greška: Nedefinisan tip int na liniji 6
+INFO  19:42:03,263 - Globalna promenljiva x dodata u program na liniji 6
+INFO  19:42:03,263 - Globalna promenljiva i dodata u program na liniji 6
+INFO  19:42:03,263 - Semantička greška: Nedefinisan tip char na liniji 7
+INFO  19:42:03,264 - Globalna promenljiva (vektor) c dodata u program na liniji 7
+INFO  19:42:03,264 - Globalna promenljiva d dodata u program na liniji 7
+INFO  19:42:03,265 - Print calls = 0
+ERROR 19:42:03,266 - Parsiranje NIJE uspesno zavrseno!
+INFO  19:42:44,245 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:42:44,319 - #50 MyProgram
+INFO  19:42:44,321 - #50 int
+INFO  19:42:44,322 - #50 jaja
+INFO  19:42:44,323 - #34 =
+INFO  19:42:44,324 - #47 5
+INFO  19:42:44,324 - #37 ;
+INFO  19:42:44,325 - #50 int
+INFO  19:42:44,326 - #50 jajaja
+INFO  19:42:44,326 - #43 [
+INFO  19:42:44,327 - #44 ]
+INFO  19:42:44,327 - #39 ,
+INFO  19:42:44,328 - #50 jaja
+INFO  19:42:44,328 - #37 ;
+INFO  19:42:44,329 - #45 {
+INFO  19:42:44,330 - #50 main
+INFO  19:42:44,331 - #41 (
+INFO  19:42:44,332 - #42 )
+INFO  19:42:44,333 - #50 int
+INFO  19:42:44,336 - #50 x
+INFO  19:42:44,336 - #39 ,
+INFO  19:42:44,337 - #50 i
+INFO  19:42:44,337 - #37 ;
+INFO  19:42:44,337 - #50 char
+INFO  19:42:44,338 - #50 c
+INFO  19:42:44,339 - #43 [
+INFO  19:42:44,339 - #44 ]
+INFO  19:42:44,340 - #39 ,
+INFO  19:42:44,340 - #50 d
+INFO  19:42:44,340 - #37 ;
+INFO  19:42:44,340 - #45 {
+INFO  19:42:44,342 - #41 (
+INFO  19:42:44,342 - #50 a
+INFO  19:42:44,343 - #42 )
+INFO  19:42:44,345 - #37 ;
+INFO  19:42:44,347 - #50 fun
+INFO  19:42:44,350 - #41 (
+INFO  19:42:44,351 - #50 a
+INFO  19:42:44,351 - #43 [
+INFO  19:42:44,351 - #44 ]
+INFO  19:42:44,351 - #39 ,
+INFO  19:42:44,352 - #50 b
+INFO  19:42:44,352 - #43 [
+INFO  19:42:44,353 - #44 ]
+INFO  19:42:44,353 - #42 )
+INFO  19:42:44,354 - #37 ;
+INFO  19:42:44,354 - #46 }
+INFO  19:42:44,356 - #46 }
+INFO  19:42:44,390 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:42:44,391 - Semantička greška: Nedefinisan tip int na liniji 2
+INFO  19:42:44,392 - Semantička greška: Tip konstante nije u skladu sa dodeljenom vrednošću. jaja na liniji 2
+INFO  19:42:44,392 - Semantička greška: Nedefinisan tip int na liniji 3
+INFO  19:42:44,393 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 3
+INFO  19:42:44,394 - Globalna promenljiva jaja dodata u program na liniji 3
+INFO  19:42:44,395 - Semantička greška: Nedefinisan tip int na liniji 6
+INFO  19:42:44,396 - Globalna promenljiva x dodata u program na liniji 6
+INFO  19:42:44,396 - Globalna promenljiva i dodata u program na liniji 6
+INFO  19:42:44,396 - Semantička greška: Nedefinisan tip char na liniji 7
+INFO  19:42:44,397 - Globalna promenljiva (vektor) c dodata u program na liniji 7
+INFO  19:42:44,397 - Globalna promenljiva d dodata u program na liniji 7
+INFO  19:42:44,398 - Print calls = 0
+ERROR 19:42:44,399 - Parsiranje NIJE uspesno zavrseno!
+INFO  19:43:12,658 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:43:12,737 - #50 MyProgram
+INFO  19:43:12,738 - #50 int
+INFO  19:43:12,739 - #50 jaja
+INFO  19:43:12,740 - #34 =
+INFO  19:43:12,741 - #47 5
+INFO  19:43:12,741 - #37 ;
+INFO  19:43:12,742 - #50 int
+INFO  19:43:12,743 - #50 jajaja
+INFO  19:43:12,743 - #43 [
+INFO  19:43:12,743 - #44 ]
+INFO  19:43:12,743 - #39 ,
+INFO  19:43:12,744 - #50 jaja
+INFO  19:43:12,744 - #37 ;
+INFO  19:43:12,744 - #45 {
+INFO  19:43:12,746 - #50 main
+INFO  19:43:12,747 - #41 (
+INFO  19:43:12,747 - #42 )
+INFO  19:43:12,748 - #50 int
+INFO  19:43:12,751 - #50 x
+INFO  19:43:12,752 - #39 ,
+INFO  19:43:12,753 - #50 i
+INFO  19:43:12,753 - #37 ;
+INFO  19:43:12,753 - #50 char
+INFO  19:43:12,754 - #50 c
+INFO  19:43:12,755 - #43 [
+INFO  19:43:12,755 - #44 ]
+INFO  19:43:12,755 - #39 ,
+INFO  19:43:12,755 - #50 d
+INFO  19:43:12,755 - #37 ;
+INFO  19:43:12,756 - #45 {
+INFO  19:43:12,758 - #41 (
+INFO  19:43:12,760 - #50 a
+INFO  19:43:12,760 - #42 )
+INFO  19:43:12,764 - #37 ;
+INFO  19:43:12,767 - #50 fun
+INFO  19:43:12,769 - #41 (
+INFO  19:43:12,769 - #50 a
+INFO  19:43:12,770 - #43 [
+INFO  19:43:12,770 - #44 ]
+INFO  19:43:12,770 - #39 ,
+INFO  19:43:12,771 - #50 b
+INFO  19:43:12,771 - #43 [
+INFO  19:43:12,772 - #44 ]
+INFO  19:43:12,772 - #42 )
+INFO  19:43:12,772 - #37 ;
+INFO  19:43:12,773 - #46 }
+INFO  19:43:12,773 - #46 }
+INFO  19:43:12,807 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:43:12,807 - Semantička greška: Nedefinisan tip int na liniji 2
+INFO  19:43:12,808 - Semantička greška: Tip konstante nije u skladu sa dodeljenom vrednošću. jaja na liniji 2
+INFO  19:43:12,808 - Semantička greška: Nedefinisan tip int na liniji 3
+INFO  19:43:12,808 - Semantička greška: Nedefinisan tip int na liniji 6
+INFO  19:43:12,808 - Semantička greška: Nedefinisan tip char na liniji 7
+INFO  19:43:12,809 - Print calls = 0
+ERROR 19:43:12,811 - Parsiranje NIJE uspesno zavrseno!
+INFO  19:43:42,957 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:43:43,037 - #50 MyProgram
+INFO  19:43:43,039 - #50 int
+INFO  19:43:43,039 - #50 jaja
+INFO  19:43:43,040 - #34 =
+INFO  19:43:43,041 - #47 5
+INFO  19:43:43,042 - #37 ;
+INFO  19:43:43,044 - #50 int
+INFO  19:43:43,044 - #50 jajaja
+INFO  19:43:43,044 - #43 [
+INFO  19:43:43,045 - #44 ]
+INFO  19:43:43,045 - #39 ,
+INFO  19:43:43,045 - #50 jaja
+INFO  19:43:43,045 - #37 ;
+INFO  19:43:43,045 - #45 {
+INFO  19:43:43,046 - #50 main
+INFO  19:43:43,047 - #41 (
+INFO  19:43:43,048 - #42 )
+INFO  19:43:43,049 - #50 int
+INFO  19:43:43,050 - #50 x
+INFO  19:43:43,051 - #39 ,
+INFO  19:43:43,051 - #50 i
+INFO  19:43:43,051 - #37 ;
+INFO  19:43:43,051 - #50 char
+INFO  19:43:43,052 - #50 c
+INFO  19:43:43,052 - #43 [
+INFO  19:43:43,052 - #44 ]
+INFO  19:43:43,052 - #39 ,
+INFO  19:43:43,053 - #50 d
+INFO  19:43:43,053 - #37 ;
+INFO  19:43:43,053 - #45 {
+INFO  19:43:43,056 - #41 (
+INFO  19:43:43,057 - #50 a
+INFO  19:43:43,057 - #42 )
+INFO  19:43:43,060 - #37 ;
+INFO  19:43:43,060 - #50 fun
+INFO  19:43:43,064 - #41 (
+INFO  19:43:43,064 - #50 a
+INFO  19:43:43,064 - #43 [
+INFO  19:43:43,064 - #44 ]
+INFO  19:43:43,065 - #39 ,
+INFO  19:43:43,066 - #50 b
+INFO  19:43:43,066 - #43 [
+INFO  19:43:43,067 - #44 ]
+INFO  19:43:43,067 - #42 )
+INFO  19:43:43,068 - #37 ;
+INFO  19:43:43,069 - #46 }
+INFO  19:43:43,069 - #46 }
+INFO  19:43:43,107 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:43:43,107 - Semantička greška: Nedefinisan tip char na liniji 7
+INFO  19:43:43,108 - Print calls = 0
+INFO  19:43:43,110 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  19:43:43,110 - Parsiranje uspesno zavrseno!
+INFO  19:44:01,178 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:44:01,253 - #50 MyProgram
+INFO  19:44:01,255 - #50 int
+INFO  19:44:01,256 - #50 jaja
+INFO  19:44:01,257 - #34 =
+INFO  19:44:01,258 - #47 5
+INFO  19:44:01,258 - #37 ;
+INFO  19:44:01,259 - #50 int
+INFO  19:44:01,260 - #50 jajaja
+INFO  19:44:01,261 - #43 [
+INFO  19:44:01,261 - #44 ]
+INFO  19:44:01,262 - #39 ,
+INFO  19:44:01,262 - #50 jaja
+INFO  19:44:01,263 - #37 ;
+INFO  19:44:01,263 - #45 {
+INFO  19:44:01,264 - #50 main
+INFO  19:44:01,265 - #41 (
+INFO  19:44:01,266 - #42 )
+INFO  19:44:01,267 - #50 int
+INFO  19:44:01,271 - #50 x
+INFO  19:44:01,272 - #39 ,
+INFO  19:44:01,272 - #50 i
+INFO  19:44:01,273 - #37 ;
+INFO  19:44:01,273 - #50 char
+INFO  19:44:01,274 - #50 c
+INFO  19:44:01,274 - #43 [
+INFO  19:44:01,275 - #44 ]
+INFO  19:44:01,275 - #39 ,
+INFO  19:44:01,275 - #50 d
+INFO  19:44:01,275 - #37 ;
+INFO  19:44:01,275 - #45 {
+INFO  19:44:01,276 - #41 (
+INFO  19:44:01,276 - #50 a
+INFO  19:44:01,277 - #42 )
+INFO  19:44:01,280 - #37 ;
+INFO  19:44:01,280 - #50 fun
+INFO  19:44:01,282 - #41 (
+INFO  19:44:01,283 - #50 a
+INFO  19:44:01,283 - #43 [
+INFO  19:44:01,283 - #44 ]
+INFO  19:44:01,284 - #39 ,
+INFO  19:44:01,284 - #50 b
+INFO  19:44:01,285 - #43 [
+INFO  19:44:01,285 - #44 ]
+INFO  19:44:01,285 - #42 )
+INFO  19:44:01,287 - #37 ;
+INFO  19:44:01,288 - #46 }
+INFO  19:44:01,288 - #46 }
+INFO  19:44:01,325 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:44:01,325 - Print calls = 0
+INFO  19:44:01,326 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  19:44:01,327 - Parsiranje uspesno zavrseno!
+INFO  19:55:45,603 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:55:45,752 - #50 MyProgram
+INFO  19:55:45,754 - #50 int
+INFO  19:55:45,754 - #50 jaja
+INFO  19:55:45,755 - #34 =
+INFO  19:55:45,756 - #47 5
+INFO  19:55:45,756 - #37 ;
+INFO  19:55:45,758 - #50 int
+INFO  19:55:45,758 - #50 jaja
+INFO  19:55:45,759 - #37 ;
+INFO  19:55:45,759 - #45 {
+INFO  19:55:45,760 - #50 main
+INFO  19:55:45,761 - #41 (
+INFO  19:55:45,762 - #42 )
+INFO  19:55:45,763 - #50 int
+INFO  19:55:45,764 - #50 x
+INFO  19:55:45,764 - #39 ,
+INFO  19:55:45,764 - #50 i
+INFO  19:55:45,764 - #37 ;
+INFO  19:55:45,764 - #50 char
+INFO  19:55:45,765 - #50 c
+INFO  19:55:45,765 - #43 [
+INFO  19:55:45,765 - #44 ]
+INFO  19:55:45,765 - #39 ,
+INFO  19:55:45,765 - #50 d
+INFO  19:55:45,766 - #37 ;
+INFO  19:55:45,766 - #45 {
+INFO  19:55:45,767 - #41 (
+INFO  19:55:45,767 - #50 a
+INFO  19:55:45,767 - #42 )
+INFO  19:55:45,769 - #37 ;
+INFO  19:55:45,769 - #50 fun
+INFO  19:55:45,771 - #41 (
+INFO  19:55:45,771 - #50 a
+INFO  19:55:45,771 - #43 [
+INFO  19:55:45,772 - #44 ]
+INFO  19:55:45,772 - #39 ,
+INFO  19:55:45,772 - #50 b
+INFO  19:55:45,773 - #43 [
+INFO  19:55:45,773 - #44 ]
+INFO  19:55:45,773 - #42 )
+INFO  19:55:45,773 - #37 ;
+INFO  19:55:45,774 - #46 }
+INFO  19:55:45,774 - #46 }
+INFO  19:55:45,833 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:55:45,834 - Semantička greška: Detektovana dvostruka definicija konstante jaja na liniji 3
+INFO  19:55:45,834 - Print calls = 0
+ERROR 19:55:45,836 - Parsiranje NIJE uspesno zavrseno!
+INFO  19:56:03,261 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:56:03,346 - #50 MyProgram
+INFO  19:56:03,348 - #50 int
+INFO  19:56:03,349 - #50 jaja
+INFO  19:56:03,350 - #34 =
+INFO  19:56:03,352 - #47 5
+INFO  19:56:03,352 - #37 ;
+INFO  19:56:03,353 - #50 int
+INFO  19:56:03,354 - #50 jaja2
+INFO  19:56:03,354 - #37 ;
+INFO  19:56:03,355 - #45 {
+INFO  19:56:03,356 - #50 main
+INFO  19:56:03,357 - #41 (
+INFO  19:56:03,357 - #42 )
+INFO  19:56:03,359 - #50 int
+INFO  19:56:03,360 - #50 x
+INFO  19:56:03,361 - #39 ,
+INFO  19:56:03,362 - #50 i
+INFO  19:56:03,363 - #37 ;
+INFO  19:56:03,364 - #50 char
+INFO  19:56:03,364 - #50 c
+INFO  19:56:03,366 - #43 [
+INFO  19:56:03,366 - #44 ]
+INFO  19:56:03,366 - #39 ,
+INFO  19:56:03,368 - #50 d
+INFO  19:56:03,369 - #37 ;
+INFO  19:56:03,370 - #45 {
+INFO  19:56:03,372 - #41 (
+INFO  19:56:03,372 - #50 a
+INFO  19:56:03,372 - #42 )
+INFO  19:56:03,375 - #37 ;
+INFO  19:56:03,375 - #50 fun
+INFO  19:56:03,377 - #41 (
+INFO  19:56:03,378 - #50 a
+INFO  19:56:03,378 - #43 [
+INFO  19:56:03,378 - #44 ]
+INFO  19:56:03,378 - #39 ,
+INFO  19:56:03,379 - #50 b
+INFO  19:56:03,379 - #43 [
+INFO  19:56:03,379 - #44 ]
+INFO  19:56:03,380 - #42 )
+INFO  19:56:03,380 - #37 ;
+INFO  19:56:03,380 - #46 }
+INFO  19:56:03,381 - #46 }
+INFO  19:56:03,396 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:56:03,397 - Print calls = 0
+INFO  19:56:03,400 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  19:56:03,400 - Parsiranje uspesno zavrseno!
+INFO  19:58:31,385 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:58:31,479 - #50 MyProgram
+INFO  19:58:31,483 - #50 int
+INFO  19:58:31,483 - #50 jaja
+INFO  19:58:31,484 - #34 =
+INFO  19:58:31,485 - #47 5
+INFO  19:58:31,485 - #37 ;
+INFO  19:58:31,486 - #50 int
+INFO  19:58:31,486 - #50 jaja2
+INFO  19:58:31,487 - #37 ;
+INFO  19:58:31,487 - #50 int
+INFO  19:58:31,487 - #50 jaja1
+INFO  19:58:31,487 - #43 [
+INFO  19:58:31,487 - #44 ]
+INFO  19:58:31,488 - #37 ;
+INFO  19:58:31,488 - #45 {
+INFO  19:58:31,489 - #50 main
+INFO  19:58:31,490 - #41 (
+INFO  19:58:31,491 - #42 )
+INFO  19:58:31,492 - #50 int
+INFO  19:58:31,493 - #50 x
+INFO  19:58:31,493 - #39 ,
+INFO  19:58:31,494 - #50 i
+INFO  19:58:31,494 - #37 ;
+INFO  19:58:31,494 - #50 char
+INFO  19:58:31,495 - #50 c
+INFO  19:58:31,495 - #43 [
+INFO  19:58:31,495 - #44 ]
+INFO  19:58:31,495 - #39 ,
+INFO  19:58:31,495 - #50 d
+INFO  19:58:31,496 - #37 ;
+INFO  19:58:31,496 - #45 {
+INFO  19:58:31,509 - #41 (
+INFO  19:58:31,509 - #50 a
+INFO  19:58:31,509 - #42 )
+INFO  19:58:31,511 - #37 ;
+INFO  19:58:31,512 - #50 fun
+INFO  19:58:31,516 - #41 (
+INFO  19:58:31,516 - #50 a
+INFO  19:58:31,516 - #43 [
+INFO  19:58:31,517 - #44 ]
+INFO  19:58:31,518 - #39 ,
+INFO  19:58:31,519 - #50 b
+INFO  19:58:31,522 - #43 [
+INFO  19:58:31,522 - #44 ]
+INFO  19:58:31,522 - #42 )
+INFO  19:58:31,523 - #37 ;
+INFO  19:58:31,523 - #46 }
+INFO  19:58:31,524 - #46 }
+INFO  19:58:31,573 - Otvoren opseg za program MyProgram na liniji 1
+INFO  19:58:31,574 - Print calls = 0
+INFO  19:58:31,575 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  19:58:31,575 - Parsiranje uspesno zavrseno!
+INFO  20:04:49,803 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:04:49,896 - #50 MyProgram
+INFO  20:04:49,897 - #50 int
+INFO  20:04:49,897 - #50 jaja
+INFO  20:04:49,898 - #34 =
+INFO  20:04:49,899 - #47 5
+INFO  20:04:49,900 - #37 ;
+INFO  20:04:49,901 - #50 int
+INFO  20:04:49,901 - #50 jaja2
+INFO  20:04:49,902 - #39 ,
+INFO  20:04:49,902 - #50 jaja1
+INFO  20:04:49,902 - #39 ,
+INFO  20:04:49,902 - #50 jaja567
+INFO  20:04:49,902 - #37 ;
+INFO  20:04:49,903 - #50 int
+INFO  20:04:49,903 - #50 jaja1
+INFO  20:04:49,903 - #43 [
+INFO  20:04:49,903 - #44 ]
+INFO  20:04:49,903 - #37 ;
+INFO  20:04:49,904 - #45 {
+INFO  20:04:49,905 - #50 main
+INFO  20:04:49,906 - #41 (
+INFO  20:04:49,906 - #42 )
+INFO  20:04:49,907 - #50 int
+INFO  20:04:49,910 - #50 x
+INFO  20:04:49,910 - #39 ,
+INFO  20:04:49,910 - #50 i
+INFO  20:04:49,911 - #37 ;
+INFO  20:04:49,912 - #50 char
+INFO  20:04:49,914 - #50 c
+INFO  20:04:49,914 - #43 [
+INFO  20:04:49,915 - #44 ]
+INFO  20:04:49,915 - #39 ,
+INFO  20:04:49,915 - #50 d
+INFO  20:04:49,916 - #37 ;
+INFO  20:04:49,916 - #45 {
+INFO  20:04:49,917 - #41 (
+INFO  20:04:49,918 - #50 a
+INFO  20:04:49,918 - #42 )
+INFO  20:04:49,920 - #37 ;
+INFO  20:04:49,920 - #50 fun
+INFO  20:04:49,921 - #41 (
+INFO  20:04:49,921 - #50 a
+INFO  20:04:49,922 - #43 [
+INFO  20:04:49,922 - #44 ]
+INFO  20:04:49,922 - #39 ,
+INFO  20:04:49,922 - #50 b
+INFO  20:04:49,922 - #43 [
+INFO  20:04:49,922 - #44 ]
+INFO  20:04:49,923 - #42 )
+INFO  20:04:49,923 - #37 ;
+INFO  20:04:49,923 - #46 }
+INFO  20:04:49,924 - #46 }
+INFO  20:04:49,962 - Otvoren opseg za program MyProgram na liniji 1
+INFO  20:04:49,963 - Semantička greška: Detektovana dvostruka deklaracija promenljive jaja1 na liniji 4
+INFO  20:04:49,963 - Print calls = 0
+ERROR 20:04:49,965 - Parsiranje NIJE uspesno zavrseno!
+INFO  20:18:57,150 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:18:58,050 - #50 MyProgram
+INFO  20:18:58,067 - #50 int
+INFO  20:18:58,067 - #50 jaja
+INFO  20:18:58,087 - #34 =
+INFO  20:18:58,100 - #47 5
+INFO  20:18:58,100 - #37 ;
+INFO  20:18:58,120 - #50 int
+INFO  20:18:58,120 - #50 jaja2
+INFO  20:18:58,121 - #39 ,
+INFO  20:18:58,121 - #50 jaja1
+INFO  20:18:58,122 - #39 ,
+INFO  20:18:58,123 - #50 jaja567
+INFO  20:18:58,123 - #37 ;
+INFO  20:18:58,123 - #50 int
+INFO  20:18:58,124 - #50 jaja1
+INFO  20:18:58,124 - #43 [
+INFO  20:18:58,125 - #44 ]
+INFO  20:18:58,126 - #37 ;
+INFO  20:18:58,126 - #45 {
+INFO  20:18:58,129 - #50 main
+INFO  20:18:58,146 - #41 (
+INFO  20:18:58,146 - #42 )
+INFO  20:18:58,148 - #50 int
+INFO  20:18:58,171 - #50 x
+INFO  20:18:58,171 - #39 ,
+INFO  20:18:58,171 - #50 i
+INFO  20:18:58,172 - #37 ;
+INFO  20:18:58,172 - #50 char
+INFO  20:18:58,173 - #50 c
+INFO  20:18:58,173 - #43 [
+INFO  20:18:58,174 - #44 ]
+INFO  20:18:58,174 - #39 ,
+INFO  20:18:58,174 - #50 d
+INFO  20:18:58,174 - #37 ;
+INFO  20:18:58,174 - #45 {
+INFO  20:18:58,189 - #41 (
+INFO  20:18:58,190 - #50 a
+INFO  20:18:58,190 - #42 )
+INFO  20:18:58,208 - #37 ;
+INFO  20:18:58,209 - #50 fun
+INFO  20:18:58,224 - #41 (
+INFO  20:18:58,224 - #50 a
+INFO  20:18:58,226 - #43 [
+INFO  20:18:58,226 - #44 ]
+INFO  20:18:58,227 - #39 ,
+INFO  20:18:58,227 - #50 b
+INFO  20:18:58,227 - #43 [
+INFO  20:18:58,228 - #44 ]
+INFO  20:18:58,228 - #42 )
+INFO  20:18:58,229 - #37 ;
+INFO  20:18:58,229 - #46 }
+INFO  20:18:58,230 - #46 }
+INFO  20:18:58,304 - Otvoren opseg za program MyProgram na liniji 1
+INFO  20:18:58,304 - Semantička greška: Detektovana dvostruka deklaracija promenljive jaja1 na liniji 4
+INFO  20:18:58,307 - Obradjuje se funkcija main na liniji 6
+INFO  20:18:58,308 - Print calls = 0
+ERROR 20:18:58,310 - Parsiranje NIJE uspesno zavrseno!
+INFO  20:19:16,467 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:19:16,555 - #50 MyProgram
+INFO  20:19:16,557 - #50 int
+INFO  20:19:16,557 - #50 jaja
+INFO  20:19:16,558 - #34 =
+INFO  20:19:16,559 - #47 5
+INFO  20:19:16,559 - #37 ;
+INFO  20:19:16,561 - #50 int
+INFO  20:19:16,561 - #50 jaja2
+INFO  20:19:16,561 - #39 ,
+INFO  20:19:16,562 - #50 jaja1
+INFO  20:19:16,562 - #39 ,
+INFO  20:19:16,562 - #50 jaja567
+INFO  20:19:16,562 - #37 ;
+INFO  20:19:16,562 - #45 {
+INFO  20:19:16,563 - #50 main
+INFO  20:19:16,564 - #41 (
+INFO  20:19:16,565 - #42 )
+INFO  20:19:16,566 - #50 int
+INFO  20:19:16,568 - #50 x
+INFO  20:19:16,569 - #39 ,
+INFO  20:19:16,569 - #50 i
+INFO  20:19:16,570 - #37 ;
+INFO  20:19:16,570 - #50 char
+INFO  20:19:16,571 - #50 c
+INFO  20:19:16,571 - #43 [
+INFO  20:19:16,571 - #44 ]
+INFO  20:19:16,572 - #39 ,
+INFO  20:19:16,572 - #50 d
+INFO  20:19:16,572 - #37 ;
+INFO  20:19:16,572 - #45 {
+INFO  20:19:16,573 - #41 (
+INFO  20:19:16,574 - #50 a
+INFO  20:19:16,574 - #42 )
+INFO  20:19:16,576 - #37 ;
+INFO  20:19:16,577 - #50 fun
+INFO  20:19:16,578 - #41 (
+INFO  20:19:16,578 - #50 a
+INFO  20:19:16,579 - #43 [
+INFO  20:19:16,579 - #44 ]
+INFO  20:19:16,579 - #39 ,
+INFO  20:19:16,580 - #50 b
+INFO  20:19:16,580 - #43 [
+INFO  20:19:16,580 - #44 ]
+INFO  20:19:16,581 - #42 )
+INFO  20:19:16,582 - #37 ;
+INFO  20:19:16,582 - #46 }
+INFO  20:19:16,583 - #46 }
+INFO  20:19:16,597 - Otvoren opseg za program MyProgram na liniji 1
+INFO  20:19:16,598 - Obradjuje se funkcija main na liniji 5
+INFO  20:19:16,598 - Print calls = 0
+INFO  20:19:16,599 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  20:19:16,600 - Parsiranje uspesno zavrseno!
+INFO  20:31:13,218 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:31:14,173 - #50 MyProgram
+INFO  20:31:14,191 - #50 int
+INFO  20:31:14,191 - #50 jaja
+INFO  20:31:14,209 - #34 =
+INFO  20:31:14,227 - #47 5
+INFO  20:31:14,227 - #37 ;
+INFO  20:31:14,246 - #50 int
+INFO  20:31:14,247 - #50 jaja2
+INFO  20:31:14,247 - #39 ,
+INFO  20:31:14,248 - #50 jaja1
+INFO  20:31:14,248 - #39 ,
+INFO  20:31:14,248 - #50 jaja567
+INFO  20:31:14,249 - #37 ;
+INFO  20:31:14,249 - #45 {
+INFO  20:31:14,252 - #50 main
+INFO  20:31:14,255 - #41 (
+INFO  20:31:14,256 - #42 )
+INFO  20:31:14,259 - #50 int
+INFO  20:31:14,283 - #50 x
+INFO  20:31:14,284 - #39 ,
+INFO  20:31:14,284 - #50 i
+INFO  20:31:14,284 - #37 ;
+INFO  20:31:14,284 - #50 char
+INFO  20:31:14,285 - #50 c
+INFO  20:31:14,285 - #43 [
+INFO  20:31:14,285 - #44 ]
+INFO  20:31:14,285 - #39 ,
+INFO  20:31:14,285 - #50 d
+INFO  20:31:14,285 - #37 ;
+INFO  20:31:14,286 - #45 {
+INFO  20:31:14,289 - #41 (
+INFO  20:31:14,289 - #50 a
+INFO  20:31:14,290 - #42 )
+INFO  20:31:14,308 - #37 ;
+INFO  20:31:14,308 - #50 fun
+INFO  20:31:14,324 - #41 (
+INFO  20:31:14,324 - #50 a
+INFO  20:31:14,325 - #43 [
+INFO  20:31:14,325 - #44 ]
+INFO  20:31:14,326 - #39 ,
+INFO  20:31:14,326 - #50 b
+INFO  20:31:14,327 - #43 [
+INFO  20:31:14,328 - #44 ]
+INFO  20:31:14,328 - #42 )
+INFO  20:31:14,328 - #37 ;
+INFO  20:31:14,328 - #46 }
+INFO  20:31:14,329 - #46 }
+INFO  20:31:14,383 - Otvoren opseg za program MyProgram na liniji 1
+INFO  20:31:14,383 - Obradjuje se funkcija main na liniji 5
+INFO  20:31:14,384 - Print calls = 0
+INFO  20:31:14,385 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  20:31:14,386 - Parsiranje uspesno zavrseno!
+INFO  20:37:31,988 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:37:32,766 - #50 MyProgram
+INFO  20:37:32,779 - #50 int
+INFO  20:37:32,779 - #50 jaja
+INFO  20:37:32,782 - #34 =
+INFO  20:37:32,795 - #47 5
+INFO  20:37:32,795 - #37 ;
+INFO  20:37:32,798 - #50 int
+INFO  20:37:32,799 - #50 jaja2
+INFO  20:37:32,799 - #39 ,
+INFO  20:37:32,799 - #50 jaja1
+INFO  20:37:32,799 - #39 ,
+INFO  20:37:32,800 - #50 jaja567
+INFO  20:37:32,800 - #37 ;
+INFO  20:37:32,800 - #45 {
+INFO  20:37:32,802 - #50 main
+INFO  20:37:32,818 - #41 (
+INFO  20:37:32,838 - #42 )
+INFO  20:37:32,842 - #50 int
+INFO  20:37:32,863 - #50 x
+INFO  20:37:32,863 - #39 ,
+INFO  20:37:32,863 - #50 i
+INFO  20:37:32,863 - #37 ;
+INFO  20:37:32,863 - #50 char
+INFO  20:37:32,864 - #50 c
+INFO  20:37:32,864 - #43 [
+INFO  20:37:32,865 - #44 ]
+INFO  20:37:32,865 - #39 ,
+INFO  20:37:32,865 - #50 d
+INFO  20:37:32,865 - #37 ;
+INFO  20:37:32,865 - #45 {
+INFO  20:37:32,868 - #41 (
+INFO  20:37:32,868 - #50 a
+INFO  20:37:32,868 - #42 )
+INFO  20:37:32,872 - #37 ;
+INFO  20:37:32,872 - #50 fun
+INFO  20:37:32,887 - #41 (
+INFO  20:37:32,887 - #50 a
+INFO  20:37:32,888 - #43 [
+INFO  20:37:32,888 - #44 ]
+INFO  20:37:32,888 - #39 ,
+INFO  20:37:32,888 - #50 b
+INFO  20:37:32,888 - #43 [
+INFO  20:37:32,889 - #44 ]
+INFO  20:37:32,889 - #42 )
+INFO  20:37:32,890 - #37 ;
+INFO  20:37:32,891 - #46 }
+INFO  20:37:32,892 - #46 }
+INFO  20:37:32,938 - Otvoren opseg za program MyProgram na liniji 1
+INFO  20:37:32,939 - Obradjuje se funkcija main na liniji 5
+INFO  20:37:32,939 - Print calls = 0
+INFO  20:37:32,941 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  20:37:32,942 - Parsiranje uspesno zavrseno!
+INFO  20:40:24,992 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:40:25,081 - #50 MyProgram
+INFO  20:40:25,083 - #50 int
+INFO  20:40:25,084 - #50 jaja
+INFO  20:40:25,085 - #34 =
+INFO  20:40:25,086 - #47 5
+INFO  20:40:25,086 - #37 ;
+INFO  20:40:25,088 - #50 int
+INFO  20:40:25,088 - #50 jaja2
+INFO  20:40:25,088 - #39 ,
+INFO  20:40:25,089 - #50 jaja1
+INFO  20:40:25,089 - #39 ,
+INFO  20:40:25,089 - #50 jaja567
+INFO  20:40:25,089 - #37 ;
+INFO  20:40:25,090 - #45 {
+INFO  20:40:25,091 - #50 main
+INFO  20:40:25,092 - #41 (
+INFO  20:40:25,093 - #42 )
+INFO  20:40:25,094 - #50 int
+INFO  20:40:25,097 - #50 x
+INFO  20:40:25,097 - #39 ,
+INFO  20:40:25,097 - #50 i
+INFO  20:40:25,097 - #37 ;
+INFO  20:40:25,098 - #50 char
+INFO  20:40:25,098 - #50 c
+INFO  20:40:25,099 - #43 [
+INFO  20:40:25,099 - #44 ]
+INFO  20:40:25,100 - #39 ,
+INFO  20:40:25,100 - #50 d
+INFO  20:40:25,101 - #37 ;
+INFO  20:40:25,101 - #45 {
+INFO  20:40:25,103 - #41 (
+INFO  20:40:25,103 - #50 a
+INFO  20:40:25,103 - #42 )
+INFO  20:40:25,106 - #37 ;
+INFO  20:40:25,106 - #50 fun
+INFO  20:40:25,110 - #41 (
+INFO  20:40:25,110 - #50 a
+INFO  20:40:25,110 - #43 [
+INFO  20:40:25,110 - #44 ]
+INFO  20:40:25,110 - #39 ,
+INFO  20:40:25,111 - #50 b
+INFO  20:40:25,111 - #43 [
+INFO  20:40:25,112 - #44 ]
+INFO  20:40:25,112 - #42 )
+INFO  20:40:25,112 - #37 ;
+INFO  20:40:25,113 - #46 }
+INFO  20:40:25,115 - #50 main2
+INFO  20:40:25,117 - #41 (
+INFO  20:40:25,117 - #42 )
+INFO  20:40:25,118 - #45 {
+INFO  20:40:25,119 - #46 }
+INFO  20:40:25,119 - #46 }
+INFO  20:40:25,133 - Otvoren opseg za program MyProgram na liniji 1
+INFO  20:40:25,134 - Obradjuje se funkcija main na liniji 5
+INFO  20:40:25,135 - Obradjuje se funkcija main2 na liniji 13
+INFO  20:40:25,135 - Print calls = 0
+INFO  20:40:25,136 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  20:40:25,136 - Parsiranje uspesno zavrseno!
+INFO  20:43:29,298 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:43:29,428 - #50 MyProgram
+INFO  20:43:29,429 - #50 int
+INFO  20:43:29,430 - #50 jaja
+INFO  20:43:29,431 - #34 =
+INFO  20:43:29,432 - #47 5
+INFO  20:43:29,432 - #37 ;
+INFO  20:43:29,434 - #50 int
+INFO  20:43:29,435 - #50 jaja2
+INFO  20:43:29,435 - #39 ,
+INFO  20:43:29,435 - #50 jaja1
+INFO  20:43:29,436 - #39 ,
+INFO  20:43:29,436 - #50 jaja567
+INFO  20:43:29,436 - #37 ;
+INFO  20:43:29,436 - #45 {
+INFO  20:43:29,437 - #50 main
+INFO  20:43:29,438 - #41 (
+INFO  20:43:29,439 - #42 )
+INFO  20:43:29,440 - #50 int
+INFO  20:43:29,443 - #50 x
+INFO  20:43:29,443 - #39 ,
+INFO  20:43:29,443 - #50 i
+INFO  20:43:29,443 - #37 ;
+INFO  20:43:29,443 - #50 char
+INFO  20:43:29,444 - #50 c
+INFO  20:43:29,444 - #43 [
+INFO  20:43:29,444 - #44 ]
+INFO  20:43:29,445 - #39 ,
+INFO  20:43:29,445 - #50 d
+INFO  20:43:29,445 - #37 ;
+INFO  20:43:29,445 - #45 {
+INFO  20:43:29,447 - #41 (
+INFO  20:43:29,447 - #50 a
+INFO  20:43:29,447 - #42 )
+INFO  20:43:29,449 - #37 ;
+INFO  20:43:29,449 - #50 fun
+INFO  20:43:29,451 - #41 (
+INFO  20:43:29,452 - #50 a
+INFO  20:43:29,452 - #43 [
+INFO  20:43:29,452 - #44 ]
+INFO  20:43:29,452 - #39 ,
+INFO  20:43:29,453 - #50 b
+INFO  20:43:29,453 - #43 [
+INFO  20:43:29,453 - #44 ]
+INFO  20:43:29,454 - #42 )
+INFO  20:43:29,454 - #37 ;
+INFO  20:43:29,455 - #46 }
+INFO  20:43:29,457 - #50 main
+INFO  20:43:29,457 - #41 (
+INFO  20:43:29,457 - #42 )
+INFO  20:43:29,458 - #45 {
+INFO  20:43:29,458 - #46 }
+INFO  20:43:29,458 - #46 }
+INFO  20:43:29,507 - Otvoren opseg za program MyProgram na liniji 1
+INFO  20:43:29,510 - Obradjuje se funkcija main na liniji 5
+INFO  20:43:29,519 - Semanticka greska: Dvostruka definicija funkcije main na liniji 13
+INFO  20:53:46,715 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:53:46,799 - #50 MyProgram
+INFO  20:53:46,801 - #50 int
+INFO  20:53:46,801 - #50 jaja
+INFO  20:53:46,802 - #34 =
+INFO  20:53:46,804 - #47 5
+INFO  20:53:46,804 - #37 ;
+INFO  20:53:46,805 - #50 int
+INFO  20:53:46,806 - #50 jaja2
+INFO  20:53:46,806 - #39 ,
+INFO  20:53:46,806 - #50 jaja1
+INFO  20:53:46,806 - #39 ,
+INFO  20:53:46,807 - #50 jaja567
+INFO  20:53:46,807 - #37 ;
+INFO  20:53:46,807 - #45 {
+INFO  20:53:46,808 - #50 main
+INFO  20:53:46,810 - #41 (
+INFO  20:53:46,811 - #42 )
+INFO  20:53:46,813 - #50 int
+INFO  20:53:46,814 - #50 x
+INFO  20:53:46,815 - #39 ,
+INFO  20:53:46,815 - #50 i
+INFO  20:53:46,815 - #37 ;
+INFO  20:53:46,815 - #50 char
+INFO  20:53:46,816 - #50 c
+INFO  20:53:46,816 - #43 [
+INFO  20:53:46,816 - #44 ]
+INFO  20:53:46,816 - #39 ,
+INFO  20:53:46,817 - #50 d
+INFO  20:53:46,817 - #37 ;
+INFO  20:53:46,817 - #45 {
+INFO  20:53:46,818 - #41 (
+INFO  20:53:46,819 - #50 a
+INFO  20:53:46,819 - #42 )
+INFO  20:53:46,821 - #37 ;
+INFO  20:53:46,822 - #50 fun
+INFO  20:53:46,824 - #41 (
+INFO  20:53:46,824 - #50 a
+INFO  20:53:46,824 - #43 [
+INFO  20:53:46,825 - #44 ]
+INFO  20:53:46,826 - #39 ,
+INFO  20:53:46,827 - #50 b
+INFO  20:53:46,827 - #43 [
+INFO  20:53:46,827 - #44 ]
+INFO  20:53:46,827 - #42 )
+INFO  20:53:46,832 - #37 ;
+INFO  20:53:46,832 - #46 }
+INFO  20:53:46,834 - #50 main
+INFO  20:53:46,834 - #41 (
+INFO  20:53:46,835 - #42 )
+INFO  20:53:46,835 - #45 {
+INFO  20:53:46,835 - #46 }
+INFO  20:53:46,835 - #46 }
+INFO  20:53:46,907 - Otvoren opseg za program MyProgram na liniji 1
+INFO  20:53:46,907 - Obradjuje se funkcija main na liniji 5
+INFO  20:53:46,908 - Semanticka greska: Dvostruka definicija funkcije main na liniji 13
+INFO  20:54:02,468 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:54:02,571 - #50 MyProgram
+INFO  20:54:02,573 - #50 int
+INFO  20:54:02,573 - #50 jaja
+INFO  20:54:02,574 - #34 =
+INFO  20:54:02,575 - #47 5
+INFO  20:54:02,576 - #37 ;
+INFO  20:54:02,577 - #50 int
+INFO  20:54:02,578 - #50 jaja2
+INFO  20:54:02,578 - #39 ,
+INFO  20:54:02,578 - #50 jaja1
+INFO  20:54:02,578 - #39 ,
+INFO  20:54:02,578 - #50 jaja567
+INFO  20:54:02,579 - #37 ;
+INFO  20:54:02,579 - #45 {
+INFO  20:54:02,580 - #50 main
+INFO  20:54:02,581 - #41 (
+INFO  20:54:02,583 - #42 )
+INFO  20:54:02,584 - #50 int
+INFO  20:54:02,586 - #50 x
+INFO  20:54:02,586 - #39 ,
+INFO  20:54:02,586 - #50 i
+INFO  20:54:02,586 - #37 ;
+INFO  20:54:02,586 - #50 char
+INFO  20:54:02,587 - #50 c
+INFO  20:54:02,587 - #43 [
+INFO  20:54:02,587 - #44 ]
+INFO  20:54:02,587 - #39 ,
+INFO  20:54:02,587 - #50 d
+INFO  20:54:02,587 - #37 ;
+INFO  20:54:02,588 - #45 {
+INFO  20:54:02,589 - #41 (
+INFO  20:54:02,589 - #50 a
+INFO  20:54:02,589 - #42 )
+INFO  20:54:02,592 - #37 ;
+INFO  20:54:02,593 - #50 fun
+INFO  20:54:02,594 - #41 (
+INFO  20:54:02,595 - #50 a
+INFO  20:54:02,595 - #43 [
+INFO  20:54:02,595 - #44 ]
+INFO  20:54:02,595 - #39 ,
+INFO  20:54:02,598 - #50 b
+INFO  20:54:02,598 - #43 [
+INFO  20:54:02,599 - #44 ]
+INFO  20:54:02,599 - #42 )
+INFO  20:54:02,600 - #37 ;
+INFO  20:54:02,600 - #46 }
+INFO  20:54:02,602 - #50 fun1
+INFO  20:54:02,602 - #41 (
+INFO  20:54:02,603 - #42 )
+INFO  20:54:02,603 - #45 {
+INFO  20:54:02,603 - #46 }
+INFO  20:54:02,603 - #46 }
+INFO  20:54:02,616 - Otvoren opseg za program MyProgram na liniji 1
+INFO  20:54:02,617 - Obradjuje se funkcija main na liniji 5
+INFO  20:54:02,618 - Obradjuje se funkcija fun1 na liniji 13
+INFO  20:54:02,618 - Print calls = 0
+INFO  20:54:02,619 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  20:54:02,620 - Parsiranje uspesno zavrseno!
+INFO  20:54:18,181 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:54:18,268 - #50 MyProgram
+INFO  20:54:18,270 - #50 int
+INFO  20:54:18,270 - #50 jaja
+INFO  20:54:18,271 - #34 =
+INFO  20:54:18,272 - #47 5
+INFO  20:54:18,272 - #37 ;
+INFO  20:54:18,273 - #50 int
+INFO  20:54:18,274 - #50 jaja2
+INFO  20:54:18,274 - #39 ,
+INFO  20:54:18,274 - #50 jaja1
+INFO  20:54:18,274 - #39 ,
+INFO  20:54:18,275 - #50 jaja567
+INFO  20:54:18,275 - #37 ;
+INFO  20:54:18,275 - #45 {
+INFO  20:54:18,276 - #50 main
+INFO  20:54:18,277 - #41 (
+INFO  20:54:18,278 - #42 )
+INFO  20:54:18,280 - #50 int
+INFO  20:54:18,281 - #50 x
+INFO  20:54:18,281 - #39 ,
+INFO  20:54:18,282 - #50 i
+INFO  20:54:18,282 - #37 ;
+INFO  20:54:18,282 - #50 char
+INFO  20:54:18,283 - #50 c
+INFO  20:54:18,283 - #43 [
+INFO  20:54:18,283 - #44 ]
+INFO  20:54:18,284 - #39 ,
+INFO  20:54:18,284 - #50 d
+INFO  20:54:18,284 - #37 ;
+INFO  20:54:18,284 - #45 {
+INFO  20:54:18,286 - #41 (
+INFO  20:54:18,286 - #50 a
+INFO  20:54:18,287 - #42 )
+INFO  20:54:18,291 - #37 ;
+INFO  20:54:18,291 - #50 fun
+INFO  20:54:18,293 - #41 (
+INFO  20:54:18,293 - #50 a
+INFO  20:54:18,294 - #43 [
+INFO  20:54:18,294 - #44 ]
+INFO  20:54:18,295 - #39 ,
+INFO  20:54:18,297 - #50 b
+INFO  20:54:18,297 - #43 [
+INFO  20:54:18,297 - #44 ]
+INFO  20:54:18,298 - #42 )
+INFO  20:54:18,298 - #37 ;
+INFO  20:54:18,299 - #46 }
+INFO  20:54:18,299 - #50 nesto
+INFO  20:54:18,301 - #50 fun1
+INFO  20:54:18,302 - #41 (
+INFO  20:54:18,303 - #42 )
+INFO  20:54:18,303 - #45 {
+INFO  20:54:18,303 - #46 }
+INFO  20:54:18,303 - #46 }
+INFO  20:54:18,316 - Otvoren opseg za program MyProgram na liniji 1
+INFO  20:54:18,317 - Obradjuje se funkcija main na liniji 5
+INFO  20:54:18,318 - Semantička greška: Nedefinisan tip nesto na liniji 13
+INFO  20:54:18,319 - Semanticka greska: Nepostojeci tip nesto na liniji 13
+INFO  20:54:18,319 - Obradjuje se funkcija fun1 na liniji 13
+INFO  20:54:18,320 - Print calls = 0
+ERROR 20:54:18,321 - Parsiranje NIJE uspesno zavrseno!
+INFO  20:54:58,106 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:54:58,235 - #50 MyProgram
+INFO  20:54:58,236 - #50 int
+INFO  20:54:58,237 - #50 jaja
+INFO  20:54:58,237 - #34 =
+INFO  20:54:58,238 - #47 5
+INFO  20:54:58,239 - #37 ;
+INFO  20:54:58,240 - #50 int
+INFO  20:54:58,241 - #50 jaja2
+INFO  20:54:58,241 - #39 ,
+INFO  20:54:58,241 - #50 jaja1
+INFO  20:54:58,242 - #39 ,
+INFO  20:54:58,243 - #50 jaja567
+INFO  20:54:58,243 - #37 ;
+INFO  20:54:58,244 - #45 {
+INFO  20:54:58,245 - #50 main
+INFO  20:54:58,246 - #41 (
+INFO  20:54:58,249 - #42 )
+INFO  20:54:58,250 - #50 int
+INFO  20:54:58,252 - #50 x
+INFO  20:54:58,252 - #39 ,
+INFO  20:54:58,252 - #50 i
+INFO  20:54:58,252 - #37 ;
+INFO  20:54:58,252 - #50 char
+INFO  20:54:58,253 - #50 c
+INFO  20:54:58,253 - #43 [
+INFO  20:54:58,253 - #44 ]
+INFO  20:54:58,253 - #39 ,
+INFO  20:54:58,254 - #50 d
+INFO  20:54:58,254 - #37 ;
+INFO  20:54:58,254 - #45 {
+INFO  20:54:58,255 - #41 (
+INFO  20:54:58,255 - #50 a
+INFO  20:54:58,255 - #42 )
+INFO  20:54:58,258 - #37 ;
+INFO  20:54:58,258 - #50 fun
+INFO  20:54:58,260 - #41 (
+INFO  20:54:58,260 - #50 a
+INFO  20:54:58,260 - #43 [
+INFO  20:54:58,260 - #44 ]
+INFO  20:54:58,260 - #39 ,
+INFO  20:54:58,261 - #50 b
+INFO  20:54:58,261 - #43 [
+INFO  20:54:58,261 - #44 ]
+INFO  20:54:58,261 - #42 )
+INFO  20:54:58,262 - #37 ;
+INFO  20:54:58,262 - #46 }
+INFO  20:54:58,263 - #50 int
+INFO  20:54:58,264 - #50 fun1
+INFO  20:54:58,264 - #41 (
+INFO  20:54:58,265 - #42 )
+INFO  20:54:58,265 - #45 {
+INFO  20:54:58,265 - #46 }
+INFO  20:54:58,265 - #46 }
+INFO  20:54:58,305 - Otvoren opseg za program MyProgram na liniji 1
+INFO  20:54:58,305 - Obradjuje se funkcija main na liniji 5
+INFO  20:54:58,306 - Obradjuje se funkcija fun1 na liniji 13
+INFO  20:54:58,306 - Print calls = 0
+INFO  20:54:58,307 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  20:54:58,308 - Parsiranje uspesno zavrseno!
+INFO  21:34:42,291 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  21:34:43,794 - #50 MyProgram
+INFO  21:34:43,824 - #50 int
+INFO  21:34:43,824 - #50 jaja
+INFO  21:34:43,827 - #34 =
+INFO  21:34:43,839 - #47 5
+INFO  21:34:43,839 - #37 ;
+INFO  21:34:43,854 - #50 int
+INFO  21:34:43,854 - #50 jaja2
+INFO  21:34:43,854 - #39 ,
+INFO  21:34:43,855 - #50 jaja1
+INFO  21:34:43,855 - #39 ,
+INFO  21:34:43,855 - #50 jaja567
+INFO  21:34:43,856 - #37 ;
+INFO  21:34:43,856 - #45 {
+INFO  21:34:43,871 - #50 main
+INFO  21:34:43,882 - #41 (
+INFO  21:34:43,900 - #42 )
+INFO  21:34:43,914 - #50 int
+INFO  21:34:43,943 - #50 x
+INFO  21:34:43,943 - #39 ,
+INFO  21:34:43,943 - #50 i
+INFO  21:34:43,944 - #37 ;
+INFO  21:34:43,944 - #50 char
+INFO  21:34:43,944 - #50 c
+INFO  21:34:43,945 - #43 [
+INFO  21:34:43,945 - #44 ]
+INFO  21:34:43,945 - #39 ,
+INFO  21:34:43,945 - #50 d
+INFO  21:34:43,945 - #37 ;
+INFO  21:34:43,946 - #45 {
+INFO  21:34:43,960 - #41 (
+INFO  21:34:43,960 - #50 a
+INFO  21:34:43,960 - #42 )
+INFO  21:34:43,975 - #37 ;
+INFO  21:34:43,976 - #50 fun
+INFO  21:34:43,991 - #41 (
+INFO  21:34:43,991 - #50 a
+INFO  21:34:43,992 - #43 [
+INFO  21:34:43,992 - #44 ]
+INFO  21:34:43,993 - #39 ,
+INFO  21:34:43,994 - #50 b
+INFO  21:34:43,994 - #43 [
+INFO  21:34:43,997 - #44 ]
+INFO  21:34:43,997 - #42 )
+INFO  21:34:43,998 - #37 ;
+INFO  21:34:43,999 - #46 }
+INFO  21:34:43,999 - #50 int
+INFO  21:34:44,015 - #50 fun1
+INFO  21:34:44,016 - #41 (
+INFO  21:34:44,016 - #42 )
+INFO  21:34:44,017 - #45 {
+INFO  21:34:44,018 - #46 }
+INFO  21:34:44,018 - #46 }
+INFO  21:34:44,071 - Otvoren opseg za program MyProgram na liniji 1
+INFO  21:34:44,072 - Obradjuje se funkcija main na liniji 5
+INFO  21:34:44,072 - Obradjuje se funkcija fun1 na liniji 13
+INFO  21:34:44,072 - Print calls = 0
+INFO  21:34:44,074 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  21:34:44,074 - Parsiranje uspesno zavrseno!
+INFO  21:44:25,642 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  21:44:26,514 - #50 MyProgram
+INFO  21:44:26,518 - #50 int
+INFO  21:44:26,518 - #50 jaja
+INFO  21:44:26,535 - #34 =
+INFO  21:44:26,539 - #47 5
+INFO  21:44:26,539 - #37 ;
+INFO  21:44:26,542 - #50 int
+INFO  21:44:26,542 - #50 jaja2
+INFO  21:44:26,543 - #39 ,
+INFO  21:44:26,543 - #50 jaja1
+INFO  21:44:26,543 - #39 ,
+INFO  21:44:26,544 - #50 jaja567
+INFO  21:44:26,544 - #37 ;
+INFO  21:44:26,544 - #45 {
+INFO  21:44:26,547 - #50 main
+INFO  21:44:26,562 - #41 (
+INFO  21:44:26,583 - #42 )
+INFO  21:44:26,587 - #50 int
+INFO  21:44:26,593 - #50 x
+INFO  21:44:26,593 - #39 ,
+INFO  21:44:26,594 - #50 i
+INFO  21:44:26,594 - #37 ;
+INFO  21:44:26,594 - #50 char
+INFO  21:44:26,596 - #50 c
+INFO  21:44:26,596 - #43 [
+INFO  21:44:26,596 - #44 ]
+INFO  21:44:26,596 - #39 ,
+INFO  21:44:26,597 - #50 d
+INFO  21:44:26,597 - #37 ;
+INFO  21:44:26,597 - #45 {
+INFO  21:44:26,601 - #41 (
+INFO  21:44:26,604 - #50 a
+INFO  21:44:26,604 - #32 &&
+INFO  21:44:26,606 - #50 b
+INFO  21:44:26,606 - #32 &&
+INFO  21:44:26,607 - #50 c
+INFO  21:44:26,607 - #33 ||
+INFO  21:44:26,610 - #48 true
+INFO  21:44:26,610 - #42 )
+INFO  21:44:26,611 - #37 ;
+INFO  21:44:26,611 - #50 fun
+INFO  21:44:26,615 - #41 (
+INFO  21:44:26,615 - #50 a
+INFO  21:44:26,616 - #43 [
+INFO  21:44:26,616 - #44 ]
+INFO  21:44:26,616 - #39 ,
+INFO  21:44:26,617 - #50 b
+INFO  21:44:26,617 - #43 [
+INFO  21:44:26,617 - #44 ]
+INFO  21:44:26,617 - #42 )
+INFO  21:44:26,618 - #37 ;
+INFO  21:44:26,618 - #46 }
+INFO  21:44:26,619 - #50 int
+INFO  21:44:26,623 - #50 fun1
+INFO  21:44:26,623 - #41 (
+INFO  21:44:26,623 - #42 )
+INFO  21:44:26,624 - #45 {
+INFO  21:44:26,624 - #46 }
+INFO  21:44:26,624 - #46 }
+INFO  21:44:26,668 - Otvoren opseg za program MyProgram na liniji 1
+INFO  21:44:26,668 - Obradjuje se funkcija main na liniji 5
+INFO  21:44:26,669 - Obradjuje se funkcija fun1 na liniji 13
+INFO  21:44:26,669 - Print calls = 0
+INFO  21:44:26,671 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  21:44:26,672 - Parsiranje uspesno zavrseno!
+INFO  21:44:37,623 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  21:44:37,707 - #50 MyProgram
+INFO  21:44:37,709 - #50 int
+INFO  21:44:37,709 - #50 jaja
+INFO  21:44:37,711 - #34 =
+INFO  21:44:37,712 - #47 5
+INFO  21:44:37,712 - #37 ;
+INFO  21:44:37,713 - #50 int
+INFO  21:44:37,714 - #50 jaja2
+INFO  21:44:37,714 - #39 ,
+INFO  21:44:37,714 - #50 jaja1
+INFO  21:44:37,714 - #39 ,
+INFO  21:44:37,715 - #50 jaja567
+INFO  21:44:37,715 - #37 ;
+INFO  21:44:37,715 - #45 {
+INFO  21:44:37,717 - #50 main
+INFO  21:44:37,718 - #41 (
+INFO  21:44:37,721 - #42 )
+INFO  21:44:37,722 - #50 int
+INFO  21:44:37,725 - #50 x
+INFO  21:44:37,725 - #39 ,
+INFO  21:44:37,725 - #50 i
+INFO  21:44:37,726 - #37 ;
+INFO  21:44:37,726 - #50 char
+INFO  21:44:37,726 - #50 c
+INFO  21:44:37,727 - #43 [
+INFO  21:44:37,727 - #44 ]
+INFO  21:44:37,727 - #39 ,
+INFO  21:44:37,727 - #50 d
+INFO  21:44:37,727 - #37 ;
+INFO  21:44:37,727 - #45 {
+INFO  21:44:37,729 - #41 (
+INFO  21:44:37,729 - #50 a
+INFO  21:44:37,729 - #32 &&
+INFO  21:44:37,730 - #50 b
+INFO  21:44:37,731 - #32 &&
+INFO  21:44:37,731 - #50 c
+INFO  21:44:37,731 - #33 ||
+INFO  21:44:37,733 - #48 true
+INFO  21:44:37,733 - #39 ,
+ERROR 21:44:37,735 - 
+Sintaksna greska na liniji 9
+ERROR 21:44:37,736 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 9
+INFO  21:44:37,750 - Print calls = 0
+ERROR 21:44:37,752 - Parsiranje NIJE uspesno zavrseno!
+INFO  22:09:25,964 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:09:26,327 - #50 MyProgram
+INFO  22:09:26,329 - #50 int
+INFO  22:09:26,329 - #50 jaja
+INFO  22:09:26,330 - #34 =
+INFO  22:09:26,331 - #47 5
+INFO  22:09:26,332 - #37 ;
+INFO  22:09:26,334 - #50 int
+INFO  22:09:26,334 - #50 jaja2
+INFO  22:09:26,335 - #39 ,
+INFO  22:09:26,335 - #50 jaja1
+INFO  22:09:26,335 - #39 ,
+INFO  22:09:26,335 - #50 jaja567
+INFO  22:09:26,335 - #37 ;
+INFO  22:09:26,336 - #45 {
+INFO  22:09:26,337 - #50 main
+INFO  22:09:26,338 - #41 (
+INFO  22:09:26,339 - #42 )
+INFO  22:09:26,340 - #50 int
+INFO  22:09:26,342 - #50 x
+INFO  22:09:26,342 - #39 ,
+INFO  22:09:26,343 - #50 i
+INFO  22:09:26,343 - #37 ;
+INFO  22:09:26,343 - #50 char
+INFO  22:09:26,344 - #50 c
+INFO  22:09:26,345 - #43 [
+INFO  22:09:26,345 - #44 ]
+INFO  22:09:26,345 - #39 ,
+INFO  22:09:26,345 - #50 d
+INFO  22:09:26,346 - #37 ;
+INFO  22:09:26,346 - #45 {
+INFO  22:09:26,349 - #41 (
+INFO  22:09:26,349 - #50 a
+INFO  22:09:26,350 - #32 &&
+INFO  22:09:26,350 - #50 b
+INFO  22:09:26,351 - #32 &&
+INFO  22:09:26,351 - #50 c
+INFO  22:09:26,351 - #33 ||
+INFO  22:09:26,352 - #48 true
+INFO  22:09:26,352 - #42 )
+INFO  22:09:26,353 - #37 ;
+INFO  22:09:26,353 - #50 fun
+INFO  22:09:26,354 - #41 (
+INFO  22:09:26,355 - #50 a
+INFO  22:09:26,355 - #43 [
+INFO  22:09:26,355 - #44 ]
+INFO  22:09:26,355 - #39 ,
+INFO  22:09:26,355 - #50 b
+INFO  22:09:26,355 - #43 [
+INFO  22:09:26,355 - #44 ]
+INFO  22:09:26,356 - #42 )
+INFO  22:09:26,356 - #37 ;
+INFO  22:09:26,356 - #46 }
+INFO  22:09:26,356 - #50 int
+INFO  22:09:26,358 - #50 fun1
+INFO  22:09:26,358 - #41 (
+INFO  22:09:26,358 - #42 )
+INFO  22:09:26,358 - #45 {
+INFO  22:09:26,359 - #47 5
+INFO  22:09:26,359 - #37 ;
+INFO  22:09:26,359 - #46 }
+INFO  22:09:26,359 - #46 }
+INFO  22:09:26,371 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:09:26,372 - Obradjuje se funkcija main na liniji 5
+INFO  22:09:26,373 - Obradjuje se funkcija fun1 na liniji 13
+INFO  22:09:26,373 - Print calls = 0
+INFO  22:09:26,374 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  22:09:26,374 - Parsiranje uspesno zavrseno!
+INFO  22:09:39,190 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:09:39,274 - #50 MyProgram
+INFO  22:09:39,276 - #50 int
+INFO  22:09:39,276 - #50 jaja
+INFO  22:09:39,277 - #34 =
+INFO  22:09:39,279 - #47 5
+INFO  22:09:39,279 - #37 ;
+INFO  22:09:39,281 - #50 int
+INFO  22:09:39,282 - #50 jaja2
+INFO  22:09:39,282 - #39 ,
+INFO  22:09:39,282 - #50 jaja1
+INFO  22:09:39,283 - #39 ,
+INFO  22:09:39,283 - #50 jaja567
+INFO  22:09:39,284 - #37 ;
+INFO  22:09:39,284 - #45 {
+INFO  22:09:39,286 - #50 main
+INFO  22:09:39,287 - #41 (
+INFO  22:09:39,289 - #42 )
+INFO  22:09:39,290 - #50 int
+INFO  22:09:39,294 - #50 x
+INFO  22:09:39,294 - #39 ,
+INFO  22:09:39,295 - #50 i
+INFO  22:09:39,296 - #37 ;
+INFO  22:09:39,296 - #50 char
+INFO  22:09:39,297 - #50 c
+INFO  22:09:39,297 - #43 [
+INFO  22:09:39,298 - #44 ]
+INFO  22:09:39,298 - #39 ,
+INFO  22:09:39,298 - #50 d
+INFO  22:09:39,298 - #37 ;
+INFO  22:09:39,298 - #45 {
+INFO  22:09:39,300 - #41 (
+INFO  22:09:39,300 - #50 a
+INFO  22:09:39,300 - #32 &&
+INFO  22:09:39,301 - #50 b
+INFO  22:09:39,302 - #32 &&
+INFO  22:09:39,302 - #50 c
+INFO  22:09:39,302 - #33 ||
+INFO  22:09:39,304 - #48 true
+INFO  22:09:39,304 - #42 )
+INFO  22:09:39,305 - #37 ;
+INFO  22:09:39,305 - #50 fun
+INFO  22:09:39,307 - #41 (
+INFO  22:09:39,307 - #50 a
+INFO  22:09:39,310 - #43 [
+INFO  22:09:39,311 - #44 ]
+INFO  22:09:39,312 - #39 ,
+INFO  22:09:39,313 - #50 b
+INFO  22:09:39,314 - #43 [
+INFO  22:09:39,314 - #44 ]
+INFO  22:09:39,315 - #42 )
+INFO  22:09:39,315 - #37 ;
+INFO  22:09:39,316 - #46 }
+INFO  22:09:39,317 - #50 int
+INFO  22:09:39,322 - #50 fun1
+INFO  22:09:39,323 - #41 (
+INFO  22:09:39,324 - #42 )
+INFO  22:09:39,324 - #45 {
+INFO  22:09:39,325 - #50 a
+INFO  22:09:39,325 - #37 ;
+INFO  22:09:39,326 - #46 }
+INFO  22:09:39,326 - #46 }
+INFO  22:09:39,344 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:09:39,346 - Obradjuje se funkcija main na liniji 5
+INFO  22:09:39,347 - Obradjuje se funkcija fun1 na liniji 13
+INFO  22:10:14,598 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:10:14,682 - #50 MyProgram
+INFO  22:10:14,684 - #50 int
+INFO  22:10:14,684 - #50 jaja
+INFO  22:10:14,685 - #34 =
+INFO  22:10:14,687 - #47 5
+INFO  22:10:14,687 - #37 ;
+INFO  22:10:14,689 - #50 int
+INFO  22:10:14,690 - #50 jaja2
+INFO  22:10:14,690 - #39 ,
+INFO  22:10:14,690 - #50 jaja1
+INFO  22:10:14,691 - #39 ,
+INFO  22:10:14,691 - #50 jaja567
+INFO  22:10:14,691 - #37 ;
+INFO  22:10:14,692 - #45 {
+INFO  22:10:14,693 - #50 main
+INFO  22:10:14,694 - #41 (
+INFO  22:10:14,695 - #42 )
+INFO  22:10:14,696 - #50 int
+INFO  22:10:14,698 - #50 x
+INFO  22:10:14,699 - #39 ,
+INFO  22:10:14,699 - #50 i
+INFO  22:10:14,699 - #37 ;
+INFO  22:10:14,699 - #50 char
+INFO  22:10:14,700 - #50 c
+INFO  22:10:14,701 - #43 [
+INFO  22:10:14,701 - #44 ]
+INFO  22:10:14,701 - #39 ,
+INFO  22:10:14,701 - #50 d
+INFO  22:10:14,701 - #37 ;
+INFO  22:10:14,702 - #45 {
+INFO  22:10:14,705 - #41 (
+INFO  22:10:14,705 - #50 a
+INFO  22:10:14,705 - #32 &&
+INFO  22:10:14,706 - #50 b
+INFO  22:10:14,706 - #32 &&
+INFO  22:10:14,707 - #50 c
+INFO  22:10:14,707 - #33 ||
+INFO  22:10:14,709 - #48 true
+INFO  22:10:14,710 - #42 )
+INFO  22:10:14,711 - #37 ;
+INFO  22:10:14,711 - #50 fun
+INFO  22:10:14,713 - #41 (
+INFO  22:10:14,714 - #50 a
+INFO  22:10:14,714 - #43 [
+INFO  22:10:14,715 - #44 ]
+INFO  22:10:14,715 - #39 ,
+INFO  22:10:14,716 - #50 b
+INFO  22:10:14,716 - #43 [
+INFO  22:10:14,716 - #44 ]
+INFO  22:10:14,717 - #42 )
+INFO  22:10:14,717 - #37 ;
+INFO  22:10:14,718 - #46 }
+INFO  22:10:14,718 - #50 char
+INFO  22:10:14,722 - #50 fun1
+INFO  22:10:14,722 - #41 (
+INFO  22:10:14,723 - #42 )
+INFO  22:10:14,723 - #45 {
+INFO  22:10:14,723 - #47 5
+INFO  22:10:14,724 - #37 ;
+INFO  22:10:14,724 - #46 }
+INFO  22:10:14,725 - #46 }
+INFO  22:10:14,739 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:10:14,740 - Obradjuje se funkcija main na liniji 5
+INFO  22:10:14,741 - Obradjuje se funkcija fun1 na liniji 13
+INFO  22:10:14,742 - Semanticka greska: neslaganje povratnog tipa funkcije sa predeklarisanim na liniji 14
+INFO  22:10:14,742 - Print calls = 0
+ERROR 22:10:14,746 - Parsiranje NIJE uspesno zavrseno!
+INFO  22:10:46,175 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:10:46,262 - #50 MyProgram
+INFO  22:10:46,263 - #50 int
+INFO  22:10:46,263 - #50 jaja
+INFO  22:10:46,265 - #34 =
+INFO  22:10:46,266 - #47 5
+INFO  22:10:46,266 - #37 ;
+INFO  22:10:46,268 - #50 int
+INFO  22:10:46,269 - #50 jaja2
+INFO  22:10:46,269 - #39 ,
+INFO  22:10:46,270 - #50 jaja1
+INFO  22:10:46,270 - #39 ,
+INFO  22:10:46,271 - #50 jaja567
+INFO  22:10:46,271 - #37 ;
+INFO  22:10:46,271 - #45 {
+INFO  22:10:46,273 - #50 main
+INFO  22:10:46,274 - #41 (
+INFO  22:10:46,276 - #42 )
+INFO  22:10:46,277 - #50 int
+INFO  22:10:46,280 - #50 x
+INFO  22:10:46,280 - #39 ,
+INFO  22:10:46,281 - #50 i
+INFO  22:10:46,281 - #37 ;
+INFO  22:10:46,281 - #50 char
+INFO  22:10:46,281 - #50 c
+INFO  22:10:46,282 - #43 [
+INFO  22:10:46,282 - #44 ]
+INFO  22:10:46,282 - #39 ,
+INFO  22:10:46,282 - #50 d
+INFO  22:10:46,282 - #37 ;
+INFO  22:10:46,282 - #45 {
+INFO  22:10:46,284 - #41 (
+INFO  22:10:46,285 - #50 a
+INFO  22:10:46,285 - #32 &&
+INFO  22:10:46,286 - #50 b
+INFO  22:10:46,287 - #32 &&
+INFO  22:10:46,287 - #50 c
+INFO  22:10:46,287 - #33 ||
+INFO  22:10:46,289 - #48 true
+INFO  22:10:46,289 - #42 )
+INFO  22:10:46,290 - #37 ;
+INFO  22:10:46,290 - #50 fun
+INFO  22:10:46,293 - #41 (
+INFO  22:10:46,295 - #50 a
+INFO  22:10:46,298 - #43 [
+INFO  22:10:46,298 - #44 ]
+INFO  22:10:46,298 - #39 ,
+INFO  22:10:46,299 - #50 b
+INFO  22:10:46,299 - #43 [
+INFO  22:10:46,300 - #44 ]
+INFO  22:10:46,300 - #42 )
+INFO  22:10:46,301 - #37 ;
+INFO  22:10:46,301 - #46 }
+INFO  22:10:46,301 - #50 int
+INFO  22:10:46,303 - #50 fun1
+INFO  22:10:46,304 - #41 (
+INFO  22:10:46,304 - #42 )
+INFO  22:10:46,304 - #45 {
+INFO  22:10:46,305 - #49 a
+INFO  22:10:46,305 - #37 ;
+INFO  22:10:46,305 - #46 }
+INFO  22:10:46,306 - #46 }
+INFO  22:10:46,321 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:10:46,322 - Obradjuje se funkcija main na liniji 5
+INFO  22:10:46,323 - Obradjuje se funkcija fun1 na liniji 13
+INFO  22:10:46,323 - Semanticka greska: neslaganje povratnog tipa funkcije sa predeklarisanim na liniji 14
+INFO  22:10:46,323 - Print calls = 0
+ERROR 22:10:46,324 - Parsiranje NIJE uspesno zavrseno!
+INFO  22:15:38,465 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:15:38,595 - #50 MyProgram
+INFO  22:15:38,597 - #50 int
+INFO  22:15:38,597 - #50 jaja
+INFO  22:15:38,601 - #34 =
+INFO  22:15:38,603 - #47 5
+INFO  22:15:38,603 - #37 ;
+INFO  22:15:38,604 - #50 int
+INFO  22:15:38,606 - #50 jaja2
+INFO  22:15:38,606 - #39 ,
+INFO  22:15:38,606 - #50 jaja1
+INFO  22:15:38,607 - #39 ,
+INFO  22:15:38,608 - #50 jaja567
+INFO  22:15:38,608 - #37 ;
+INFO  22:15:38,608 - #45 {
+INFO  22:15:38,611 - #50 main
+INFO  22:15:38,612 - #41 (
+INFO  22:15:38,614 - #42 )
+INFO  22:15:38,615 - #50 int
+INFO  22:15:38,618 - #50 x
+INFO  22:15:38,618 - #39 ,
+INFO  22:15:38,619 - #50 i
+INFO  22:15:38,619 - #37 ;
+INFO  22:15:38,619 - #50 char
+INFO  22:15:38,620 - #50 c
+INFO  22:15:38,620 - #43 [
+INFO  22:15:38,620 - #44 ]
+INFO  22:15:38,621 - #39 ,
+INFO  22:15:38,621 - #50 d
+INFO  22:15:38,621 - #37 ;
+INFO  22:15:38,621 - #45 {
+INFO  22:15:38,634 - #41 (
+INFO  22:15:38,635 - #50 a
+INFO  22:15:38,635 - #32 &&
+INFO  22:15:38,636 - #50 b
+INFO  22:15:38,636 - #32 &&
+INFO  22:15:38,636 - #50 c
+INFO  22:15:38,637 - #33 ||
+INFO  22:15:38,638 - #48 true
+INFO  22:15:38,638 - #42 )
+INFO  22:15:38,639 - #37 ;
+INFO  22:15:38,639 - #50 fun
+INFO  22:15:38,641 - #41 (
+INFO  22:15:38,641 - #50 a
+INFO  22:15:38,642 - #43 [
+INFO  22:15:38,642 - #44 ]
+INFO  22:15:38,642 - #39 ,
+INFO  22:15:38,643 - #50 b
+INFO  22:15:38,643 - #43 [
+INFO  22:15:38,643 - #44 ]
+INFO  22:15:38,643 - #42 )
+INFO  22:15:38,644 - #37 ;
+INFO  22:15:38,644 - #46 }
+INFO  22:15:38,645 - #50 int
+INFO  22:15:38,646 - #50 fun1
+INFO  22:15:38,647 - #41 (
+INFO  22:15:38,647 - #42 )
+INFO  22:15:38,647 - #45 {
+INFO  22:15:38,648 - #46 }
+INFO  22:15:38,648 - #46 }
+INFO  22:15:38,702 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:15:38,703 - Obradjuje se funkcija main na liniji 5
+INFO  22:15:38,703 - Obradjuje se funkcija fun1 na liniji 13
+INFO  22:15:38,703 - Semantička greška: Nepostojeca return naredba u funkciji fun1 na liniji 13
+INFO  22:15:38,704 - Print calls = 0
+ERROR 22:15:38,705 - Parsiranje NIJE uspesno zavrseno!
+INFO  22:50:03,045 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:50:03,152 - #50 MyProgram
+INFO  22:50:03,154 - #50 int
+INFO  22:50:03,154 - #50 jaja
+INFO  22:50:03,155 - #34 =
+INFO  22:50:03,156 - #47 5
+INFO  22:50:03,156 - #37 ;
+INFO  22:50:03,157 - #50 int
+INFO  22:50:03,159 - #50 jaja2
+INFO  22:50:03,159 - #39 ,
+INFO  22:50:03,159 - #50 jaja1
+INFO  22:50:03,159 - #39 ,
+INFO  22:50:03,160 - #50 jaja567
+INFO  22:50:03,160 - #37 ;
+INFO  22:50:03,161 - #45 {
+INFO  22:50:03,161 - #50 int
+INFO  22:50:03,162 - #50 fun1
+INFO  22:50:03,163 - #41 (
+INFO  22:50:03,164 - #42 )
+INFO  22:50:03,165 - #45 {
+INFO  22:50:03,171 - #46 }
+INFO  22:50:03,173 - #46 }
+INFO  22:50:03,191 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:50:03,191 - Obradjuje se funkcija fun1 na liniji 7
+INFO  22:50:03,191 - Semantička greška: Nepostojeca return naredba u funkciji fun1 na liniji 7
+INFO  22:50:03,192 - Semantička greška: Funkcija main nije definisana na liniji 1
+INFO  22:50:03,192 - Print calls = 0
+ERROR 22:50:03,193 - Parsiranje NIJE uspesno zavrseno!
+INFO  22:55:49,708 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:55:49,815 - #50 MyProgram
+INFO  22:55:49,817 - #50 int
+INFO  22:55:49,817 - #50 jaja
+INFO  22:55:49,818 - #34 =
+INFO  22:55:49,820 - #47 5
+INFO  22:55:49,820 - #37 ;
+INFO  22:55:49,821 - #50 int
+INFO  22:55:49,822 - #50 jaja2
+INFO  22:55:49,822 - #39 ,
+INFO  22:55:49,822 - #50 jaja1
+INFO  22:55:49,822 - #39 ,
+INFO  22:55:49,823 - #50 jaja567
+INFO  22:55:49,823 - #37 ;
+INFO  22:55:49,823 - #45 {
+INFO  22:55:49,823 - #50 int
+INFO  22:55:49,824 - #50 main
+INFO  22:55:49,825 - #41 (
+INFO  22:55:49,826 - #42 )
+INFO  22:55:49,827 - #50 int
+INFO  22:55:49,829 - #50 x
+INFO  22:55:49,829 - #39 ,
+INFO  22:55:49,829 - #50 i
+INFO  22:55:49,829 - #37 ;
+INFO  22:55:49,830 - #50 char
+INFO  22:55:49,830 - #50 c
+INFO  22:55:49,830 - #43 [
+INFO  22:55:49,831 - #44 ]
+INFO  22:55:49,831 - #39 ,
+INFO  22:55:49,831 - #50 d
+INFO  22:55:49,831 - #37 ;
+INFO  22:55:49,831 - #45 {
+INFO  22:55:49,834 - #41 (
+INFO  22:55:49,835 - #50 a
+INFO  22:55:49,835 - #32 &&
+INFO  22:55:49,836 - #50 b
+INFO  22:55:49,836 - #32 &&
+INFO  22:55:49,837 - #50 c
+INFO  22:55:49,837 - #33 ||
+INFO  22:55:49,838 - #48 true
+INFO  22:55:49,838 - #42 )
+INFO  22:55:49,839 - #37 ;
+INFO  22:55:49,839 - #50 fun
+INFO  22:55:49,841 - #41 (
+INFO  22:55:49,841 - #50 a
+INFO  22:55:49,841 - #43 [
+INFO  22:55:49,841 - #44 ]
+INFO  22:55:49,841 - #39 ,
+INFO  22:55:49,842 - #50 b
+INFO  22:55:49,842 - #43 [
+INFO  22:55:49,842 - #44 ]
+INFO  22:55:49,842 - #42 )
+INFO  22:55:49,843 - #37 ;
+INFO  22:55:49,843 - #46 }
+INFO  22:55:49,843 - #50 int
+INFO  22:55:49,845 - #50 fun1
+INFO  22:55:49,845 - #41 (
+INFO  22:55:49,845 - #42 )
+INFO  22:55:49,845 - #45 {
+INFO  22:55:49,846 - #46 }
+INFO  22:55:49,846 - #46 }
+INFO  22:55:49,860 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:55:49,860 - Obradjuje se funkcija main na liniji 5
+INFO  22:55:49,861 - Semanticka greska: Neispravan povratni tip funkcije main. Očekivan je void  na liniji 5
+INFO  22:55:49,861 - Semanticka greska: return naredba mora sadržati povratnu vrednost
+INFO  22:55:49,862 - Semantička greška: Nepostojeca return naredba u funkciji main na liniji 5
+INFO  22:55:49,862 - Obradjuje se funkcija fun1 na liniji 13
+INFO  22:55:49,862 - Semantička greška: Nepostojeca return naredba u funkciji fun1 na liniji 13
+INFO  22:55:49,863 - Semantička greška: Funkcija main nije definisana na liniji 1
+INFO  22:55:49,863 - Print calls = 0
+ERROR 22:55:49,864 - Parsiranje NIJE uspesno zavrseno!
+INFO  22:56:29,278 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:56:29,403 - #50 MyProgram
+INFO  22:56:29,404 - #50 int
+INFO  22:56:29,404 - #50 jaja
+INFO  22:56:29,405 - #34 =
+INFO  22:56:29,406 - #47 5
+INFO  22:56:29,406 - #37 ;
+INFO  22:56:29,410 - #50 int
+INFO  22:56:29,410 - #50 jaja2
+INFO  22:56:29,411 - #39 ,
+INFO  22:56:29,411 - #50 jaja1
+INFO  22:56:29,411 - #39 ,
+INFO  22:56:29,411 - #50 jaja567
+INFO  22:56:29,411 - #37 ;
+INFO  22:56:29,412 - #45 {
+INFO  22:56:29,412 - #50 int
+INFO  22:56:29,413 - #50 main
+INFO  22:56:29,413 - #41 (
+INFO  22:56:29,415 - #42 )
+INFO  22:56:29,416 - #50 int
+INFO  22:56:29,418 - #50 x
+INFO  22:56:29,418 - #39 ,
+INFO  22:56:29,418 - #50 i
+INFO  22:56:29,418 - #37 ;
+INFO  22:56:29,418 - #50 char
+INFO  22:56:29,419 - #50 c
+INFO  22:56:29,419 - #43 [
+INFO  22:56:29,419 - #44 ]
+INFO  22:56:29,419 - #39 ,
+INFO  22:56:29,419 - #50 d
+INFO  22:56:29,420 - #37 ;
+INFO  22:56:29,420 - #45 {
+INFO  22:56:29,421 - #41 (
+INFO  22:56:29,421 - #50 a
+INFO  22:56:29,421 - #32 &&
+INFO  22:56:29,422 - #50 b
+INFO  22:56:29,422 - #32 &&
+INFO  22:56:29,423 - #50 c
+INFO  22:56:29,423 - #33 ||
+INFO  22:56:29,428 - #48 true
+INFO  22:56:29,429 - #42 )
+INFO  22:56:29,430 - #37 ;
+INFO  22:56:29,430 - #50 fun
+INFO  22:56:29,435 - #41 (
+INFO  22:56:29,435 - #50 a
+INFO  22:56:29,435 - #43 [
+INFO  22:56:29,435 - #44 ]
+INFO  22:56:29,435 - #39 ,
+INFO  22:56:29,436 - #50 b
+INFO  22:56:29,437 - #43 [
+INFO  22:56:29,437 - #44 ]
+INFO  22:56:29,437 - #42 )
+INFO  22:56:29,438 - #37 ;
+INFO  22:56:29,439 - #46 }
+INFO  22:56:29,442 - #50 int
+INFO  22:56:29,443 - #50 fun1
+INFO  22:56:29,443 - #41 (
+INFO  22:56:29,443 - #42 )
+INFO  22:56:29,443 - #45 {
+INFO  22:56:29,444 - #46 }
+INFO  22:56:29,444 - #46 }
+INFO  22:56:29,534 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:56:29,534 - Obradjuje se funkcija main na liniji 5
+INFO  22:56:29,535 - Neispravan povratni tip funkcije main. Očekivan je void. Semanticka greska na liniji 5
+INFO  22:56:29,536 - Semanticka greska: return naredba mora sadržati povratnu vrednost
+INFO  22:56:29,536 - Semantička greška: Nepostojeca return naredba u funkciji main na liniji 5
+INFO  22:56:29,537 - Obradjuje se funkcija fun1 na liniji 13
+INFO  22:56:29,537 - Semantička greška: Nepostojeca return naredba u funkciji fun1 na liniji 13
+INFO  22:56:29,537 - Semantička greška: Funkcija main nije definisana na liniji 1
+INFO  22:56:29,537 - Print calls = 0
+ERROR 22:56:29,538 - Parsiranje NIJE uspesno zavrseno!
+INFO  22:58:25,442 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:58:25,575 - #50 MyProgram
+INFO  22:58:25,577 - #50 int
+INFO  22:58:25,577 - #50 jaja
+INFO  22:58:25,578 - #34 =
+INFO  22:58:25,579 - #49 a
+INFO  22:58:25,580 - #37 ;
+INFO  22:58:25,594 - #50 int
+INFO  22:58:25,595 - #50 jaja2
+INFO  22:58:25,597 - #39 ,
+INFO  22:58:25,598 - #50 jaja1
+INFO  22:58:25,599 - #39 ,
+INFO  22:58:25,599 - #50 jaja567
+INFO  22:58:25,600 - #37 ;
+INFO  22:58:25,600 - #45 {
+INFO  22:58:25,602 - #50 main
+INFO  22:58:25,603 - #41 (
+INFO  22:58:25,605 - #42 )
+INFO  22:58:25,606 - #50 int
+INFO  22:58:25,608 - #50 x
+INFO  22:58:25,608 - #39 ,
+INFO  22:58:25,609 - #50 i
+INFO  22:58:25,609 - #37 ;
+INFO  22:58:25,609 - #50 char
+INFO  22:58:25,610 - #50 c
+INFO  22:58:25,611 - #43 [
+INFO  22:58:25,611 - #44 ]
+INFO  22:58:25,611 - #39 ,
+INFO  22:58:25,611 - #50 d
+INFO  22:58:25,612 - #37 ;
+INFO  22:58:25,612 - #45 {
+INFO  22:58:25,615 - #41 (
+INFO  22:58:25,616 - #50 a
+INFO  22:58:25,616 - #32 &&
+INFO  22:58:25,617 - #50 b
+INFO  22:58:25,617 - #32 &&
+INFO  22:58:25,618 - #50 c
+INFO  22:58:25,618 - #33 ||
+INFO  22:58:25,627 - #48 true
+INFO  22:58:25,627 - #42 )
+INFO  22:58:25,628 - #37 ;
+INFO  22:58:25,628 - #50 fun
+INFO  22:58:25,632 - #41 (
+INFO  22:58:25,633 - #50 a
+INFO  22:58:25,633 - #43 [
+INFO  22:58:25,633 - #44 ]
+INFO  22:58:25,633 - #39 ,
+INFO  22:58:25,634 - #50 b
+INFO  22:58:25,634 - #43 [
+INFO  22:58:25,634 - #44 ]
+INFO  22:58:25,634 - #42 )
+INFO  22:58:25,635 - #37 ;
+INFO  22:58:25,635 - #46 }
+INFO  22:58:25,636 - #50 int
+INFO  22:58:25,640 - #50 fun1
+INFO  22:58:25,641 - #41 (
+INFO  22:58:25,641 - #42 )
+INFO  22:58:25,641 - #45 {
+INFO  22:58:25,641 - #47 1
+INFO  22:58:25,642 - #37 ;
+INFO  22:58:25,642 - #46 }
+INFO  22:58:25,642 - #46 }
+INFO  22:58:25,666 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:58:25,666 - Semantička greška: Tip konstante nije u skladu sa dodeljenom vrednošću. jaja na liniji 2
+INFO  22:58:25,667 - Obradjuje se funkcija main na liniji 5
+INFO  22:58:25,667 - Obradjuje se funkcija fun1 na liniji 13
+INFO  22:58:25,668 - Print calls = 0
+ERROR 22:58:25,669 - Parsiranje NIJE uspesno zavrseno!
+INFO  22:59:06,717 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:59:06,797 - #50 MyProgram
+INFO  22:59:06,799 - #50 int
+INFO  22:59:06,799 - #50 jaja
+INFO  22:59:06,800 - #34 =
+INFO  22:59:06,801 - #49 a
+INFO  22:59:06,801 - #37 ;
+INFO  22:59:06,803 - #50 int
+INFO  22:59:06,804 - #50 jaja2
+INFO  22:59:06,805 - #39 ,
+INFO  22:59:06,806 - #50 jaja1
+INFO  22:59:06,807 - #39 ,
+INFO  22:59:06,808 - #50 jaja567
+INFO  22:59:06,808 - #37 ;
+INFO  22:59:06,809 - #45 {
+INFO  22:59:06,810 - #50 main
+INFO  22:59:06,811 - #41 (
+INFO  22:59:06,814 - #42 )
+INFO  22:59:06,815 - #50 int
+INFO  22:59:06,817 - #50 x
+INFO  22:59:06,818 - #39 ,
+INFO  22:59:06,819 - #50 i
+INFO  22:59:06,819 - #37 ;
+INFO  22:59:06,819 - #50 char
+INFO  22:59:06,821 - #50 c
+INFO  22:59:06,822 - #43 [
+INFO  22:59:06,822 - #44 ]
+INFO  22:59:06,822 - #39 ,
+INFO  22:59:06,823 - #50 d
+INFO  22:59:06,823 - #37 ;
+INFO  22:59:06,823 - #45 {
+INFO  22:59:06,829 - #41 (
+INFO  22:59:06,831 - #50 a
+INFO  22:59:06,831 - #32 &&
+INFO  22:59:06,835 - #50 b
+INFO  22:59:06,835 - #32 &&
+INFO  22:59:06,835 - #50 c
+INFO  22:59:06,836 - #33 ||
+INFO  22:59:06,839 - #48 true
+INFO  22:59:06,839 - #42 )
+INFO  22:59:06,840 - #37 ;
+INFO  22:59:06,840 - #50 fun
+INFO  22:59:06,842 - #41 (
+INFO  22:59:06,843 - #50 a
+INFO  22:59:06,843 - #43 [
+INFO  22:59:06,843 - #44 ]
+INFO  22:59:06,843 - #39 ,
+INFO  22:59:06,844 - #50 b
+INFO  22:59:06,844 - #43 [
+INFO  22:59:06,844 - #44 ]
+INFO  22:59:06,844 - #42 )
+INFO  22:59:06,845 - #37 ;
+INFO  22:59:06,845 - #46 }
+INFO  22:59:06,845 - #50 int
+INFO  22:59:06,847 - #50 fun1
+INFO  22:59:06,848 - #41 (
+INFO  22:59:06,848 - #42 )
+INFO  22:59:06,848 - #45 {
+INFO  22:59:06,849 - #47 1
+INFO  22:59:06,849 - #37 ;
+INFO  22:59:06,849 - #46 }
+INFO  22:59:06,850 - #46 }
+INFO  22:59:06,902 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:59:06,903 - Tip konstante nije u skladu sa dodeljenom vrednošću. Semantička greška na liniji 2
+INFO  22:59:06,904 - Obradjuje se funkcija main na liniji 5
+INFO  22:59:06,904 - Obradjuje se funkcija fun1 na liniji 13
+INFO  22:59:06,905 - Print calls = 0
+ERROR 22:59:06,906 - Parsiranje NIJE uspesno zavrseno!
+INFO  22:59:58,657 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:59:58,743 - #50 MyProgram
+INFO  22:59:58,744 - #50 int
+INFO  22:59:58,745 - #50 jaja
+INFO  22:59:58,746 - #34 =
+INFO  22:59:58,747 - #49 a
+INFO  22:59:58,747 - #37 ;
+INFO  22:59:58,748 - #50 int
+INFO  22:59:58,749 - #50 jaja2
+INFO  22:59:58,749 - #39 ,
+INFO  22:59:58,749 - #50 jaja1
+INFO  22:59:58,750 - #39 ,
+INFO  22:59:58,750 - #50 jaja567
+INFO  22:59:58,750 - #37 ;
+INFO  22:59:58,751 - #45 {
+INFO  22:59:58,752 - #50 main
+INFO  22:59:58,753 - #41 (
+INFO  22:59:58,754 - #42 )
+INFO  22:59:58,756 - #50 int
+INFO  22:59:58,759 - #50 x
+INFO  22:59:58,759 - #39 ,
+INFO  22:59:58,760 - #50 x
+INFO  22:59:58,761 - #37 ;
+INFO  22:59:58,761 - #50 char
+INFO  22:59:58,762 - #50 c
+INFO  22:59:58,762 - #43 [
+INFO  22:59:58,762 - #44 ]
+INFO  22:59:58,762 - #39 ,
+INFO  22:59:58,763 - #50 d
+INFO  22:59:58,763 - #37 ;
+INFO  22:59:58,763 - #45 {
+INFO  22:59:58,765 - #41 (
+INFO  22:59:58,765 - #50 a
+INFO  22:59:58,766 - #32 &&
+INFO  22:59:58,767 - #50 b
+INFO  22:59:58,767 - #32 &&
+INFO  22:59:58,768 - #50 c
+INFO  22:59:58,768 - #33 ||
+INFO  22:59:58,769 - #48 true
+INFO  22:59:58,769 - #42 )
+INFO  22:59:58,770 - #37 ;
+INFO  22:59:58,771 - #50 fun
+INFO  22:59:58,772 - #41 (
+INFO  22:59:58,772 - #50 a
+INFO  22:59:58,772 - #43 [
+INFO  22:59:58,773 - #44 ]
+INFO  22:59:58,773 - #39 ,
+INFO  22:59:58,774 - #50 b
+INFO  22:59:58,774 - #43 [
+INFO  22:59:58,775 - #44 ]
+INFO  22:59:58,775 - #42 )
+INFO  22:59:58,775 - #37 ;
+INFO  22:59:58,776 - #46 }
+INFO  22:59:58,776 - #50 int
+INFO  22:59:58,778 - #50 fun1
+INFO  22:59:58,778 - #41 (
+INFO  22:59:58,779 - #42 )
+INFO  22:59:58,779 - #45 {
+INFO  22:59:58,779 - #47 1
+INFO  22:59:58,780 - #37 ;
+INFO  22:59:58,780 - #46 }
+INFO  22:59:58,781 - #46 }
+INFO  22:59:58,819 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:59:58,820 - Tip konstante nije u skladu sa dodeljenom vrednošću. Semantička greška na liniji 2
+INFO  22:59:58,821 - Obradjuje se funkcija main na liniji 5
+INFO  22:59:58,821 - Semantička greška: Detektovana dvostruka deklaracija promenljive x na liniji 6
+INFO  22:59:58,822 - Obradjuje se funkcija fun1 na liniji 13
+INFO  22:59:58,822 - Print calls = 0
+ERROR 22:59:58,823 - Parsiranje NIJE uspesno zavrseno!
+INFO  23:00:33,442 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:00:33,527 - #50 MyProgram
+INFO  23:00:33,529 - #50 int
+INFO  23:00:33,529 - #50 jaja
+INFO  23:00:33,530 - #34 =
+INFO  23:00:33,532 - #49 a
+INFO  23:00:33,532 - #37 ;
+INFO  23:00:33,534 - #50 int
+INFO  23:00:33,534 - #50 jaja2
+INFO  23:00:33,535 - #39 ,
+INFO  23:00:33,535 - #50 jaja1
+INFO  23:00:33,535 - #39 ,
+INFO  23:00:33,535 - #50 jaja567
+INFO  23:00:33,535 - #37 ;
+INFO  23:00:33,536 - #45 {
+INFO  23:00:33,537 - #50 main
+INFO  23:00:33,538 - #41 (
+INFO  23:00:33,539 - #42 )
+INFO  23:00:33,540 - #50 int
+INFO  23:00:33,543 - #50 x
+INFO  23:00:33,543 - #39 ,
+INFO  23:00:33,543 - #50 x
+INFO  23:00:33,543 - #37 ;
+INFO  23:00:33,543 - #50 char
+INFO  23:00:33,544 - #50 c
+INFO  23:00:33,544 - #43 [
+INFO  23:00:33,544 - #44 ]
+INFO  23:00:33,545 - #39 ,
+INFO  23:00:33,545 - #50 d
+INFO  23:00:33,545 - #37 ;
+INFO  23:00:33,545 - #45 {
+INFO  23:00:33,546 - #41 (
+INFO  23:00:33,547 - #50 a
+INFO  23:00:33,547 - #32 &&
+INFO  23:00:33,549 - #50 b
+INFO  23:00:33,549 - #32 &&
+INFO  23:00:33,550 - #50 c
+INFO  23:00:33,551 - #33 ||
+INFO  23:00:33,552 - #48 true
+INFO  23:00:33,553 - #42 )
+INFO  23:00:33,553 - #37 ;
+INFO  23:00:33,554 - #50 fun
+INFO  23:00:33,556 - #41 (
+INFO  23:00:33,556 - #50 a
+INFO  23:00:33,556 - #43 [
+INFO  23:00:33,557 - #44 ]
+INFO  23:00:33,557 - #39 ,
+INFO  23:00:33,558 - #50 b
+INFO  23:00:33,558 - #43 [
+INFO  23:00:33,558 - #44 ]
+INFO  23:00:33,558 - #42 )
+INFO  23:00:33,559 - #37 ;
+INFO  23:00:33,559 - #46 }
+INFO  23:00:33,560 - #50 int
+INFO  23:00:33,562 - #50 fun1
+INFO  23:00:33,562 - #41 (
+INFO  23:00:33,563 - #42 )
+INFO  23:00:33,563 - #45 {
+INFO  23:00:33,564 - #47 1
+INFO  23:00:33,564 - #37 ;
+INFO  23:00:33,564 - #46 }
+INFO  23:00:33,564 - #46 }
+INFO  23:00:33,605 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:00:33,606 - Tip konstante nije u skladu sa dodeljenom vrednošću. Semantička greška na liniji 2
+INFO  23:00:51,026 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:00:51,107 - #50 MyProgram
+INFO  23:00:51,109 - #50 int
+INFO  23:00:51,109 - #50 jaja
+INFO  23:00:51,110 - #34 =
+INFO  23:00:51,113 - #49 a
+INFO  23:00:51,113 - #37 ;
+INFO  23:00:51,115 - #50 int
+INFO  23:00:51,115 - #50 jaja2
+INFO  23:00:51,116 - #39 ,
+INFO  23:00:51,116 - #50 jaja1
+INFO  23:00:51,116 - #39 ,
+INFO  23:00:51,117 - #50 jaja567
+INFO  23:00:51,117 - #37 ;
+INFO  23:00:51,117 - #45 {
+INFO  23:00:51,119 - #50 main
+INFO  23:00:51,120 - #41 (
+INFO  23:00:51,121 - #42 )
+INFO  23:00:51,122 - #50 int
+INFO  23:00:51,124 - #50 x
+INFO  23:00:51,124 - #39 ,
+INFO  23:00:51,125 - #50 x
+INFO  23:00:51,125 - #37 ;
+INFO  23:00:51,125 - #50 char
+INFO  23:00:51,125 - #50 c
+INFO  23:00:51,126 - #43 [
+INFO  23:00:51,126 - #44 ]
+INFO  23:00:51,126 - #39 ,
+INFO  23:00:51,126 - #50 d
+INFO  23:00:51,126 - #37 ;
+INFO  23:00:51,127 - #45 {
+INFO  23:00:51,129 - #41 (
+INFO  23:00:51,129 - #50 a
+INFO  23:00:51,130 - #32 &&
+INFO  23:00:51,131 - #50 b
+INFO  23:00:51,131 - #32 &&
+INFO  23:00:51,131 - #50 c
+INFO  23:00:51,132 - #33 ||
+INFO  23:00:51,133 - #48 true
+INFO  23:00:51,133 - #42 )
+INFO  23:00:51,134 - #37 ;
+INFO  23:00:51,135 - #50 fun
+INFO  23:00:51,137 - #41 (
+INFO  23:00:51,137 - #50 a
+INFO  23:00:51,137 - #43 [
+INFO  23:00:51,137 - #44 ]
+INFO  23:00:51,138 - #39 ,
+INFO  23:00:51,138 - #50 b
+INFO  23:00:51,139 - #43 [
+INFO  23:00:51,139 - #44 ]
+INFO  23:00:51,139 - #42 )
+INFO  23:00:51,142 - #37 ;
+INFO  23:00:51,145 - #46 }
+INFO  23:00:51,146 - #50 int
+INFO  23:00:51,149 - #50 fun1
+INFO  23:00:51,153 - #41 (
+INFO  23:00:51,155 - #42 )
+INFO  23:00:51,155 - #45 {
+INFO  23:00:51,155 - #47 1
+INFO  23:00:51,156 - #37 ;
+INFO  23:00:51,156 - #46 }
+INFO  23:00:51,157 - #46 }
+INFO  23:00:51,198 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:00:51,199 - Tip konstante nije u skladu sa dodeljenom vrednošću. Semantička greška na liniji 2
+INFO  23:00:51,199 - Obradjuje se funkcija main na liniji 5
+INFO  23:00:51,200 - Detektovana dvostruka deklaracija promenljive x .Semantička greška na liniji 6
+INFO  23:01:03,328 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:01:03,403 - #50 MyProgram
+INFO  23:01:03,405 - #50 int
+INFO  23:01:03,405 - #50 jaja
+INFO  23:01:03,406 - #34 =
+INFO  23:01:03,407 - #49 a
+INFO  23:01:03,407 - #37 ;
+INFO  23:01:03,409 - #50 int
+INFO  23:01:03,410 - #50 jaja2
+INFO  23:01:03,410 - #39 ,
+INFO  23:01:03,410 - #50 jaja1
+INFO  23:01:03,411 - #39 ,
+INFO  23:01:03,411 - #50 jaja567
+INFO  23:01:03,412 - #37 ;
+INFO  23:01:03,413 - #45 {
+INFO  23:01:03,414 - #50 main
+INFO  23:01:03,415 - #41 (
+INFO  23:01:03,416 - #42 )
+INFO  23:01:03,417 - #50 int
+INFO  23:01:03,419 - #50 x
+INFO  23:01:03,419 - #39 ,
+INFO  23:01:03,419 - #50 x
+INFO  23:01:03,419 - #37 ;
+INFO  23:01:03,419 - #50 char
+INFO  23:01:03,420 - #50 c
+INFO  23:01:03,420 - #43 [
+INFO  23:01:03,420 - #44 ]
+INFO  23:01:03,420 - #39 ,
+INFO  23:01:03,421 - #50 d
+INFO  23:01:03,421 - #37 ;
+INFO  23:01:03,421 - #45 {
+INFO  23:01:03,422 - #41 (
+INFO  23:01:03,423 - #50 a
+INFO  23:01:03,423 - #32 &&
+INFO  23:01:03,424 - #50 b
+INFO  23:01:03,424 - #32 &&
+INFO  23:01:03,425 - #50 c
+INFO  23:01:03,426 - #33 ||
+INFO  23:01:03,428 - #48 true
+INFO  23:01:03,428 - #42 )
+INFO  23:01:03,429 - #37 ;
+INFO  23:01:03,429 - #50 fun
+INFO  23:01:03,431 - #41 (
+INFO  23:01:03,431 - #50 a
+INFO  23:01:03,432 - #43 [
+INFO  23:01:03,432 - #44 ]
+INFO  23:01:03,432 - #39 ,
+INFO  23:01:03,433 - #50 b
+INFO  23:01:03,434 - #43 [
+INFO  23:01:03,434 - #44 ]
+INFO  23:01:03,434 - #42 )
+INFO  23:01:03,435 - #37 ;
+INFO  23:01:03,435 - #46 }
+INFO  23:01:03,436 - #50 int
+INFO  23:01:03,437 - #50 fun1
+INFO  23:01:03,438 - #41 (
+INFO  23:01:03,438 - #42 )
+INFO  23:01:03,438 - #45 {
+INFO  23:01:03,439 - #47 1
+INFO  23:01:03,439 - #37 ;
+INFO  23:01:03,439 - #46 }
+INFO  23:01:03,439 - #46 }
+INFO  23:01:03,473 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:01:03,474 - Tip konstante nije u skladu sa dodeljenom vrednošću. Semantička greška na liniji 2
+INFO  23:01:03,475 - Obradjuje se funkcija main na liniji 5
+INFO  23:01:03,475 - Detektovana dvostruka deklaracija promenljive x .Semantička greška na liniji 6
+INFO  23:01:03,477 - Obradjuje se funkcija fun1 na liniji 13
+INFO  23:01:03,477 - Print calls = 0
+ERROR 23:01:03,478 - Parsiranje NIJE uspesno zavrseno!
+INFO  23:01:42,679 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:01:42,770 - #50 MyProgram
+INFO  23:01:42,772 - #50 int
+INFO  23:01:42,772 - #50 jaja
+INFO  23:01:42,774 - #34 =
+INFO  23:01:42,775 - #49 a
+INFO  23:01:42,776 - #37 ;
+INFO  23:01:42,777 - #50 int
+INFO  23:01:42,778 - #50 jaja2
+INFO  23:01:42,778 - #39 ,
+INFO  23:01:42,779 - #50 jaja1
+INFO  23:01:42,779 - #39 ,
+INFO  23:01:42,780 - #50 jaja567
+INFO  23:01:42,780 - #37 ;
+INFO  23:01:42,780 - #45 {
+INFO  23:01:42,781 - #50 main
+INFO  23:01:42,783 - #41 (
+INFO  23:01:42,784 - #42 )
+INFO  23:01:42,785 - #50 int
+INFO  23:01:42,787 - #50 x
+INFO  23:01:42,787 - #39 ,
+INFO  23:01:42,788 - #50 x
+INFO  23:01:42,788 - #37 ;
+INFO  23:01:42,788 - #50 char
+INFO  23:01:42,788 - #50 c
+INFO  23:01:42,789 - #43 [
+INFO  23:01:42,789 - #44 ]
+INFO  23:01:42,789 - #39 ,
+INFO  23:01:42,789 - #50 d
+INFO  23:01:42,789 - #37 ;
+INFO  23:01:42,789 - #45 {
+INFO  23:01:42,790 - #41 (
+INFO  23:01:42,791 - #50 a
+INFO  23:01:42,791 - #32 &&
+INFO  23:01:42,792 - #50 b
+INFO  23:01:42,792 - #32 &&
+INFO  23:01:42,792 - #50 c
+INFO  23:01:42,793 - #33 ||
+INFO  23:01:42,794 - #48 true
+INFO  23:01:42,794 - #42 )
+INFO  23:01:42,795 - #37 ;
+INFO  23:01:42,796 - #50 fun
+INFO  23:01:42,798 - #41 (
+INFO  23:01:42,798 - #50 a
+INFO  23:01:42,801 - #43 [
+INFO  23:01:42,801 - #44 ]
+INFO  23:01:42,801 - #39 ,
+INFO  23:01:42,801 - #50 b
+INFO  23:01:42,803 - #43 [
+INFO  23:01:42,804 - #44 ]
+INFO  23:01:42,805 - #42 )
+INFO  23:01:42,805 - #37 ;
+INFO  23:01:42,806 - #46 }
+INFO  23:01:42,806 - #50 int
+INFO  23:01:42,810 - #50 fun1
+INFO  23:01:42,811 - #41 (
+INFO  23:01:42,812 - #42 )
+INFO  23:01:42,813 - #45 {
+INFO  23:01:42,813 - #50 int
+INFO  23:01:42,813 - #50 a
+ERROR 23:01:42,813 - 
+Sintaksna greska na liniji 14
+ERROR 23:01:42,814 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 14
+INFO  23:01:42,827 - Print calls = 0
+ERROR 23:01:42,828 - Parsiranje NIJE uspesno zavrseno!
+INFO  23:02:07,229 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:02:07,314 - #50 MyProgram
+INFO  23:02:07,316 - #50 int
+INFO  23:02:07,316 - #50 jaja
+INFO  23:02:07,317 - #34 =
+INFO  23:02:07,318 - #49 a
+INFO  23:02:07,318 - #37 ;
+INFO  23:02:07,319 - #50 int
+INFO  23:02:07,320 - #50 jaja2
+INFO  23:02:07,321 - #39 ,
+INFO  23:02:07,321 - #50 jaja1
+INFO  23:02:07,321 - #39 ,
+INFO  23:02:07,321 - #50 jaja567
+INFO  23:02:07,322 - #37 ;
+INFO  23:02:07,322 - #45 {
+INFO  23:02:07,324 - #50 main
+INFO  23:02:07,325 - #41 (
+INFO  23:02:07,328 - #42 )
+INFO  23:02:07,330 - #50 int
+INFO  23:02:07,332 - #50 x
+INFO  23:02:07,332 - #39 ,
+INFO  23:02:07,332 - #50 x
+INFO  23:02:07,332 - #37 ;
+INFO  23:02:07,332 - #50 char
+INFO  23:02:07,333 - #50 c
+INFO  23:02:07,333 - #43 [
+INFO  23:02:07,333 - #44 ]
+INFO  23:02:07,334 - #39 ,
+INFO  23:02:07,334 - #50 d
+INFO  23:02:07,334 - #37 ;
+INFO  23:02:07,334 - #45 {
+INFO  23:02:07,336 - #41 (
+INFO  23:02:07,336 - #50 a
+INFO  23:02:07,336 - #32 &&
+INFO  23:02:07,337 - #50 b
+INFO  23:02:07,338 - #32 &&
+INFO  23:02:07,338 - #50 c
+INFO  23:02:07,340 - #33 ||
+INFO  23:02:07,342 - #48 true
+INFO  23:02:07,342 - #42 )
+INFO  23:02:07,346 - #37 ;
+INFO  23:02:07,346 - #50 fun
+INFO  23:02:07,349 - #41 (
+INFO  23:02:07,349 - #50 a
+INFO  23:02:07,350 - #43 [
+INFO  23:02:07,350 - #44 ]
+INFO  23:02:07,350 - #39 ,
+INFO  23:02:07,351 - #50 b
+INFO  23:02:07,351 - #43 [
+INFO  23:02:07,352 - #44 ]
+INFO  23:02:07,352 - #42 )
+INFO  23:02:07,353 - #37 ;
+INFO  23:02:07,353 - #46 }
+INFO  23:02:07,353 - #50 int
+INFO  23:02:07,356 - #50 fun1
+INFO  23:02:07,356 - #41 (
+INFO  23:02:07,356 - #42 )
+INFO  23:02:07,356 - #45 {
+INFO  23:02:07,357 - #50 int
+INFO  23:02:07,357 - #50 a
+ERROR 23:02:07,357 - 
+Sintaksna greska na liniji 14
+ERROR 23:02:07,357 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 14
+INFO  23:02:07,373 - Print calls = 0
+ERROR 23:02:07,374 - Parsiranje NIJE uspesno zavrseno!
+INFO  23:02:47,102 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:02:47,193 - #50 MyProgram
+INFO  23:02:47,195 - #50 int
+INFO  23:02:47,195 - #50 jaja
+INFO  23:02:47,196 - #34 =
+INFO  23:02:47,197 - #49 a
+INFO  23:02:47,197 - #37 ;
+INFO  23:02:47,199 - #50 int
+INFO  23:02:47,200 - #50 jaja2
+INFO  23:02:47,200 - #39 ,
+INFO  23:02:47,201 - #50 jaja1
+INFO  23:02:47,201 - #39 ,
+INFO  23:02:47,202 - #50 jaja567
+INFO  23:02:47,202 - #37 ;
+INFO  23:02:47,202 - #45 {
+INFO  23:02:47,204 - #50 main
+INFO  23:02:47,205 - #41 (
+INFO  23:02:47,207 - #42 )
+INFO  23:02:47,208 - #50 int
+INFO  23:02:47,210 - #50 x
+INFO  23:02:47,211 - #39 ,
+INFO  23:02:47,211 - #50 x
+INFO  23:02:47,211 - #37 ;
+INFO  23:02:47,211 - #50 char
+INFO  23:02:47,212 - #50 c
+INFO  23:02:47,213 - #43 [
+INFO  23:02:47,213 - #44 ]
+INFO  23:02:47,213 - #39 ,
+INFO  23:02:47,213 - #50 d
+INFO  23:02:47,213 - #37 ;
+INFO  23:02:47,213 - #45 {
+INFO  23:02:47,215 - #41 (
+INFO  23:02:47,215 - #50 a
+INFO  23:02:47,215 - #32 &&
+INFO  23:02:47,218 - #50 b
+INFO  23:02:47,218 - #32 &&
+INFO  23:02:47,219 - #50 c
+INFO  23:02:47,219 - #33 ||
+INFO  23:02:47,220 - #48 true
+INFO  23:02:47,221 - #42 )
+INFO  23:02:47,222 - #37 ;
+INFO  23:02:47,222 - #50 fun
+INFO  23:02:47,224 - #41 (
+INFO  23:02:47,224 - #50 a
+INFO  23:02:47,225 - #43 [
+INFO  23:02:47,225 - #44 ]
+INFO  23:02:47,225 - #39 ,
+INFO  23:02:47,226 - #50 b
+INFO  23:02:47,226 - #43 [
+INFO  23:02:47,226 - #44 ]
+INFO  23:02:47,226 - #42 )
+INFO  23:02:47,227 - #37 ;
+INFO  23:02:47,228 - #46 }
+INFO  23:02:47,228 - #50 int
+INFO  23:02:47,230 - #50 fun1
+INFO  23:02:47,230 - #41 (
+INFO  23:02:47,231 - #42 )
+INFO  23:02:47,231 - #45 {
+INFO  23:02:47,231 - #50 int
+INFO  23:02:47,232 - #50 a
+ERROR 23:02:47,232 - 
+Sintaksna greska na liniji 14
+ERROR 23:02:47,232 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 14
+INFO  23:02:47,246 - Print calls = 0
+ERROR 23:02:47,247 - Parsiranje NIJE uspesno zavrseno!
+INFO  23:03:03,389 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:03:03,476 - #50 MyProgram
+INFO  23:03:03,477 - #50 int
+INFO  23:03:03,477 - #50 jaja
+INFO  23:03:03,478 - #34 =
+INFO  23:03:03,480 - #49 a
+INFO  23:03:03,480 - #37 ;
+INFO  23:03:03,482 - #50 int
+INFO  23:03:03,483 - #50 jaja2
+INFO  23:03:03,483 - #39 ,
+INFO  23:03:03,483 - #50 jaja1
+INFO  23:03:03,483 - #39 ,
+INFO  23:03:03,484 - #50 jaja567
+INFO  23:03:03,484 - #37 ;
+INFO  23:03:03,484 - #45 {
+INFO  23:03:03,486 - #50 main
+INFO  23:03:03,487 - #41 (
+INFO  23:03:03,488 - #42 )
+INFO  23:03:03,489 - #50 int
+INFO  23:03:03,491 - #50 x
+INFO  23:03:03,491 - #39 ,
+INFO  23:03:03,491 - #50 x
+INFO  23:03:03,492 - #37 ;
+INFO  23:03:03,492 - #50 char
+INFO  23:03:03,492 - #50 c
+INFO  23:03:03,493 - #43 [
+INFO  23:03:03,493 - #44 ]
+INFO  23:03:03,493 - #39 ,
+INFO  23:03:03,494 - #50 d
+INFO  23:03:03,494 - #37 ;
+INFO  23:03:03,494 - #45 {
+INFO  23:03:03,499 - #41 (
+INFO  23:03:03,499 - #50 a
+INFO  23:03:03,499 - #32 &&
+INFO  23:03:03,501 - #50 b
+INFO  23:03:03,501 - #32 &&
+INFO  23:03:03,501 - #50 c
+INFO  23:03:03,502 - #33 ||
+INFO  23:03:03,503 - #48 true
+INFO  23:03:03,504 - #42 )
+INFO  23:03:03,505 - #37 ;
+INFO  23:03:03,505 - #50 fun
+INFO  23:03:03,507 - #41 (
+INFO  23:03:03,507 - #50 a
+INFO  23:03:03,507 - #43 [
+INFO  23:03:03,507 - #44 ]
+INFO  23:03:03,508 - #39 ,
+INFO  23:03:03,508 - #50 b
+INFO  23:03:03,509 - #43 [
+INFO  23:03:03,509 - #44 ]
+INFO  23:03:03,510 - #42 )
+INFO  23:03:03,510 - #37 ;
+INFO  23:03:03,511 - #46 }
+INFO  23:03:03,511 - #50 int
+INFO  23:03:03,514 - #50 fun1
+INFO  23:03:03,515 - #41 (
+INFO  23:03:03,516 - #42 )
+INFO  23:03:03,516 - #45 {
+INFO  23:03:03,516 - #46 }
+INFO  23:03:03,516 - #46 }
+INFO  23:03:03,531 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:03:03,532 - Tip konstante nije u skladu sa dodeljenom vrednošću. Semantička greška na liniji 2
+INFO  23:03:03,532 - Obradjuje se funkcija main na liniji 5
+INFO  23:03:03,533 - Detektovana dvostruka deklaracija promenljive x .Semantička greška na liniji 6
+INFO  23:03:03,543 - Obradjuje se funkcija fun1 na liniji 13
+INFO  23:03:03,547 - Semantička greška: Nepostojeca return naredba u funkciji fun1 na liniji 13
+INFO  23:03:03,549 - Print calls = 0
+ERROR 23:03:03,551 - Parsiranje NIJE uspesno zavrseno!
+INFO  23:03:26,766 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:03:26,856 - #50 MyProgram
+INFO  23:03:26,859 - #50 int
+INFO  23:03:26,859 - #50 jaja
+INFO  23:03:26,860 - #34 =
+INFO  23:03:26,861 - #49 a
+INFO  23:03:26,862 - #37 ;
+INFO  23:03:26,864 - #50 int
+INFO  23:03:26,864 - #50 jaja2
+INFO  23:03:26,865 - #39 ,
+INFO  23:03:26,865 - #50 jaja1
+INFO  23:03:26,865 - #39 ,
+INFO  23:03:26,866 - #50 jaja567
+INFO  23:03:26,866 - #37 ;
+INFO  23:03:26,866 - #45 {
+INFO  23:03:26,867 - #50 main
+INFO  23:03:26,868 - #41 (
+INFO  23:03:26,869 - #42 )
+INFO  23:03:26,870 - #50 int
+INFO  23:03:26,872 - #50 x
+INFO  23:03:26,873 - #39 ,
+INFO  23:03:26,873 - #50 x
+INFO  23:03:26,873 - #37 ;
+INFO  23:03:26,873 - #50 char
+INFO  23:03:26,874 - #50 c
+INFO  23:03:26,875 - #43 [
+INFO  23:03:26,875 - #44 ]
+INFO  23:03:26,876 - #39 ,
+INFO  23:03:26,876 - #50 d
+INFO  23:03:26,876 - #37 ;
+INFO  23:03:26,877 - #45 {
+INFO  23:03:26,879 - #41 (
+INFO  23:03:26,879 - #50 a
+INFO  23:03:26,880 - #32 &&
+INFO  23:03:26,881 - #50 b
+INFO  23:03:26,881 - #32 &&
+INFO  23:03:26,881 - #50 c
+INFO  23:03:26,881 - #33 ||
+INFO  23:03:26,883 - #48 true
+INFO  23:03:26,884 - #42 )
+INFO  23:03:26,885 - #37 ;
+INFO  23:03:26,885 - #50 fun
+INFO  23:03:26,887 - #41 (
+INFO  23:03:26,888 - #50 a
+INFO  23:03:26,888 - #43 [
+INFO  23:03:26,889 - #44 ]
+INFO  23:03:26,889 - #39 ,
+INFO  23:03:26,889 - #50 b
+INFO  23:03:26,890 - #43 [
+INFO  23:03:26,890 - #44 ]
+INFO  23:03:26,892 - #42 )
+INFO  23:03:26,893 - #37 ;
+INFO  23:03:26,894 - #46 }
+INFO  23:03:26,894 - #50 int
+INFO  23:03:26,896 - #50 fun1
+INFO  23:03:26,897 - #41 (
+INFO  23:03:26,897 - #42 )
+INFO  23:03:26,897 - #50 int
+INFO  23:03:26,898 - #50 a
+INFO  23:03:26,898 - #37 ;
+INFO  23:03:26,898 - #45 {
+INFO  23:03:26,898 - #50 a
+INFO  23:03:26,899 - #34 =
+INFO  23:03:26,900 - #47 5
+INFO  23:03:26,903 - #37 ;
+INFO  23:03:26,904 - #50 a
+INFO  23:03:26,904 - #37 ;
+INFO  23:03:26,905 - #46 }
+INFO  23:03:26,907 - #46 }
+INFO  23:03:26,923 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:03:26,924 - Tip konstante nije u skladu sa dodeljenom vrednošću. Semantička greška na liniji 2
+INFO  23:03:26,927 - Obradjuje se funkcija main na liniji 5
+INFO  23:03:26,928 - Detektovana dvostruka deklaracija promenljive x .Semantička greška na liniji 6
+INFO  23:03:26,928 - Obradjuje se funkcija fun1 na liniji 13
+INFO  23:04:07,512 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:04:07,599 - #50 MyProgram
+INFO  23:04:07,601 - #50 int
+INFO  23:04:07,601 - #50 jaja
+INFO  23:04:07,602 - #34 =
+INFO  23:04:07,603 - #49 a
+INFO  23:04:07,603 - #37 ;
+INFO  23:04:07,604 - #50 int
+INFO  23:04:07,605 - #50 jaja2
+INFO  23:04:07,605 - #39 ,
+INFO  23:04:07,606 - #50 jaja1
+INFO  23:04:07,606 - #39 ,
+INFO  23:04:07,606 - #50 jaja567
+INFO  23:04:07,607 - #37 ;
+INFO  23:04:07,607 - #45 {
+INFO  23:04:07,608 - #50 main
+INFO  23:04:07,610 - #41 (
+INFO  23:04:07,611 - #42 )
+INFO  23:04:07,612 - #50 int
+INFO  23:04:07,615 - #50 x
+INFO  23:04:07,616 - #39 ,
+INFO  23:04:07,616 - #50 x
+INFO  23:04:07,616 - #37 ;
+INFO  23:04:07,616 - #50 char
+INFO  23:04:07,617 - #50 c
+INFO  23:04:07,617 - #43 [
+INFO  23:04:07,618 - #44 ]
+INFO  23:04:07,618 - #39 ,
+INFO  23:04:07,618 - #50 d
+INFO  23:04:07,618 - #37 ;
+INFO  23:04:07,618 - #45 {
+INFO  23:04:07,619 - #41 (
+INFO  23:04:07,620 - #50 a
+INFO  23:04:07,620 - #32 &&
+INFO  23:04:07,621 - #50 b
+INFO  23:04:07,622 - #32 &&
+INFO  23:04:07,622 - #50 c
+INFO  23:04:07,622 - #33 ||
+INFO  23:04:07,624 - #48 true
+INFO  23:04:07,624 - #42 )
+INFO  23:04:07,625 - #37 ;
+INFO  23:04:07,625 - #50 fun
+INFO  23:04:07,628 - #41 (
+INFO  23:04:07,628 - #50 a
+INFO  23:04:07,628 - #43 [
+INFO  23:04:07,628 - #44 ]
+INFO  23:04:07,629 - #39 ,
+INFO  23:04:07,629 - #50 b
+INFO  23:04:07,629 - #43 [
+INFO  23:04:07,630 - #44 ]
+INFO  23:04:07,630 - #42 )
+INFO  23:04:07,631 - #37 ;
+INFO  23:04:07,633 - #46 }
+INFO  23:04:07,633 - #50 int
+INFO  23:04:07,635 - #50 fun1
+INFO  23:04:07,636 - #41 (
+INFO  23:04:07,636 - #42 )
+INFO  23:04:07,636 - #50 int
+INFO  23:04:07,637 - #50 a
+INFO  23:04:07,637 - #37 ;
+INFO  23:04:07,637 - #45 {
+INFO  23:04:07,637 - #50 a
+INFO  23:04:07,638 - #34 =
+INFO  23:04:07,638 - #47 5
+INFO  23:04:07,638 - #37 ;
+INFO  23:04:07,639 - #47 5
+INFO  23:04:07,639 - #37 ;
+INFO  23:04:07,639 - #46 }
+INFO  23:04:07,639 - #46 }
+INFO  23:04:07,652 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:04:07,652 - Tip konstante nije u skladu sa dodeljenom vrednošću. Semantička greška na liniji 2
+INFO  23:04:07,653 - Obradjuje se funkcija main na liniji 5
+INFO  23:04:07,653 - Detektovana dvostruka deklaracija promenljive x .Semantička greška na liniji 6
+INFO  23:04:07,654 - Obradjuje se funkcija fun1 na liniji 13
+INFO  23:04:07,654 - Print calls = 0
+ERROR 23:04:07,655 - Parsiranje NIJE uspesno zavrseno!
+INFO  23:06:04,263 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:06:04,356 - #50 MyProgram
+INFO  23:06:04,357 - #37 ;
+ERROR 23:06:04,357 - 
+Sintaksna greska na liniji 1
+ERROR 23:06:04,357 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 1
+INFO  23:06:29,902 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:06:29,986 - #50 MyProgram
+INFO  23:06:29,986 - #45 {
+INFO  23:06:29,989 - #50 main
+INFO  23:06:29,989 - #41 (
+INFO  23:06:29,991 - #42 )
+INFO  23:06:29,992 - #50 int
+INFO  23:06:29,995 - #50 x
+INFO  23:06:29,997 - #37 ;
+INFO  23:06:29,997 - #50 char
+INFO  23:06:29,998 - #50 c
+INFO  23:06:29,999 - #43 [
+INFO  23:06:29,999 - #44 ]
+INFO  23:06:29,999 - #39 ,
+INFO  23:06:30,000 - #50 d
+INFO  23:06:30,000 - #37 ;
+INFO  23:06:30,001 - #45 {
+INFO  23:06:30,002 - #41 (
+INFO  23:06:30,002 - #50 a
+INFO  23:06:30,003 - #32 &&
+INFO  23:06:30,003 - #50 b
+INFO  23:06:30,004 - #32 &&
+INFO  23:06:30,004 - #50 c
+INFO  23:06:30,004 - #33 ||
+INFO  23:06:30,006 - #48 true
+INFO  23:06:30,006 - #42 )
+INFO  23:06:30,007 - #37 ;
+INFO  23:06:30,007 - #50 fun
+INFO  23:06:30,008 - #41 (
+INFO  23:06:30,009 - #50 a
+INFO  23:06:30,009 - #43 [
+INFO  23:06:30,009 - #44 ]
+INFO  23:06:30,009 - #39 ,
+INFO  23:06:30,010 - #50 b
+INFO  23:06:30,010 - #43 [
+INFO  23:06:30,010 - #44 ]
+INFO  23:06:30,010 - #42 )
+INFO  23:06:30,011 - #37 ;
+INFO  23:06:30,012 - #46 }
+INFO  23:06:30,012 - #50 int
+INFO  23:06:30,017 - #50 fun1
+INFO  23:06:30,019 - #41 (
+INFO  23:06:30,019 - #42 )
+INFO  23:06:30,021 - #50 int
+INFO  23:06:30,021 - #50 a
+INFO  23:06:30,021 - #39 ,
+INFO  23:06:30,022 - #50 x
+INFO  23:06:30,022 - #37 ;
+INFO  23:06:30,022 - #45 {
+INFO  23:06:30,022 - #50 a
+INFO  23:06:30,023 - #34 =
+INFO  23:06:30,023 - #47 5
+INFO  23:06:30,023 - #37 ;
+INFO  23:06:30,024 - #47 5
+INFO  23:06:30,024 - #37 ;
+INFO  23:06:30,024 - #46 }
+INFO  23:06:30,025 - #46 }
+INFO  23:06:30,042 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:06:30,043 - Obradjuje se funkcija main na liniji 3
+INFO  23:06:30,043 - Obradjuje se funkcija fun1 na liniji 11
+INFO  23:06:30,043 - Print calls = 0
+INFO  23:06:30,044 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  23:06:30,045 - Parsiranje uspesno zavrseno!
+INFO  23:06:48,181 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:06:48,270 - #50 MyProgram
+INFO  23:06:48,270 - #45 {
+INFO  23:06:48,273 - #50 main
+INFO  23:06:48,274 - #41 (
+INFO  23:06:48,276 - #42 )
+INFO  23:06:48,278 - #50 int
+INFO  23:06:48,280 - #50 x
+INFO  23:06:48,282 - #37 ;
+INFO  23:06:48,282 - #50 char
+INFO  23:06:48,283 - #50 c
+INFO  23:06:48,283 - #43 [
+INFO  23:06:48,283 - #44 ]
+INFO  23:06:48,284 - #39 ,
+INFO  23:06:48,284 - #50 d
+INFO  23:06:48,284 - #37 ;
+INFO  23:06:48,284 - #45 {
+INFO  23:06:48,286 - #41 (
+INFO  23:06:48,287 - #50 a
+INFO  23:06:48,287 - #32 &&
+INFO  23:06:48,288 - #50 b
+INFO  23:06:48,288 - #32 &&
+INFO  23:06:48,289 - #50 c
+INFO  23:06:48,290 - #33 ||
+INFO  23:06:48,297 - #48 true
+INFO  23:06:48,298 - #42 )
+INFO  23:06:48,300 - #37 ;
+INFO  23:06:48,301 - #50 fun
+INFO  23:06:48,302 - #41 (
+INFO  23:06:48,302 - #50 a
+INFO  23:06:48,302 - #43 [
+INFO  23:06:48,303 - #44 ]
+INFO  23:06:48,303 - #39 ,
+INFO  23:06:48,303 - #50 b
+INFO  23:06:48,303 - #43 [
+INFO  23:06:48,304 - #44 ]
+INFO  23:06:48,304 - #42 )
+INFO  23:06:48,304 - #37 ;
+INFO  23:06:48,305 - #46 }
+INFO  23:06:48,305 - #50 int
+INFO  23:06:48,307 - #50 fun1
+INFO  23:06:48,307 - #41 (
+INFO  23:06:48,307 - #42 )
+INFO  23:06:48,308 - #50 int
+INFO  23:06:48,308 - #50 a
+INFO  23:06:48,308 - #39 ,
+INFO  23:06:48,308 - #50 x
+INFO  23:06:48,308 - #37 ;
+INFO  23:06:48,308 - #45 {
+INFO  23:06:48,309 - #50 a
+INFO  23:06:48,309 - #34 =
+INFO  23:06:48,309 - #47 5
+INFO  23:06:48,309 - #37 ;
+INFO  23:06:48,310 - #50 b
+INFO  23:06:48,311 - #34 =
+INFO  23:06:48,312 - #47 5
+INFO  23:06:48,312 - #37 ;
+INFO  23:06:48,312 - #47 5
+INFO  23:06:48,312 - #37 ;
+INFO  23:06:48,313 - #46 }
+INFO  23:06:48,313 - #46 }
+INFO  23:06:48,329 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:06:48,330 - Obradjuje se funkcija main na liniji 3
+INFO  23:06:48,330 - Obradjuje se funkcija fun1 na liniji 11
+INFO  23:06:48,331 - Print calls = 0
+INFO  23:06:48,332 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  23:06:48,333 - Parsiranje uspesno zavrseno!
+INFO  23:06:57,646 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:06:57,739 - #50 MyProgram
+INFO  23:06:57,739 - #45 {
+INFO  23:06:57,741 - #50 main
+INFO  23:06:57,742 - #41 (
+INFO  23:06:57,744 - #42 )
+INFO  23:06:57,745 - #50 int
+INFO  23:06:57,748 - #50 x
+INFO  23:06:57,750 - #37 ;
+INFO  23:06:57,750 - #50 char
+INFO  23:06:57,750 - #50 c
+INFO  23:06:57,750 - #43 [
+INFO  23:06:57,751 - #44 ]
+INFO  23:06:57,751 - #39 ,
+INFO  23:06:57,751 - #50 d
+INFO  23:06:57,751 - #37 ;
+INFO  23:06:57,752 - #45 {
+INFO  23:06:57,753 - #41 (
+INFO  23:06:57,753 - #50 a
+INFO  23:06:57,753 - #32 &&
+INFO  23:06:57,754 - #50 b
+INFO  23:06:57,754 - #32 &&
+INFO  23:06:57,754 - #50 c
+INFO  23:06:57,754 - #33 ||
+INFO  23:06:57,763 - #48 true
+INFO  23:06:57,763 - #42 )
+INFO  23:06:57,764 - #37 ;
+INFO  23:06:57,764 - #50 fun
+INFO  23:06:57,766 - #41 (
+INFO  23:06:57,766 - #50 a
+INFO  23:06:57,766 - #43 [
+INFO  23:06:57,767 - #44 ]
+INFO  23:06:57,767 - #39 ,
+INFO  23:06:57,767 - #50 b
+INFO  23:06:57,767 - #43 [
+INFO  23:06:57,768 - #44 ]
+INFO  23:06:57,768 - #42 )
+INFO  23:06:57,768 - #37 ;
+INFO  23:06:57,769 - #46 }
+INFO  23:06:57,769 - #50 int
+INFO  23:06:57,771 - #50 fun1
+INFO  23:06:57,771 - #41 (
+INFO  23:06:57,772 - #50 int
+INFO  23:06:57,772 - #50 c
+INFO  23:06:57,772 - #42 )
+INFO  23:06:57,773 - #50 int
+INFO  23:06:57,775 - #50 a
+INFO  23:06:57,776 - #39 ,
+INFO  23:06:57,776 - #50 x
+INFO  23:06:57,776 - #37 ;
+INFO  23:06:57,776 - #45 {
+INFO  23:06:57,777 - #50 a
+INFO  23:06:57,777 - #34 =
+INFO  23:06:57,777 - #47 5
+INFO  23:06:57,777 - #37 ;
+INFO  23:06:57,778 - #50 b
+INFO  23:06:57,778 - #34 =
+INFO  23:06:57,778 - #47 5
+INFO  23:06:57,779 - #37 ;
+INFO  23:06:57,779 - #47 5
+INFO  23:06:57,779 - #37 ;
+INFO  23:06:57,779 - #46 }
+INFO  23:06:57,780 - #46 }
+INFO  23:06:57,797 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:06:57,798 - Obradjuje se funkcija main na liniji 3
+INFO  23:06:57,799 - Obradjuje se funkcija fun1 na liniji 11
+INFO  23:06:57,799 - Print calls = 0
+INFO  23:06:57,800 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  23:06:57,801 - Parsiranje uspesno zavrseno!
+INFO  23:24:49,756 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:24:51,616 - #50 MyProgram
+INFO  23:24:51,616 - #45 {
+INFO  23:24:51,650 - #50 main
+INFO  23:24:51,654 - #41 (
+INFO  23:24:51,678 - #42 )
+INFO  23:24:51,681 - #50 int
+INFO  23:24:51,703 - #50 x
+INFO  23:24:51,722 - #37 ;
+INFO  23:24:51,723 - #50 char
+INFO  23:24:51,723 - #50 c
+INFO  23:24:51,723 - #43 [
+INFO  23:24:51,723 - #44 ]
+INFO  23:24:51,724 - #39 ,
+INFO  23:24:51,724 - #50 d
+INFO  23:24:51,724 - #37 ;
+INFO  23:24:51,724 - #45 {
+INFO  23:24:51,741 - #41 (
+INFO  23:24:51,742 - #50 a
+INFO  23:24:51,742 - #32 &&
+INFO  23:24:51,743 - #50 b
+INFO  23:24:51,743 - #32 &&
+INFO  23:24:51,743 - #50 c
+INFO  23:24:51,743 - #33 ||
+INFO  23:24:51,759 - #48 true
+INFO  23:24:51,760 - #42 )
+INFO  23:24:51,760 - #37 ;
+INFO  23:24:51,760 - #50 fun
+INFO  23:24:51,764 - #41 (
+INFO  23:24:51,764 - #50 a
+INFO  23:24:51,764 - #43 [
+INFO  23:24:51,764 - #44 ]
+INFO  23:24:51,764 - #39 ,
+INFO  23:24:51,765 - #50 b
+INFO  23:24:51,765 - #43 [
+INFO  23:24:51,765 - #44 ]
+INFO  23:24:51,765 - #42 )
+INFO  23:24:51,766 - #37 ;
+INFO  23:24:51,766 - #46 }
+INFO  23:24:51,766 - #50 int
+INFO  23:24:51,770 - #50 fun1
+INFO  23:24:51,770 - #41 (
+INFO  23:24:51,771 - #50 int
+INFO  23:24:51,771 - #50 c
+INFO  23:24:51,771 - #42 )
+INFO  23:24:51,772 - #50 int
+INFO  23:24:51,772 - #50 a
+INFO  23:24:51,772 - #39 ,
+INFO  23:24:51,773 - #50 x
+INFO  23:24:51,773 - #37 ;
+INFO  23:24:51,773 - #45 {
+INFO  23:24:51,773 - #50 a
+INFO  23:24:51,773 - #34 =
+INFO  23:24:51,774 - #47 5
+INFO  23:24:51,774 - #37 ;
+INFO  23:24:51,774 - #50 b
+INFO  23:24:51,774 - #34 =
+INFO  23:24:51,775 - #47 5
+INFO  23:24:51,775 - #37 ;
+INFO  23:24:51,776 - #47 5
+INFO  23:24:51,776 - #37 ;
+INFO  23:24:51,776 - #46 }
+INFO  23:24:51,776 - #46 }
+INFO  23:24:51,850 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:24:51,850 - Obradjuje se funkcija main na liniji 3
+INFO  23:24:51,851 - Obradjuje se funkcija fun1 na liniji 11
+INFO  23:24:51,851 - Print calls = 0
+INFO  23:24:51,854 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  23:24:51,855 - Parsiranje uspesno zavrseno!
+INFO  23:35:52,319 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:35:53,083 - #50 MyProgram
+INFO  23:35:53,083 - #45 {
+INFO  23:35:53,115 - #50 main
+INFO  23:35:53,125 - #41 (
+INFO  23:35:53,156 - #42 )
+INFO  23:35:53,171 - #50 int
+INFO  23:35:53,193 - #50 x
+INFO  23:35:53,197 - #37 ;
+INFO  23:35:53,198 - #50 char
+INFO  23:35:53,198 - #50 c
+INFO  23:35:53,198 - #43 [
+INFO  23:35:53,198 - #44 ]
+INFO  23:35:53,199 - #39 ,
+INFO  23:35:53,199 - #50 d
+INFO  23:35:53,199 - #37 ;
+INFO  23:35:53,199 - #45 {
+INFO  23:35:53,207 - #41 (
+INFO  23:35:53,210 - #50 a
+INFO  23:35:53,214 - #32 &&
+INFO  23:35:53,215 - #50 b
+INFO  23:35:53,216 - #32 &&
+INFO  23:35:53,217 - #50 c
+INFO  23:35:53,217 - #33 ||
+INFO  23:35:53,220 - #48 true
+INFO  23:35:53,221 - #42 )
+INFO  23:35:53,221 - #37 ;
+INFO  23:35:53,222 - #50 fun
+INFO  23:35:53,239 - #41 (
+INFO  23:35:53,239 - #50 a
+INFO  23:35:53,239 - #43 [
+INFO  23:35:53,239 - #44 ]
+INFO  23:35:53,240 - #39 ,
+INFO  23:35:53,240 - #50 b
+INFO  23:35:53,240 - #43 [
+INFO  23:35:53,240 - #44 ]
+INFO  23:35:53,240 - #42 )
+INFO  23:35:53,241 - #37 ;
+INFO  23:35:53,241 - #46 }
+INFO  23:35:53,242 - #50 int
+INFO  23:35:53,245 - #50 fun1
+INFO  23:35:53,246 - #41 (
+INFO  23:35:53,246 - #50 int
+INFO  23:35:53,247 - #50 c
+INFO  23:35:53,247 - #42 )
+INFO  23:35:53,248 - #50 int
+INFO  23:35:53,248 - #50 a
+INFO  23:35:53,248 - #39 ,
+INFO  23:35:53,248 - #50 x
+INFO  23:35:53,249 - #37 ;
+INFO  23:35:53,249 - #45 {
+INFO  23:35:53,249 - #50 a
+INFO  23:35:53,249 - #34 =
+INFO  23:35:53,250 - #47 5
+INFO  23:35:53,250 - #37 ;
+INFO  23:35:53,250 - #50 b
+INFO  23:35:53,251 - #34 =
+INFO  23:35:53,253 - #47 5
+INFO  23:35:53,254 - #37 ;
+INFO  23:35:53,254 - #47 5
+INFO  23:35:53,254 - #37 ;
+INFO  23:35:53,255 - #46 }
+INFO  23:35:53,255 - #46 }
+INFO  23:35:53,310 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:35:53,310 - Obradjuje se funkcija main na liniji 3
+INFO  23:35:53,311 - Promenljiva a mora biti deklarisana pre upotrebe. Semantička greškaa na liniji 7
+INFO  23:35:53,311 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greškab na liniji 7
+INFO  23:35:53,312 - Promenljiva fun mora biti deklarisana pre upotrebe. Semantička greškafun na liniji 8
+INFO  23:35:53,313 - Obradjuje se funkcija fun1 na liniji 11
+INFO  23:35:53,313 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greškab na liniji 15
+INFO  23:35:53,314 - Print calls = 0
+ERROR 23:35:53,315 - Parsiranje NIJE uspesno zavrseno!
+INFO  23:50:00,308 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:50:01,198 - #50 MyProgram
+INFO  23:50:01,198 - #45 {
+INFO  23:50:01,226 - #50 main
+INFO  23:50:01,230 - #41 (
+INFO  23:50:01,248 - #42 )
+INFO  23:50:01,263 - #50 int
+INFO  23:50:01,281 - #50 x
+INFO  23:50:01,284 - #37 ;
+INFO  23:50:01,284 - #50 char
+INFO  23:50:01,285 - #50 c
+INFO  23:50:01,286 - #43 [
+INFO  23:50:01,286 - #44 ]
+INFO  23:50:01,287 - #39 ,
+INFO  23:50:01,287 - #50 d
+INFO  23:50:01,288 - #37 ;
+INFO  23:50:01,288 - #45 {
+INFO  23:50:01,292 - #41 (
+INFO  23:50:01,293 - #50 a
+INFO  23:50:01,293 - #32 &&
+INFO  23:50:01,295 - #50 b
+INFO  23:50:01,296 - #32 &&
+INFO  23:50:01,296 - #50 c
+INFO  23:50:01,296 - #33 ||
+INFO  23:50:01,300 - #48 true
+INFO  23:50:01,300 - #42 )
+INFO  23:50:01,301 - #37 ;
+INFO  23:50:01,301 - #50 fun
+INFO  23:50:01,304 - #41 (
+INFO  23:50:01,304 - #50 a
+INFO  23:50:01,305 - #43 [
+INFO  23:50:01,305 - #44 ]
+INFO  23:50:01,305 - #39 ,
+INFO  23:50:01,306 - #50 b
+INFO  23:50:01,306 - #43 [
+INFO  23:50:01,306 - #44 ]
+INFO  23:50:01,306 - #42 )
+INFO  23:50:01,307 - #37 ;
+INFO  23:50:01,307 - #46 }
+INFO  23:50:01,308 - #50 int
+INFO  23:50:01,313 - #50 fun1
+INFO  23:50:01,313 - #41 (
+INFO  23:50:01,315 - #50 int
+INFO  23:50:01,316 - #50 c
+INFO  23:50:01,316 - #42 )
+INFO  23:50:01,317 - #50 int
+INFO  23:50:01,317 - #50 a
+INFO  23:50:01,318 - #39 ,
+INFO  23:50:01,318 - #50 x
+INFO  23:50:01,318 - #37 ;
+INFO  23:50:01,318 - #45 {
+INFO  23:50:01,319 - #50 a
+INFO  23:50:01,320 - #34 =
+INFO  23:50:01,321 - #47 5
+INFO  23:50:01,321 - #37 ;
+INFO  23:50:01,322 - #50 b
+INFO  23:50:01,323 - #34 =
+INFO  23:50:01,323 - #47 5
+INFO  23:50:01,323 - #37 ;
+INFO  23:50:01,324 - #47 5
+INFO  23:50:01,324 - #37 ;
+INFO  23:50:01,324 - #46 }
+INFO  23:50:01,325 - #46 }
+INFO  23:50:01,388 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:50:01,388 - Obradjuje se funkcija main na liniji 3
+INFO  23:50:01,389 - Promenljiva a mora biti deklarisana pre upotrebe. Semantička greškaa na liniji 7
+INFO  23:50:01,389 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greškab na liniji 7
+INFO  23:50:01,390 - Promenljiva fun mora biti deklarisana pre upotrebe. Semantička greškafun na liniji 8
+INFO  23:50:01,390 - Obradjuje se funkcija fun1 na liniji 11
+INFO  23:50:01,391 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greškab na liniji 15
+INFO  23:50:55,108 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:50:55,189 - #50 MyProgram
+INFO  23:50:55,189 - #45 {
+INFO  23:50:55,191 - #50 main
+INFO  23:50:55,192 - #41 (
+INFO  23:50:55,194 - #42 )
+INFO  23:50:55,199 - #50 int
+INFO  23:50:55,202 - #50 x
+INFO  23:50:55,204 - #37 ;
+INFO  23:50:55,205 - #50 char
+INFO  23:50:55,206 - #50 c
+INFO  23:50:55,206 - #43 [
+INFO  23:50:55,206 - #44 ]
+INFO  23:50:55,207 - #39 ,
+INFO  23:50:55,207 - #50 d
+INFO  23:50:55,207 - #37 ;
+INFO  23:50:55,207 - #45 {
+INFO  23:50:55,209 - #41 (
+INFO  23:50:55,209 - #50 a
+INFO  23:50:55,210 - #32 &&
+INFO  23:50:55,211 - #50 b
+INFO  23:50:55,211 - #32 &&
+INFO  23:50:55,211 - #50 c
+INFO  23:50:55,212 - #33 ||
+INFO  23:50:55,217 - #48 true
+INFO  23:50:55,217 - #42 )
+INFO  23:50:55,219 - #37 ;
+INFO  23:50:55,220 - #50 fun
+INFO  23:50:55,221 - #41 (
+INFO  23:50:55,222 - #50 a
+INFO  23:50:55,222 - #43 [
+INFO  23:50:55,222 - #44 ]
+INFO  23:50:55,222 - #39 ,
+INFO  23:50:55,223 - #50 b
+INFO  23:50:55,223 - #43 [
+INFO  23:50:55,223 - #44 ]
+INFO  23:50:55,223 - #42 )
+INFO  23:50:55,224 - #37 ;
+INFO  23:50:55,225 - #46 }
+INFO  23:50:55,225 - #50 int
+INFO  23:50:55,227 - #50 fun1
+INFO  23:50:55,227 - #41 (
+INFO  23:50:55,228 - #50 int
+INFO  23:50:55,228 - #50 c
+INFO  23:50:55,228 - #42 )
+INFO  23:50:55,229 - #50 int
+INFO  23:50:55,229 - #50 a
+INFO  23:50:55,230 - #39 ,
+INFO  23:50:55,230 - #50 x
+INFO  23:50:55,231 - #37 ;
+INFO  23:50:55,232 - #45 {
+INFO  23:50:55,233 - #50 a
+INFO  23:50:55,233 - #34 =
+INFO  23:50:55,233 - #47 5
+INFO  23:50:55,234 - #37 ;
+INFO  23:50:55,234 - #50 b
+INFO  23:50:55,234 - #34 =
+INFO  23:50:55,235 - #47 5
+INFO  23:50:55,236 - #37 ;
+INFO  23:50:55,236 - #47 5
+INFO  23:50:55,236 - #37 ;
+INFO  23:50:55,237 - #46 }
+INFO  23:50:55,237 - #46 }
+INFO  23:50:55,274 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:50:55,275 - Obradjuje se funkcija main na liniji 3
+INFO  23:50:55,276 - Promenljiva a mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  23:50:55,276 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  23:50:55,277 - Promenljiva fun mora biti deklarisana pre upotrebe. Semantička greška na liniji 8
+INFO  23:50:55,277 - Obradjuje se funkcija fun1 na liniji 11
+INFO  23:50:55,278 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 15
+INFO  23:52:15,949 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:52:16,024 - #50 MyProgram
+INFO  23:52:16,024 - #45 {
+INFO  23:52:16,027 - #50 main
+INFO  23:52:16,028 - #41 (
+INFO  23:52:16,031 - #42 )
+INFO  23:52:16,032 - #50 int
+INFO  23:52:16,034 - #50 x
+INFO  23:52:16,035 - #37 ;
+INFO  23:52:16,036 - #50 char
+INFO  23:52:16,036 - #50 c
+INFO  23:52:16,036 - #43 [
+INFO  23:52:16,037 - #44 ]
+INFO  23:52:16,037 - #39 ,
+INFO  23:52:16,037 - #50 d
+INFO  23:52:16,037 - #37 ;
+INFO  23:52:16,037 - #45 {
+INFO  23:52:16,038 - #41 (
+INFO  23:52:16,039 - #50 a
+INFO  23:52:16,039 - #32 &&
+INFO  23:52:16,040 - #50 b
+INFO  23:52:16,041 - #32 &&
+INFO  23:52:16,041 - #50 c
+INFO  23:52:16,042 - #33 ||
+INFO  23:52:16,048 - #48 true
+INFO  23:52:16,048 - #42 )
+INFO  23:52:16,049 - #37 ;
+INFO  23:52:16,049 - #50 fun
+INFO  23:52:16,050 - #41 (
+INFO  23:52:16,051 - #50 a
+INFO  23:52:16,051 - #43 [
+INFO  23:52:16,051 - #44 ]
+INFO  23:52:16,052 - #39 ,
+INFO  23:52:16,052 - #50 b
+INFO  23:52:16,052 - #43 [
+INFO  23:52:16,053 - #44 ]
+INFO  23:52:16,053 - #42 )
+INFO  23:52:16,053 - #37 ;
+INFO  23:52:16,054 - #46 }
+INFO  23:52:16,054 - #50 int
+INFO  23:52:16,056 - #50 fun1
+INFO  23:52:16,057 - #41 (
+INFO  23:52:16,057 - #50 int
+INFO  23:52:16,057 - #50 c
+INFO  23:52:16,058 - #42 )
+INFO  23:52:16,059 - #50 int
+INFO  23:52:16,059 - #50 a
+INFO  23:52:16,059 - #39 ,
+INFO  23:52:16,060 - #50 x
+INFO  23:52:16,060 - #37 ;
+INFO  23:52:16,060 - #45 {
+INFO  23:52:16,060 - #50 a
+INFO  23:52:16,061 - #34 =
+INFO  23:52:16,061 - #47 5
+INFO  23:52:16,061 - #37 ;
+INFO  23:52:16,063 - #50 b
+INFO  23:52:16,064 - #34 =
+INFO  23:52:16,064 - #47 5
+INFO  23:52:16,064 - #37 ;
+INFO  23:52:16,064 - #47 5
+INFO  23:52:16,065 - #37 ;
+INFO  23:52:16,065 - #46 }
+INFO  23:52:16,065 - #46 }
+INFO  23:52:16,105 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:52:16,106 - Obradjuje se funkcija main na liniji 3
+INFO  23:52:16,107 - Promenljiva a mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  23:52:16,107 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  23:52:16,108 - Promenljiva fun mora biti deklarisana pre upotrebe. Semantička greška na liniji 8
+INFO  23:52:16,108 - Obradjuje se funkcija fun1 na liniji 11
+INFO  23:52:16,109 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 15
+INFO  23:52:16,109 - Print calls = 0
+ERROR 23:52:16,110 - Parsiranje NIJE uspesno zavrseno!
+INFO  23:52:36,631 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:52:36,722 - #50 MyProgram
+INFO  23:52:36,722 - #45 {
+INFO  23:52:36,725 - #50 main
+INFO  23:52:36,726 - #41 (
+INFO  23:52:36,728 - #42 )
+INFO  23:52:36,729 - #50 int
+INFO  23:52:36,731 - #50 x
+INFO  23:52:36,732 - #37 ;
+INFO  23:52:36,733 - #50 char
+INFO  23:52:36,733 - #50 c
+INFO  23:52:36,733 - #43 [
+INFO  23:52:36,733 - #44 ]
+INFO  23:52:36,733 - #39 ,
+INFO  23:52:36,734 - #50 d
+INFO  23:52:36,734 - #37 ;
+INFO  23:52:36,734 - #45 {
+INFO  23:52:36,735 - #41 (
+INFO  23:52:36,736 - #50 a
+INFO  23:52:36,736 - #32 &&
+INFO  23:52:36,737 - #50 b
+INFO  23:52:36,737 - #32 &&
+INFO  23:52:36,737 - #50 c
+INFO  23:52:36,738 - #33 ||
+INFO  23:52:36,739 - #48 true
+INFO  23:52:36,739 - #42 )
+INFO  23:52:36,741 - #37 ;
+INFO  23:52:36,741 - #50 fun
+INFO  23:52:36,743 - #41 (
+INFO  23:52:36,744 - #50 a
+INFO  23:52:36,748 - #43 [
+INFO  23:52:36,748 - #44 ]
+INFO  23:52:36,748 - #39 ,
+INFO  23:52:36,749 - #50 b
+INFO  23:52:36,749 - #43 [
+INFO  23:52:36,750 - #44 ]
+INFO  23:52:36,750 - #42 )
+INFO  23:52:36,751 - #37 ;
+INFO  23:52:36,751 - #46 }
+INFO  23:52:36,752 - #50 int
+INFO  23:52:36,756 - #50 fun1
+INFO  23:52:36,756 - #41 (
+INFO  23:52:36,756 - #50 int
+INFO  23:52:36,757 - #50 c
+INFO  23:52:36,759 - #42 )
+INFO  23:52:36,760 - #50 int
+INFO  23:52:36,760 - #50 a
+INFO  23:52:36,760 - #39 ,
+INFO  23:52:36,760 - #50 x
+INFO  23:52:36,760 - #37 ;
+INFO  23:52:36,760 - #45 {
+INFO  23:52:36,761 - #50 a
+INFO  23:52:36,761 - #34 =
+INFO  23:52:36,761 - #49 a
+INFO  23:52:36,761 - #37 ;
+INFO  23:52:36,762 - #50 b
+INFO  23:52:36,762 - #34 =
+INFO  23:52:36,762 - #47 5
+INFO  23:52:36,763 - #37 ;
+INFO  23:52:36,763 - #47 5
+INFO  23:52:36,763 - #37 ;
+INFO  23:52:36,764 - #46 }
+INFO  23:52:36,764 - #46 }
+INFO  23:52:36,779 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:52:36,780 - Obradjuje se funkcija main na liniji 3
+INFO  23:52:36,781 - Promenljiva a mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  23:52:36,782 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  23:52:36,782 - Promenljiva fun mora biti deklarisana pre upotrebe. Semantička greška na liniji 8
+INFO  23:52:36,782 - Obradjuje se funkcija fun1 na liniji 11
+INFO  23:52:36,783 - Nepoklapanje tipova u dodeli vrednosti. Semantička greška na liniji 14
+INFO  23:52:36,783 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 15
+INFO  23:52:36,784 - Print calls = 0
+ERROR 23:52:36,785 - Parsiranje NIJE uspesno zavrseno!
+INFO  00:01:53,673 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  00:01:53,766 - #50 MyProgram
+INFO  00:01:53,766 - #45 {
+INFO  00:01:53,768 - #50 main
+INFO  00:01:53,769 - #41 (
+INFO  00:01:53,771 - #42 )
+INFO  00:01:53,772 - #50 int
+INFO  00:01:53,774 - #50 x
+INFO  00:01:53,775 - #37 ;
+INFO  00:01:53,776 - #50 char
+INFO  00:01:53,777 - #50 c
+INFO  00:01:53,777 - #43 [
+INFO  00:01:53,777 - #44 ]
+INFO  00:01:53,778 - #39 ,
+INFO  00:01:53,778 - #50 d
+INFO  00:01:53,778 - #37 ;
+INFO  00:01:53,779 - #45 {
+INFO  00:01:53,780 - #41 (
+INFO  00:01:53,780 - #50 a
+INFO  00:01:53,780 - #32 &&
+INFO  00:01:53,782 - #50 b
+INFO  00:01:53,782 - #32 &&
+INFO  00:01:53,783 - #50 c
+INFO  00:01:53,783 - #33 ||
+INFO  00:01:53,785 - #48 true
+INFO  00:01:53,785 - #42 )
+INFO  00:01:53,785 - #37 ;
+INFO  00:01:53,786 - #50 fun
+INFO  00:01:53,787 - #41 (
+INFO  00:01:53,787 - #50 a
+INFO  00:01:53,788 - #43 [
+INFO  00:01:53,788 - #44 ]
+INFO  00:01:53,788 - #39 ,
+INFO  00:01:53,788 - #50 b
+INFO  00:01:53,789 - #43 [
+INFO  00:01:53,789 - #44 ]
+INFO  00:01:53,789 - #42 )
+INFO  00:01:53,790 - #37 ;
+INFO  00:01:53,790 - #46 }
+INFO  00:01:53,791 - #50 int
+INFO  00:01:53,798 - #50 fun1
+INFO  00:01:53,798 - #41 (
+INFO  00:01:53,799 - #50 int
+INFO  00:01:53,799 - #50 c
+INFO  00:01:53,799 - #42 )
+INFO  00:01:53,800 - #50 int
+INFO  00:01:53,800 - #50 a
+INFO  00:01:53,800 - #39 ,
+INFO  00:01:53,800 - #50 x
+INFO  00:01:53,800 - #37 ;
+INFO  00:01:53,801 - #45 {
+INFO  00:01:53,801 - #50 a
+INFO  00:01:53,801 - #34 =
+INFO  00:01:53,801 - #49 a
+INFO  00:01:53,801 - #37 ;
+INFO  00:01:53,802 - #50 b
+INFO  00:01:53,802 - #34 =
+INFO  00:01:53,803 - #47 5
+INFO  00:01:53,803 - #37 ;
+INFO  00:01:53,804 - #50 b
+INFO  00:01:53,804 - #35 ++
+INFO  00:01:53,804 - #37 ;
+INFO  00:01:53,805 - #47 5
+INFO  00:01:53,805 - #37 ;
+INFO  00:01:53,806 - #46 }
+INFO  00:01:53,806 - #46 }
+INFO  00:01:53,846 - Otvoren opseg za program MyProgram na liniji 1
+INFO  00:01:53,846 - Obradjuje se funkcija main na liniji 3
+INFO  00:01:53,847 - Promenljiva a mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  00:01:53,847 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  00:01:53,847 - Promenljiva fun mora biti deklarisana pre upotrebe. Semantička greška na liniji 8
+INFO  00:01:53,848 - Obradjuje se funkcija fun1 na liniji 11
+INFO  00:01:53,848 - Nepoklapanje tipova u dodeli vrednosti. Semantička greška na liniji 14
+INFO  00:01:53,849 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 15
+INFO  00:01:53,849 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 16
+INFO  00:01:53,849 - Print calls = 0
+ERROR 00:01:53,850 - Parsiranje NIJE uspesno zavrseno!
+INFO  00:02:22,782 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  00:02:22,874 - #50 MyProgram
+INFO  00:02:22,874 - #45 {
+INFO  00:02:22,876 - #50 main
+INFO  00:02:22,877 - #41 (
+INFO  00:02:22,879 - #42 )
+INFO  00:02:22,880 - #50 int
+INFO  00:02:22,884 - #50 x
+INFO  00:02:22,885 - #37 ;
+INFO  00:02:22,887 - #50 char
+INFO  00:02:22,887 - #50 c
+INFO  00:02:22,888 - #43 [
+INFO  00:02:22,888 - #44 ]
+INFO  00:02:22,888 - #39 ,
+INFO  00:02:22,888 - #50 d
+INFO  00:02:22,888 - #37 ;
+INFO  00:02:22,889 - #45 {
+INFO  00:02:22,890 - #41 (
+INFO  00:02:22,890 - #50 a
+INFO  00:02:22,890 - #32 &&
+INFO  00:02:22,891 - #50 b
+INFO  00:02:22,891 - #32 &&
+INFO  00:02:22,892 - #50 c
+INFO  00:02:22,892 - #33 ||
+INFO  00:02:22,893 - #48 true
+INFO  00:02:22,894 - #42 )
+INFO  00:02:22,894 - #37 ;
+INFO  00:02:22,895 - #50 fun
+INFO  00:02:22,896 - #41 (
+INFO  00:02:22,897 - #50 a
+INFO  00:02:22,897 - #43 [
+INFO  00:02:22,897 - #44 ]
+INFO  00:02:22,900 - #39 ,
+INFO  00:02:22,903 - #50 b
+INFO  00:02:22,903 - #43 [
+INFO  00:02:22,903 - #44 ]
+INFO  00:02:22,903 - #42 )
+INFO  00:02:22,904 - #37 ;
+INFO  00:02:22,905 - #46 }
+INFO  00:02:22,905 - #50 int
+INFO  00:02:22,906 - #50 fun1
+INFO  00:02:22,906 - #41 (
+INFO  00:02:22,907 - #50 int
+INFO  00:02:22,907 - #50 c
+INFO  00:02:22,907 - #42 )
+INFO  00:02:22,909 - #50 int
+INFO  00:02:22,909 - #50 a
+INFO  00:02:22,909 - #39 ,
+INFO  00:02:22,909 - #50 x
+INFO  00:02:22,909 - #37 ;
+INFO  00:02:22,910 - #45 {
+INFO  00:02:22,910 - #50 a
+INFO  00:02:22,910 - #35 ++
+INFO  00:02:22,910 - #37 ;
+INFO  00:02:22,911 - #47 5
+INFO  00:02:22,911 - #37 ;
+INFO  00:02:22,911 - #46 }
+INFO  00:02:22,912 - #46 }
+INFO  00:02:22,926 - Otvoren opseg za program MyProgram na liniji 1
+INFO  00:02:22,926 - Obradjuje se funkcija main na liniji 3
+INFO  00:02:22,927 - Promenljiva a mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  00:02:22,927 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  00:02:22,928 - Promenljiva fun mora biti deklarisana pre upotrebe. Semantička greška na liniji 8
+INFO  00:02:22,928 - Obradjuje se funkcija fun1 na liniji 11
+INFO  00:02:22,929 - Print calls = 0
+ERROR 00:02:22,930 - Parsiranje NIJE uspesno zavrseno!
+INFO  00:02:39,210 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  00:02:39,294 - #50 MyProgram
+INFO  00:02:39,294 - #45 {
+INFO  00:02:39,297 - #50 main
+INFO  00:02:39,298 - #41 (
+INFO  00:02:39,300 - #42 )
+INFO  00:02:39,301 - #50 int
+INFO  00:02:39,304 - #50 x
+INFO  00:02:39,306 - #37 ;
+INFO  00:02:39,306 - #50 char
+INFO  00:02:39,306 - #50 c
+INFO  00:02:39,307 - #43 [
+INFO  00:02:39,307 - #44 ]
+INFO  00:02:39,307 - #39 ,
+INFO  00:02:39,307 - #50 d
+INFO  00:02:39,307 - #37 ;
+INFO  00:02:39,308 - #45 {
+INFO  00:02:39,309 - #41 (
+INFO  00:02:39,309 - #50 a
+INFO  00:02:39,310 - #32 &&
+INFO  00:02:39,311 - #50 b
+INFO  00:02:39,311 - #32 &&
+INFO  00:02:39,311 - #50 c
+INFO  00:02:39,311 - #33 ||
+INFO  00:02:39,313 - #48 true
+INFO  00:02:39,313 - #42 )
+INFO  00:02:39,315 - #37 ;
+INFO  00:02:39,315 - #50 fun
+INFO  00:02:39,321 - #41 (
+INFO  00:02:39,321 - #50 a
+INFO  00:02:39,321 - #43 [
+INFO  00:02:39,322 - #44 ]
+INFO  00:02:39,323 - #39 ,
+INFO  00:02:39,323 - #50 b
+INFO  00:02:39,323 - #43 [
+INFO  00:02:39,323 - #44 ]
+INFO  00:02:39,324 - #42 )
+INFO  00:02:39,324 - #37 ;
+INFO  00:02:39,325 - #46 }
+INFO  00:02:39,325 - #50 int
+INFO  00:02:39,329 - #50 fun1
+INFO  00:02:39,329 - #41 (
+INFO  00:02:39,330 - #50 int
+INFO  00:02:39,330 - #50 c
+INFO  00:02:39,330 - #42 )
+INFO  00:02:39,332 - #50 char
+INFO  00:02:39,333 - #50 a
+INFO  00:02:39,333 - #39 ,
+INFO  00:02:39,333 - #50 x
+INFO  00:02:39,334 - #37 ;
+INFO  00:02:39,334 - #45 {
+INFO  00:02:39,335 - #50 a
+INFO  00:02:39,335 - #35 ++
+INFO  00:02:39,335 - #37 ;
+INFO  00:02:39,336 - #47 5
+INFO  00:02:39,336 - #37 ;
+INFO  00:02:39,337 - #46 }
+INFO  00:02:39,338 - #46 }
+INFO  00:02:39,355 - Otvoren opseg za program MyProgram na liniji 1
+INFO  00:02:39,356 - Obradjuje se funkcija main na liniji 3
+INFO  00:02:39,356 - Promenljiva a mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  00:02:39,357 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  00:02:39,357 - Promenljiva fun mora biti deklarisana pre upotrebe. Semantička greška na liniji 8
+INFO  00:02:39,358 - Obradjuje se funkcija fun1 na liniji 11
+INFO  00:02:39,358 - Nepoklapanje tipova. Semantička greška na liniji 14
+INFO  00:02:39,359 - Print calls = 0
+ERROR 00:02:39,360 - Parsiranje NIJE uspesno zavrseno!
+INFO  00:07:13,283 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  00:07:13,372 - #50 MyProgram
+INFO  00:07:13,372 - #45 {
+INFO  00:07:13,375 - #50 main
+INFO  00:07:13,376 - #41 (
+INFO  00:07:13,378 - #42 )
+INFO  00:07:13,379 - #50 int
+INFO  00:07:13,381 - #50 x
+INFO  00:07:13,383 - #37 ;
+INFO  00:07:13,383 - #50 char
+INFO  00:07:13,384 - #50 c
+INFO  00:07:13,384 - #43 [
+INFO  00:07:13,384 - #44 ]
+INFO  00:07:13,384 - #39 ,
+INFO  00:07:13,385 - #50 d
+INFO  00:07:13,385 - #37 ;
+INFO  00:07:13,385 - #45 {
+INFO  00:07:13,386 - #41 (
+INFO  00:07:13,386 - #50 a
+INFO  00:07:13,386 - #32 &&
+INFO  00:07:13,388 - #50 b
+INFO  00:07:13,388 - #32 &&
+INFO  00:07:13,388 - #50 c
+INFO  00:07:13,389 - #33 ||
+INFO  00:07:13,392 - #48 true
+INFO  00:07:13,392 - #42 )
+INFO  00:07:13,393 - #37 ;
+INFO  00:07:13,393 - #50 fun
+INFO  00:07:13,395 - #41 (
+INFO  00:07:13,395 - #50 a
+INFO  00:07:13,395 - #43 [
+INFO  00:07:13,395 - #44 ]
+INFO  00:07:13,396 - #39 ,
+INFO  00:07:13,396 - #50 b
+INFO  00:07:13,396 - #43 [
+INFO  00:07:13,396 - #44 ]
+INFO  00:07:13,397 - #42 )
+INFO  00:07:13,397 - #37 ;
+INFO  00:07:13,399 - #46 }
+INFO  00:07:13,400 - #50 int
+INFO  00:07:13,403 - #50 fun1
+INFO  00:07:13,404 - #41 (
+INFO  00:07:13,404 - #50 int
+INFO  00:07:13,406 - #50 c
+INFO  00:07:13,406 - #42 )
+INFO  00:07:13,407 - #50 char
+INFO  00:07:13,407 - #50 a
+INFO  00:07:13,407 - #39 ,
+INFO  00:07:13,408 - #50 x
+INFO  00:07:13,408 - #37 ;
+INFO  00:07:13,408 - #50 main
+INFO  00:07:13,408 - #41 (
+ERROR 00:07:13,409 - 
+Sintaksna greska na liniji 13
+ERROR 00:07:13,409 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 13
+INFO  00:07:13,458 - Semantička greška: Nedefinisan tip main na liniji 13
+INFO  00:07:13,458 - Print calls = 0
+ERROR 00:07:13,461 - Parsiranje NIJE uspesno zavrseno!
+INFO  00:09:29,454 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  00:09:29,543 - #50 MyProgram
+INFO  00:09:29,543 - #45 {
+INFO  00:09:29,545 - #50 main
+INFO  00:09:29,546 - #41 (
+INFO  00:09:29,548 - #42 )
+INFO  00:09:29,550 - #50 int
+INFO  00:09:29,553 - #50 x
+INFO  00:09:29,556 - #37 ;
+INFO  00:09:29,556 - #50 char
+INFO  00:09:29,557 - #50 c
+INFO  00:09:29,557 - #43 [
+INFO  00:09:29,557 - #44 ]
+INFO  00:09:29,558 - #39 ,
+INFO  00:09:29,558 - #50 d
+INFO  00:09:29,558 - #37 ;
+INFO  00:09:29,559 - #45 {
+INFO  00:09:29,560 - #41 (
+INFO  00:09:29,562 - #50 a
+INFO  00:09:29,562 - #32 &&
+INFO  00:09:29,563 - #50 b
+INFO  00:09:29,564 - #32 &&
+INFO  00:09:29,564 - #50 c
+INFO  00:09:29,564 - #33 ||
+INFO  00:09:29,567 - #48 true
+INFO  00:09:29,568 - #42 )
+INFO  00:09:29,568 - #37 ;
+INFO  00:09:29,569 - #50 fun
+INFO  00:09:29,570 - #41 (
+INFO  00:09:29,571 - #50 a
+INFO  00:09:29,571 - #43 [
+INFO  00:09:29,571 - #44 ]
+INFO  00:09:29,571 - #39 ,
+INFO  00:09:29,572 - #50 b
+INFO  00:09:29,572 - #43 [
+INFO  00:09:29,572 - #44 ]
+INFO  00:09:29,572 - #42 )
+INFO  00:09:29,573 - #37 ;
+INFO  00:09:29,574 - #46 }
+INFO  00:09:29,574 - #50 int
+INFO  00:09:29,576 - #50 fun1
+INFO  00:09:29,576 - #41 (
+INFO  00:09:29,577 - #50 int
+INFO  00:09:29,577 - #50 c
+INFO  00:09:29,577 - #42 )
+INFO  00:09:29,578 - #50 char
+INFO  00:09:29,578 - #50 a
+INFO  00:09:29,578 - #39 ,
+INFO  00:09:29,579 - #50 x
+INFO  00:09:29,579 - #37 ;
+INFO  00:09:29,579 - #45 {
+INFO  00:09:29,579 - #50 a
+INFO  00:09:29,580 - #35 ++
+INFO  00:09:29,580 - #37 ;
+INFO  00:09:29,580 - #50 main
+INFO  00:09:29,584 - #41 (
+INFO  00:09:29,585 - #42 )
+INFO  00:09:29,603 - #37 ;
+INFO  00:09:29,603 - #47 5
+INFO  00:09:29,604 - #37 ;
+INFO  00:09:29,617 - #46 }
+INFO  00:09:29,617 - #46 }
+INFO  00:09:29,630 - Otvoren opseg za program MyProgram na liniji 1
+INFO  00:09:29,630 - Obradjuje se funkcija main na liniji 3
+INFO  00:09:29,631 - Promenljiva a mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  00:09:29,631 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  00:09:29,632 - Promenljiva fun mora biti deklarisana pre upotrebe. Semantička greška na liniji 8
+INFO  00:09:29,632 - Nema funkcije kao Obj cvor. Semantička greška na liniji 8
+INFO  00:09:29,634 - Obradjuje se funkcija fun1 na liniji 11
+INFO  00:09:29,635 - Nepoklapanje tipova. Semantička greška na liniji 14
+INFO  00:09:29,635 - Print calls = 0
+ERROR 00:09:29,636 - Parsiranje NIJE uspesno zavrseno!
+INFO  00:14:04,727 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  00:14:05,041 - #50 MyProgram
+INFO  00:14:05,041 - #45 {
+INFO  00:14:05,049 - #50 main
+INFO  00:14:05,051 - #41 (
+INFO  00:14:05,056 - #42 )
+INFO  00:14:05,059 - #50 int
+INFO  00:14:05,063 - #50 x
+INFO  00:14:05,065 - #37 ;
+INFO  00:14:05,065 - #50 char
+INFO  00:14:05,067 - #50 c
+INFO  00:14:05,067 - #43 [
+INFO  00:14:05,069 - #44 ]
+INFO  00:14:05,069 - #39 ,
+INFO  00:14:05,070 - #50 d
+INFO  00:14:05,071 - #37 ;
+INFO  00:14:05,072 - #45 {
+INFO  00:14:05,074 - #41 (
+INFO  00:14:05,076 - #50 a
+INFO  00:14:05,076 - #32 &&
+INFO  00:14:05,078 - #50 b
+INFO  00:14:05,078 - #32 &&
+INFO  00:14:05,079 - #50 c
+INFO  00:14:05,079 - #33 ||
+INFO  00:14:05,093 - #48 true
+INFO  00:14:05,095 - #42 )
+INFO  00:14:05,097 - #37 ;
+INFO  00:14:05,097 - #50 fun
+INFO  00:14:05,101 - #41 (
+INFO  00:14:05,102 - #50 a
+INFO  00:14:05,102 - #43 [
+INFO  00:14:05,103 - #44 ]
+INFO  00:14:05,103 - #39 ,
+INFO  00:14:05,104 - #50 b
+INFO  00:14:05,105 - #43 [
+INFO  00:14:05,105 - #44 ]
+INFO  00:14:05,105 - #42 )
+INFO  00:14:05,106 - #37 ;
+INFO  00:14:05,107 - #46 }
+INFO  00:14:05,108 - #50 int
+INFO  00:14:05,111 - #50 fun1
+INFO  00:14:05,112 - #41 (
+INFO  00:14:05,112 - #50 int
+INFO  00:14:05,112 - #50 c
+INFO  00:14:05,113 - #42 )
+INFO  00:14:05,115 - #50 char
+INFO  00:14:05,115 - #50 a
+INFO  00:14:05,116 - #39 ,
+INFO  00:14:05,116 - #50 x
+INFO  00:14:05,118 - #37 ;
+INFO  00:14:05,119 - #45 {
+INFO  00:14:05,119 - #50 a
+INFO  00:14:05,119 - #35 ++
+INFO  00:14:05,120 - #37 ;
+INFO  00:14:05,121 - #47 5
+INFO  00:14:05,122 - #37 ;
+INFO  00:14:05,123 - #46 }
+INFO  00:14:05,124 - #46 }
+INFO  00:14:05,249 - Otvoren opseg za program MyProgram na liniji 1
+INFO  00:14:05,250 - Obradjuje se funkcija main na liniji 3
+INFO  00:14:05,251 - Promenljiva a mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  00:14:05,254 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 7
+INFO  00:14:05,255 - Promenljiva fun mora biti deklarisana pre upotrebe. Semantička greška na liniji 8
