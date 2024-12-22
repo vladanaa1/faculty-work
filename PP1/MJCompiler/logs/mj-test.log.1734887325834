@@ -1,0 +1,66 @@
+INFO  18:08:01,025 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  18:08:01,094 - #50 MyProgram
+INFO  18:08:01,096 - #50 int
+INFO  18:08:01,096 - #50 jaja
+INFO  18:08:01,097 - #34 =
+INFO  18:08:01,098 - #47 5
+INFO  18:08:01,098 - #39 ,
+INFO  18:08:01,100 - #50 jaja1
+INFO  18:08:01,100 - #34 =
+INFO  18:08:01,100 - #47 6
+INFO  18:08:01,100 - #37 ;
+INFO  18:08:01,101 - #50 int
+INFO  18:08:01,101 - #50 jajaja
+INFO  18:08:01,102 - #43 [
+INFO  18:08:01,102 - #44 ]
+INFO  18:08:01,102 - #39 ,
+INFO  18:08:01,103 - #50 jaja
+INFO  18:08:01,103 - #37 ;
+INFO  18:08:01,103 - #50 nesto
+INFO  18:08:01,103 - #50 nesto
+INFO  18:08:01,103 - #37 ;
+INFO  18:08:01,104 - #50 bool
+INFO  18:08:01,108 - #50 sinemoj
+INFO  18:08:01,108 - #34 =
+INFO  18:08:01,108 - #48 true
+INFO  18:08:01,108 - #37 ;
+INFO  18:08:01,109 - #45 {
+INFO  18:08:01,110 - #50 main
+INFO  18:08:01,111 - #41 (
+INFO  18:08:01,111 - #42 )
+INFO  18:08:01,112 - #50 int
+INFO  18:08:01,114 - #50 x
+INFO  18:08:01,114 - #39 ,
+INFO  18:08:01,115 - #50 i
+INFO  18:08:01,115 - #37 ;
+INFO  18:08:01,115 - #50 char
+INFO  18:08:01,116 - #50 c
+INFO  18:08:01,116 - #43 [
+INFO  18:08:01,116 - #44 ]
+INFO  18:08:01,116 - #39 ,
+INFO  18:08:01,117 - #50 d
+INFO  18:08:01,118 - #37 ;
+INFO  18:08:01,118 - #45 {
+INFO  18:08:01,120 - #41 (
+INFO  18:08:01,120 - #50 a
+INFO  18:08:01,120 - #42 )
+INFO  18:08:01,124 - #37 ;
+INFO  18:08:01,125 - #50 fun
+INFO  18:08:01,128 - #41 (
+INFO  18:08:01,128 - #50 a
+INFO  18:08:01,128 - #43 [
+INFO  18:08:01,129 - #44 ]
+INFO  18:08:01,129 - #39 ,
+INFO  18:08:01,130 - #50 b
+INFO  18:08:01,130 - #43 [
+INFO  18:08:01,131 - #44 ]
+INFO  18:08:01,131 - #42 )
+INFO  18:08:01,132 - #37 ;
+INFO  18:08:01,132 - #46 }
+INFO  18:08:01,133 - #46 }
+INFO  18:08:01,165 - Otvoren opseg za program MyProgram na liniji 1
+INFO  18:08:01,166 - Konstanta jaja sa vrednoscu 05 na liniji 3
+INFO  18:08:01,166 - Konstanta jaja1 sa vrednoscu 06 na liniji 3
+INFO  18:08:01,166 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  18:08:01,167 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  18:08:01,167 - Globalna promenljiva nesto dodata u program na liniji 5

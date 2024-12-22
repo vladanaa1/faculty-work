@@ -1,37 +1,78 @@
 // generated with ast extension for cup
 // version 0.8
-// 21/11/2024 0:58:15
+// 22/11/2024 21:59:47
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public abstract class ConstDecl implements SyntaxNode {
+public class ConstDecl extends Declaration {
 
-    private SyntaxNode parent;
+    private Type Type;
+    private ConstDeclList ConstDeclList;
 
-    private int line;
-
-    public SyntaxNode getParent() {
-        return parent;
+    public ConstDecl (Type Type, ConstDeclList ConstDeclList) {
+        this.Type=Type;
+        if(Type!=null) Type.setParent(this);
+        this.ConstDeclList=ConstDeclList;
+        if(ConstDeclList!=null) ConstDeclList.setParent(this);
     }
 
-    public void setParent(SyntaxNode parent) {
-        this.parent=parent;
+    public Type getType() {
+        return Type;
     }
 
-    public int getLine() {
-        return line;
+    public void setType(Type Type) {
+        this.Type=Type;
     }
 
-    public void setLine(int line) {
-        this.line=line;
+    public ConstDeclList getConstDeclList() {
+        return ConstDeclList;
     }
 
-    public abstract void accept(Visitor visitor);
-    public abstract void childrenAccept(Visitor visitor);
-    public abstract void traverseTopDown(Visitor visitor);
-    public abstract void traverseBottomUp(Visitor visitor);
+    public void setConstDeclList(ConstDeclList ConstDeclList) {
+        this.ConstDeclList=ConstDeclList;
+    }
 
-    public String toString() { return toString(""); }
-    public abstract String toString(String tab);
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+
+    public void childrenAccept(Visitor visitor) {
+        if(Type!=null) Type.accept(visitor);
+        if(ConstDeclList!=null) ConstDeclList.accept(visitor);
+    }
+
+    public void traverseTopDown(Visitor visitor) {
+        accept(visitor);
+        if(Type!=null) Type.traverseTopDown(visitor);
+        if(ConstDeclList!=null) ConstDeclList.traverseTopDown(visitor);
+    }
+
+    public void traverseBottomUp(Visitor visitor) {
+        if(Type!=null) Type.traverseBottomUp(visitor);
+        if(ConstDeclList!=null) ConstDeclList.traverseBottomUp(visitor);
+        accept(visitor);
+    }
+
+    public String toString(String tab) {
+        StringBuffer buffer=new StringBuffer();
+        buffer.append(tab);
+        buffer.append("ConstDecl(\n");
+
+        if(Type!=null)
+            buffer.append(Type.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(ConstDeclList!=null)
+            buffer.append(ConstDeclList.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        buffer.append(tab);
+        buffer.append(") [ConstDecl]");
+        return buffer.toString();
+    }
 }

@@ -1,0 +1,67 @@
+INFO  16:14:49,658 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:14:49,723 - #50 MyProgram
+INFO  16:14:49,726 - #50 int
+INFO  16:14:49,726 - #50 jaja
+INFO  16:14:49,727 - #34 =
+INFO  16:14:49,727 - #47 5
+INFO  16:14:49,727 - #39 ,
+INFO  16:14:49,728 - #50 jaja1
+INFO  16:14:49,728 - #34 =
+INFO  16:14:49,728 - #47 6
+INFO  16:14:49,728 - #37 ;
+INFO  16:14:49,729 - #50 int
+INFO  16:14:49,729 - #50 jajaja
+INFO  16:14:49,730 - #43 [
+INFO  16:14:49,730 - #44 ]
+INFO  16:14:49,731 - #39 ,
+INFO  16:14:49,732 - #50 jaja
+INFO  16:14:49,732 - #37 ;
+INFO  16:14:49,733 - #50 nesto
+INFO  16:14:49,733 - #50 nesto
+INFO  16:14:49,733 - #37 ;
+INFO  16:14:49,734 - #50 bool
+INFO  16:14:49,738 - #50 sinemoj
+INFO  16:14:49,738 - #34 =
+INFO  16:14:49,738 - #48 true
+INFO  16:14:49,739 - #37 ;
+INFO  16:14:49,739 - #45 {
+INFO  16:14:49,740 - #50 main
+INFO  16:14:49,741 - #41 (
+INFO  16:14:49,741 - #42 )
+INFO  16:14:49,742 - #50 int
+INFO  16:14:49,743 - #50 x
+INFO  16:14:49,744 - #39 ,
+INFO  16:14:49,744 - #50 i
+INFO  16:14:49,744 - #37 ;
+INFO  16:14:49,744 - #50 char
+INFO  16:14:49,745 - #50 c
+INFO  16:14:49,745 - #43 [
+INFO  16:14:49,745 - #44 ]
+INFO  16:14:49,745 - #39 ,
+INFO  16:14:49,746 - #50 d
+INFO  16:14:49,746 - #37 ;
+INFO  16:14:49,746 - #45 {
+INFO  16:14:49,749 - #41 (
+INFO  16:14:49,749 - #50 a
+INFO  16:14:49,750 - #42 )
+INFO  16:14:49,753 - #37 ;
+INFO  16:14:49,753 - #50 fun
+INFO  16:14:49,756 - #41 (
+INFO  16:14:49,756 - #50 a
+INFO  16:14:49,757 - #43 [
+INFO  16:14:49,758 - #44 ]
+INFO  16:14:49,758 - #39 ,
+INFO  16:14:49,761 - #50 b
+INFO  16:14:49,761 - #43 [
+INFO  16:14:49,762 - #44 ]
+INFO  16:14:49,764 - #42 )
+INFO  16:14:49,765 - #37 ;
+INFO  16:14:49,766 - #46 }
+INFO  16:14:49,768 - #46 }
+INFO  16:14:49,801 - Otvoren opseg za program MyProgram na liniji 1
+INFO  16:14:49,802 - Konstanta dodata u program na liniji 3 na liniji 3
+INFO  16:14:49,802 - Konstante dodata u program na liniji 3 na liniji 3
+INFO  16:14:49,803 - Konstanta dodata u program na liniji 6 na liniji 6
+INFO  16:14:49,804 - Print calls = 0
+INFO  16:14:49,806 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  16:14:49,811 - Parsiranje uspesno zavrseno!

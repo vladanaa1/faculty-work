@@ -1,0 +1,67 @@
+INFO  16:30:53,595 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:30:53,667 - #50 MyProgram
+INFO  16:30:53,669 - #50 int
+INFO  16:30:53,670 - #50 jaja
+INFO  16:30:53,671 - #34 =
+INFO  16:30:53,673 - #47 5
+INFO  16:30:53,673 - #39 ,
+INFO  16:30:53,673 - #50 jaja1
+INFO  16:30:53,674 - #34 =
+INFO  16:30:53,674 - #47 6
+INFO  16:30:53,674 - #37 ;
+INFO  16:30:53,675 - #50 int
+INFO  16:30:53,675 - #50 jajaja
+INFO  16:30:53,675 - #43 [
+INFO  16:30:53,676 - #44 ]
+INFO  16:30:53,676 - #39 ,
+INFO  16:30:53,676 - #50 jaja
+INFO  16:30:53,677 - #37 ;
+INFO  16:30:53,677 - #50 nesto
+INFO  16:30:53,677 - #50 nesto
+INFO  16:30:53,677 - #37 ;
+INFO  16:30:53,678 - #50 bool
+INFO  16:30:53,681 - #50 sinemoj
+INFO  16:30:53,681 - #34 =
+INFO  16:30:53,681 - #48 true
+INFO  16:30:53,681 - #37 ;
+INFO  16:30:53,682 - #45 {
+INFO  16:30:53,682 - #50 main
+INFO  16:30:53,683 - #41 (
+INFO  16:30:53,684 - #42 )
+INFO  16:30:53,684 - #50 int
+INFO  16:30:53,685 - #50 x
+INFO  16:30:53,686 - #39 ,
+INFO  16:30:53,686 - #50 i
+INFO  16:30:53,686 - #37 ;
+INFO  16:30:53,686 - #50 char
+INFO  16:30:53,687 - #50 c
+INFO  16:30:53,687 - #43 [
+INFO  16:30:53,687 - #44 ]
+INFO  16:30:53,688 - #39 ,
+INFO  16:30:53,692 - #50 d
+INFO  16:30:53,692 - #37 ;
+INFO  16:30:53,693 - #45 {
+INFO  16:30:53,696 - #41 (
+INFO  16:30:53,696 - #50 a
+INFO  16:30:53,697 - #42 )
+INFO  16:30:53,699 - #37 ;
+INFO  16:30:53,700 - #50 fun
+INFO  16:30:53,701 - #41 (
+INFO  16:30:53,702 - #50 a
+INFO  16:30:53,702 - #43 [
+INFO  16:30:53,702 - #44 ]
+INFO  16:30:53,702 - #39 ,
+INFO  16:30:53,704 - #50 b
+INFO  16:30:53,704 - #43 [
+INFO  16:30:53,705 - #44 ]
+INFO  16:30:53,707 - #42 )
+INFO  16:30:53,708 - #37 ;
+INFO  16:30:53,709 - #46 }
+INFO  16:30:53,709 - #46 }
+INFO  16:30:53,740 - Otvoren opseg za program MyProgram na liniji 1
+INFO  16:30:53,740 - Konstanta jaja dodata u program na liniji 3
+INFO  16:30:53,741 - Konstanta jaja1 dodata u program na liniji 3
+INFO  16:30:53,741 - Konstanta sinemoj dodata u program na liniji 6
+INFO  16:30:53,742 - Print calls = 0
+INFO  16:30:53,743 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  16:30:53,747 - Parsiranje uspesno zavrseno!

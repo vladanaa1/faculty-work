@@ -1,0 +1,64 @@
+INFO  16:10:42,962 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:10:43,040 - #50 MyProgram
+INFO  16:10:43,042 - #50 int
+INFO  16:10:43,042 - #50 jaja
+INFO  16:10:43,043 - #34 =
+INFO  16:10:43,044 - #47 5
+INFO  16:10:43,044 - #39 ,
+INFO  16:10:43,044 - #50 jaja1
+INFO  16:10:43,045 - #34 =
+INFO  16:10:43,045 - #47 6
+INFO  16:10:43,045 - #37 ;
+INFO  16:10:43,045 - #50 int
+INFO  16:10:43,046 - #50 jajaja
+INFO  16:10:43,046 - #43 [
+INFO  16:10:43,046 - #44 ]
+INFO  16:10:43,046 - #39 ,
+INFO  16:10:43,047 - #50 jaja
+INFO  16:10:43,047 - #37 ;
+INFO  16:10:43,047 - #50 nesto
+INFO  16:10:43,048 - #50 nesto
+INFO  16:10:43,048 - #37 ;
+INFO  16:10:43,048 - #50 bool
+INFO  16:10:43,052 - #50 sinemoj
+INFO  16:10:43,052 - #34 =
+INFO  16:10:43,052 - #48 true
+INFO  16:10:43,053 - #37 ;
+INFO  16:10:43,053 - #45 {
+INFO  16:10:43,054 - #50 main
+INFO  16:10:43,055 - #41 (
+INFO  16:10:43,055 - #42 )
+INFO  16:10:43,056 - #50 int
+INFO  16:10:43,058 - #50 x
+INFO  16:10:43,058 - #39 ,
+INFO  16:10:43,058 - #50 i
+INFO  16:10:43,058 - #37 ;
+INFO  16:10:43,059 - #50 char
+INFO  16:10:43,059 - #50 c
+INFO  16:10:43,059 - #43 [
+INFO  16:10:43,060 - #44 ]
+INFO  16:10:43,060 - #39 ,
+INFO  16:10:43,061 - #50 d
+INFO  16:10:43,062 - #37 ;
+INFO  16:10:43,062 - #45 {
+INFO  16:10:43,066 - #41 (
+INFO  16:10:43,066 - #50 a
+INFO  16:10:43,066 - #42 )
+INFO  16:10:43,070 - #37 ;
+INFO  16:10:43,070 - #50 fun
+INFO  16:10:43,073 - #41 (
+INFO  16:10:43,074 - #50 a
+INFO  16:10:43,075 - #43 [
+INFO  16:10:43,075 - #44 ]
+INFO  16:10:43,078 - #39 ,
+INFO  16:10:43,079 - #50 b
+INFO  16:10:43,080 - #43 [
+INFO  16:10:43,081 - #44 ]
+INFO  16:10:43,081 - #42 )
+INFO  16:10:43,082 - #37 ;
+INFO  16:10:43,083 - #46 }
+INFO  16:10:43,084 - #46 }
+INFO  16:10:43,123 - Otvoren opseg za program MyProgram na liniji 1
+INFO  16:10:43,123 - Print calls = 0
+INFO  16:10:43,124 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  16:10:43,130 - Parsiranje uspesno zavrseno!

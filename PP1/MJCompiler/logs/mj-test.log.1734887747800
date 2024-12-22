@@ -1,0 +1,68 @@
+INFO  18:08:45,840 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  18:08:45,917 - #50 MyProgram
+INFO  18:08:45,919 - #50 int
+INFO  18:08:45,919 - #50 jaja
+INFO  18:08:45,920 - #34 =
+INFO  18:08:45,921 - #47 5
+INFO  18:08:45,921 - #39 ,
+INFO  18:08:45,923 - #50 jaja1
+INFO  18:08:45,924 - #34 =
+INFO  18:08:45,924 - #47 6
+INFO  18:08:45,924 - #37 ;
+INFO  18:08:45,925 - #50 int
+INFO  18:08:45,925 - #50 jajaja
+INFO  18:08:45,926 - #43 [
+INFO  18:08:45,926 - #44 ]
+INFO  18:08:45,926 - #39 ,
+INFO  18:08:45,926 - #50 jaja
+INFO  18:08:45,927 - #37 ;
+INFO  18:08:45,927 - #50 nesto
+INFO  18:08:45,927 - #50 nesto
+INFO  18:08:45,928 - #37 ;
+INFO  18:08:45,929 - #45 {
+INFO  18:08:45,931 - #50 main
+INFO  18:08:45,932 - #41 (
+INFO  18:08:45,933 - #42 )
+INFO  18:08:45,934 - #50 int
+INFO  18:08:45,935 - #50 x
+INFO  18:08:45,935 - #39 ,
+INFO  18:08:45,935 - #50 i
+INFO  18:08:45,936 - #37 ;
+INFO  18:08:45,936 - #50 char
+INFO  18:08:45,936 - #50 c
+INFO  18:08:45,936 - #43 [
+INFO  18:08:45,936 - #44 ]
+INFO  18:08:45,937 - #39 ,
+INFO  18:08:45,937 - #50 d
+INFO  18:08:45,937 - #37 ;
+INFO  18:08:45,937 - #45 {
+INFO  18:08:45,939 - #41 (
+INFO  18:08:45,939 - #50 a
+INFO  18:08:45,939 - #42 )
+INFO  18:08:45,942 - #37 ;
+INFO  18:08:45,942 - #50 fun
+INFO  18:08:45,946 - #41 (
+INFO  18:08:45,946 - #50 a
+INFO  18:08:45,946 - #43 [
+INFO  18:08:45,946 - #44 ]
+INFO  18:08:45,947 - #39 ,
+INFO  18:08:45,948 - #50 b
+INFO  18:08:45,948 - #43 [
+INFO  18:08:45,948 - #44 ]
+INFO  18:08:45,948 - #42 )
+INFO  18:08:45,949 - #37 ;
+INFO  18:08:45,951 - #46 }
+INFO  18:08:45,952 - #46 }
+INFO  18:08:45,967 - Otvoren opseg za program MyProgram na liniji 1
+INFO  18:08:45,967 - Konstanta jaja sa vrednoscu 05 na liniji 3
+INFO  18:08:45,968 - Konstanta jaja1 sa vrednoscu 06 na liniji 3
+INFO  18:08:45,968 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  18:08:45,968 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  18:08:45,968 - Globalna promenljiva nesto dodata u program na liniji 5
+INFO  18:08:45,969 - Globalna promenljiva x dodata u program na liniji 9
+INFO  18:08:45,969 - Globalna promenljiva i dodata u program na liniji 9
+INFO  18:08:45,969 - Globalna promenljiva (vektor) c dodata u program na liniji 10
+INFO  18:08:45,970 - Globalna promenljiva d dodata u program na liniji 10
+INFO  18:08:45,971 - Print calls = 0
+INFO  18:08:45,972 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  18:08:45,972 - Parsiranje uspesno zavrseno!

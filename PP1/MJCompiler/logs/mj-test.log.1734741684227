@@ -1,0 +1,49 @@
+INFO  01:40:53,033 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  01:40:53,116 - #50 MyProgram
+INFO  01:40:53,117 - #50 int
+INFO  01:40:53,122 - #50 jaja
+INFO  01:40:53,122 - #34 =
+INFO  01:40:53,123 - #47 5
+INFO  01:40:53,123 - #39 ,
+INFO  01:40:53,124 - #50 jaja1
+INFO  01:40:53,125 - #34 =
+INFO  01:40:53,125 - #47 6
+INFO  01:40:53,125 - #37 ;
+INFO  01:40:53,126 - #50 int
+INFO  01:40:53,127 - #50 jajaja
+INFO  01:40:53,127 - #43 [
+INFO  01:40:53,127 - #44 ]
+INFO  01:40:53,128 - #39 ,
+INFO  01:40:53,128 - #50 jaja
+INFO  01:40:53,128 - #37 ;
+INFO  01:40:53,129 - #50 nesto
+INFO  01:40:53,129 - #50 nesto
+INFO  01:40:53,130 - #37 ;
+INFO  01:40:53,130 - #50 bool
+INFO  01:40:53,134 - #50 sinemoj
+INFO  01:40:53,134 - #34 =
+INFO  01:40:53,135 - #48 true
+INFO  01:40:53,135 - #37 ;
+INFO  01:40:53,136 - #45 {
+INFO  01:40:53,137 - #50 main
+INFO  01:40:53,138 - #41 (
+INFO  01:40:53,139 - #42 )
+INFO  01:40:53,140 - #50 int
+INFO  01:40:53,141 - #50 x
+INFO  01:40:53,141 - #39 ,
+INFO  01:40:53,141 - #50 i
+INFO  01:40:53,141 - #37 ;
+INFO  01:40:53,142 - #50 char
+INFO  01:40:53,142 - #50 c
+INFO  01:40:53,143 - #37 ;
+INFO  01:40:53,143 - #45 {
+INFO  01:40:53,145 - #41 (
+INFO  01:40:53,146 - #50 a
+INFO  01:40:53,146 - #42 )
+INFO  01:40:53,162 - #50 b
+INFO  01:40:53,163 - #37 ;
+ERROR 01:40:53,163 - 
+Sintaksna greska na liniji 12
+ERROR 01:40:53,165 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 12
+INFO  01:40:53,179 - Print calls = 0
+ERROR 01:40:53,189 - Parsiranje NIJE uspesno zavrseno!

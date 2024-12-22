@@ -1,0 +1,74 @@
+INFO  17:41:32,729 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  17:41:33,986 - #50 MyProgram
+INFO  17:41:34,006 - #50 int
+INFO  17:41:34,007 - #50 jaja
+INFO  17:41:34,022 - #34 =
+INFO  17:41:34,034 - #47 5
+INFO  17:41:34,034 - #39 ,
+INFO  17:41:34,048 - #50 jaja1
+INFO  17:41:34,048 - #34 =
+INFO  17:41:34,049 - #47 6
+INFO  17:41:34,049 - #37 ;
+INFO  17:41:34,050 - #50 int
+INFO  17:41:34,051 - #50 jajaja
+INFO  17:41:34,051 - #43 [
+INFO  17:41:34,052 - #44 ]
+INFO  17:41:34,052 - #39 ,
+INFO  17:41:34,053 - #50 jaja
+INFO  17:41:34,053 - #37 ;
+INFO  17:41:34,054 - #50 nesto
+INFO  17:41:34,055 - #50 nesto
+INFO  17:41:34,055 - #37 ;
+INFO  17:41:34,055 - #50 bool
+INFO  17:41:34,056 - #50 sinemoj
+INFO  17:41:34,056 - #34 =
+INFO  17:41:34,057 - #48 true
+INFO  17:41:34,057 - #37 ;
+INFO  17:41:34,057 - #45 {
+INFO  17:41:34,071 - #50 main
+INFO  17:41:34,082 - #41 (
+INFO  17:41:34,083 - #42 )
+INFO  17:41:34,094 - #50 int
+INFO  17:41:34,108 - #50 x
+INFO  17:41:34,108 - #39 ,
+INFO  17:41:34,108 - #50 i
+INFO  17:41:34,108 - #37 ;
+INFO  17:41:34,108 - #50 char
+INFO  17:41:34,109 - #50 c
+INFO  17:41:34,109 - #43 [
+INFO  17:41:34,109 - #44 ]
+INFO  17:41:34,109 - #39 ,
+INFO  17:41:34,110 - #50 d
+INFO  17:41:34,110 - #37 ;
+INFO  17:41:34,110 - #45 {
+INFO  17:41:34,122 - #41 (
+INFO  17:41:34,122 - #50 a
+INFO  17:41:34,123 - #42 )
+INFO  17:41:34,134 - #37 ;
+INFO  17:41:34,134 - #50 fun
+INFO  17:41:34,145 - #41 (
+INFO  17:41:34,145 - #50 a
+INFO  17:41:34,145 - #43 [
+INFO  17:41:34,146 - #44 ]
+INFO  17:41:34,146 - #39 ,
+INFO  17:41:34,146 - #50 b
+INFO  17:41:34,146 - #43 [
+INFO  17:41:34,146 - #44 ]
+INFO  17:41:34,147 - #42 )
+INFO  17:41:34,147 - #37 ;
+INFO  17:41:34,148 - #46 }
+INFO  17:41:34,148 - #46 }
+INFO  17:41:34,208 - Otvoren opseg za program MyProgram na liniji 1
+INFO  17:41:34,209 - Konstanta jaja sa vrednoscu 5 na liniji 3
+INFO  17:41:34,209 - Konstanta jaja1 sa vrednoscu 6 na liniji 3
+INFO  17:41:34,209 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  17:41:34,209 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  17:41:34,209 - Globalna promenljiva nesto dodata u program na liniji 5
+INFO  17:41:34,210 - Konstanta sinemoj sa vrednoscu true na liniji 6
+INFO  17:41:34,210 - Globalna promenljiva x dodata u program na liniji 10
+INFO  17:41:34,210 - Globalna promenljiva i dodata u program na liniji 10
+INFO  17:41:34,210 - Globalna promenljiva (vektor) c dodata u program na liniji 11
+INFO  17:41:34,210 - Globalna promenljiva d dodata u program na liniji 11
+INFO  17:41:34,211 - Print calls = 0
+INFO  17:41:34,212 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  17:41:34,212 - Parsiranje uspesno zavrseno!

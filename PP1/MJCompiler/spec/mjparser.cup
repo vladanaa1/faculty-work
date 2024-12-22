@@ -114,22 +114,32 @@ terminal Boolean BOOL;
 terminal Character CHAR;
 terminal String IDENT;
 
-nonterminal Program;
-nonterminal ProgramName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgramName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Declaration;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Literal;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj MethodSignature2;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Expr2;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Term;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Factor;
+
 nonterminal DeclarationsOptional;
 nonterminal DeclarationsList;
-nonterminal Declaration;
-nonterminal ConstDecl;
 nonterminal ConstDeclList;
+nonterminal Const;
 nonterminal VarDecl;
 nonterminal VarDeclList;
-nonterminal Literal;
-nonterminal MethodDeclarationsOptional;
+nonterminal VarDeclOptional;
+nonterminal VarDeclMultiple;
+nonterminal MethodName;
 nonterminal MethodDeclarationList;
 nonterminal MethodDeclaration;
-nonterminal MethodSignature;
-nonterminal MethodName;
 nonterminal MethodReturnType;
+nonterminal MethodSignature;
 nonterminal MethodParametersOptional;
 nonterminal MethodParametersList;
 nonterminal MethodParameter;
@@ -149,127 +159,165 @@ nonterminal CondTermList;
 nonterminal CondTerm;
 nonterminal CondFactList;
 nonterminal CondFact;
-nonterminal Expr2;
 nonterminal AddopGroup;
 nonterminal Relop;
-nonterminal Term;
-nonterminal Factor;
 nonterminal Mulop;
 nonterminal Addop;
 nonterminal MethodArgumentsOptional;
 nonterminal MethodArgumentList;
 nonterminal MethodArgument;
+nonterminal LocalVars, LocalVar;
 nonterminal Type;
-nonterminal Des1, Des2;
+nonterminal Name;
 
 
-Program ::= PROGRAM ProgramName DeclarationsOptional LBRACE MethodDeclarationsOptional RBRACE;
+Program               ::= (Program) PROGRAM ProgramName DeclarationsList LBRACE MethodDeclarationList RBRACE;
 
-ProgramName ::= IDENT;
+ProgramName           ::= (ProgramName) IDENT:ident;
 
-DeclarationsOptional ::= DeclarationsList | /*epsilon*/;
+DeclarationsList      ::= (NonEmptyDeclList) DeclarationsList Declaration 
+                       |  (EmptyDeclList) /*epsilon*/;
 
-DeclarationsList ::= DeclarationsList Declaration | Declaration;
+Declaration           ::= (ConstDecl) CONST Type ConstDeclList SEMI
+                       |  (GlobalVarDecl) Type VarDeclList SEMI;
 
-Declaration ::= ConstDecl | VarDecl;
+ConstDeclList         ::= (SingleConstDecl) Const
+                       |  (MultipleConstDecl) ConstDeclList COMMA Const;
 
-ConstDecl ::= CONST Type ConstDeclList SEMI;
+Const                 ::= (Const) Name ASSIGN Literal;
 
-ConstDeclList ::= IDENT ASSIGN Literal | ConstDeclList COMMA IDENT ASSIGN Literal;
+Name                  ::= (Name) IDENT:ident;
 
-VarDecl ::= Type VarDeclList SEMI;
+Type                  ::= (Type) IDENT:typeName;
 
-VarDeclList ::= IDENT | IDENT LBRACKET RBRACKET | VarDeclList COMMA IDENT | VarDeclList COMMA IDENT LBRACKET RBRACKET;
+VarDeclList           ::= (SingleVarDecl) Name
+                       |  (SingleVarDeclVector) Name LBRACKET RBRACKET
+                       |  (MultipleVarDecl) VarDeclList COMMA Name
+                       |  (MultipleVarDeclVector) VarDeclList COMMA Name LBRACKET RBRACKET;
 
-Literal ::= NUMBER | BOOL | CHAR;
+Literal               ::= (IntLiteral) NUMBER:value
+                       |  (BoolLiteral) BOOL:value
+                       |  (CharLiteral) CHAR:value;
 
-MethodDeclarationsOptional ::= MethodDeclarationList | /*epsilon*/;
+MethodDeclarationList ::= (MethodDeclarations) MethodDeclarationList MethodDeclaration
+                       |  (NoMethodDeclarations) /*epsilon*/;
 
-MethodDeclarationList ::= MethodDeclarationList MethodDeclaration | MethodDeclaration;
+MethodDeclaration     ::= (MethodDeclaration) MethodSignature LocalVars LBRACE StatementList RBRACE;
 
-MethodDeclaration ::= MethodSignature LBRACE StatementList RBRACE;
+LocalVars             ::= LocalVars LocalVar 
+                       |  /*epsilon*/;
 
-StatementList ::= StatementList Statement | /*epsilon*/;
+LocalVar              ::= Type VarDeclList SEMI;
 
-Statement ::= Matched | Unmatched;
+StatementList         ::= StatementList Statement 
+                       |  /*epsilon*/;
 
-Unmatched ::= IF LPAREN Condition RPAREN Statement | IF LPAREN Condition RPAREN Matched ELSE Unmatched;
+Statement             ::= Matched 
+                       |  Unmatched;
 
-Matched ::=  DesignatorStatement SEMI
-	| PRINT LPAREN Expr2 RPAREN SEMI
-	| PRINT LPAREN Expr2 COMMA NUMBER RPAREN SEMI
-        | RETURN Expr2 SEMI // prolazi i slucaj return(designator); sto ne bi trebalo, prepozna return kao designator?
-        | RETURN SEMI
-	| READ LPAREN Designator RPAREN SEMI
-        | CONTINUE SEMI
-        | BREAK SEMI
-        | IF LPAREN Condition RPAREN Matched ELSE Matched
-	| DO Statement WHILE LPAREN RPAREN SEMI
-	| DO Statement WHILE LPAREN Condition RPAREN SEMI
-	| DO Statement WHILE LPAREN Condition COMMA DesignatorStatement RPAREN SEMI
-        | LBRACE StatementList RBRACE;
+Unmatched             ::= IF LPAREN Condition RPAREN Statement 
+                       |  IF LPAREN Condition RPAREN Matched ELSE Unmatched;
 
-DesignatorStatement ::= Designator ASSIGN Expr2
-	| Designator LPAREN MethodArgumentsOptional RPAREN
-	| Designator INC
-	| Designator DEC
-	| Designator ASSIGN Designator UNION Designator;
+Matched               ::= (DesignatorStatementMatched) DesignatorStatement SEMI
+                       |  (Print) PRINT LPAREN Expr2 RPAREN SEMI
+                       |  (PrintWithComma) PRINT LPAREN Expr2 COMMA NUMBER RPAREN SEMI
+                       |  (ReturnWithExpr) RETURN Expr2 SEMI
+                       |  (Return) RETURN SEMI
+                       |  (Read) READ LPAREN Designator RPAREN SEMI
+                       |  (Continue) CONTINUE SEMI
+                       |  (Break) BREAK SEMI
+                       |  (If) IF LPAREN Condition RPAREN Matched ELSE Matched
+                       |  (DoWhile) DO Statement WHILE LPAREN RPAREN SEMI
+                       |  (DoWhileWithCond) DO Statement WHILE LPAREN Condition RPAREN SEMI
+                       |  (DoWhileWithCondNStmt) DO Statement WHILE LPAREN Condition COMMA DesignatorStatement RPAREN SEMI
+                       |  (StatementListMatched) LBRACE StatementList RBRACE;
 
-Designator ::= IDENT | Designator Selector;
+DesignatorStatement   ::= (DesignatorAssign) Designator ASSIGN Expr2
+                       |  (FunctionCall) Designator LPAREN MethodArgumentsOptional RPAREN
+                       |  (DesignatorInc) Designator INC
+                       |  (DesignatorDec) Designator DEC
+                       |  (DesignatorUnion) Designator ASSIGN Designator UNION Designator;
 
-Selector ::= DOT IDENT | LBRACKET Expr2 RBRACKET;
+Designator            ::= (DesignatorIdent) IDENT 
+                       |  (DesignatorSelect) Designator Selector;
 
-PrintStatement ::= PRINT LPAREN RPAREN SEMI;
+Selector              ::= (DesignatorAttribute) DOT IDENT 
+                       |  (DesignatorVector) LBRACKET Expr2 RBRACKET;
 
-ReturnStatement ::= RETURN SEMI;
+Condition             ::= CondTerm CondTermList;
 
-Condition ::=  CondTerm CondTermList ;
+CondTermList          ::= CondTermList OR CondTerm
+                       |  /*epsilon*/;
 
-CondTermList ::= CondTermList OR CondTerm | /*epsilon*/;
+CondTerm              ::= CondFactList;
 
-CondTerm ::= CondFactList;
+CondFactList          ::= CondFactList AND CondFact 
+                       |  CondFact;
 
-CondFactList ::= CondFactList AND CondFact | CondFact;
+CondFact              ::= Expr2 
+                       |  Expr2 Relop Expr2;
 
-CondFact ::= Expr2 | Expr2 Relop Expr2;
+Expr2                 ::= (NegativeTermExprSum) MINUS Term AddopGroup 
+                       |  (TermExprSum) Term AddopGroup 
+                       |  (TermExpr) Term 
+                       |  (NegativeTermExpr) MINUS Term;
 
-Expr2 ::= MINUS Term AddopGroup | Term AddopGroup | Term | MINUS Term;
+AddopGroup            ::= AddopGroup Addop Term 
+                       |  Addop Term;
 
-AddopGroup ::= AddopGroup Addop Term | Addop Term;
+Relop                 ::= EQUALS 
+                       |  NOTEQUAL 
+                       |  GREATER 
+                       |  GREATEREQ 
+                       |  LESS 
+                       |  LESSEQ;
 
-Relop ::= EQUALS | NOTEQUAL | GREATER | GREATEREQ | LESS | LESSEQ;
+Term                  ::= (FactorTerm) Factor 
+                       |  (MulopTerm) Term Mulop Factor;
 
-Term ::= Factor | Factor Mulop Factor;
+Factor                ::= (DesignatorFactor) Designator 
+                       |  (VectorFactor) Designator LBRACKET RBRACKET
+                       |  (MethodCallFactor) Designator LPAREN MethodArgumentsOptional RPAREN
+                       |  (NumberFactor) NUMBER:value
+                       |  (CharFactor) CHAR:value
+                       |  (BoolFactor) BOOL:value
+                       |  (NewVectorFactor) NEW Type LBRACKET Expr2 RBRACKET
+                       |  (TypeConstructorFactor) NEW Type LPAREN MethodArgumentList RPAREN
+                       |  (DelimitedFactor) LPAREN Expr2 RPAREN;
 
-Factor ::= Designator 
-         | Designator LBRACKET RBRACKET
-         | Designator LPAREN MethodArgumentsOptional RPAREN
-         | Literal
-	| NEW Type LBRACKET Expr2 RBRACKET
-	| NEW Type LPAREN MethodArgumentList RPAREN
-	| LPAREN Expr2 RPAREN;
+Mulop                 ::= MULT 
+                       |  DIV 
+                       |  MOD;
 
-Mulop ::= MULT | DIV | MOD;
+Addop                 ::= MINUS 
+                       |  PLUS;
 
-Addop ::= MINUS | PLUS;
+MethodSignature       ::= (MethodSignature) MethodSignature2 LPAREN MethodParametersOptional RPAREN;
 
-MethodSignature ::= MethodReturnType MethodName LPAREN MethodParametersOptional RPAREN;
+MethodSignature2      ::= (MethodSignature2) MethodReturnType Name;
 
-MethodName ::= IDENT;
+MethodReturnType      ::= (VoidReturnType) VOID 
+                       |  (NonVoidReturnType) Type:ident;
 
-MethodReturnType ::= VOID | IDENT;
+MethodParametersOptional ::= MethodParametersList 
+                           |  /*epsilon*/;
 
-MethodParametersOptional ::= MethodParametersList | /*epsilon*/;
+MethodParametersList  ::= MethodParametersList COMMA MethodParameter 
+                       |  MethodParameter;
 
-MethodParametersList ::= MethodParametersList COMMA MethodParameter | MethodParameter;
+MethodParameter       ::= Type IDENT 
+                       |  Type IDENT LBRACKET RBRACKET;
 
-MethodParameter ::= Type IDENT | Type IDENT LBRACKET RBRACKET;
+MethodArgumentsOptional ::= MethodArgumentList 
+                          |  /*epsilon*/;
 
-MethodArgumentsOptional ::= MethodArgumentList | /*epsilon*/;
+MethodArgumentList    ::= MethodArgumentList COMMA MethodArgument 
+                       |  MethodArgument;
 
-MethodArgumentList ::= MethodArgumentList COMMA MethodArgument | MethodArgument;
+MethodArgument        ::= IDENT 
+                       |  IDENT LBRACKET RBRACKET 
+                       |  Literal;
 
-MethodArgument ::= IDENT | IDENT LBRACKET RBRACKET | Literal;
 
-Type ::= IDENT;
+
 

@@ -1,0 +1,73 @@
+INFO  16:18:33,856 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:18:33,949 - #50 MyProgram
+INFO  16:18:33,952 - #50 int
+INFO  16:18:33,953 - #50 jaja
+INFO  16:18:33,954 - #34 =
+INFO  16:18:33,955 - #47 5
+INFO  16:18:33,955 - #39 ,
+INFO  16:18:33,955 - #50 jaja1
+INFO  16:18:33,955 - #34 =
+INFO  16:18:33,956 - #47 6
+INFO  16:18:33,956 - #37 ;
+INFO  16:18:33,956 - #50 int
+INFO  16:18:33,957 - #50 jajaja
+INFO  16:18:33,957 - #43 [
+INFO  16:18:33,958 - #44 ]
+INFO  16:18:33,958 - #39 ,
+INFO  16:18:33,958 - #50 jaja
+INFO  16:18:33,958 - #37 ;
+INFO  16:18:33,959 - #50 nesto
+INFO  16:18:33,959 - #50 nesto
+INFO  16:18:33,959 - #37 ;
+INFO  16:18:33,959 - #50 bool
+INFO  16:18:33,962 - #50 sinemoj
+INFO  16:18:33,963 - #34 =
+INFO  16:18:33,963 - #48 true
+INFO  16:18:33,964 - #37 ;
+INFO  16:18:33,964 - #45 {
+INFO  16:18:33,965 - #50 main
+INFO  16:18:33,967 - #41 (
+INFO  16:18:33,968 - #42 )
+INFO  16:18:33,969 - #50 int
+INFO  16:18:33,970 - #50 x
+INFO  16:18:33,971 - #39 ,
+INFO  16:18:33,971 - #50 i
+INFO  16:18:33,971 - #37 ;
+INFO  16:18:33,971 - #50 char
+INFO  16:18:33,972 - #50 c
+INFO  16:18:33,972 - #43 [
+INFO  16:18:33,972 - #44 ]
+INFO  16:18:33,972 - #39 ,
+INFO  16:18:33,973 - #50 d
+INFO  16:18:33,973 - #37 ;
+INFO  16:18:33,973 - #45 {
+INFO  16:18:33,975 - #41 (
+INFO  16:18:33,975 - #50 a
+INFO  16:18:33,976 - #42 )
+INFO  16:18:33,977 - #37 ;
+INFO  16:18:33,977 - #50 fun
+INFO  16:18:33,980 - #41 (
+INFO  16:18:33,980 - #50 a
+INFO  16:18:33,981 - #43 [
+INFO  16:18:33,981 - #44 ]
+INFO  16:18:33,981 - #39 ,
+INFO  16:18:33,983 - #50 b
+INFO  16:18:33,984 - #43 [
+INFO  16:18:33,984 - #44 ]
+INFO  16:18:33,984 - #42 )
+INFO  16:18:33,985 - #37 ;
+INFO  16:18:33,985 - #46 }
+INFO  16:18:33,986 - #46 }
+INFO  16:18:34,023 - Otvoren opseg za program MyProgram na liniji 1
+INFO  16:18:34,023 - Konstanta dodata u program LiteralDerived1(
+ 5
+) [LiteralDerived1] na liniji 3
+INFO  16:18:34,023 - Konstante dodata u program LiteralDerived1(
+ 6
+) [LiteralDerived1] na liniji 3
+INFO  16:18:34,023 - Konstanta dodata u program LiteralDerived2(
+ true
+) [LiteralDerived2] na liniji 6
+INFO  16:18:34,024 - Print calls = 0
+INFO  16:18:34,025 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  16:18:34,030 - Parsiranje uspesno zavrseno!

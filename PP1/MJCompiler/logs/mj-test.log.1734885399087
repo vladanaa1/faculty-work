@@ -1,0 +1,79 @@
+INFO  17:34:31,906 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  17:34:33,221 - #50 MyProgram
+INFO  17:34:33,228 - #50 int
+INFO  17:34:33,228 - #50 jaja
+INFO  17:34:33,243 - #34 =
+INFO  17:34:33,245 - #47 5
+INFO  17:34:33,245 - #39 ,
+INFO  17:34:33,260 - #50 jaja1
+INFO  17:34:33,260 - #34 =
+INFO  17:34:33,261 - #47 6
+INFO  17:34:33,261 - #37 ;
+INFO  17:34:33,261 - #50 int
+INFO  17:34:33,262 - #50 jajaja
+INFO  17:34:33,262 - #43 [
+INFO  17:34:33,262 - #44 ]
+INFO  17:34:33,262 - #39 ,
+INFO  17:34:33,263 - #50 jaja
+INFO  17:34:33,263 - #37 ;
+INFO  17:34:33,263 - #50 nesto
+INFO  17:34:33,264 - #50 nesto
+INFO  17:34:33,264 - #37 ;
+INFO  17:34:33,265 - #50 bool
+INFO  17:34:33,265 - #50 sinemoj
+INFO  17:34:33,266 - #34 =
+INFO  17:34:33,266 - #48 true
+INFO  17:34:33,266 - #37 ;
+INFO  17:34:33,267 - #45 {
+INFO  17:34:33,270 - #50 main
+INFO  17:34:33,286 - #41 (
+INFO  17:34:33,286 - #42 )
+INFO  17:34:33,301 - #50 int
+INFO  17:34:33,304 - #50 x
+INFO  17:34:33,304 - #39 ,
+INFO  17:34:33,304 - #50 i
+INFO  17:34:33,304 - #37 ;
+INFO  17:34:33,305 - #50 char
+INFO  17:34:33,305 - #50 c
+INFO  17:34:33,305 - #43 [
+INFO  17:34:33,305 - #44 ]
+INFO  17:34:33,305 - #39 ,
+INFO  17:34:33,306 - #50 d
+INFO  17:34:33,306 - #37 ;
+INFO  17:34:33,306 - #45 {
+INFO  17:34:33,318 - #41 (
+INFO  17:34:33,318 - #50 a
+INFO  17:34:33,318 - #42 )
+INFO  17:34:33,329 - #37 ;
+INFO  17:34:33,329 - #50 fun
+INFO  17:34:33,343 - #41 (
+INFO  17:34:33,343 - #50 a
+INFO  17:34:33,343 - #43 [
+INFO  17:34:33,343 - #44 ]
+INFO  17:34:33,343 - #39 ,
+INFO  17:34:33,344 - #50 b
+INFO  17:34:33,345 - #43 [
+INFO  17:34:33,346 - #44 ]
+INFO  17:34:33,346 - #42 )
+INFO  17:34:33,347 - #37 ;
+INFO  17:34:33,348 - #46 }
+INFO  17:34:33,348 - #46 }
+INFO  17:34:33,391 - Otvoren opseg za program MyProgram na liniji 1
+INFO  17:34:33,391 - Konstanta jaja sa vrednoscu IntLiteral(
+ 5
+) [IntLiteral] na liniji 3
+INFO  17:34:33,391 - Konstanta jaja1 sa vrednoscu IntLiteral(
+ 6
+) [IntLiteral] na liniji 3
+INFO  17:34:33,391 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  17:34:33,392 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  17:34:33,392 - Globalna promenljiva nesto dodata u program na liniji 5
+INFO  17:34:33,392 - Konstanta sinemoj sa vrednoscu BoolLiteral(
+ true
+) [BoolLiteral] na liniji 6
+INFO  17:34:33,392 - Globalna promenljiva x dodata u program na liniji 10
+INFO  17:34:33,393 - Globalna promenljiva i dodata u program na liniji 10
+INFO  17:34:33,393 - Globalna promenljiva (vektor) c dodata u program na liniji 11
+INFO  17:34:33,393 - Globalna promenljiva d dodata u program na liniji 11
+INFO  17:34:33,393 - Print calls = 0
+INFO  17:34:33,394 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj

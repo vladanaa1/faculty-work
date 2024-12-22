@@ -1,0 +1,66 @@
+INFO  16:15:42,533 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:15:42,611 - #50 MyProgram
+INFO  16:15:42,612 - #50 int
+INFO  16:15:42,613 - #50 jaja
+INFO  16:15:42,614 - #34 =
+INFO  16:15:42,614 - #47 5
+INFO  16:15:42,614 - #39 ,
+INFO  16:15:42,615 - #50 jaja1
+INFO  16:15:42,616 - #34 =
+INFO  16:15:42,616 - #47 6
+INFO  16:15:42,616 - #37 ;
+INFO  16:15:42,617 - #50 int
+INFO  16:15:42,617 - #50 jajaja
+INFO  16:15:42,618 - #43 [
+INFO  16:15:42,618 - #44 ]
+INFO  16:15:42,618 - #39 ,
+INFO  16:15:42,619 - #50 jaja
+INFO  16:15:42,619 - #37 ;
+INFO  16:15:42,620 - #50 nesto
+INFO  16:15:42,620 - #50 nesto
+INFO  16:15:42,621 - #37 ;
+INFO  16:15:42,621 - #50 bool
+INFO  16:15:42,624 - #50 sinemoj
+INFO  16:15:42,625 - #34 =
+INFO  16:15:42,626 - #48 true
+INFO  16:15:42,626 - #37 ;
+INFO  16:15:42,626 - #45 {
+INFO  16:15:42,627 - #50 main
+INFO  16:15:42,629 - #41 (
+INFO  16:15:42,629 - #42 )
+INFO  16:15:42,630 - #50 int
+INFO  16:15:42,632 - #50 x
+INFO  16:15:42,632 - #39 ,
+INFO  16:15:42,635 - #50 i
+INFO  16:15:42,636 - #37 ;
+INFO  16:15:42,636 - #50 char
+INFO  16:15:42,636 - #50 c
+INFO  16:15:42,638 - #43 [
+INFO  16:15:42,638 - #44 ]
+INFO  16:15:42,638 - #39 ,
+INFO  16:15:42,640 - #50 d
+INFO  16:15:42,640 - #37 ;
+INFO  16:15:42,641 - #45 {
+INFO  16:15:42,645 - #41 (
+INFO  16:15:42,645 - #50 a
+INFO  16:15:42,647 - #42 )
+INFO  16:15:42,651 - #37 ;
+INFO  16:15:42,654 - #50 fun
+INFO  16:15:42,664 - #41 (
+INFO  16:15:42,665 - #50 a
+INFO  16:15:42,666 - #43 [
+INFO  16:15:42,667 - #44 ]
+INFO  16:15:42,667 - #39 ,
+INFO  16:15:42,670 - #50 b
+INFO  16:15:42,670 - #43 [
+INFO  16:15:42,671 - #44 ]
+INFO  16:15:42,678 - #42 )
+INFO  16:15:42,683 - #37 ;
+INFO  16:15:42,686 - #46 }
+INFO  16:15:42,688 - #46 }
+INFO  16:15:42,723 - Otvoren opseg za program MyProgram na liniji 1
+INFO  16:15:42,723 - Konstanta dodata u program na liniji 3 na liniji 3
+INFO  16:15:42,724 - Konstanta dodata u program na liniji 6 na liniji 6
+INFO  16:15:42,726 - Print calls = 0
+INFO  16:15:42,730 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  16:15:42,737 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,44 @@
+INFO  01:37:20,509 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  01:37:20,597 - #50 MyProgram
+INFO  01:37:20,597 - #50 int
+INFO  01:37:20,598 - #50 jaja
+INFO  01:37:20,599 - #34 =
+INFO  01:37:20,599 - #47 5
+INFO  01:37:20,599 - #39 ,
+INFO  01:37:20,599 - #50 jaja1
+INFO  01:37:20,600 - #34 =
+INFO  01:37:20,600 - #47 6
+INFO  01:37:20,600 - #37 ;
+INFO  01:37:20,601 - #50 int
+INFO  01:37:20,601 - #50 jajaja
+INFO  01:37:20,602 - #43 [
+INFO  01:37:20,602 - #44 ]
+INFO  01:37:20,602 - #39 ,
+INFO  01:37:20,603 - #50 jaja
+INFO  01:37:20,603 - #37 ;
+INFO  01:37:20,603 - #50 nesto
+INFO  01:37:20,604 - #50 nesto
+INFO  01:37:20,604 - #37 ;
+INFO  01:37:20,605 - #50 bool
+INFO  01:37:20,608 - #50 sinemoj
+INFO  01:37:20,608 - #34 =
+INFO  01:37:20,609 - #48 true
+INFO  01:37:20,609 - #37 ;
+INFO  01:37:20,609 - #45 {
+INFO  01:37:20,609 - #50 main
+INFO  01:37:20,609 - #41 (
+INFO  01:37:20,610 - #42 )
+INFO  01:37:20,611 - #50 char
+INFO  01:37:20,612 - #50 c
+INFO  01:37:20,612 - #37 ;
+INFO  01:37:20,612 - #45 {
+INFO  01:37:20,613 - #50 val
+INFO  01:37:20,616 - #34 =
+INFO  01:37:20,617 - #50 Table
+INFO  01:37:20,617 - #41 (
+INFO  01:37:20,617 - #42 )
+ERROR 01:37:20,617 - 
+Sintaksna greska na liniji 14
+ERROR 01:37:20,619 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 14
+INFO  01:37:20,628 - Print calls = 0
+ERROR 01:37:20,629 - Parsiranje NIJE uspesno zavrseno!

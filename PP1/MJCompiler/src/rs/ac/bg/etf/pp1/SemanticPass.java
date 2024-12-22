@@ -1,25 +1,10 @@
 package rs.ac.bg.etf.pp1;
+import java.util.ArrayList;
+import java.util.Stack;
+
 import org.apache.log4j.Logger;
 
-import rs.ac.bg.etf.pp1.ast.AddExpr;
-import rs.ac.bg.etf.pp1.ast.Assignment;
-import rs.ac.bg.etf.pp1.ast.Const;
-import rs.ac.bg.etf.pp1.ast.Designator;
-import rs.ac.bg.etf.pp1.ast.FuncCall;
-import rs.ac.bg.etf.pp1.ast.MethodDecl;
-import rs.ac.bg.etf.pp1.ast.MethodTypeName;
-import rs.ac.bg.etf.pp1.ast.PrintStmt;
-import rs.ac.bg.etf.pp1.ast.ProcCall;
-import rs.ac.bg.etf.pp1.ast.ProgName;
-import rs.ac.bg.etf.pp1.ast.Program;
-import rs.ac.bg.etf.pp1.ast.ReturnExpr;
-import rs.ac.bg.etf.pp1.ast.SyntaxNode;
-import rs.ac.bg.etf.pp1.ast.Term;
-import rs.ac.bg.etf.pp1.ast.TermExpr;
-import rs.ac.bg.etf.pp1.ast.Type;
-import rs.ac.bg.etf.pp1.ast.Var;
-import rs.ac.bg.etf.pp1.ast.VarDecl;
-import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
+import rs.ac.bg.etf.pp1.ast.*;
 import rs.etf.pp1.symboltable.Tab;
 import rs.etf.pp1.symboltable.concepts.Obj;
 import rs.etf.pp1.symboltable.concepts.Struct;
@@ -28,9 +13,15 @@ public class SemanticPass extends VisitorAdaptor {
 
 	boolean errorDetected = false;
 	int printCallCount = 0;
+	int VarDeclCount = 0; // globalne prom.
+	int ConstDeclCount = 0; // globalne konst.
 	Obj currentMethod = null;
+	Struct currentMethodReturnType = Tab.noType;
 	boolean returnFound = false;
 	int nVars;
+	private Struct currentType = Tab.noType;
+	
+	Stack<Obj> constants = new Stack<Obj>();
 
 	Logger log = Logger.getLogger(getClass());
 
@@ -51,133 +42,252 @@ public class SemanticPass extends VisitorAdaptor {
 		log.info(msg.toString());
 	}
 	
-	public void visit(Program program) {		
-		nVars = Tab.currentScope.getnVars();
-		Tab.chainLocalSymbols(program.getProgName().obj);
-		Tab.closeScope();
+	private Obj findInCurrentScope(String identName) {
+        Obj result = Tab.currentScope.findSymbol(identName);
+        if (result == null) {
+            result = Tab.noObj;
+        }
+        return result;
 	}
 
-	public void visit(ProgName progName) {
-		progName.obj = Tab.insert(Obj.Prog, progName.getPName(), Tab.noType);
-		Tab.openScope();     	
-	}
-
-	public void visit(VarDecl varDecl) {
-		report_info("Deklarisana promenljiva "+ varDecl.getVarName(), varDecl);
-		Obj varNode = Tab.insert(Obj.Var, varDecl.getVarName(), varDecl.getType().struct);
-	}
-
-	public void visit(Type type) {
-		Obj typeNode = Tab.find(type.getTypeName());
-		if (typeNode == Tab.noObj) {
-			report_error("Nije pronadjen tip " + type.getTypeName() + " u tabeli simbola", null);
-			type.struct = Tab.noType;
-		} 
-		else {
-			if (Obj.Type == typeNode.getKind()) {
-				type.struct = typeNode.getType();
-			} 
-			else {
-				report_error("Greska: Ime " + type.getTypeName() + " ne predstavlja tip ", type);
-				type.struct = Tab.noType;
-			}
-		}  
-	}
-
-	public void visit(MethodDecl methodDecl) {
-		if (!returnFound && currentMethod.getType() != Tab.noType) {
-			report_error("Semanticka greska na liniji " + methodDecl.getLine() + ": funcija " + currentMethod.getName() + " nema return iskaz!", null);
-		}
-		
-		Tab.chainLocalSymbols(currentMethod);
-		Tab.closeScope();
-		
-		returnFound = false;
-		currentMethod = null;
-	}
-
-	public void visit(MethodTypeName methodTypeName) {
-		currentMethod = Tab.insert(Obj.Meth, methodTypeName.getMethName(), methodTypeName.getType().struct);
-		methodTypeName.obj = currentMethod;
+	@Override
+	public void visit(ProgramName programName) {
+		programName.obj = Tab.insert(Obj.Prog, programName.getIdent(), Tab.noType);
 		Tab.openScope();
-		report_info("Obradjuje se funkcija " + methodTypeName.getMethName(), methodTypeName);
-	}
-
-	public void visit(Assignment assignment) {
-		if (!assignment.getExpr().struct.assignableTo(assignment.getDesignator().obj.getType()))
-			report_error("Greska na liniji " + assignment.getLine() + " : " + " nekompatibilni tipovi u dodeli vrednosti ", null);
-	}
-
-	public void visit(PrintStmt printStmt){
-		printCallCount++;    	
-	}
-
-	public void visit(ReturnExpr returnExpr){
-		returnFound = true;
-		Struct currMethType = currentMethod.getType();
-		if (!currMethType.compatibleWith(returnExpr.getExpr().struct)) {
-			report_error("Greska na liniji " + returnExpr.getLine() + " : " + "tip izraza u return naredbi ne slaze se sa tipom povratne vrednosti funkcije " + currentMethod.getName(), null);
-		}			  	     	
-	}
-
-	public void visit(ProcCall procCall){
-		Obj func = procCall.getDesignator().obj;
-		if (Obj.Meth == func.getKind()) { 
-			report_info("Pronadjen poziv funkcije " + func.getName() + " na liniji " + procCall.getLine(), null);
-			//RESULT = func.getType();
-		} 
-		else {
-			report_error("Greska na liniji " + procCall.getLine()+" : ime " + func.getName() + " nije funkcija!", null);
-			//RESULT = Tab.noType;
-		}     	
-	}    
-
-	public void visit(AddExpr addExpr) {
-		Struct te = addExpr.getExpr().struct;
-		Struct t = addExpr.getTerm().struct;
-		if (te.equals(t) && te == Tab.intType)
-			addExpr.struct = te;
-		else {
-			report_error("Greska na liniji "+ addExpr.getLine()+" : nekompatibilni tipovi u izrazu za sabiranje.", null);
-			addExpr.struct = Tab.noType;
-		} 
-	}
-
-	public void visit(TermExpr termExpr) {
-		termExpr.struct = termExpr.getTerm().struct;
-	}
-
-	public void visit(Term term) {
-		term.struct = term.getFactor().struct;    	
-	}
-
-	public void visit(Const cnst){
-		cnst.struct = Tab.intType;    	
+		report_info("Otvoren opseg za program " + programName.getIdent(), programName);
 	}
 	
-	public void visit(Var var) {
-		var.struct = var.getDesignator().obj.getType();
-	}
-
-	public void visit(FuncCall funcCall){
-		Obj func = funcCall.getDesignator().obj;
-		if (Obj.Meth == func.getKind()) { 
-			report_info("Pronadjen poziv funkcije " + func.getName() + " na liniji " + funcCall.getLine(), null);
-			funcCall.struct = func.getType();
-		} 
+	@Override
+	public void visit(MethodSignature2 methodSignature) {
+		String ident = methodSignature.getName().getIdent();
+		
+		Obj methodObj = findInCurrentScope(ident);
+		// Pretražuju se PROGRAM i UNIVERSE opsezi.
+		
+		if(methodObj == Tab.noObj) {
+			methodSignature.obj = Tab.insert(Obj.Meth, ident, currentMethodReturnType);
+			currentMethod = methodSignature.obj;
+			Tab.openScope();
+			report_info("Obradjuje se funkcija " + ident, methodSignature);
+		}
 		else {
-			report_error("Greska na liniji " + funcCall.getLine()+" : ime " + func.getName() + " nije funkcija!", null);
-			funcCall.struct = Tab.noType;
+			report_info("Semanticka greska: Dvostruka definicija funkcije " + ident, methodSignature);
+			errorDetected = true;
 		}
-
 	}
-
-	public void visit(Designator designator){
-		Obj obj = Tab.find(designator.getName());
-		if (obj == Tab.noObj) { 
-			report_error("Greska na liniji " + designator.getLine()+ " : ime "+designator.getName()+" nije deklarisano! ", null);
+	
+	@Override
+	public void visit(NonVoidReturnType ret) {
+		String retType = ret.getType().getTypeName();
+		if(retType.equals("int")) {
+			currentMethodReturnType = Tab.intType;
 		}
-		designator.obj = obj;
+		else if(retType.equals("char")) {
+			currentMethodReturnType = Tab.charType;
+		}
+		else {
+			report_info("Semanticka greska: Nepostojeci tip " + retType, ret);
+			errorDetected = true;
+		}
+	}
+	
+	@Override
+	public void visit(VoidReturnType ret) {
+		currentMethodReturnType = Tab.noType;
+	}
+	
+	@Override
+	public void visit(Return ret) {
+		if(currentMethodReturnType != Tab.noType) {
+			report_info("Semanticka greska: return naredba mora sadržati povratnu vrednost", ret);
+			errorDetected = true;
+		}
+	}
+	
+	@Override
+	public void visit(ReturnWithExpr ret) {
+		if(currentMethodReturnType == Tab.noType) {
+			report_info("Semanticka greska: void metoda ne sme imati povratnu vrednost u return naredbi", ret);
+			errorDetected = true;
+			return;
+		}
+		
+		Struct retType = ret.getExpr2().obj.getType();
+		
+		if(retType != currentMethodReturnType) {
+			report_info("Semanticka greska: neslaganje povratnog tipa funkcije sa predeklarisanim", ret);
+			errorDetected = true;
+		}
+		else {
+			returnFound = true;
+		}
+	}
+	
+	@Override
+	public void visit(Const constant) {
+		String ident = constant.getName().getIdent();
+		//report_info("Konstanta " + ident + " sa vrednoscu " + constant.getLiteral().getValue(), constant);
+		
+		Obj constantObj = findInCurrentScope(ident);
+		// Pretražuju se PROGRAM i UNIVERSE opsezi.
+		
+		if(constantObj == Tab.noObj) {
+			Struct constantType = constant.getLiteral().obj.getType();
+			if(constantType != currentType) {
+				report_info("Semantička greška: Tip konstante nije u skladu sa dodeljenom vrednošću. " + ident, constant);
+				errorDetected  = true;
+			}
+			else {
+				constantObj = Tab.insert(0, ident, currentType);
+				constantObj.setAdr(constant.getLiteral().obj.getAdr());
+			}
+		}
+		else {
+			report_info("Semantička greška: Detektovana dvostruka definicija konstante " + ident, constant);
+			errorDetected  = true;
+		}
+	}
+	
+	@Override
+	public void visit(Type type) {
+		String typeName = type.getTypeName();
+		
+		if(typeName.equals("int")) {
+			currentType = Tab.intType;
+		}
+		else if(typeName.equals("char")) {
+			currentType = Tab.charType;
+		}
+		else {
+			report_info("Semantička greška: Nedefinisan tip " + typeName, type);
+			errorDetected = true;
+		}
+	}
+	
+	@Override
+	public void visit(SingleVarDecl singleVarDecl) {
+		String ident = singleVarDecl.getName().getIdent();
+		
+		Obj varObj = findInCurrentScope(ident);
+		// Pretražuju se PROGRAM i UNIVERSE opsezi.
+		
+		if(varObj == Tab.noObj) {
+			varObj = Tab.insert(1, ident, currentType);
+		}
+		else {
+			report_info("Semantička greška: Detektovana dvostruka deklaracija promenljive " + ident, singleVarDecl);
+			errorDetected  = true;
+		}
+	}
+	
+	@Override
+	public void visit(SingleVarDeclVector singleVarDeclVector) {
+		// treba dodatno za niz!!!
+		String ident = singleVarDeclVector.getName().getIdent();
+		
+		Obj varObj = findInCurrentScope(ident);
+		// Pretražuju se PROGRAM i UNIVERSE opsezi.
+		
+		if(varObj == Tab.noObj) {
+			varObj = Tab.insert(1, ident, currentType);
+		}
+		else {
+			report_info("Semantička greška: Detektovana dvostruka deklaracija promenljive " + ident, singleVarDeclVector);
+			errorDetected  = true;
+		}
+	}
+	
+	@Override
+	public void visit(MultipleVarDecl multipleVarDecl) {
+		String ident = multipleVarDecl.getName().getIdent();
+		
+		Obj varObj = findInCurrentScope(ident);
+		// Pretražuju se PROGRAM i UNIVERSE opsezi.
+		
+		if(varObj == Tab.noObj) {
+			varObj = Tab.insert(1, ident, currentType);
+		}
+		else {
+			report_info("Semantička greška: Detektovana dvostruka deklaracija promenljive " + ident, multipleVarDecl);
+			errorDetected  = true;
+		}
+	}
+	
+	@Override
+	public void visit(MultipleVarDeclVector multipleVarDeclVector) {
+		// treba dodatno za niz!!!
+		String ident = multipleVarDeclVector.getName().getIdent();
+		
+		Obj varObj = findInCurrentScope(ident);
+		// Pretražuju se PROGRAM i UNIVERSE opsezi.
+		
+		if(varObj == Tab.noObj) {
+			varObj = Tab.insert(1, ident, currentType);
+		}
+		else {
+			report_info("Semantička greška: Detektovana dvostruka deklaracija promenljive " + ident, multipleVarDeclVector);
+			errorDetected  = true;
+		}
+	}
+	
+    @Override
+    public void visit(IntLiteral intLiteral) {
+        intLiteral.obj = new Obj(Obj.Con, "", Tab.intType, intLiteral.getValue(), 0);
+    }
+
+    @Override
+    public void visit(CharLiteral charLiteral) {
+        charLiteral.obj = new Obj(Obj.Con, "", Tab.charType, charLiteral.getValue(), 0);
+    }
+    
+    @Override
+    public void visit(TermExpr termExpr) {
+        termExpr.obj = termExpr.getTerm().obj;
+    }
+    
+    @Override
+    public void visit(FactorTerm factorTerm) {
+        factorTerm.obj = factorTerm.getFactor().obj;
+    }
+    
+    @Override
+    public void visit(NumberFactor numberFactor) {
+    	numberFactor.obj = new Obj(Obj.Con, "", Tab.intType, numberFactor.getValue(), 1);
+    }
+
+    @Override
+    public void visit(CharFactor charFactor) {
+        charFactor.obj = new Obj(Obj.Con, "", Tab.charType, charFactor.getValue(), 1);
+    }
+    
+    /*
+    @Override
+    public void visit(BoolFactor boolFactor) {
+        boolFactor.obj = new Obj(Obj.Con, "", MJTab.BOOL_TYPE, boolFactor.getValue() ? 1 : 0, 1);
+    }
+    */
+
+    /*
+    @Override
+    public void visit(BoolLiteral boolLiteral) {
+        boolLiteral.obj = new Obj(Obj.Con, "", Tab.boolType, boolLiteral.getValue(), 0);
+    }
+	*/
+
+	public void visit(Program program) {
+		Tab.chainLocalSymbols(program.getProgramName().obj);
+		Tab.closeScope();
+	}
+	
+	public void visit(MethodDeclaration methodDeclaration) {
+		String ident = methodDeclaration.getMethodSignature().getMethodSignature2().getName().getIdent();
+		if(currentMethodReturnType != Tab.noType && !returnFound) {
+			report_info("Semantička greška: Nepostojeca return naredba u funkciji " + ident, methodDeclaration);
+			errorDetected  = true;
+		}
+		
+		Tab.chainLocalSymbols(methodDeclaration.getMethodSignature().getMethodSignature2().obj);
+		Tab.closeScope();
 	}
 	
 	public boolean passed() {

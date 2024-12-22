@@ -1,0 +1,20 @@
+INFO  18:16:33,398 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  18:16:33,477 - #50 MyProgram
+INFO  18:16:33,479 - #50 int
+INFO  18:16:33,479 - #50 jaja
+INFO  18:16:33,480 - #34 =
+INFO  18:16:33,481 - #47 5
+INFO  18:16:33,481 - #39 ,
+INFO  18:16:33,483 - #50 jaja1
+INFO  18:16:33,483 - #34 =
+INFO  18:16:33,483 - #47 6
+INFO  18:16:33,484 - #37 ;
+INFO  18:16:33,484 - #50 char
+INFO  18:16:33,485 - #50 aa
+INFO  18:16:33,486 - #34 =
+INFO  18:16:33,486 - #50 jasamta
+ERROR 18:16:33,487 - 
+Sintaksna greska na liniji 4
+ERROR 18:16:33,487 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 4
+INFO  18:16:33,500 - Print calls = 0
+ERROR 18:16:33,502 - Parsiranje NIJE uspesno zavrseno!

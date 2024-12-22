@@ -1,0 +1,131 @@
+INFO  17:53:29,447 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  17:53:29,522 - #50 MyProgram
+INFO  17:53:29,524 - #50 int
+INFO  17:53:29,524 - #50 jaja
+INFO  17:53:29,525 - #34 =
+INFO  17:53:29,526 - #47 5
+INFO  17:53:29,526 - #39 ,
+INFO  17:53:29,528 - #50 jaja1
+INFO  17:53:29,528 - #34 =
+INFO  17:53:29,528 - #47 6
+INFO  17:53:29,528 - #37 ;
+INFO  17:53:29,529 - #50 int
+INFO  17:53:29,529 - #50 jajaja
+INFO  17:53:29,530 - #43 [
+INFO  17:53:29,530 - #44 ]
+INFO  17:53:29,530 - #39 ,
+INFO  17:53:29,531 - #50 jaja
+INFO  17:53:29,531 - #37 ;
+INFO  17:53:29,531 - #50 nesto
+INFO  17:53:29,532 - #50 nesto
+INFO  17:53:29,532 - #37 ;
+INFO  17:53:29,532 - #50 bool
+INFO  17:53:29,535 - #50 sinemoj
+INFO  17:53:29,535 - #34 =
+INFO  17:53:29,536 - #48 true
+INFO  17:53:29,537 - #37 ;
+INFO  17:53:29,537 - #45 {
+INFO  17:53:29,540 - #50 main
+INFO  17:53:29,543 - #41 (
+INFO  17:53:29,543 - #42 )
+INFO  17:53:29,546 - #50 int
+INFO  17:53:29,549 - #50 x
+INFO  17:53:29,550 - #39 ,
+INFO  17:53:29,551 - #50 i
+INFO  17:53:29,551 - #37 ;
+INFO  17:53:29,552 - #50 char
+INFO  17:53:29,553 - #50 c
+INFO  17:53:29,553 - #43 [
+INFO  17:53:29,553 - #44 ]
+INFO  17:53:29,554 - #39 ,
+INFO  17:53:29,555 - #50 d
+INFO  17:53:29,555 - #37 ;
+INFO  17:53:29,556 - #45 {
+INFO  17:53:29,558 - #41 (
+INFO  17:53:29,558 - #50 a
+INFO  17:53:29,559 - #42 )
+INFO  17:53:29,561 - #37 ;
+INFO  17:53:29,561 - #50 fun
+INFO  17:53:29,566 - #41 (
+INFO  17:53:29,566 - #50 a
+INFO  17:53:29,566 - #43 [
+INFO  17:53:29,566 - #44 ]
+INFO  17:53:29,566 - #39 ,
+INFO  17:53:29,567 - #50 b
+INFO  17:53:29,568 - #43 [
+INFO  17:53:29,568 - #44 ]
+INFO  17:53:29,568 - #42 )
+INFO  17:53:29,568 - #37 ;
+INFO  17:53:29,569 - #46 }
+INFO  17:53:29,569 - #46 }
+INFO  17:53:29,602 - Otvoren opseg za program MyProgram na liniji 1
+INFO  17:53:29,603 - Konstanta MultipleConstDecl(
+  SingleConstDecl(
+    Const(
+      Name(
+       jaja
+      ) [Name]
+      IntLiteral(
+       5
+      ) [IntLiteral]
+    ) [Const]
+  ) [SingleConstDecl]
+  Const(
+    Name(
+     jaja1
+    ) [Name]
+    IntLiteral(
+     6
+    ) [IntLiteral]
+  ) [Const]
+) [MultipleConstDecl]jaja sa vrednoscu 5 na liniji 3
+INFO  17:53:29,603 - Konstanta ConstDecl(
+  Type(
+   int
+  ) [Type]
+  MultipleConstDecl(
+    SingleConstDecl(
+      Const(
+        Name(
+         jaja
+        ) [Name]
+        IntLiteral(
+         5
+        ) [IntLiteral]
+      ) [Const]
+    ) [SingleConstDecl]
+    Const(
+      Name(
+       jaja1
+      ) [Name]
+      IntLiteral(
+       6
+      ) [IntLiteral]
+    ) [Const]
+  ) [MultipleConstDecl]
+) [ConstDecl]jaja1 sa vrednoscu 6 na liniji 3
+INFO  17:53:29,604 - Globalna promenljiva (vektor) jajaja dodata u program na liniji 4
+INFO  17:53:29,604 - Globalna promenljiva jaja dodata u program na liniji 4
+INFO  17:53:29,604 - Globalna promenljiva nesto dodata u program na liniji 5
+INFO  17:53:29,605 - Konstanta ConstDecl(
+  Type(
+   bool
+  ) [Type]
+  SingleConstDecl(
+    Const(
+      Name(
+       sinemoj
+      ) [Name]
+      BoolLiteral(
+       true
+      ) [BoolLiteral]
+    ) [Const]
+  ) [SingleConstDecl]
+) [ConstDecl]sinemoj sa vrednoscu true na liniji 6
+INFO  17:53:29,605 - Globalna promenljiva x dodata u program na liniji 10
+INFO  17:53:29,605 - Globalna promenljiva i dodata u program na liniji 10
+INFO  17:53:29,605 - Globalna promenljiva (vektor) c dodata u program na liniji 11
+INFO  17:53:29,605 - Globalna promenljiva d dodata u program na liniji 11
+INFO  17:53:29,606 - Print calls = 0
+INFO  17:53:29,607 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  17:53:29,607 - Parsiranje uspesno zavrseno!
