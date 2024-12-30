@@ -1,5 +1,9 @@
 package rs.ac.bg.etf.pp1;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 import org.apache.log4j.Logger;
@@ -17,12 +21,18 @@ public class SemanticPass extends VisitorAdaptor {
 	int ConstDeclCount = 0; // globalne konst.
 	Obj currentMethod = null;
 	Struct currentMethodReturnType = Tab.noType;
+	int currentMethodParameters = 0;
 	boolean returnFound = false;
+	boolean breakFound = false;
+	boolean continueFound = false;
+	boolean doWhile = false;
 	boolean mainDeclared = false;
 	int nVars;
 	private Struct currentType = Tab.noType;
 	
 	Stack<Obj> constants = new Stack<Obj>();
+	
+	Queue<Struct> queue = new LinkedList<>(); // Used for parameters in function calls
 
 	Logger log = Logger.getLogger(getClass());
 
@@ -81,6 +91,7 @@ public class SemanticPass extends VisitorAdaptor {
 		if(methodObj == Tab.noObj) {
 			methodSignature.obj = Tab.insert(Obj.Meth, ident, currentMethodReturnType);
 			currentMethod = methodSignature.obj;
+			currentMethod.setLevel(0);
 			Tab.openScope();
 			report_info("Obradjuje se funkcija " + ident, methodSignature);
 			
@@ -99,6 +110,96 @@ public class SemanticPass extends VisitorAdaptor {
 			errorDetected = true;
 		}
 	}
+	
+	@Override
+	public void visit(MultipleMethodParameters multipleMethodParameters) {
+		currentMethodParameters++;
+	}
+	
+	@Override
+	public void visit(SingleMethodParameter singleMethodParameter) {
+		currentMethodParameters++;
+	}
+	
+	@Override
+	public void visit(MethodSignature methodSignature) {
+		methodSignature.getMethodSignature2().obj.setLevel(currentMethodParameters);
+		currentMethodParameters = 0;
+	}
+	
+	@Override
+	public void visit(MethodCallFactor methodCallFactor) {
+		Obj designatorObj = methodCallFactor.getDesignator().obj;
+		
+		int argumentsNeeded = designatorObj.getLevel();
+		
+		if(argumentsNeeded != currentMethodParameters) {
+			// ERROR
+			report_info("Neodgovarajući broj parametara u pozivu funkcije. Semantička greška", methodCallFactor);
+			errorDetected = true;
+		}
+		
+		if(queue.isEmpty()) {
+			// DON'T CONTINUE
+			return;
+		}
+		
+		Collection<Obj> locals = designatorObj.getLocalSymbols();
+		
+		if(!locals.isEmpty()) {
+			int size = currentMethodParameters;
+			
+			Iterator<Obj> iterator = locals.iterator();
+			
+			while(size>0 && iterator.hasNext() && !queue.isEmpty()) {
+				Obj local = iterator.next();
+				
+				if(local.getType().equals(queue.remove())) {
+					// OK
+				}
+				else {
+					report_info("Neodgovarajući tip parametra u pozivu funkcije" + designatorObj.getName() + ". Semantička greška", methodCallFactor);
+					errorDetected = true;
+					break;
+				}
+				size--;
+			}
+		}
+		
+		queue.clear();
+		currentMethodParameters = 0;
+	}
+	
+	@Override
+	public void visit(SingleMethodArgument singleMethodArgument) {
+		currentMethodParameters++;
+	}
+	
+	@Override
+	public void visit(MultipleMethodArguments multipleMethodArguments) {
+		currentMethodParameters++;
+	}
+	
+	@Override
+	public void visit(DoStatement doStatement) {
+		doWhile = true;
+	}
+	
+	@Override
+	public void visit(WhileStatement whileStatement) {
+		doWhile = false;
+	}
+	
+	@Override
+	public void visit(Continue cnt) {
+		if(!doWhile) continueFound = true;
+	}
+	
+	@Override
+	public void visit(Break brk) {
+		if(!doWhile) breakFound = true;
+	}
+	
 	
 	@Override
 	public void visit(ScalarMethodParameter scalarMethodParameter) {
@@ -135,6 +236,11 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	@Override
+	public void visit(DesignatorSelect desSelect) {
+		desSelect.obj = desSelect.getDesignator().obj;
+	}
+	
+	@Override
 	public void visit(FunctionCall functionCall) {
 		Obj functionCallObj = functionCall.getDesignator().obj;
 		
@@ -146,16 +252,52 @@ public class SemanticPass extends VisitorAdaptor {
 		Obj designatorObj = findInCurrentOrSomeOuterScope(functionCall.getDesignator().obj.getName());
 		
 		if(designatorObj == Tab.noObj) {
-			// Error
+			// ERROR
 			report_info("Nedeklarisana funkcija. Semantička greška", functionCall);
 			errorDetected = true;
 		}
 		else {
 			if(designatorObj.getKind() == 3) {
-				// OK
+				if(designatorObj.getLevel() == currentMethodParameters) {
+					// OK
+					
+					if(queue.isEmpty()) {
+						// DON'T CONTINUE
+						return;
+					}
+					
+					Collection<Obj> locals = designatorObj.getLocalSymbols();
+					
+					if(!locals.isEmpty()) {
+						int size = currentMethodParameters;
+						
+						Iterator<Obj> iterator = locals.iterator();
+						
+						while(size>0 && iterator.hasNext() && !queue.isEmpty()) {
+							Obj local = iterator.next();
+							
+							if(local.getType().equals(queue.remove())) {
+								// OK
+							}
+							else {
+								report_info("Neodgovarajući tip parametra u pozivu funkcije" + designatorObj.getName() + ". Semantička greška", functionCall);
+								errorDetected = true;
+								break;
+							}
+							size--;
+						}
+					}
+					queue.clear();
+					currentMethodParameters = 0;
+				}
+				else {
+					// ERROR
+					report_info("Neodgovarajući broj parametara u pozivu funkcije. Semantička greška", functionCall);
+					errorDetected = true;
+				}
 			}
 			else {
-				// Error
+				// ERROR
 				report_info("Nedeklarisana funkcija. Semantička greška", functionCall);
 				errorDetected = true;
 			}
@@ -217,12 +359,12 @@ public class SemanticPass extends VisitorAdaptor {
 			}
 			else {
 				// Found in global scope
-				designatorIdent.obj = new Obj(designatorObj.getKind(), ident, designatorObj.getType());
+				designatorIdent.obj = designatorObj;
 			}
 		}
 		else {
 			// Found in local scope
-			designatorIdent.obj = new Obj(designatorObj.getKind(), ident, designatorObj.getType());
+			designatorIdent.obj = designatorObj;
 		}
 	}
 	
@@ -274,6 +416,8 @@ public class SemanticPass extends VisitorAdaptor {
 			return;
 		}
 		
+		if(ret.getExpr2().obj==null) return;	
+		
 		Struct retType = ret.getExpr2().obj.getType();
 		
 		if(retType != currentMethodReturnType) {
@@ -282,6 +426,21 @@ public class SemanticPass extends VisitorAdaptor {
 		}
 		else {
 			returnFound = true;
+		}
+	}
+	
+	@Override
+	public void visit(DesignatorVector vector) {
+		Obj vectorObj = vector.getExpr2().obj;
+		
+		if(vectorObj == null) return;
+		
+		if(vectorObj.getType().equals(Tab.intType)) {
+			// OK
+		}
+		else {
+			report_info("Indeks mora biti tipa 'int'! Semantička greška", vector);
+			errorDetected = true;
 		}
 	}
 	
@@ -393,6 +552,56 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	@Override
+	public void visit(NegativeTermExprSum negTerm) {
+		Obj negObj = negTerm.getTerm().obj;
+		
+		if(negObj == null) {
+			return;
+		}
+		
+		if(negObj.getType().equals(Tab.intType)) {
+			// OK
+		}
+		else {
+			report_info("Izraz neposredno nakon '-' mora biti tipa int. Semantička greška", negTerm);
+			errorDetected  = true;
+		}
+	}
+	
+	@Override
+	public void visit(NegativeTermExpr negTerm){
+		Obj negObj = negTerm.getTerm().obj;
+		
+		if(negObj == null) {
+			return;
+		}
+		
+		if(negObj.getType().equals(Tab.intType)) {
+			// OK
+		}
+		else {
+			report_info("Izraz neposredno nakon '-' mora biti tipa int. Semantička greška", negTerm);
+			errorDetected  = true;
+		}
+	}
+	
+	@Override
+	public void visit(AddopTerm addopTerm) {
+		Obj addopTermObj = addopTerm.getTerm().obj;
+		
+		if(addopTermObj == null) return;
+		
+		if((addopTermObj.getKind() == Obj.Con && addopTermObj.getType().equals(Tab.intType)) ||
+				(addopTermObj.getKind() == Obj.Var && addopTermObj.getType().equals(Tab.intType))) {
+			// OK
+		}
+		else {
+			report_info("Nepoklapanje tipova u izrazu. Semantička greška", addopTerm);
+			errorDetected  = true;
+		}
+	}
+	
+	@Override
 	public void visit(MulopTerm mulopTerm) {
 		Obj factor = mulopTerm.getFactor().obj;
 		
@@ -401,8 +610,10 @@ public class SemanticPass extends VisitorAdaptor {
 			return;
 		}
 		
-		if(factor.getKind() == Obj.Con && factor.getType().equals(Tab.intType)) {
+		if((factor.getKind() == Obj.Con && factor.getType().equals(Tab.intType)) ||
+				(factor.getKind() == Obj.Var && factor.getType().equals(Tab.intType))) {
 			// OK
+			// mulopTerm.obj = factor;
 		}
 		else {
 			report_info("Nepoklapanje tipova u izrazu. Semantička greška", mulopTerm);
@@ -453,12 +664,68 @@ public class SemanticPass extends VisitorAdaptor {
         boolLiteral.obj = new Obj(Obj.Con, "", Tab.boolType, boolLiteral.getValue(), 0);
     }
 	*/
+    
+    @Override
+    public void visit(IdentMethodArgument identMethodArgument) {
+        String ident = identMethodArgument.getIdent();
+        
+        Obj identObj = findInCurrentOrSomeOuterScope(ident);
+        
+        if(identObj.equals(Tab.noObj)) {
+        	// ERROR: Method argument not found
+        	report_info("Argument funkcije nije definisan. Semantička greška", identMethodArgument);
+			errorDetected  = true;
+        }
+        else {
+        	// OK
+        	queue.add(identObj.getType());
+        }
+    }
+    
+    
+    @Override
+    public void visit(IdentVectorMethodArgument identMethodArgument) {
+        String ident = identMethodArgument.getIdent();
+        
+        Obj identObj = findInCurrentOrSomeOuterScope(ident);
+        
+        if(identObj.equals(Tab.noObj)) {
+        	// ERROR: Method argument not found
+        	report_info("Argument funkcije nije definisan. Semantička greška", identMethodArgument);
+			errorDetected  = true;
+        }
+        else {
+        	// OK
+        	queue.add(identObj.getType());
+        	// FALI PROVERA DA JE OBJ ARRAY
+        }
+    }
+    
+    @Override
+    public void visit(LiteralMethodArgument literalMethodArgument) {
+    	Obj literalObj = literalMethodArgument.getLiteral().obj;
+    	Struct type = literalObj.getType();
+    	queue.add(type);
+    }
+    
 
 	public void visit(Program program) {
 		if(!mainDeclared) {
 			report_info("Semantička greška: Funkcija main nije definisana", program);
 			errorDetected  = true;
 		}
+		
+		
+		if(breakFound) {
+			report_info("Neispravna upotreba 'break' iskaza. Semantička greška", null);
+			errorDetected  = true;
+		}
+		
+		if(continueFound) {
+			report_info("Neispravna upotreba 'continue' iskaza. Semantička greška", null);
+			errorDetected  = true;
+		}
+		
 		
 		Tab.chainLocalSymbols(program.getProgramName().obj);
 		Tab.closeScope();

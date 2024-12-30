@@ -1,0 +1,67 @@
+INFO  22:03:12,703 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:03:12,832 - #50 MyProgram
+INFO  22:03:12,834 - #50 int
+INFO  22:03:12,834 - #50 jedan
+INFO  22:03:12,836 - #34 =
+INFO  22:03:12,837 - #47 1
+INFO  22:03:12,838 - #37 ;
+INFO  22:03:12,840 - #45 {
+INFO  22:03:12,841 - #50 int
+INFO  22:03:12,842 - #50 fun1
+INFO  22:03:12,842 - #41 (
+INFO  22:03:12,844 - #50 int
+INFO  22:03:12,844 - #50 c
+INFO  22:03:12,844 - #42 )
+INFO  22:03:12,845 - #50 int
+INFO  22:03:12,847 - #50 a
+INFO  22:03:12,848 - #39 ,
+INFO  22:03:12,848 - #50 x
+INFO  22:03:12,849 - #37 ;
+INFO  22:03:12,849 - #45 {
+INFO  22:03:12,850 - #50 a
+INFO  22:03:12,851 - #35 ++
+INFO  22:03:12,852 - #37 ;
+INFO  22:03:12,856 - #50 a
+INFO  22:03:12,856 - #34 =
+INFO  22:03:12,857 - #50 b
+INFO  22:03:12,857 - #37 ;
+INFO  22:03:12,858 - #50 jedan
+INFO  22:03:12,858 - #37 ;
+INFO  22:03:12,858 - #46 }
+INFO  22:03:12,860 - #50 main
+INFO  22:03:12,861 - #41 (
+INFO  22:03:12,861 - #42 )
+INFO  22:03:12,863 - #50 int
+INFO  22:03:12,863 - #50 x
+INFO  22:03:12,863 - #37 ;
+INFO  22:03:12,863 - #50 char
+INFO  22:03:12,863 - #50 c
+INFO  22:03:12,864 - #43 [
+INFO  22:03:12,864 - #44 ]
+INFO  22:03:12,864 - #39 ,
+INFO  22:03:12,865 - #50 a
+INFO  22:03:12,865 - #37 ;
+INFO  22:03:12,865 - #45 {
+INFO  22:03:12,866 - #41 (
+INFO  22:03:12,866 - #50 jedan
+INFO  22:03:12,866 - #23 *
+INFO  22:03:12,866 - #50 x
+INFO  22:03:12,868 - #33 ||
+INFO  22:03:12,871 - #48 true
+INFO  22:03:12,871 - #42 )
+INFO  22:03:12,872 - #37 ;
+INFO  22:03:12,872 - #50 fun1
+INFO  22:03:12,874 - #41 (
+INFO  22:03:12,874 - #50 a
+INFO  22:03:12,874 - #43 [
+INFO  22:03:12,874 - #44 ]
+INFO  22:03:12,875 - #42 )
+INFO  22:03:12,875 - #37 ;
+INFO  22:03:12,876 - #46 }
+INFO  22:03:12,876 - #46 }
+INFO  22:03:12,893 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:03:12,893 - Obradjuje se funkcija fun1 na liniji 5
+INFO  22:03:12,894 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 10
+INFO  22:03:12,894 - Obradjuje se funkcija main na liniji 15
+INFO  22:03:12,895 - Print calls = 0
+ERROR 22:03:12,896 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,71 @@
+INFO  21:42:21,113 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  21:42:21,197 - #50 MyProgram
+INFO  21:42:21,199 - #50 int
+INFO  21:42:21,199 - #50 jedan
+INFO  21:42:21,200 - #34 =
+INFO  21:42:21,201 - #47 1
+INFO  21:42:21,201 - #37 ;
+INFO  21:42:21,203 - #45 {
+INFO  21:42:21,204 - #50 int
+INFO  21:42:21,205 - #50 fun1
+INFO  21:42:21,205 - #41 (
+INFO  21:42:21,207 - #50 int
+INFO  21:42:21,207 - #50 c
+INFO  21:42:21,207 - #42 )
+INFO  21:42:21,208 - #50 int
+INFO  21:42:21,211 - #50 a
+INFO  21:42:21,211 - #39 ,
+INFO  21:42:21,212 - #50 x
+INFO  21:42:21,212 - #37 ;
+INFO  21:42:21,213 - #45 {
+INFO  21:42:21,213 - #50 a
+INFO  21:42:21,214 - #35 ++
+INFO  21:42:21,215 - #37 ;
+INFO  21:42:21,218 - #50 a
+INFO  21:42:21,219 - #34 =
+INFO  21:42:21,219 - #50 jedan
+INFO  21:42:21,219 - #37 ;
+INFO  21:42:21,220 - #50 jedan
+INFO  21:42:21,220 - #37 ;
+INFO  21:42:21,220 - #46 }
+INFO  21:42:21,221 - #50 main
+INFO  21:42:21,222 - #41 (
+INFO  21:42:21,223 - #42 )
+INFO  21:42:21,224 - #50 int
+INFO  21:42:21,224 - #50 x
+INFO  21:42:21,224 - #37 ;
+INFO  21:42:21,225 - #50 char
+INFO  21:42:21,225 - #50 c
+INFO  21:42:21,225 - #43 [
+INFO  21:42:21,226 - #44 ]
+INFO  21:42:21,226 - #39 ,
+INFO  21:42:21,226 - #50 a
+INFO  21:42:21,227 - #37 ;
+INFO  21:42:21,228 - #45 {
+INFO  21:42:21,228 - #41 (
+INFO  21:42:21,229 - #50 jedan
+INFO  21:42:21,229 - #23 *
+INFO  21:42:21,229 - #50 x
+INFO  21:42:21,231 - #21 +
+INFO  21:42:21,232 - #49 a
+INFO  21:42:21,234 - #42 )
+INFO  21:42:21,237 - #37 ;
+INFO  21:42:21,237 - #50 fun1
+INFO  21:42:21,240 - #41 (
+INFO  21:42:21,240 - #50 a
+INFO  21:42:21,241 - #43 [
+INFO  21:42:21,243 - #44 ]
+INFO  21:42:21,243 - #39 ,
+INFO  21:42:21,244 - #50 b
+INFO  21:42:21,245 - #43 [
+INFO  21:42:21,245 - #44 ]
+INFO  21:42:21,246 - #42 )
+INFO  21:42:21,246 - #37 ;
+INFO  21:42:21,247 - #46 }
+INFO  21:42:21,249 - #46 }
+INFO  21:42:21,264 - Otvoren opseg za program MyProgram na liniji 1
+INFO  21:42:21,264 - Obradjuje se funkcija fun1 na liniji 5
+INFO  21:42:21,265 - Obradjuje se funkcija main na liniji 15
+INFO  21:42:21,265 - Nepoklapanje tipova u izrazu. Semantička greška na liniji 19
+INFO  21:42:21,266 - Print calls = 0
+ERROR 21:42:21,268 - Parsiranje NIJE uspesno zavrseno!

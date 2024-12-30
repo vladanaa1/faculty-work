@@ -1,0 +1,62 @@
+INFO  00:43:03,407 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  00:43:03,518 - #50 MyProgram
+INFO  00:43:03,519 - #45 {
+INFO  00:43:03,521 - #50 int
+INFO  00:43:03,522 - #50 fun1
+INFO  00:43:03,524 - #41 (
+INFO  00:43:03,526 - #50 int
+INFO  00:43:03,526 - #50 c
+INFO  00:43:03,527 - #42 )
+INFO  00:43:03,528 - #50 int
+INFO  00:43:03,530 - #50 a
+INFO  00:43:03,531 - #39 ,
+INFO  00:43:03,531 - #50 x
+INFO  00:43:03,531 - #37 ;
+INFO  00:43:03,532 - #45 {
+INFO  00:43:03,533 - #50 a
+INFO  00:43:03,534 - #35 ++
+INFO  00:43:03,534 - #37 ;
+INFO  00:43:03,535 - #47 5
+INFO  00:43:03,536 - #37 ;
+INFO  00:43:03,536 - #46 }
+INFO  00:43:03,538 - #50 main
+INFO  00:43:03,540 - #41 (
+INFO  00:43:03,543 - #42 )
+INFO  00:43:03,544 - #50 int
+INFO  00:43:03,545 - #50 x
+INFO  00:43:03,545 - #39 ,
+INFO  00:43:03,545 - #50 a
+INFO  00:43:03,545 - #37 ;
+INFO  00:43:03,546 - #50 char
+INFO  00:43:03,546 - #50 c
+INFO  00:43:03,546 - #43 [
+INFO  00:43:03,546 - #44 ]
+INFO  00:43:03,547 - #39 ,
+INFO  00:43:03,548 - #50 d
+INFO  00:43:03,548 - #37 ;
+INFO  00:43:03,548 - #45 {
+INFO  00:43:03,548 - #41 (
+INFO  00:43:03,548 - #50 d
+INFO  00:43:03,549 - #24 /
+INFO  00:43:03,551 - #50 c
+INFO  00:43:03,553 - #42 )
+INFO  00:43:03,557 - #37 ;
+INFO  00:43:03,560 - #50 fun1
+INFO  00:43:03,561 - #41 (
+INFO  00:43:03,562 - #50 a
+INFO  00:43:03,562 - #43 [
+INFO  00:43:03,562 - #44 ]
+INFO  00:43:03,562 - #39 ,
+INFO  00:43:03,563 - #50 b
+INFO  00:43:03,563 - #43 [
+INFO  00:43:03,564 - #44 ]
+INFO  00:43:03,564 - #42 )
+INFO  00:43:03,565 - #37 ;
+INFO  00:43:03,565 - #46 }
+INFO  00:43:03,565 - #46 }
+INFO  00:43:03,625 - Otvoren opseg za program MyProgram na liniji 1
+INFO  00:43:03,625 - Obradjuje se funkcija fun1 na liniji 4
+INFO  00:43:03,626 - Obradjuje se funkcija main na liniji 12
+INFO  00:43:03,626 - Nepoklapanje tipova u izrazu. Semantička greška na liniji 16
+INFO  00:43:03,627 - Print calls = 0
+ERROR 00:43:03,629 - Parsiranje NIJE uspesno zavrseno!

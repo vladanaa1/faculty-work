@@ -1,0 +1,70 @@
+INFO  22:01:22,217 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:01:22,293 - #50 MyProgram
+INFO  22:01:22,295 - #50 int
+INFO  22:01:22,296 - #50 jedan
+INFO  22:01:22,297 - #34 =
+INFO  22:01:22,298 - #47 1
+INFO  22:01:22,298 - #37 ;
+INFO  22:01:22,300 - #45 {
+INFO  22:01:22,301 - #50 int
+INFO  22:01:22,302 - #50 fun1
+INFO  22:01:22,302 - #41 (
+INFO  22:01:22,304 - #50 int
+INFO  22:01:22,304 - #50 c
+INFO  22:01:22,304 - #42 )
+INFO  22:01:22,305 - #50 int
+INFO  22:01:22,307 - #50 a
+INFO  22:01:22,307 - #39 ,
+INFO  22:01:22,308 - #50 x
+INFO  22:01:22,308 - #37 ;
+INFO  22:01:22,308 - #45 {
+INFO  22:01:22,309 - #50 a
+INFO  22:01:22,310 - #35 ++
+INFO  22:01:22,310 - #37 ;
+INFO  22:01:22,314 - #50 a
+INFO  22:01:22,315 - #34 =
+INFO  22:01:22,316 - #50 jedan
+INFO  22:01:22,316 - #37 ;
+INFO  22:01:22,316 - #50 jedan
+INFO  22:01:22,316 - #37 ;
+INFO  22:01:22,317 - #46 }
+INFO  22:01:22,318 - #50 main
+INFO  22:01:22,319 - #41 (
+INFO  22:01:22,319 - #42 )
+INFO  22:01:22,320 - #50 int
+INFO  22:01:22,321 - #50 x
+INFO  22:01:22,321 - #37 ;
+INFO  22:01:22,321 - #50 char
+INFO  22:01:22,322 - #50 c
+INFO  22:01:22,322 - #43 [
+INFO  22:01:22,322 - #44 ]
+INFO  22:01:22,323 - #39 ,
+INFO  22:01:22,323 - #50 a
+INFO  22:01:22,323 - #37 ;
+INFO  22:01:22,324 - #45 {
+INFO  22:01:22,324 - #41 (
+INFO  22:01:22,324 - #50 jedan
+INFO  22:01:22,324 - #23 *
+INFO  22:01:22,325 - #50 x
+INFO  22:01:22,327 - #33 ||
+INFO  22:01:22,329 - #48 true
+INFO  22:01:22,330 - #42 )
+INFO  22:01:22,331 - #37 ;
+INFO  22:01:22,332 - #50 fun
+INFO  22:01:22,333 - #41 (
+INFO  22:01:22,334 - #50 a
+INFO  22:01:22,334 - #43 [
+INFO  22:01:22,334 - #44 ]
+INFO  22:01:22,335 - #39 ,
+INFO  22:01:22,335 - #50 b
+INFO  22:01:22,336 - #42 )
+INFO  22:01:22,336 - #37 ;
+INFO  22:01:22,337 - #46 }
+INFO  22:01:22,337 - #46 }
+INFO  22:01:22,349 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:01:22,349 - Obradjuje se funkcija fun1 na liniji 5
+INFO  22:01:22,350 - Obradjuje se funkcija main na liniji 15
+INFO  22:01:22,350 - Promenljiva fun mora biti deklarisana pre upotrebe. Semantička greška na liniji 20
+INFO  22:01:22,351 - Argument funkcije nije definisan. Semantička greška na liniji 20
+INFO  22:01:22,351 - Print calls = 0
+ERROR 22:01:22,352 - Parsiranje NIJE uspesno zavrseno!

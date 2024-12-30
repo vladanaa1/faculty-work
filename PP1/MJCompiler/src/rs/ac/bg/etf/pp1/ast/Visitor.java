@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 22/11/2024 23:42:19
+// 29/11/2024 23:36:16
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -50,22 +50,23 @@ public interface Visitor {
     public void visit(Declaration Declaration);
     public void visit(MethodArgument MethodArgument);
     public void visit(MethodArgumentsOptional MethodArgumentsOptional);
-    public void visit(MethodArgumentDerived3 MethodArgumentDerived3);
-    public void visit(MethodArgumentDerived2 MethodArgumentDerived2);
-    public void visit(MethodArgumentDerived1 MethodArgumentDerived1);
-    public void visit(MethodArgumentListDerived2 MethodArgumentListDerived2);
-    public void visit(MethodArgumentListDerived1 MethodArgumentListDerived1);
-    public void visit(MethodArgumentsOptionalDerived2 MethodArgumentsOptionalDerived2);
-    public void visit(MethodArgumentsOptionalDerived1 MethodArgumentsOptionalDerived1);
+    public void visit(LiteralMethodArgument LiteralMethodArgument);
+    public void visit(IdentVectorMethodArgument IdentVectorMethodArgument);
+    public void visit(IdentMethodArgument IdentMethodArgument);
+    public void visit(SingleMethodArgument SingleMethodArgument);
+    public void visit(MultipleMethodArguments MultipleMethodArguments);
+    public void visit(EmptyMethodArguments EmptyMethodArguments);
+    public void visit(NonEmptyMethodArguments NonEmptyMethodArguments);
     public void visit(VectorMethodParameter VectorMethodParameter);
     public void visit(ScalarMethodParameter ScalarMethodParameter);
-    public void visit(MethodParametersListDerived2 MethodParametersListDerived2);
-    public void visit(MethodParametersListDerived1 MethodParametersListDerived1);
-    public void visit(MethodParametersOptionalDerived2 MethodParametersOptionalDerived2);
-    public void visit(MethodParametersOptionalDerived1 MethodParametersOptionalDerived1);
+    public void visit(SingleMethodParameter SingleMethodParameter);
+    public void visit(MultipleMethodParameters MultipleMethodParameters);
+    public void visit(EmptyMethodParameters EmptyMethodParameters);
+    public void visit(NonEmptyMethodParameters NonEmptyMethodParameters);
     public void visit(NonVoidReturnType NonVoidReturnType);
     public void visit(VoidReturnType VoidReturnType);
     public void visit(MethodSignature2 MethodSignature2);
+    public void visit(MethodSignatureEnd MethodSignatureEnd);
     public void visit(MethodSignature MethodSignature);
     public void visit(AddopDerived2 AddopDerived2);
     public void visit(AddopDerived1 AddopDerived1);
@@ -89,8 +90,8 @@ public interface Visitor {
     public void visit(RelopDerived3 RelopDerived3);
     public void visit(RelopDerived2 RelopDerived2);
     public void visit(RelopDerived1 RelopDerived1);
-    public void visit(AddopGroupDerived2 AddopGroupDerived2);
-    public void visit(AddopGroupDerived1 AddopGroupDerived1);
+    public void visit(AddopTerm AddopTerm);
+    public void visit(AddopGroupTerm AddopGroupTerm);
     public void visit(NegativeTermExpr NegativeTermExpr);
     public void visit(TermExpr TermExpr);
     public void visit(TermExprSum TermExprSum);
@@ -112,6 +113,8 @@ public interface Visitor {
     public void visit(DesignatorInc DesignatorInc);
     public void visit(FunctionCall FunctionCall);
     public void visit(DesignatorAssign DesignatorAssign);
+    public void visit(WhileStatement WhileStatement);
+    public void visit(DoStatement DoStatement);
     public void visit(StatementListMatched StatementListMatched);
     public void visit(DoWhileWithCondNStmt DoWhileWithCondNStmt);
     public void visit(DoWhileWithCond DoWhileWithCond);
@@ -127,10 +130,10 @@ public interface Visitor {
     public void visit(DesignatorStatementMatched DesignatorStatementMatched);
     public void visit(UnmatchedDerived2 UnmatchedDerived2);
     public void visit(UnmatchedDerived1 UnmatchedDerived1);
-    public void visit(StatementDerived2 StatementDerived2);
-    public void visit(StatementDerived1 StatementDerived1);
-    public void visit(StatementListDerived2 StatementListDerived2);
-    public void visit(StatementListDerived1 StatementListDerived1);
+    public void visit(UnmatchedStatement UnmatchedStatement);
+    public void visit(MatchedStatement MatchedStatement);
+    public void visit(EmptyStatementList EmptyStatementList);
+    public void visit(NonEmptyStatementList NonEmptyStatementList);
     public void visit(LocalVarDerived1 LocalVarDerived1);
     public void visit(LocalVarsDerived2 LocalVarsDerived2);
     public void visit(LocalVarsDerived1 LocalVarsDerived1);

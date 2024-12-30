@@ -1,0 +1,68 @@
+INFO  22:02:42,754 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:02:42,833 - #50 MyProgram
+INFO  22:02:42,835 - #50 int
+INFO  22:02:42,835 - #50 jedan
+INFO  22:02:42,837 - #34 =
+INFO  22:02:42,838 - #47 1
+INFO  22:02:42,838 - #37 ;
+INFO  22:02:42,840 - #45 {
+INFO  22:02:42,840 - #50 int
+INFO  22:02:42,841 - #50 fun1
+INFO  22:02:42,842 - #41 (
+INFO  22:02:42,843 - #50 int
+INFO  22:02:42,843 - #50 c
+INFO  22:02:42,843 - #42 )
+INFO  22:02:42,844 - #50 int
+INFO  22:02:42,846 - #50 a
+INFO  22:02:42,847 - #39 ,
+INFO  22:02:42,847 - #50 x
+INFO  22:02:42,847 - #37 ;
+INFO  22:02:42,848 - #45 {
+INFO  22:02:42,848 - #50 a
+INFO  22:02:42,850 - #35 ++
+INFO  22:02:42,850 - #37 ;
+INFO  22:02:42,854 - #50 a
+INFO  22:02:42,855 - #34 =
+INFO  22:02:42,855 - #50 jedan
+INFO  22:02:42,855 - #37 ;
+INFO  22:02:42,856 - #50 jedan
+INFO  22:02:42,856 - #37 ;
+INFO  22:02:42,856 - #46 }
+INFO  22:02:42,857 - #50 main
+INFO  22:02:42,858 - #41 (
+INFO  22:02:42,859 - #42 )
+INFO  22:02:42,860 - #50 int
+INFO  22:02:42,860 - #50 x
+INFO  22:02:42,861 - #37 ;
+INFO  22:02:42,862 - #50 char
+INFO  22:02:42,862 - #50 c
+INFO  22:02:42,862 - #43 [
+INFO  22:02:42,862 - #44 ]
+INFO  22:02:42,863 - #39 ,
+INFO  22:02:42,863 - #50 a
+INFO  22:02:42,864 - #37 ;
+INFO  22:02:42,864 - #45 {
+INFO  22:02:42,864 - #41 (
+INFO  22:02:42,864 - #50 jedan
+INFO  22:02:42,865 - #23 *
+INFO  22:02:42,865 - #50 x
+INFO  22:02:42,867 - #33 ||
+INFO  22:02:42,869 - #48 true
+INFO  22:02:42,869 - #42 )
+INFO  22:02:42,870 - #47 5
+INFO  22:02:42,870 - #37 ;
+INFO  22:02:42,871 - #50 fun1
+INFO  22:02:42,872 - #41 (
+INFO  22:02:42,872 - #50 a
+INFO  22:02:42,872 - #43 [
+INFO  22:02:42,873 - #44 ]
+INFO  22:02:42,873 - #42 )
+INFO  22:02:42,874 - #37 ;
+INFO  22:02:42,874 - #46 }
+INFO  22:02:42,874 - #46 }
+INFO  22:02:42,885 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:02:42,885 - Obradjuje se funkcija fun1 na liniji 5
+INFO  22:02:42,886 - Obradjuje se funkcija main na liniji 15
+INFO  22:02:42,887 - Semantička greška: void metoda ne sme imati povratnu vrednost u return naredbi na liniji 19
+INFO  22:02:42,887 - Print calls = 0
+ERROR 22:02:42,888 - Parsiranje NIJE uspesno zavrseno!

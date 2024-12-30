@@ -1,0 +1,57 @@
+INFO  21:04:46,349 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  21:04:46,428 - #50 MyProgram
+INFO  21:04:46,428 - #45 {
+INFO  21:04:46,430 - #50 int
+INFO  21:04:46,431 - #50 fun1
+INFO  21:04:46,432 - #41 (
+INFO  21:04:46,435 - #50 int
+INFO  21:04:46,435 - #50 c
+INFO  21:04:46,436 - #42 )
+INFO  21:04:46,436 - #50 int
+INFO  21:04:46,439 - #50 a
+INFO  21:04:46,440 - #39 ,
+INFO  21:04:46,440 - #50 x
+INFO  21:04:46,441 - #37 ;
+INFO  21:04:46,441 - #45 {
+INFO  21:04:46,442 - #50 a
+INFO  21:04:46,444 - #35 ++
+INFO  21:04:46,444 - #37 ;
+INFO  21:04:46,445 - #50 b
+INFO  21:04:46,445 - #37 ;
+INFO  21:04:46,446 - #46 }
+INFO  21:04:46,447 - #50 main
+INFO  21:04:46,448 - #41 (
+INFO  21:04:46,451 - #42 )
+INFO  21:04:46,457 - #50 int
+INFO  21:04:46,459 - #50 x
+INFO  21:04:46,459 - #39 ,
+INFO  21:04:46,460 - #50 a
+INFO  21:04:46,460 - #37 ;
+INFO  21:04:46,461 - #50 char
+INFO  21:04:46,461 - #50 c
+INFO  21:04:46,462 - #43 [
+INFO  21:04:46,462 - #44 ]
+INFO  21:04:46,463 - #39 ,
+INFO  21:04:46,463 - #50 d
+INFO  21:04:46,464 - #37 ;
+INFO  21:04:46,464 - #45 {
+INFO  21:04:46,464 - #41 (
+INFO  21:04:46,465 - #50 d
+INFO  21:04:46,465 - #42 )
+INFO  21:04:46,467 - #37 ;
+INFO  21:04:46,467 - #50 fun1
+INFO  21:04:46,470 - #41 (
+INFO  21:04:46,472 - #50 a
+INFO  21:04:46,473 - #43 [
+INFO  21:04:46,473 - #44 ]
+INFO  21:04:46,474 - #39 ,
+INFO  21:04:46,474 - #50 b
+INFO  21:04:46,475 - #43 [
+INFO  21:04:46,475 - #44 ]
+INFO  21:04:46,475 - #42 )
+INFO  21:04:46,476 - #37 ;
+INFO  21:04:46,476 - #46 }
+INFO  21:04:46,477 - #46 }
+INFO  21:04:46,496 - Otvoren opseg za program MyProgram na liniji 1
+INFO  21:04:46,497 - Obradjuje se funkcija fun1 na liniji 4
+INFO  21:04:46,501 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 9

@@ -1,0 +1,67 @@
+INFO  22:00:04,609 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:00:05,450 - #50 MyProgram
+INFO  22:00:05,455 - #50 int
+INFO  22:00:05,455 - #50 jedan
+INFO  22:00:05,469 - #34 =
+INFO  22:00:05,472 - #47 1
+INFO  22:00:05,472 - #37 ;
+INFO  22:00:05,487 - #45 {
+INFO  22:00:05,487 - #50 int
+INFO  22:00:05,490 - #50 fun1
+INFO  22:00:05,490 - #41 (
+INFO  22:00:05,507 - #50 int
+INFO  22:00:05,508 - #50 c
+INFO  22:00:05,508 - #42 )
+INFO  22:00:05,509 - #50 int
+INFO  22:00:05,531 - #50 a
+INFO  22:00:05,532 - #39 ,
+INFO  22:00:05,532 - #50 x
+INFO  22:00:05,533 - #37 ;
+INFO  22:00:05,533 - #45 {
+INFO  22:00:05,534 - #50 a
+INFO  22:00:05,537 - #35 ++
+INFO  22:00:05,537 - #37 ;
+INFO  22:00:05,540 - #50 a
+INFO  22:00:05,541 - #34 =
+INFO  22:00:05,541 - #50 jedan
+INFO  22:00:05,541 - #37 ;
+INFO  22:00:05,542 - #50 jedan
+INFO  22:00:05,542 - #37 ;
+INFO  22:00:05,543 - #46 }
+INFO  22:00:05,546 - #50 main
+INFO  22:00:05,548 - #41 (
+INFO  22:00:05,548 - #42 )
+INFO  22:00:05,567 - #50 int
+INFO  22:00:05,567 - #50 x
+INFO  22:00:05,567 - #37 ;
+INFO  22:00:05,567 - #50 char
+INFO  22:00:05,567 - #50 c
+INFO  22:00:05,568 - #43 [
+INFO  22:00:05,568 - #44 ]
+INFO  22:00:05,569 - #39 ,
+INFO  22:00:05,569 - #50 a
+INFO  22:00:05,569 - #37 ;
+INFO  22:00:05,570 - #45 {
+INFO  22:00:05,570 - #41 (
+INFO  22:00:05,571 - #50 jedan
+INFO  22:00:05,571 - #23 *
+INFO  22:00:05,571 - #50 x
+INFO  22:00:05,587 - #33 ||
+INFO  22:00:05,590 - #48 true
+INFO  22:00:05,591 - #42 )
+INFO  22:00:05,591 - #37 ;
+INFO  22:00:05,591 - #50 fun1
+INFO  22:00:05,605 - #41 (
+INFO  22:00:05,605 - #50 a
+INFO  22:00:05,605 - #43 [
+INFO  22:00:05,606 - #44 ]
+INFO  22:00:05,606 - #42 )
+INFO  22:00:05,607 - #37 ;
+INFO  22:00:05,607 - #46 }
+INFO  22:00:05,608 - #46 }
+INFO  22:00:05,656 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:00:05,657 - Obradjuje se funkcija fun1 na liniji 5
+INFO  22:00:05,657 - Obradjuje se funkcija main na liniji 15
+INFO  22:00:05,658 - Print calls = 0
+INFO  22:00:05,660 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  22:00:05,661 - Parsiranje uspesno zavrseno!

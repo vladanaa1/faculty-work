@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 22/11/2024 23:42:19
+// 29/11/2024 23:36:16
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -50,22 +50,23 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Declaration Declaration) { }
     public void visit(MethodArgument MethodArgument) { }
     public void visit(MethodArgumentsOptional MethodArgumentsOptional) { }
-    public void visit(MethodArgumentDerived3 MethodArgumentDerived3) { visit(); }
-    public void visit(MethodArgumentDerived2 MethodArgumentDerived2) { visit(); }
-    public void visit(MethodArgumentDerived1 MethodArgumentDerived1) { visit(); }
-    public void visit(MethodArgumentListDerived2 MethodArgumentListDerived2) { visit(); }
-    public void visit(MethodArgumentListDerived1 MethodArgumentListDerived1) { visit(); }
-    public void visit(MethodArgumentsOptionalDerived2 MethodArgumentsOptionalDerived2) { visit(); }
-    public void visit(MethodArgumentsOptionalDerived1 MethodArgumentsOptionalDerived1) { visit(); }
+    public void visit(LiteralMethodArgument LiteralMethodArgument) { visit(); }
+    public void visit(IdentVectorMethodArgument IdentVectorMethodArgument) { visit(); }
+    public void visit(IdentMethodArgument IdentMethodArgument) { visit(); }
+    public void visit(SingleMethodArgument SingleMethodArgument) { visit(); }
+    public void visit(MultipleMethodArguments MultipleMethodArguments) { visit(); }
+    public void visit(EmptyMethodArguments EmptyMethodArguments) { visit(); }
+    public void visit(NonEmptyMethodArguments NonEmptyMethodArguments) { visit(); }
     public void visit(VectorMethodParameter VectorMethodParameter) { visit(); }
     public void visit(ScalarMethodParameter ScalarMethodParameter) { visit(); }
-    public void visit(MethodParametersListDerived2 MethodParametersListDerived2) { visit(); }
-    public void visit(MethodParametersListDerived1 MethodParametersListDerived1) { visit(); }
-    public void visit(MethodParametersOptionalDerived2 MethodParametersOptionalDerived2) { visit(); }
-    public void visit(MethodParametersOptionalDerived1 MethodParametersOptionalDerived1) { visit(); }
+    public void visit(SingleMethodParameter SingleMethodParameter) { visit(); }
+    public void visit(MultipleMethodParameters MultipleMethodParameters) { visit(); }
+    public void visit(EmptyMethodParameters EmptyMethodParameters) { visit(); }
+    public void visit(NonEmptyMethodParameters NonEmptyMethodParameters) { visit(); }
     public void visit(NonVoidReturnType NonVoidReturnType) { visit(); }
     public void visit(VoidReturnType VoidReturnType) { visit(); }
     public void visit(MethodSignature2 MethodSignature2) { visit(); }
+    public void visit(MethodSignatureEnd MethodSignatureEnd) { visit(); }
     public void visit(MethodSignature MethodSignature) { visit(); }
     public void visit(AddopDerived2 AddopDerived2) { visit(); }
     public void visit(AddopDerived1 AddopDerived1) { visit(); }
@@ -89,8 +90,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(RelopDerived3 RelopDerived3) { visit(); }
     public void visit(RelopDerived2 RelopDerived2) { visit(); }
     public void visit(RelopDerived1 RelopDerived1) { visit(); }
-    public void visit(AddopGroupDerived2 AddopGroupDerived2) { visit(); }
-    public void visit(AddopGroupDerived1 AddopGroupDerived1) { visit(); }
+    public void visit(AddopTerm AddopTerm) { visit(); }
+    public void visit(AddopGroupTerm AddopGroupTerm) { visit(); }
     public void visit(NegativeTermExpr NegativeTermExpr) { visit(); }
     public void visit(TermExpr TermExpr) { visit(); }
     public void visit(TermExprSum TermExprSum) { visit(); }
@@ -112,6 +113,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DesignatorInc DesignatorInc) { visit(); }
     public void visit(FunctionCall FunctionCall) { visit(); }
     public void visit(DesignatorAssign DesignatorAssign) { visit(); }
+    public void visit(WhileStatement WhileStatement) { visit(); }
+    public void visit(DoStatement DoStatement) { visit(); }
     public void visit(StatementListMatched StatementListMatched) { visit(); }
     public void visit(DoWhileWithCondNStmt DoWhileWithCondNStmt) { visit(); }
     public void visit(DoWhileWithCond DoWhileWithCond) { visit(); }
@@ -127,10 +130,10 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DesignatorStatementMatched DesignatorStatementMatched) { visit(); }
     public void visit(UnmatchedDerived2 UnmatchedDerived2) { visit(); }
     public void visit(UnmatchedDerived1 UnmatchedDerived1) { visit(); }
-    public void visit(StatementDerived2 StatementDerived2) { visit(); }
-    public void visit(StatementDerived1 StatementDerived1) { visit(); }
-    public void visit(StatementListDerived2 StatementListDerived2) { visit(); }
-    public void visit(StatementListDerived1 StatementListDerived1) { visit(); }
+    public void visit(UnmatchedStatement UnmatchedStatement) { visit(); }
+    public void visit(MatchedStatement MatchedStatement) { visit(); }
+    public void visit(EmptyStatementList EmptyStatementList) { visit(); }
+    public void visit(NonEmptyStatementList NonEmptyStatementList) { visit(); }
     public void visit(LocalVarDerived1 LocalVarDerived1) { visit(); }
     public void visit(LocalVarsDerived2 LocalVarsDerived2) { visit(); }
     public void visit(LocalVarsDerived1 LocalVarsDerived1) { visit(); }

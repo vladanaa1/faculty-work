@@ -141,6 +141,7 @@ nonterminal MethodDeclarationList;
 nonterminal MethodDeclaration;
 nonterminal MethodReturnType;
 nonterminal MethodSignature;
+nonterminal MethodSignatureEnd;
 nonterminal MethodParametersOptional;
 nonterminal MethodParametersList;
 nonterminal MethodParameter;
@@ -148,6 +149,8 @@ nonterminal StatementList;
 nonterminal Statement;
 nonterminal Matched;
 nonterminal Unmatched;
+nonterminal DoStatement;
+nonterminal WhileStatement;
 nonterminal DesignatorStatement;
 nonterminal DesignatorsOptional;
 nonterminal DesignatorList;
@@ -209,11 +212,11 @@ LocalVars             ::= LocalVars LocalVar
 
 LocalVar              ::= Type VarDeclList SEMI;
 
-StatementList         ::= StatementList Statement 
-                       |  /*epsilon*/;
+StatementList         ::= (NonEmptyStatementList) StatementList Statement 
+                       |  (EmptyStatementList) /*epsilon*/;
 
-Statement             ::= Matched 
-                       |  Unmatched;
+Statement             ::= (MatchedStatement) Matched 
+                       |  (UnmatchedStatement) Unmatched;
 
 Unmatched             ::= IF LPAREN Condition RPAREN Statement 
                        |  IF LPAREN Condition RPAREN Matched ELSE Unmatched;
@@ -227,10 +230,14 @@ Matched               ::= (DesignatorStatementMatched) DesignatorStatement SEMI
                        |  (Continue) CONTINUE SEMI
                        |  (Break) BREAK SEMI
                        |  (If) IF LPAREN Condition RPAREN Matched ELSE Matched
-                       |  (DoWhile) DO Statement WHILE LPAREN RPAREN SEMI
-                       |  (DoWhileWithCond) DO Statement WHILE LPAREN Condition RPAREN SEMI
-                       |  (DoWhileWithCondNStmt) DO Statement WHILE LPAREN Condition COMMA DesignatorStatement RPAREN SEMI
+                       |  (DoWhile) DoStatement Statement WhileStatement LPAREN RPAREN SEMI
+                       |  (DoWhileWithCond) DoStatement Statement WhileStatement LPAREN Condition RPAREN SEMI
+                       |  (DoWhileWithCondNStmt) DoStatement Statement WhileStatement LPAREN Condition COMMA DesignatorStatement RPAREN SEMI
                        |  (StatementListMatched) LBRACE StatementList RBRACE;
+
+DoStatement           ::= (DoStatement) DO;            
+
+WhileStatement        ::= (WhileStatement) WHILE;
 
 DesignatorStatement   ::= (DesignatorAssign) Designator ASSIGN Expr2
                        |  (FunctionCall) Designator LPAREN MethodArgumentsOptional RPAREN
@@ -262,17 +269,17 @@ Expr2                 ::= (NegativeTermExprSum) MINUS Term AddopGroup
                        |  (TermExpr) Term 
                        |  (NegativeTermExpr) MINUS Term;
 
-AddopGroup            ::= AddopGroup Addop Term 
-                       |  Addop Term;
+AddopGroup            ::= (AddopGroupTerm) AddopGroup Addop Term 
+                       |  (AddopTerm) Addop Term;
 
 Relop                 ::= EQUALS 
-                       |  NOTEQUAL 
-                       |  GREATER 
+                       |  NOTEQUAL
+                       |  GREATER
                        |  GREATEREQ 
                        |  LESS 
                        |  LESSEQ;
 
-Term                  ::= (FactorTerm) Factor 
+Term                  ::= (FactorTerm) Factor
                        |  (MulopTerm) Term Mulop Factor;
 
 Factor                ::= (DesignatorFactor) Designator
@@ -292,31 +299,33 @@ Mulop                 ::= MULT
 Addop                 ::= MINUS 
                        |  PLUS;
 
-MethodSignature       ::= (MethodSignature) MethodSignature2 LPAREN MethodParametersOptional RPAREN;
+MethodSignature       ::= (MethodSignature) MethodSignature2 LPAREN MethodParametersOptional MethodSignatureEnd;
+
+MethodSignatureEnd    ::= (MethodSignatureEnd) RPAREN;
 
 MethodSignature2      ::= (MethodSignature2) MethodReturnType Name;
 
 MethodReturnType      ::= (VoidReturnType) VOID 
                        |  (NonVoidReturnType) Type:ident;
 
-MethodParametersOptional ::= MethodParametersList 
-                           |  /*epsilon*/;
+MethodParametersOptional ::= (NonEmptyMethodParameters) MethodParametersList 
+                           | (EmptyMethodParameters) /*epsilon*/;
 
-MethodParametersList  ::= MethodParametersList COMMA MethodParameter 
-                       |  MethodParameter;
+MethodParametersList  ::= (MultipleMethodParameters) MethodParametersList COMMA MethodParameter 
+                       |  (SingleMethodParameter) MethodParameter;
 
 MethodParameter       ::= (ScalarMethodParameter) Type IDENT:ident 
                        |  (VectorMethodParameter) Type IDENT:ident LBRACKET RBRACKET;
 
-MethodArgumentsOptional ::= MethodArgumentList 
-                          |  /*epsilon*/;
+MethodArgumentsOptional ::= (NonEmptyMethodArguments) MethodArgumentList 
+                          | (EmptyMethodArguments) /*epsilon*/;
 
-MethodArgumentList    ::= MethodArgumentList COMMA MethodArgument 
-                       |  MethodArgument;
+MethodArgumentList    ::= (MultipleMethodArguments) MethodArgumentList COMMA MethodArgument 
+                       |  (SingleMethodArgument) MethodArgument;
 
-MethodArgument        ::= IDENT 
-                       |  IDENT LBRACKET RBRACKET 
-                       |  Literal;
+MethodArgument        ::= (IdentMethodArgument) IDENT:ident
+                       |  (IdentVectorMethodArgument) IDENT:ident LBRACKET RBRACKET 
+                       |  (LiteralMethodArgument) Literal;
 
 
 

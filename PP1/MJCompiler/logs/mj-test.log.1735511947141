@@ -1,0 +1,89 @@
+INFO  23:38:38,368 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:38:39,152 - #50 MyProgram
+INFO  23:38:39,156 - #50 int
+INFO  23:38:39,156 - #50 jedan
+INFO  23:38:39,169 - #34 =
+INFO  23:38:39,172 - #47 1
+INFO  23:38:39,172 - #39 ,
+INFO  23:38:39,190 - #50 dva
+INFO  23:38:39,190 - #34 =
+INFO  23:38:39,190 - #47 2
+INFO  23:38:39,190 - #37 ;
+INFO  23:38:39,191 - #50 char
+INFO  23:38:39,192 - #50 b
+INFO  23:38:39,192 - #34 =
+INFO  23:38:39,192 - #49 1
+INFO  23:38:39,193 - #37 ;
+INFO  23:38:39,193 - #45 {
+INFO  23:38:39,193 - #50 int
+INFO  23:38:39,205 - #50 fun1
+INFO  23:38:39,206 - #41 (
+INFO  23:38:39,210 - #50 int
+INFO  23:38:39,210 - #50 c
+INFO  23:38:39,213 - #42 )
+INFO  23:38:39,214 - #50 int
+INFO  23:38:39,243 - #50 a
+INFO  23:38:39,244 - #39 ,
+INFO  23:38:39,244 - #50 x
+INFO  23:38:39,244 - #37 ;
+INFO  23:38:39,245 - #45 {
+INFO  23:38:39,245 - #50 a
+INFO  23:38:39,247 - #35 ++
+INFO  23:38:39,247 - #37 ;
+INFO  23:38:39,248 - #50 a
+INFO  23:38:39,248 - #34 =
+INFO  23:38:39,249 - #50 dva
+INFO  23:38:39,249 - #37 ;
+INFO  23:38:39,250 - #45 {
+INFO  23:38:39,252 - #37 ;
+INFO  23:38:39,253 - #46 }
+INFO  23:38:39,267 - #41 (
+INFO  23:38:39,270 - #50 a
+INFO  23:38:39,270 - #42 )
+INFO  23:38:39,273 - #37 ;
+INFO  23:38:39,273 - #50 jedan
+INFO  23:38:39,274 - #37 ;
+INFO  23:38:39,274 - #46 }
+INFO  23:38:39,289 - #50 main
+INFO  23:38:39,292 - #41 (
+INFO  23:38:39,292 - #42 )
+INFO  23:38:39,304 - #50 int
+INFO  23:38:39,304 - #50 x
+INFO  23:38:39,304 - #37 ;
+INFO  23:38:39,305 - #50 char
+INFO  23:38:39,305 - #50 c
+INFO  23:38:39,305 - #43 [
+INFO  23:38:39,305 - #44 ]
+INFO  23:38:39,305 - #39 ,
+INFO  23:38:39,306 - #50 a
+INFO  23:38:39,306 - #37 ;
+INFO  23:38:39,306 - #45 {
+INFO  23:38:39,307 - #41 (
+INFO  23:38:39,307 - #50 jedan
+INFO  23:38:39,307 - #23 *
+INFO  23:38:39,307 - #50 x
+INFO  23:38:39,322 - #42 )
+INFO  23:38:39,322 - #37 ;
+INFO  23:38:39,323 - #50 c
+INFO  23:38:39,336 - #43 [
+INFO  23:38:39,336 - #50 a
+INFO  23:38:39,336 - #44 ]
+INFO  23:38:39,337 - #34 =
+INFO  23:38:39,337 - #50 x
+INFO  23:38:39,337 - #37 ;
+INFO  23:38:39,338 - #50 fun1
+INFO  23:38:39,338 - #41 (
+INFO  23:38:39,338 - #50 a
+INFO  23:38:39,338 - #43 [
+INFO  23:38:39,338 - #44 ]
+INFO  23:38:39,339 - #42 )
+INFO  23:38:39,339 - #37 ;
+INFO  23:38:39,340 - #46 }
+INFO  23:38:39,340 - #46 }
+INFO  23:38:39,381 - Otvoren opseg za program MyProgram na liniji 1
+INFO  23:38:39,382 - Obradjuje se funkcija fun1 na liniji 5
+INFO  23:38:39,383 - Obradjuje se funkcija main na liniji 18
+INFO  23:38:39,383 - Indeks mora biti tipa 'int'! Semantička greška na liniji 24
+INFO  23:38:39,384 - Nepoklapanje tipova u dodeli vrednosti. Semantička greška na liniji 24
+INFO  23:38:39,384 - Print calls = 0
+ERROR 23:38:39,386 - Parsiranje NIJE uspesno zavrseno!

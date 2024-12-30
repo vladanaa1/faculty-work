@@ -1,0 +1,82 @@
+INFO  22:33:49,345 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:33:49,426 - #50 MyProgram
+INFO  22:33:49,429 - #50 int
+INFO  22:33:49,429 - #50 jedan
+INFO  22:33:49,430 - #34 =
+INFO  22:33:49,431 - #47 1
+INFO  22:33:49,431 - #39 ,
+INFO  22:33:49,433 - #50 dva
+INFO  22:33:49,433 - #34 =
+INFO  22:33:49,434 - #47 2
+INFO  22:33:49,434 - #37 ;
+INFO  22:33:49,435 - #50 char
+INFO  22:33:49,435 - #50 b
+INFO  22:33:49,435 - #34 =
+INFO  22:33:49,435 - #49 1
+INFO  22:33:49,435 - #37 ;
+INFO  22:33:49,435 - #45 {
+INFO  22:33:49,435 - #50 int
+INFO  22:33:49,437 - #50 fun1
+INFO  22:33:49,437 - #41 (
+INFO  22:33:49,438 - #50 int
+INFO  22:33:49,439 - #50 c
+INFO  22:33:49,442 - #42 )
+INFO  22:33:49,442 - #50 int
+INFO  22:33:49,444 - #50 a
+INFO  22:33:49,445 - #39 ,
+INFO  22:33:49,445 - #50 x
+INFO  22:33:49,445 - #37 ;
+INFO  22:33:49,445 - #45 {
+INFO  22:33:49,446 - #50 a
+INFO  22:33:49,447 - #35 ++
+INFO  22:33:49,447 - #37 ;
+INFO  22:33:49,448 - #50 a
+INFO  22:33:49,448 - #34 =
+INFO  22:33:49,449 - #50 dva
+INFO  22:33:49,449 - #37 ;
+INFO  22:33:49,450 - #45 {
+INFO  22:33:49,451 - #37 ;
+INFO  22:33:49,451 - #46 }
+INFO  22:33:49,452 - #41 (
+INFO  22:33:49,452 - #50 a
+INFO  22:33:49,453 - #42 )
+INFO  22:33:49,454 - #37 ;
+INFO  22:33:49,455 - #50 jedan
+INFO  22:33:49,455 - #37 ;
+INFO  22:33:49,455 - #46 }
+INFO  22:33:49,458 - #50 main
+INFO  22:33:49,460 - #41 (
+INFO  22:33:49,461 - #42 )
+INFO  22:33:49,463 - #50 int
+INFO  22:33:49,464 - #50 x
+INFO  22:33:49,464 - #37 ;
+INFO  22:33:49,465 - #50 char
+INFO  22:33:49,468 - #50 c
+INFO  22:33:49,468 - #43 [
+INFO  22:33:49,469 - #44 ]
+INFO  22:33:49,470 - #39 ,
+INFO  22:33:49,471 - #50 a
+INFO  22:33:49,471 - #37 ;
+INFO  22:33:49,472 - #45 {
+INFO  22:33:49,473 - #41 (
+INFO  22:33:49,473 - #50 jedan
+INFO  22:33:49,473 - #23 *
+INFO  22:33:49,474 - #50 x
+INFO  22:33:49,478 - #42 )
+INFO  22:33:49,479 - #37 ;
+INFO  22:33:49,479 - #50 fun1
+INFO  22:33:49,480 - #41 (
+INFO  22:33:49,481 - #50 a
+INFO  22:33:49,481 - #43 [
+INFO  22:33:49,482 - #44 ]
+INFO  22:33:49,482 - #42 )
+INFO  22:33:49,482 - #37 ;
+INFO  22:33:49,483 - #46 }
+INFO  22:33:49,484 - #46 }
+INFO  22:33:49,524 - Otvoren opseg za program MyProgram na liniji 1
+INFO  22:33:49,524 - Obradjuje se funkcija fun1 na liniji 6
+INFO  22:33:49,525 - Nedozvoljena upotreba 'break' iskaza. Semantička greška na liniji 14
+INFO  22:33:49,525 - do while petlja na liniji 13
+INFO  22:33:49,525 - Obradjuje se funkcija main na liniji 20
+INFO  22:33:49,526 - Print calls = 0
+ERROR 22:33:49,528 - Parsiranje NIJE uspesno zavrseno!

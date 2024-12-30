@@ -1,0 +1,72 @@
+INFO  21:12:52,377 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  21:12:52,452 - #50 MyProgram
+INFO  21:12:52,454 - #50 char
+INFO  21:12:52,455 - #50 jedan
+INFO  21:12:52,456 - #34 =
+INFO  21:12:52,457 - #47 1
+INFO  21:12:52,457 - #37 ;
+INFO  21:12:52,459 - #45 {
+INFO  21:12:52,460 - #50 int
+INFO  21:12:52,461 - #50 fun1
+INFO  21:12:52,461 - #41 (
+INFO  21:12:52,463 - #50 int
+INFO  21:12:52,463 - #50 c
+INFO  21:12:52,463 - #42 )
+INFO  21:12:52,464 - #50 int
+INFO  21:12:52,466 - #50 a
+INFO  21:12:52,466 - #39 ,
+INFO  21:12:52,467 - #50 x
+INFO  21:12:52,467 - #37 ;
+INFO  21:12:52,467 - #45 {
+INFO  21:12:52,468 - #50 a
+INFO  21:12:52,469 - #35 ++
+INFO  21:12:52,473 - #37 ;
+INFO  21:12:52,473 - #50 a
+INFO  21:12:52,474 - #34 =
+INFO  21:12:52,474 - #50 jedan
+INFO  21:12:52,475 - #37 ;
+INFO  21:12:52,475 - #50 jedan
+INFO  21:12:52,476 - #37 ;
+INFO  21:12:52,476 - #46 }
+INFO  21:12:52,478 - #50 main
+INFO  21:12:52,480 - #41 (
+INFO  21:12:52,482 - #42 )
+INFO  21:12:52,484 - #50 int
+INFO  21:12:52,485 - #50 x
+INFO  21:12:52,485 - #39 ,
+INFO  21:12:52,487 - #50 a
+INFO  21:12:52,488 - #37 ;
+INFO  21:12:52,489 - #50 char
+INFO  21:12:52,489 - #50 c
+INFO  21:12:52,491 - #43 [
+INFO  21:12:52,492 - #44 ]
+INFO  21:12:52,492 - #39 ,
+INFO  21:12:52,495 - #50 d
+INFO  21:12:52,495 - #37 ;
+INFO  21:12:52,496 - #45 {
+INFO  21:12:52,496 - #41 (
+INFO  21:12:52,496 - #50 d
+INFO  21:12:52,497 - #42 )
+INFO  21:12:52,499 - #37 ;
+INFO  21:12:52,499 - #50 fun1
+INFO  21:12:52,501 - #41 (
+INFO  21:12:52,501 - #50 a
+INFO  21:12:52,502 - #43 [
+INFO  21:12:52,502 - #44 ]
+INFO  21:12:52,503 - #39 ,
+INFO  21:12:52,509 - #50 b
+INFO  21:12:52,509 - #43 [
+INFO  21:12:52,510 - #44 ]
+INFO  21:12:52,510 - #42 )
+INFO  21:12:52,516 - #37 ;
+INFO  21:12:52,516 - #46 }
+INFO  21:12:52,517 - #46 }
+INFO  21:12:52,532 - Otvoren opseg za program MyProgram na liniji 1
+INFO  21:12:52,533 - Tip konstante nije u skladu sa dodeljenom vrednošću. Semantička greška na liniji 2
+INFO  21:12:52,534 - Obradjuje se funkcija fun1 na liniji 5
+INFO  21:12:52,534 - Promenljiva jedan mora biti deklarisana pre upotrebe. Semantička greška na liniji 10
+INFO  21:12:52,535 - Promenljiva jedan mora biti deklarisana pre upotrebe. Semantička greška na liniji 12
+INFO  21:12:52,536 - Semantička greška: Nepostojeca return naredba u funkciji fun1 na liniji 5
+INFO  21:12:52,536 - Obradjuje se funkcija main na liniji 15
+INFO  21:12:52,537 - Print calls = 0
+ERROR 21:12:52,541 - Parsiranje NIJE uspesno zavrseno!

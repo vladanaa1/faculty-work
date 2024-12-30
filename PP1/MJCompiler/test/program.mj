@@ -1,21 +1,29 @@
 program MyProgram
+const int jedan = 1, dva = 4;
+const char b = '1';
 {
-
-	int fun1(int c)
+	int fun1(int c, int d, int e, int f, int g, int h, char i)
 		int a,x;
 	{
 		a++;
+		a = dva;
 		
-		return 5; // return a;
+		do{
+			break;
+		} while(a);
+
+		return jedan; // return a;
 	}
 	
-    void main() 
-    	int x, a;
-    	char c[], d;
+    void main()
+    	int x;
+    	char c[], a;
     {
-	    if(d/c) return;
-	    fun1(a[],b[]);
+	    if(jedan*x || fun1(x,x,x,x,x,x,b)) return;
+	    
+	    x = x;
+	    
+	    fun1(1,2,3,4,5,6,b);
 	}
-	
 
 }

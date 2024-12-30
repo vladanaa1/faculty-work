@@ -1,0 +1,61 @@
+INFO  21:11:30,257 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  21:11:30,350 - #50 MyProgram
+INFO  21:11:30,351 - #45 {
+INFO  21:11:30,352 - #50 int
+INFO  21:11:30,354 - #50 fun1
+INFO  21:11:30,355 - #41 (
+INFO  21:11:30,359 - #50 int
+INFO  21:11:30,360 - #50 c
+INFO  21:11:30,360 - #42 )
+INFO  21:11:30,362 - #50 int
+INFO  21:11:30,367 - #50 a
+INFO  21:11:30,368 - #39 ,
+INFO  21:11:30,369 - #50 x
+INFO  21:11:30,369 - #37 ;
+INFO  21:11:30,370 - #45 {
+INFO  21:11:30,371 - #50 a
+INFO  21:11:30,374 - #35 ++
+INFO  21:11:30,375 - #37 ;
+INFO  21:11:30,376 - #50 b
+INFO  21:11:30,377 - #37 ;
+INFO  21:11:30,378 - #46 }
+INFO  21:11:30,380 - #50 main
+INFO  21:11:30,381 - #41 (
+INFO  21:11:30,384 - #42 )
+INFO  21:11:30,387 - #50 int
+INFO  21:11:30,388 - #50 x
+INFO  21:11:30,388 - #39 ,
+INFO  21:11:30,388 - #50 a
+INFO  21:11:30,389 - #37 ;
+INFO  21:11:30,389 - #50 char
+INFO  21:11:30,391 - #50 c
+INFO  21:11:30,391 - #43 [
+INFO  21:11:30,393 - #44 ]
+INFO  21:11:30,394 - #39 ,
+INFO  21:11:30,394 - #50 d
+INFO  21:11:30,395 - #37 ;
+INFO  21:11:30,395 - #45 {
+INFO  21:11:30,395 - #41 (
+INFO  21:11:30,396 - #50 d
+INFO  21:11:30,396 - #42 )
+INFO  21:11:30,401 - #37 ;
+INFO  21:11:30,401 - #50 fun1
+INFO  21:11:30,403 - #41 (
+INFO  21:11:30,403 - #50 a
+INFO  21:11:30,404 - #43 [
+INFO  21:11:30,404 - #44 ]
+INFO  21:11:30,404 - #39 ,
+INFO  21:11:30,406 - #50 b
+INFO  21:11:30,406 - #43 [
+INFO  21:11:30,407 - #44 ]
+INFO  21:11:30,407 - #42 )
+INFO  21:11:30,408 - #37 ;
+INFO  21:11:30,409 - #46 }
+INFO  21:11:30,409 - #46 }
+INFO  21:11:30,448 - Otvoren opseg za program MyProgram na liniji 1
+INFO  21:11:30,449 - Obradjuje se funkcija fun1 na liniji 4
+INFO  21:11:30,451 - Promenljiva b mora biti deklarisana pre upotrebe. Semantička greška na liniji 9
+INFO  21:11:30,452 - Semantička greška: Nepostojeca return naredba u funkciji fun1 na liniji 4
+INFO  21:11:30,452 - Obradjuje se funkcija main na liniji 12
+INFO  21:11:30,455 - Print calls = 0
+ERROR 21:11:30,458 - Parsiranje NIJE uspesno zavrseno!

@@ -141,6 +141,7 @@ nonterminal MethodDeclarationList MethodDeclarationList;
 nonterminal MethodDeclaration MethodDeclaration;
 nonterminal MethodReturnType MethodReturnType;
 nonterminal MethodSignature MethodSignature;
+nonterminal MethodSignatureEnd MethodSignatureEnd;
 nonterminal MethodParametersOptional MethodParametersOptional;
 nonterminal MethodParametersList MethodParametersList;
 nonterminal MethodParameter MethodParameter;
@@ -148,6 +149,8 @@ nonterminal StatementList StatementList;
 nonterminal Statement Statement;
 nonterminal Matched Matched;
 nonterminal Unmatched Unmatched;
+nonterminal DoStatement DoStatement;
+nonterminal WhileStatement WhileStatement;
 nonterminal DesignatorStatement DesignatorStatement;
 nonterminal DesignatorsOptional DesignatorsOptional;
 nonterminal DesignatorList DesignatorList;
@@ -210,11 +213,11 @@ LocalVars             ::= LocalVars:L1 LocalVar:L2 {: RESULT=new LocalVarsDerive
 
 LocalVar              ::= Type:T1 VarDeclList:V2 SEMI {: RESULT=new LocalVarDerived1(T1, V2); RESULT.setLine(T1left); :};
 
-StatementList         ::= StatementList:S1 Statement:S2 {: RESULT=new StatementListDerived1(S1, S2); RESULT.setLine(S1left); :} 
-                       | {: RESULT=new StatementListDerived2(); :}  /*epsilon*/;
+StatementList         ::= (NonEmptyStatementList) StatementList:S1 Statement:S2 {: RESULT=new NonEmptyStatementList(S1, S2); RESULT.setLine(S1left); :} 
+                       |  (EmptyStatementList) {: RESULT=new EmptyStatementList(); :} /*epsilon*/;
 
-Statement             ::= Matched:M1 {: RESULT=new StatementDerived1(M1); RESULT.setLine(M1left); :} 
-                       |  Unmatched:U1 {: RESULT=new StatementDerived2(U1); RESULT.setLine(U1left); :};
+Statement             ::= (MatchedStatement) Matched:M1 {: RESULT=new MatchedStatement(M1); RESULT.setLine(M1left); :} 
+                       |  (UnmatchedStatement) Unmatched:U1 {: RESULT=new UnmatchedStatement(U1); RESULT.setLine(U1left); :};
 
 Unmatched             ::= IF LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new UnmatchedDerived1(C1, S2); RESULT.setLine(C1left); :} 
                        |  IF LPAREN Condition:C1 RPAREN Matched:M2 ELSE Unmatched:U3 {: RESULT=new UnmatchedDerived2(C1, M2, U3); RESULT.setLine(C1left); :};
@@ -228,10 +231,14 @@ Matched               ::= (DesignatorStatementMatched) DesignatorStatement:D1 SE
                        |  (Continue) CONTINUE SEMI {: RESULT=new Continue(); :}
                        |  (Break) BREAK SEMI {: RESULT=new Break(); :}
                        |  (If) IF LPAREN Condition:C1 RPAREN Matched:M2 ELSE Matched:M3 {: RESULT=new If(C1, M2, M3); RESULT.setLine(C1left); :}
-                       |  (DoWhile) DO Statement:S1 WHILE LPAREN RPAREN SEMI {: RESULT=new DoWhile(S1); RESULT.setLine(S1left); :}
-                       |  (DoWhileWithCond) DO Statement:S1 WHILE LPAREN Condition:C2 RPAREN SEMI {: RESULT=new DoWhileWithCond(S1, C2); RESULT.setLine(S1left); :}
-                       |  (DoWhileWithCondNStmt) DO Statement:S1 WHILE LPAREN Condition:C2 COMMA DesignatorStatement:D3 RPAREN SEMI {: RESULT=new DoWhileWithCondNStmt(S1, C2, D3); RESULT.setLine(S1left); :}
+                       |  (DoWhile) DoStatement:D1 Statement:S2 WhileStatement:W3 LPAREN RPAREN SEMI {: RESULT=new DoWhile(D1, S2, W3); RESULT.setLine(D1left); :}
+                       |  (DoWhileWithCond) DoStatement:D1 Statement:S2 WhileStatement:W3 LPAREN Condition:C4 RPAREN SEMI {: RESULT=new DoWhileWithCond(D1, S2, W3, C4); RESULT.setLine(D1left); :}
+                       |  (DoWhileWithCondNStmt) DoStatement:D1 Statement:S2 WhileStatement:W3 LPAREN Condition:C4 COMMA DesignatorStatement:D5 RPAREN SEMI {: RESULT=new DoWhileWithCondNStmt(D1, S2, W3, C4, D5); RESULT.setLine(D1left); :}
                        |  (StatementListMatched) LBRACE StatementList:S1 RBRACE {: RESULT=new StatementListMatched(S1); RESULT.setLine(S1left); :};
+
+DoStatement           ::= (DoStatement) DO {: RESULT=new DoStatement(); :};            
+
+WhileStatement        ::= (WhileStatement) WHILE {: RESULT=new WhileStatement(); :};
 
 DesignatorStatement   ::= (DesignatorAssign) Designator:D1 ASSIGN Expr2:E2 {: RESULT=new DesignatorAssign(D1, E2); RESULT.setLine(D1left); :}
                        |  (FunctionCall) Designator:D1 LPAREN MethodArgumentsOptional:M2 RPAREN {: RESULT=new FunctionCall(D1, M2); RESULT.setLine(D1left); :}
@@ -263,17 +270,17 @@ Expr2                 ::= (NegativeTermExprSum) MINUS Term:T1 AddopGroup:A2 {: R
                        |  (TermExpr) Term:T1 {: RESULT=new TermExpr(T1); RESULT.setLine(T1left); :} 
                        |  (NegativeTermExpr) MINUS Term:T1 {: RESULT=new NegativeTermExpr(T1); RESULT.setLine(T1left); :};
 
-AddopGroup            ::= AddopGroup:A1 Addop:A2 Term:T3 {: RESULT=new AddopGroupDerived1(A1, A2, T3); RESULT.setLine(A1left); :} 
-                       |  Addop:A1 Term:T2 {: RESULT=new AddopGroupDerived2(A1, T2); RESULT.setLine(A1left); :};
+AddopGroup            ::= (AddopGroupTerm) AddopGroup:A1 Addop:A2 Term:T3 {: RESULT=new AddopGroupTerm(A1, A2, T3); RESULT.setLine(A1left); :} 
+                       |  (AddopTerm) Addop:A1 Term:T2 {: RESULT=new AddopTerm(A1, T2); RESULT.setLine(A1left); :};
 
 Relop                 ::= EQUALS {: RESULT=new RelopDerived1(); :} 
-                       |  NOTEQUAL {: RESULT=new RelopDerived2(); :} 
-                       |  GREATER {: RESULT=new RelopDerived3(); :} 
+                       |  NOTEQUAL {: RESULT=new RelopDerived2(); :}
+                       |  GREATER {: RESULT=new RelopDerived3(); :}
                        |  GREATEREQ {: RESULT=new RelopDerived4(); :} 
                        |  LESS {: RESULT=new RelopDerived5(); :} 
                        |  LESSEQ {: RESULT=new RelopDerived6(); :};
 
-Term                  ::= (FactorTerm) Factor:F1 {: RESULT=new FactorTerm(F1); RESULT.setLine(F1left); :} 
+Term                  ::= (FactorTerm) Factor:F1 {: RESULT=new FactorTerm(F1); RESULT.setLine(F1left); :}
                        |  (MulopTerm) Term:T1 Mulop:M2 Factor:F3 {: RESULT=new MulopTerm(T1, M2, F3); RESULT.setLine(T1left); :};
 
 Factor                ::= (DesignatorFactor) Designator:D1 {: RESULT=new DesignatorFactor(D1); RESULT.setLine(D1left); :}
@@ -293,31 +300,33 @@ Mulop                 ::= MULT {: RESULT=new MulopDerived1(); :}
 Addop                 ::= MINUS {: RESULT=new AddopDerived1(); :} 
                        |  PLUS {: RESULT=new AddopDerived2(); :};
 
-MethodSignature       ::= (MethodSignature) MethodSignature2:M1 LPAREN MethodParametersOptional:M2 RPAREN {: RESULT=new MethodSignature(M1, M2); RESULT.setLine(M1left); :};
+MethodSignature       ::= (MethodSignature) MethodSignature2:M1 LPAREN MethodParametersOptional:M2 MethodSignatureEnd:M3 {: RESULT=new MethodSignature(M1, M2, M3); RESULT.setLine(M1left); :};
+
+MethodSignatureEnd    ::= (MethodSignatureEnd) RPAREN {: RESULT=new MethodSignatureEnd(); :};
 
 MethodSignature2      ::= (MethodSignature2) MethodReturnType:M1 Name:N2 {: RESULT=new MethodSignature2(M1, N2); RESULT.setLine(M1left); :};
 
 MethodReturnType      ::= (VoidReturnType) VOID {: RESULT=new VoidReturnType(); :} 
                        |  (NonVoidReturnType) Type:ident {: RESULT=new NonVoidReturnType(ident); RESULT.setLine(identleft); :};
 
-MethodParametersOptional ::= MethodParametersList:M1 {: RESULT=new MethodParametersOptionalDerived1(M1); RESULT.setLine(M1left); :} 
-                           | {: RESULT=new MethodParametersOptionalDerived2(); :}  /*epsilon*/;
+MethodParametersOptional ::= (NonEmptyMethodParameters) MethodParametersList:M1 {: RESULT=new NonEmptyMethodParameters(M1); RESULT.setLine(M1left); :} 
+                           | (EmptyMethodParameters) {: RESULT=new EmptyMethodParameters(); :} /*epsilon*/;
 
-MethodParametersList  ::= MethodParametersList:M1 COMMA MethodParameter:M2 {: RESULT=new MethodParametersListDerived1(M1, M2); RESULT.setLine(M1left); :} 
-                       |  MethodParameter:M1 {: RESULT=new MethodParametersListDerived2(M1); RESULT.setLine(M1left); :};
+MethodParametersList  ::= (MultipleMethodParameters) MethodParametersList:M1 COMMA MethodParameter:M2 {: RESULT=new MultipleMethodParameters(M1, M2); RESULT.setLine(M1left); :} 
+                       |  (SingleMethodParameter) MethodParameter:M1 {: RESULT=new SingleMethodParameter(M1); RESULT.setLine(M1left); :};
 
 MethodParameter       ::= (ScalarMethodParameter) Type:T1 IDENT:ident {: RESULT=new ScalarMethodParameter(T1, ident); RESULT.setLine(T1left); :} 
                        |  (VectorMethodParameter) Type:T1 IDENT:ident LBRACKET RBRACKET {: RESULT=new VectorMethodParameter(T1, ident); RESULT.setLine(T1left); :};
 
-MethodArgumentsOptional ::= MethodArgumentList:M1 {: RESULT=new MethodArgumentsOptionalDerived1(M1); RESULT.setLine(M1left); :} 
-                          | {: RESULT=new MethodArgumentsOptionalDerived2(); :}  /*epsilon*/;
+MethodArgumentsOptional ::= (NonEmptyMethodArguments) MethodArgumentList:M1 {: RESULT=new NonEmptyMethodArguments(M1); RESULT.setLine(M1left); :} 
+                          | (EmptyMethodArguments) {: RESULT=new EmptyMethodArguments(); :} /*epsilon*/;
 
-MethodArgumentList    ::= MethodArgumentList:M1 COMMA MethodArgument:M2 {: RESULT=new MethodArgumentListDerived1(M1, M2); RESULT.setLine(M1left); :} 
-                       |  MethodArgument:M1 {: RESULT=new MethodArgumentListDerived2(M1); RESULT.setLine(M1left); :};
+MethodArgumentList    ::= (MultipleMethodArguments) MethodArgumentList:M1 COMMA MethodArgument:M2 {: RESULT=new MultipleMethodArguments(M1, M2); RESULT.setLine(M1left); :} 
+                       |  (SingleMethodArgument) MethodArgument:M1 {: RESULT=new SingleMethodArgument(M1); RESULT.setLine(M1left); :};
 
-MethodArgument        ::= IDENT:I1 {: RESULT=new MethodArgumentDerived1(I1); RESULT.setLine(I1left); :} 
-                       |  IDENT:I1 LBRACKET RBRACKET {: RESULT=new MethodArgumentDerived2(I1); RESULT.setLine(I1left); :} 
-                       |  Literal:L1 {: RESULT=new MethodArgumentDerived3(L1); RESULT.setLine(L1left); :};
+MethodArgument        ::= (IdentMethodArgument) IDENT:ident {: RESULT=new IdentMethodArgument(ident); RESULT.setLine(identleft); :}
+                       |  (IdentVectorMethodArgument) IDENT:ident LBRACKET RBRACKET {: RESULT=new IdentVectorMethodArgument(ident); RESULT.setLine(identleft); :} 
+                       |  (LiteralMethodArgument) Literal:L1 {: RESULT=new LiteralMethodArgument(L1); RESULT.setLine(L1left); :};
 
 
 
