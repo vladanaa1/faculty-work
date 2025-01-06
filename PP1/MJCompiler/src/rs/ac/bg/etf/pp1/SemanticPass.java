@@ -16,9 +16,12 @@ import rs.etf.pp1.symboltable.concepts.Struct;
 public class SemanticPass extends VisitorAdaptor {
 
 	boolean errorDetected = false;
+	
+	Struct boolType = new Struct(Struct.Bool);
+	
 	int printCallCount = 0;
-	int VarDeclCount = 0; // globalne prom.
-	int ConstDeclCount = 0; // globalne konst.
+	int VarDeclCount = 0; // Global Vars Count
+	int ConstDeclCount = 0; // Global Constants Count
 	Obj currentMethod = null;
 	Struct currentMethodReturnType = Tab.noType;
 	int currentMethodParameters = 0;
@@ -27,14 +30,13 @@ public class SemanticPass extends VisitorAdaptor {
 	boolean continueFound = false;
 	boolean doWhile = false;
 	boolean mainDeclared = false;
-	int nVars;
 	private Struct currentType = Tab.noType;
 	
-	Stack<Obj> constants = new Stack<Obj>();
+	Stack<Obj> constants = new Stack<Obj>(); // Not used
 	
 	Queue<Struct> queue = new LinkedList<>(); // Used for parameters in function calls
 
-	Logger log = Logger.getLogger(getClass());
+	Logger log = Logger.getLogger(getClass()); // Not used
 
 	public void report_error(String message, SyntaxNode info) {
 		errorDetected = true;
@@ -131,6 +133,11 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(MethodCallFactor methodCallFactor) {
 		Obj designatorObj = methodCallFactor.getDesignator().obj;
 		
+		if(designatorObj == null) {
+			// DON'T CONTINUE
+			return;
+		}
+		
 		int argumentsNeeded = designatorObj.getLevel();
 		
 		if(argumentsNeeded != currentMethodParameters) {
@@ -154,11 +161,15 @@ public class SemanticPass extends VisitorAdaptor {
 			while(size>0 && iterator.hasNext() && !queue.isEmpty()) {
 				Obj local = iterator.next();
 				
-				if(local.getType().equals(queue.remove())) {
+				if(local.getType().equals(queue.peek()) ||
+						(local.getType().getKind() == Struct.Array && queue.peek().equals(local.getType().getElemType())) ||
+						(queue.peek().getKind() == Struct.Array && local.getType().equals(queue.peek().getElemType()))) {
 					// OK
+					queue.remove();
 				}
 				else {
-					report_info("Neodgovarajući tip parametra u pozivu funkcije" + designatorObj.getName() + ". Semantička greška", methodCallFactor);
+					// ERROR
+					report_info("Neodgovarajući tip parametra u pozivu funkcije " + designatorObj.getName() + ". Semantička greška", methodCallFactor);
 					errorDetected = true;
 					break;
 				}
@@ -210,7 +221,7 @@ public class SemanticPass extends VisitorAdaptor {
 	@Override
 	public void visit(VectorMethodParameter vectorMethodParameter) {
 		String ident = vectorMethodParameter.getIdent();
-		Tab.insert(1, ident, currentType);
+		Tab.insert(1, ident, new Struct(Struct.Array, currentType));
 	}
 	
 	@Override
@@ -226,12 +237,24 @@ public class SemanticPass extends VisitorAdaptor {
 		Struct expressionType = expressionObj.getType();
 		
 		if(designatorType.equals(expressionType)) {
-			// Ok
+			if(designatorObj.getKind() != Obj.Var) {
+				// Error
+				report_info("Na levoj strani dodele mora biti promenljiva ili niz. Semantička greška", designatorAssign);
+				errorDetected = true;
+			}
+			else {
+				// Ok
+			}
 		}
 		else {
-			// Error
-			report_info("Nepoklapanje tipova u dodeli vrednosti. Semantička greška", designatorAssign);
-			errorDetected = true;
+			if(designatorType.getKind() == Struct.Array && expressionType.equals(designatorType.getElemType())) {
+				// Ok
+			}
+			else {
+				// Error
+				report_info("Nepoklapanje tipova u dodeli vrednosti. Semantička greška", designatorAssign);
+				errorDetected = true;
+			}
 		}
 	}
 	
@@ -260,7 +283,6 @@ public class SemanticPass extends VisitorAdaptor {
 			if(designatorObj.getKind() == 3) {
 				if(designatorObj.getLevel() == currentMethodParameters) {
 					// OK
-					
 					if(queue.isEmpty()) {
 						// DON'T CONTINUE
 						return;
@@ -276,13 +298,22 @@ public class SemanticPass extends VisitorAdaptor {
 						while(size>0 && iterator.hasNext() && !queue.isEmpty()) {
 							Obj local = iterator.next();
 							
-							if(local.getType().equals(queue.remove())) {
+							if(local.getType().equals(queue.peek())){
 								// OK
+								queue.remove();
 							}
 							else {
-								report_info("Neodgovarajući tip parametra u pozivu funkcije" + designatorObj.getName() + ". Semantička greška", functionCall);
-								errorDetected = true;
-								break;
+								if((local.getType().getKind() == Struct.Array && queue.peek().equals(local.getType().getElemType())) ||
+										(queue.peek().getKind() == Struct.Array && local.getType().equals(queue.peek().getElemType()))) {
+									// OK
+									queue.remove();
+								}
+								else {
+									// ERROR
+									report_info("Neodgovarajući tip parametra u pozivu funkcije " + designatorObj.getName() + ". Semantička greška", functionCall);
+									errorDetected = true;
+									break;
+								}
 							}
 							size--;
 						}
@@ -381,6 +412,13 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	@Override
+	public void visit(VectorFactor vectorFactor) {
+		Obj desFactVect = vectorFactor.getDesignator().obj;
+		
+		vectorFactor.obj = desFactVect;
+	}
+	
+	@Override
 	public void visit(NonVoidReturnType ret) {
 		String retType = ret.getType().getTypeName();
 		if(retType.equals("int")) {
@@ -388,6 +426,9 @@ public class SemanticPass extends VisitorAdaptor {
 		}
 		else if(retType.equals("char")) {
 			currentMethodReturnType = Tab.charType;
+		}
+		else if(retType.equals("bool")) {
+			currentMethodReturnType = boolType;
 		}
 		else {
 			report_info("Semanticka greska: Nepostojeci tip " + retType, ret);
@@ -401,9 +442,19 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	@Override
+	public void visit(Print printStmt) {
+		printCallCount++;
+	}
+	
+	@Override
+	public void visit(PrintWithComma printStmt) {
+		printCallCount++;
+	}
+	
+	@Override
 	public void visit(Return ret) {
 		if(currentMethodReturnType != Tab.noType) {
-			report_info("Semantička greška: return naredba mora sadržati povratnu vrednost", ret);
+			report_info("Return naredba mora sadržati povratnu vrednost. Semantička greška", ret);
 			errorDetected = true;
 		}
 	}
@@ -411,17 +462,19 @@ public class SemanticPass extends VisitorAdaptor {
 	@Override
 	public void visit(ReturnWithExpr ret) {
 		if(currentMethodReturnType == Tab.noType) {
-			report_info("Semantička greška: void metoda ne sme imati povratnu vrednost u return naredbi", ret);
+			report_info("Void metoda ne sme imati povratnu vrednost u return naredbi. Semantička greška", ret);
 			errorDetected = true;
 			return;
 		}
 		
-		if(ret.getExpr2().obj==null) return;	
+		if(ret.getExpr2().obj==null){
+			return;
+		}	
 		
 		Struct retType = ret.getExpr2().obj.getType();
 		
 		if(retType != currentMethodReturnType) {
-			report_info("Semantička greška: neslaganje povratnog tipa funkcije sa predeklarisanim", ret);
+			report_info("Neslaganje povratnog tipa funkcije sa predeklarisanim. Semantička greška", ret);
 			errorDetected = true;
 		}
 		else {
@@ -479,8 +532,11 @@ public class SemanticPass extends VisitorAdaptor {
 		else if(typeName.equals("char")) {
 			currentType = Tab.charType;
 		}
+		else if(typeName.equals("bool")) {
+			currentType = boolType;
+		}
 		else {
-			report_info("Semantička greška: Nedefinisan tip " + typeName, type);
+			report_info("Nedefinisan tip " + typeName + ". Semantička greška", type);
 			errorDetected = true;
 		}
 	}
@@ -503,14 +559,13 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(SingleVarDeclVector singleVarDeclVector) {
-		// treba dodatno za niz!!!
 		String ident = singleVarDeclVector.getName().getIdent();
 		
 		Obj varObj = findInCurrentScope(ident);
 		// Pretražuju se PROGRAM i UNIVERSE opsezi.
 		
 		if(varObj == Tab.noObj) {
-			varObj = Tab.insert(1, ident, currentType);
+			varObj = Tab.insert(1, ident, new Struct(Struct.Array, currentType));
 		}
 		else {
 			report_info("Detektovana dvostruka deklaracija promenljive " + ident + " .Semantička greška", singleVarDeclVector);
@@ -536,18 +591,73 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(MultipleVarDeclVector multipleVarDeclVector) {
-		// treba dodatno za niz!!!
 		String ident = multipleVarDeclVector.getName().getIdent();
 		
 		Obj varObj = findInCurrentScope(ident);
 		// Pretražuju se PROGRAM i UNIVERSE opsezi.
 		
 		if(varObj == Tab.noObj) {
-			varObj = Tab.insert(1, ident, currentType);
+			varObj = Tab.insert(1, ident, new Struct(Struct.Array, currentType));
 		}
 		else {
 			report_info("Detektovana dvostruka deklaracija promenljive " + ident + " .Semantička greška", multipleVarDeclVector);
 			errorDetected  = true;
+		}
+	}
+	
+	@Override
+	public void visit(RelopCondFactor relopCondFactor) {
+		Obj expr1 = relopCondFactor.getExpr2().obj;
+		Obj expr2 = relopCondFactor.getExpr21().obj;
+		
+		if(expr1 == null || expr2 == null) {
+			return;
+		}
+		
+		if(!expr1.getType().equals(expr2.getType())) {
+			if(expr1.getType().getKind() == Struct.Array) {
+				if(expr1.getType().getElemType().equals(expr2.getType())) {
+					// OK
+				}
+				else {
+					// ERROR
+					report_info("Nepoklapanje tipova. Semantička greška", relopCondFactor);
+					errorDetected  = true;
+				}
+			}
+			else if(expr2.getType().getKind() == Struct.Array) {
+				if(expr2.getType().getElemType().equals(expr1.getType())) {
+					// OK
+				}
+				else {
+					// ERROR
+					report_info("Nepoklapanje tipova. Semantička greška", relopCondFactor);
+					errorDetected  = true;
+				}
+			}
+			else {
+				// ERROR
+				report_info("Nepoklapanje tipova. Semantička greška", relopCondFactor);
+				errorDetected  = true;
+			}
+		}
+		else {
+			Struct expr1Type = expr1.getType();
+			Struct expr2Type = expr2.getType();
+			if(expr1Type.getKind() == Struct.Array && expr2Type.getKind() == Struct.Array) {
+				Relop relop = relopCondFactor.getRelop();
+				if(relop instanceof EqRelop || relop instanceof NeqRelop) {
+					// OK
+				}
+				else {
+					// ERROR
+					report_info("Neodgovarajući relacioni operator. Semantička greška", relopCondFactor);
+					errorDetected  = true;
+				}
+			}
+			else {
+				// OK
+			}
 		}
 	}
 	
@@ -559,6 +669,8 @@ public class SemanticPass extends VisitorAdaptor {
 			return;
 		}
 		
+		negTerm.obj = negObj;
+		
 		if(negObj.getType().equals(Tab.intType)) {
 			// OK
 		}
@@ -569,12 +681,21 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	@Override
+	public void visit(TermExprSum termExprSum) {
+		Obj termObj = termExprSum.getTerm().obj;
+		
+		termExprSum.obj = termObj;
+	}
+	
+	@Override
 	public void visit(NegativeTermExpr negTerm){
 		Obj negObj = negTerm.getTerm().obj;
 		
 		if(negObj == null) {
 			return;
 		}
+		
+		negTerm.obj = negObj;
 		
 		if(negObj.getType().equals(Tab.intType)) {
 			// OK
@@ -592,8 +713,10 @@ public class SemanticPass extends VisitorAdaptor {
 		if(addopTermObj == null) return;
 		
 		if((addopTermObj.getKind() == Obj.Con && addopTermObj.getType().equals(Tab.intType)) ||
-				(addopTermObj.getKind() == Obj.Var && addopTermObj.getType().equals(Tab.intType))) {
+				(addopTermObj.getKind() == Obj.Var && addopTermObj.getType().equals(Tab.intType)) ||
+				(addopTermObj.getType().getKind() == Struct.Array && addopTermObj.getType().getElemType().equals(Tab.intType))) {
 			// OK
+			// addopTerm.obj = addopTermObj;
 		}
 		else {
 			report_info("Nepoklapanje tipova u izrazu. Semantička greška", addopTerm);
@@ -611,9 +734,10 @@ public class SemanticPass extends VisitorAdaptor {
 		}
 		
 		if((factor.getKind() == Obj.Con && factor.getType().equals(Tab.intType)) ||
-				(factor.getKind() == Obj.Var && factor.getType().equals(Tab.intType))) {
+				(factor.getKind() == Obj.Var && factor.getType().equals(Tab.intType)) ||
+				(factor.getType().getKind() == Struct.Array && factor.getType().getElemType().equals(Tab.intType))) {
 			// OK
-			// mulopTerm.obj = factor;
+			mulopTerm.obj = factor;
 		}
 		else {
 			report_info("Nepoklapanje tipova u izrazu. Semantička greška", mulopTerm);
@@ -629,6 +753,11 @@ public class SemanticPass extends VisitorAdaptor {
     @Override
     public void visit(CharLiteral charLiteral) {
         charLiteral.obj = new Obj(Obj.Con, "", Tab.charType, charLiteral.getValue(), 0);
+    }
+    
+    @Override
+    public void visit(BoolLiteral boolLiteral) {
+        boolLiteral.obj = new Obj(Obj.Con, "", boolType);
     }
     
     @Override
@@ -651,19 +780,11 @@ public class SemanticPass extends VisitorAdaptor {
         charFactor.obj = new Obj(Obj.Con, "", Tab.charType, charFactor.getValue(), 1);
     }
     
-    /*
+    
     @Override
     public void visit(BoolFactor boolFactor) {
-        boolFactor.obj = new Obj(Obj.Con, "", MJTab.BOOL_TYPE, boolFactor.getValue() ? 1 : 0, 1);
+        boolFactor.obj = new Obj(Obj.Con, "", boolType, boolFactor.getValue() ? 1 : 0, 1);
     }
-    */
-
-    /*
-    @Override
-    public void visit(BoolLiteral boolLiteral) {
-        boolLiteral.obj = new Obj(Obj.Con, "", Tab.boolType, boolLiteral.getValue(), 0);
-    }
-	*/
     
     @Override
     public void visit(IdentMethodArgument identMethodArgument) {
@@ -697,7 +818,6 @@ public class SemanticPass extends VisitorAdaptor {
         else {
         	// OK
         	queue.add(identObj.getType());
-        	// FALI PROVERA DA JE OBJ ARRAY
         }
     }
     
@@ -715,7 +835,6 @@ public class SemanticPass extends VisitorAdaptor {
 			errorDetected  = true;
 		}
 		
-		
 		if(breakFound) {
 			report_info("Neispravna upotreba 'break' iskaza. Semantička greška", null);
 			errorDetected  = true;
@@ -726,7 +845,6 @@ public class SemanticPass extends VisitorAdaptor {
 			errorDetected  = true;
 		}
 		
-		
 		Tab.chainLocalSymbols(program.getProgramName().obj);
 		Tab.closeScope();
 	}
@@ -734,7 +852,7 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(MethodDeclaration methodDeclaration) {
 		String ident = methodDeclaration.getMethodSignature().getMethodSignature2().getName().getIdent();
 		if(currentMethodReturnType != Tab.noType && !returnFound) {
-			report_info("Semantička greška: Nepostojeca return naredba u funkciji " + ident, methodDeclaration);
+			report_info("Nepostojeca return naredba u funkciji " + ident + ". Semantička greška", methodDeclaration);
 			errorDetected  = true;
 		}
 		

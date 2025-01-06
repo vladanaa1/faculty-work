@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/11/2024 23:36:16
+// 6/0/2025 1:42:51
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -84,20 +84,20 @@ public interface Visitor {
     public void visit(DesignatorFactor DesignatorFactor);
     public void visit(MulopTerm MulopTerm);
     public void visit(FactorTerm FactorTerm);
-    public void visit(RelopDerived6 RelopDerived6);
-    public void visit(RelopDerived5 RelopDerived5);
-    public void visit(RelopDerived4 RelopDerived4);
-    public void visit(RelopDerived3 RelopDerived3);
-    public void visit(RelopDerived2 RelopDerived2);
-    public void visit(RelopDerived1 RelopDerived1);
+    public void visit(LseqRelop LseqRelop);
+    public void visit(LsRelop LsRelop);
+    public void visit(GteqRelop GteqRelop);
+    public void visit(GtRelop GtRelop);
+    public void visit(NeqRelop NeqRelop);
+    public void visit(EqRelop EqRelop);
     public void visit(AddopTerm AddopTerm);
     public void visit(AddopGroupTerm AddopGroupTerm);
     public void visit(NegativeTermExpr NegativeTermExpr);
     public void visit(TermExpr TermExpr);
     public void visit(TermExprSum TermExprSum);
     public void visit(NegativeTermExprSum NegativeTermExprSum);
-    public void visit(CondFactDerived2 CondFactDerived2);
-    public void visit(CondFactDerived1 CondFactDerived1);
+    public void visit(RelopCondFactor RelopCondFactor);
+    public void visit(ExprCondFactor ExprCondFactor);
     public void visit(CondFactListDerived2 CondFactListDerived2);
     public void visit(CondFactListDerived1 CondFactListDerived1);
     public void visit(CondTermDerived1 CondTermDerived1);

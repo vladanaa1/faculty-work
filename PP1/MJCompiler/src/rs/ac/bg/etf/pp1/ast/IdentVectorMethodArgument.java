@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/11/2024 23:36:16
+// 6/0/2025 1:42:51
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,9 +8,12 @@ package rs.ac.bg.etf.pp1.ast;
 public class IdentVectorMethodArgument extends MethodArgument {
 
     private String ident;
+    private Expr2 Expr2;
 
-    public IdentVectorMethodArgument (String ident) {
+    public IdentVectorMethodArgument (String ident, Expr2 Expr2) {
         this.ident=ident;
+        this.Expr2=Expr2;
+        if(Expr2!=null) Expr2.setParent(this);
     }
 
     public String getIdent() {
@@ -21,18 +24,29 @@ public class IdentVectorMethodArgument extends MethodArgument {
         this.ident=ident;
     }
 
+    public Expr2 getExpr2() {
+        return Expr2;
+    }
+
+    public void setExpr2(Expr2 Expr2) {
+        this.Expr2=Expr2;
+    }
+
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(Expr2!=null) Expr2.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(Expr2!=null) Expr2.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(Expr2!=null) Expr2.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -42,6 +56,12 @@ public class IdentVectorMethodArgument extends MethodArgument {
         buffer.append("IdentVectorMethodArgument(\n");
 
         buffer.append(" "+tab+ident);
+        buffer.append("\n");
+
+        if(Expr2!=null)
+            buffer.append(Expr2.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         buffer.append(tab);

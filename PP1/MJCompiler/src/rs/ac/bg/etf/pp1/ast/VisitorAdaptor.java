@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/11/2024 23:36:16
+// 6/0/2025 1:42:51
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -84,20 +84,20 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DesignatorFactor DesignatorFactor) { visit(); }
     public void visit(MulopTerm MulopTerm) { visit(); }
     public void visit(FactorTerm FactorTerm) { visit(); }
-    public void visit(RelopDerived6 RelopDerived6) { visit(); }
-    public void visit(RelopDerived5 RelopDerived5) { visit(); }
-    public void visit(RelopDerived4 RelopDerived4) { visit(); }
-    public void visit(RelopDerived3 RelopDerived3) { visit(); }
-    public void visit(RelopDerived2 RelopDerived2) { visit(); }
-    public void visit(RelopDerived1 RelopDerived1) { visit(); }
+    public void visit(LseqRelop LseqRelop) { visit(); }
+    public void visit(LsRelop LsRelop) { visit(); }
+    public void visit(GteqRelop GteqRelop) { visit(); }
+    public void visit(GtRelop GtRelop) { visit(); }
+    public void visit(NeqRelop NeqRelop) { visit(); }
+    public void visit(EqRelop EqRelop) { visit(); }
     public void visit(AddopTerm AddopTerm) { visit(); }
     public void visit(AddopGroupTerm AddopGroupTerm) { visit(); }
     public void visit(NegativeTermExpr NegativeTermExpr) { visit(); }
     public void visit(TermExpr TermExpr) { visit(); }
     public void visit(TermExprSum TermExprSum) { visit(); }
     public void visit(NegativeTermExprSum NegativeTermExprSum) { visit(); }
-    public void visit(CondFactDerived2 CondFactDerived2) { visit(); }
-    public void visit(CondFactDerived1 CondFactDerived1) { visit(); }
+    public void visit(RelopCondFactor RelopCondFactor) { visit(); }
+    public void visit(ExprCondFactor ExprCondFactor) { visit(); }
     public void visit(CondFactListDerived2 CondFactListDerived2) { visit(); }
     public void visit(CondFactListDerived1 CondFactListDerived1) { visit(); }
     public void visit(CondTermDerived1 CondTermDerived1) { visit(); }

@@ -1,0 +1,136 @@
+INFO  01:52:14,041 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  01:52:14,109 - #50 test302
+INFO  01:52:14,109 - #50 int
+INFO  01:52:14,111 - #50 i
+INFO  01:52:14,112 - #37 ;
+INFO  01:52:14,113 - #50 bool
+INFO  01:52:14,113 - #50 ibool
+INFO  01:52:14,114 - #37 ;
+INFO  01:52:14,114 - #50 int
+INFO  01:52:14,114 - #50 niz2
+INFO  01:52:14,115 - #37 ;
+INFO  01:52:14,115 - #50 int
+INFO  01:52:14,115 - #50 niz
+INFO  01:52:14,115 - #43 [
+INFO  01:52:14,115 - #44 ]
+INFO  01:52:14,116 - #37 ;
+INFO  01:52:14,116 - #50 int
+INFO  01:52:14,116 - #50 a
+INFO  01:52:14,117 - #37 ;
+INFO  01:52:14,117 - #45 {
+INFO  01:52:14,117 - #50 int
+INFO  01:52:14,119 - #50 sum
+INFO  01:52:14,122 - #41 (
+INFO  01:52:14,123 - #50 int
+INFO  01:52:14,124 - #50 z
+INFO  01:52:14,124 - #39 ,
+INFO  01:52:14,124 - #50 int
+INFO  01:52:14,125 - #50 d
+INFO  01:52:14,125 - #42 )
+INFO  01:52:14,125 - #45 {
+INFO  01:52:14,129 - #50 z
+INFO  01:52:14,129 - #21 +
+INFO  01:52:14,130 - #50 d
+INFO  01:52:14,131 - #37 ;
+INFO  01:52:14,132 - #46 }
+INFO  01:52:14,133 - #50 int
+INFO  01:52:14,135 - #50 inkrement
+INFO  01:52:14,136 - #41 (
+INFO  01:52:14,136 - #50 int
+INFO  01:52:14,136 - #50 a
+INFO  01:52:14,138 - #39 ,
+INFO  01:52:14,138 - #50 int
+INFO  01:52:14,139 - #50 inc
+INFO  01:52:14,141 - #42 )
+INFO  01:52:14,142 - #50 int
+INFO  01:52:14,142 - #50 pom
+INFO  01:52:14,142 - #37 ;
+INFO  01:52:14,143 - #45 {
+INFO  01:52:14,144 - #41 (
+INFO  01:52:14,145 - #50 inc
+INFO  01:52:14,146 - #26 ==
+INFO  01:52:14,146 - #47 1
+INFO  01:52:14,150 - #42 )
+INFO  01:52:14,152 - #50 pom
+INFO  01:52:14,152 - #34 =
+INFO  01:52:14,152 - #47 1
+INFO  01:52:14,153 - #37 ;
+INFO  01:52:14,154 - #41 (
+INFO  01:52:14,154 - #50 inc
+INFO  01:52:14,154 - #26 ==
+INFO  01:52:14,155 - #47 2
+INFO  01:52:14,155 - #42 )
+INFO  01:52:14,156 - #50 pom
+INFO  01:52:14,157 - #34 =
+INFO  01:52:14,159 - #50 a
+INFO  01:52:14,160 - #37 ;
+INFO  01:52:14,162 - #50 sum
+INFO  01:52:14,163 - #41 (
+INFO  01:52:14,165 - #50 a
+INFO  01:52:14,165 - #39 ,
+INFO  01:52:14,166 - #50 pom
+INFO  01:52:14,166 - #42 )
+INFO  01:52:14,167 - #37 ;
+INFO  01:52:14,168 - #46 }
+INFO  01:52:14,168 - #50 bool
+INFO  01:52:14,169 - #50 verify
+INFO  01:52:14,169 - #41 (
+INFO  01:52:14,169 - #42 )
+INFO  01:52:14,170 - #45 {
+INFO  01:52:14,170 - #41 (
+INFO  01:52:14,171 - #49 v
+INFO  01:52:14,171 - #42 )
+INFO  01:52:14,172 - #37 ;
+INFO  01:52:14,172 - #48 false
+INFO  01:52:14,173 - #37 ;
+INFO  01:52:14,174 - #46 }
+INFO  01:52:14,174 - #50 int
+INFO  01:52:14,175 - #50 f1
+INFO  01:52:14,175 - #41 (
+INFO  01:52:14,175 - #50 int
+INFO  01:52:14,176 - #50 arg
+INFO  01:52:14,176 - #42 )
+INFO  01:52:14,176 - #45 {
+INFO  01:52:14,177 - #41 (
+INFO  01:52:14,177 - #50 arg
+INFO  01:52:14,177 - #42 )
+INFO  01:52:14,178 - #37 ;
+INFO  01:52:14,178 - #50 arg
+INFO  01:52:14,178 - #23 *
+INFO  01:52:14,179 - #47 2
+INFO  01:52:14,181 - #37 ;
+INFO  01:52:14,181 - #46 }
+INFO  01:52:14,182 - #50 main
+INFO  01:52:14,183 - #41 (
+INFO  01:52:14,183 - #42 )
+INFO  01:52:14,183 - #45 {
+INFO  01:52:14,184 - #50 inkrement
+INFO  01:52:14,184 - #41 (
+INFO  01:52:14,184 - #50 i
+INFO  01:52:14,185 - #39 ,
+INFO  01:52:14,185 - #47 2
+INFO  01:52:14,185 - #42 )
+INFO  01:52:14,186 - #37 ;
+INFO  01:52:14,186 - #50 inkrement
+INFO  01:52:14,187 - #41 (
+INFO  01:52:14,187 - #50 niz
+INFO  01:52:14,187 - #43 [
+INFO  01:52:14,188 - #47 0
+INFO  01:52:14,188 - #44 ]
+INFO  01:52:14,188 - #39 ,
+INFO  01:52:14,189 - #47 1
+INFO  01:52:14,189 - #42 )
+INFO  01:52:14,190 - #37 ;
+INFO  01:52:14,190 - #46 }
+INFO  01:52:14,190 - #46 }
+INFO  01:52:14,228 - Otvoren opseg za program test302 na liniji 1
+INFO  01:52:14,229 - Obradjuje se funkcija sum na liniji 12
+INFO  01:52:14,229 - Obradjuje se funkcija inkrement na liniji 16
+INFO  01:52:14,231 - Obradjuje se funkcija verify na liniji 25
+INFO  01:52:14,231 - Obradjuje se funkcija f1 na liniji 30
+INFO  01:52:14,232 - Obradjuje se funkcija main na liniji 35
+INFO  01:52:14,232 - jel se ovo desava na liniji 38
+INFO  01:52:14,233 - jel se ovo desava na liniji 40
+INFO  01:52:14,234 - Neodgovarajući tip parametra u pozivu funkcije inkrement. Semantička greška na liniji 40
+INFO  01:52:14,234 - Print calls = 2
+ERROR 01:52:14,236 - Parsiranje NIJE uspesno zavrseno!

@@ -126,6 +126,9 @@ nonterminal rs.etf.pp1.symboltable.concepts.Obj MethodSignature2;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Expr2;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Term;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj CondFact; // ?
+
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Factor;
 
 nonterminal DeclarationsOptional;
@@ -161,7 +164,6 @@ nonterminal Condition;
 nonterminal CondTermList;
 nonterminal CondTerm;
 nonterminal CondFactList;
-nonterminal CondFact;
 nonterminal AddopGroup;
 nonterminal Relop;
 nonterminal Mulop;
@@ -261,8 +263,8 @@ CondTerm              ::= CondFactList;
 CondFactList          ::= CondFactList AND CondFact 
                        |  CondFact;
 
-CondFact              ::= Expr2 
-                       |  Expr2 Relop Expr2;
+CondFact              ::= (ExprCondFactor) Expr2 
+                       |  (RelopCondFactor) Expr2 Relop Expr2;
 
 Expr2                 ::= (NegativeTermExprSum) MINUS Term AddopGroup 
                        |  (TermExprSum) Term AddopGroup 
@@ -272,12 +274,12 @@ Expr2                 ::= (NegativeTermExprSum) MINUS Term AddopGroup
 AddopGroup            ::= (AddopGroupTerm) AddopGroup Addop Term 
                        |  (AddopTerm) Addop Term;
 
-Relop                 ::= EQUALS 
-                       |  NOTEQUAL
-                       |  GREATER
-                       |  GREATEREQ 
-                       |  LESS 
-                       |  LESSEQ;
+Relop                 ::= (EqRelop) EQUALS
+                       |  (NeqRelop) NOTEQUAL
+                       |  (GtRelop) GREATER
+                       |  (GteqRelop) GREATEREQ 
+                       |  (LsRelop) LESS 
+                       |  (LseqRelop) LESSEQ;
 
 Term                  ::= (FactorTerm) Factor
                        |  (MulopTerm) Term Mulop Factor;
@@ -324,7 +326,7 @@ MethodArgumentList    ::= (MultipleMethodArguments) MethodArgumentList COMMA Met
                        |  (SingleMethodArgument) MethodArgument;
 
 MethodArgument        ::= (IdentMethodArgument) IDENT:ident
-                       |  (IdentVectorMethodArgument) IDENT:ident LBRACKET RBRACKET 
+                       |  (IdentVectorMethodArgument) IDENT:ident LBRACKET Expr2 RBRACKET
                        |  (LiteralMethodArgument) Literal;
 
 

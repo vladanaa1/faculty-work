@@ -1,0 +1,84 @@
+INFO  14:37:40,004 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  14:37:40,073 - #50 MyProgram
+INFO  14:37:40,074 - #50 int
+INFO  14:37:40,075 - #50 jedan
+INFO  14:37:40,076 - #34 =
+INFO  14:37:40,077 - #47 1
+INFO  14:37:40,077 - #39 ,
+INFO  14:37:40,079 - #50 dva
+INFO  14:37:40,080 - #34 =
+INFO  14:37:40,080 - #47 4
+INFO  14:37:40,080 - #37 ;
+INFO  14:37:40,081 - #50 char
+INFO  14:37:40,081 - #50 a
+INFO  14:37:40,081 - #34 =
+INFO  14:37:40,082 - #49 1
+INFO  14:37:40,082 - #37 ;
+INFO  14:37:40,083 - #45 {
+INFO  14:37:40,083 - #50 int
+INFO  14:37:40,085 - #50 fun1
+INFO  14:37:40,085 - #41 (
+INFO  14:37:40,086 - #42 )
+INFO  14:37:40,087 - #50 int
+INFO  14:37:40,093 - #50 a
+INFO  14:37:40,094 - #39 ,
+INFO  14:37:40,094 - #50 x
+INFO  14:37:40,094 - #37 ;
+INFO  14:37:40,094 - #45 {
+INFO  14:37:40,095 - #50 a
+INFO  14:37:40,096 - #35 ++
+INFO  14:37:40,096 - #37 ;
+INFO  14:37:40,097 - #50 jedan
+INFO  14:37:40,097 - #34 =
+INFO  14:37:40,098 - #50 dva
+INFO  14:37:40,098 - #37 ;
+INFO  14:37:40,099 - #45 {
+INFO  14:37:40,103 - #37 ;
+INFO  14:37:40,104 - #46 }
+INFO  14:37:40,106 - #41 (
+INFO  14:37:40,108 - #50 a
+INFO  14:37:40,109 - #42 )
+INFO  14:37:40,111 - #37 ;
+INFO  14:37:40,112 - #50 jedan
+INFO  14:37:40,112 - #37 ;
+INFO  14:37:40,115 - #46 }
+INFO  14:37:40,117 - #50 main
+INFO  14:37:40,119 - #41 (
+INFO  14:37:40,119 - #42 )
+INFO  14:37:40,120 - #50 int
+INFO  14:37:40,120 - #50 x
+INFO  14:37:40,120 - #37 ;
+INFO  14:37:40,120 - #50 char
+INFO  14:37:40,121 - #50 c
+INFO  14:37:40,123 - #43 [
+INFO  14:37:40,125 - #44 ]
+INFO  14:37:40,125 - #39 ,
+INFO  14:37:40,126 - #50 a
+INFO  14:37:40,128 - #37 ;
+INFO  14:37:40,128 - #45 {
+INFO  14:37:40,128 - #41 (
+INFO  14:37:40,129 - #50 jedan
+INFO  14:37:40,129 - #23 *
+INFO  14:37:40,129 - #50 x
+INFO  14:37:40,132 - #33 ||
+INFO  14:37:40,133 - #50 fun1
+INFO  14:37:40,133 - #41 (
+INFO  14:37:40,134 - #42 )
+INFO  14:37:40,136 - #42 )
+INFO  14:37:40,137 - #37 ;
+INFO  14:37:40,137 - #50 x
+INFO  14:37:40,140 - #34 =
+INFO  14:37:40,141 - #50 x
+INFO  14:37:40,141 - #37 ;
+INFO  14:37:40,141 - #50 fun1
+INFO  14:37:40,141 - #41 (
+INFO  14:37:40,142 - #42 )
+INFO  14:37:40,142 - #37 ;
+INFO  14:37:40,142 - #46 }
+INFO  14:37:40,142 - #46 }
+INFO  14:37:40,188 - Otvoren opseg za program MyProgram na liniji 1
+INFO  14:37:40,189 - Obradjuje se funkcija fun1 na liniji 5
+INFO  14:37:40,189 - Na levoj strani dodele mora biti promenljiva. Semantička greška na liniji 9
+INFO  14:37:40,190 - Obradjuje se funkcija main na liniji 18
+INFO  14:37:40,191 - Print calls = 0
+ERROR 14:37:40,193 - Parsiranje NIJE uspesno zavrseno!

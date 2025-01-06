@@ -126,6 +126,9 @@ nonterminal rs.etf.pp1.symboltable.concepts.Obj MethodSignature2;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Expr2;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Term;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj CondFact; // ?
+
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Factor;
 
 nonterminal DeclarationsOptional DeclarationsOptional;
@@ -161,7 +164,6 @@ nonterminal Condition Condition;
 nonterminal CondTermList CondTermList;
 nonterminal CondTerm CondTerm;
 nonterminal CondFactList CondFactList;
-nonterminal CondFact CondFact;
 nonterminal AddopGroup AddopGroup;
 nonterminal Relop Relop;
 nonterminal Mulop Mulop;
@@ -262,8 +264,8 @@ CondTerm              ::= CondFactList:C1 {: RESULT=new CondTermDerived1(C1); RE
 CondFactList          ::= CondFactList:C1 AND CondFact:C2 {: RESULT=new CondFactListDerived1(C1, C2); RESULT.setLine(C1left); :} 
                        |  CondFact:C1 {: RESULT=new CondFactListDerived2(C1); RESULT.setLine(C1left); :};
 
-CondFact              ::= Expr2:E1 {: RESULT=new CondFactDerived1(E1); RESULT.setLine(E1left); :} 
-                       |  Expr2:E1 Relop:R2 Expr2:E3 {: RESULT=new CondFactDerived2(E1, R2, E3); RESULT.setLine(E1left); :};
+CondFact              ::= (ExprCondFactor) Expr2:E1 {: RESULT=new ExprCondFactor(E1); RESULT.setLine(E1left); :} 
+                       |  (RelopCondFactor) Expr2:E1 Relop:R2 Expr2:E3 {: RESULT=new RelopCondFactor(E1, R2, E3); RESULT.setLine(E1left); :};
 
 Expr2                 ::= (NegativeTermExprSum) MINUS Term:T1 AddopGroup:A2 {: RESULT=new NegativeTermExprSum(T1, A2); RESULT.setLine(T1left); :} 
                        |  (TermExprSum) Term:T1 AddopGroup:A2 {: RESULT=new TermExprSum(T1, A2); RESULT.setLine(T1left); :} 
@@ -273,12 +275,12 @@ Expr2                 ::= (NegativeTermExprSum) MINUS Term:T1 AddopGroup:A2 {: R
 AddopGroup            ::= (AddopGroupTerm) AddopGroup:A1 Addop:A2 Term:T3 {: RESULT=new AddopGroupTerm(A1, A2, T3); RESULT.setLine(A1left); :} 
                        |  (AddopTerm) Addop:A1 Term:T2 {: RESULT=new AddopTerm(A1, T2); RESULT.setLine(A1left); :};
 
-Relop                 ::= EQUALS {: RESULT=new RelopDerived1(); :} 
-                       |  NOTEQUAL {: RESULT=new RelopDerived2(); :}
-                       |  GREATER {: RESULT=new RelopDerived3(); :}
-                       |  GREATEREQ {: RESULT=new RelopDerived4(); :} 
-                       |  LESS {: RESULT=new RelopDerived5(); :} 
-                       |  LESSEQ {: RESULT=new RelopDerived6(); :};
+Relop                 ::= (EqRelop) EQUALS {: RESULT=new EqRelop(); :}
+                       |  (NeqRelop) NOTEQUAL {: RESULT=new NeqRelop(); :}
+                       |  (GtRelop) GREATER {: RESULT=new GtRelop(); :}
+                       |  (GteqRelop) GREATEREQ {: RESULT=new GteqRelop(); :} 
+                       |  (LsRelop) LESS {: RESULT=new LsRelop(); :} 
+                       |  (LseqRelop) LESSEQ {: RESULT=new LseqRelop(); :};
 
 Term                  ::= (FactorTerm) Factor:F1 {: RESULT=new FactorTerm(F1); RESULT.setLine(F1left); :}
                        |  (MulopTerm) Term:T1 Mulop:M2 Factor:F3 {: RESULT=new MulopTerm(T1, M2, F3); RESULT.setLine(T1left); :};
@@ -325,7 +327,7 @@ MethodArgumentList    ::= (MultipleMethodArguments) MethodArgumentList:M1 COMMA 
                        |  (SingleMethodArgument) MethodArgument:M1 {: RESULT=new SingleMethodArgument(M1); RESULT.setLine(M1left); :};
 
 MethodArgument        ::= (IdentMethodArgument) IDENT:ident {: RESULT=new IdentMethodArgument(ident); RESULT.setLine(identleft); :}
-                       |  (IdentVectorMethodArgument) IDENT:ident LBRACKET RBRACKET {: RESULT=new IdentVectorMethodArgument(ident); RESULT.setLine(identleft); :} 
+                       |  (IdentVectorMethodArgument) IDENT:ident LBRACKET Expr2:E1 RBRACKET {: RESULT=new IdentVectorMethodArgument(ident, E1); RESULT.setLine(identleft); :}
                        |  (LiteralMethodArgument) Literal:L1 {: RESULT=new LiteralMethodArgument(L1); RESULT.setLine(L1left); :};
 
 
