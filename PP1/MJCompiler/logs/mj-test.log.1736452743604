@@ -1,0 +1,122 @@
+INFO  20:46:56,737 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:46:56,808 - #50 test302
+INFO  20:46:56,808 - #50 int
+INFO  20:46:56,810 - #50 i
+INFO  20:46:56,811 - #37 ;
+INFO  20:46:56,813 - #50 bool
+INFO  20:46:56,814 - #50 ibool
+INFO  20:46:56,814 - #37 ;
+INFO  20:46:56,814 - #50 int
+INFO  20:46:56,814 - #50 niz2
+INFO  20:46:56,815 - #37 ;
+INFO  20:46:56,815 - #50 int
+INFO  20:46:56,815 - #50 a
+INFO  20:46:56,815 - #37 ;
+INFO  20:46:56,815 - #45 {
+INFO  20:46:56,816 - #50 int
+INFO  20:46:56,817 - #50 sum
+INFO  20:46:56,817 - #41 (
+INFO  20:46:56,819 - #50 int
+INFO  20:46:56,819 - #50 z
+INFO  20:46:56,819 - #39 ,
+INFO  20:46:56,820 - #50 int
+INFO  20:46:56,823 - #50 d
+INFO  20:46:56,824 - #42 )
+INFO  20:46:56,824 - #45 {
+INFO  20:46:56,827 - #50 z
+INFO  20:46:56,827 - #21 +
+INFO  20:46:56,828 - #50 d
+INFO  20:46:56,829 - #37 ;
+INFO  20:46:56,829 - #46 }
+INFO  20:46:56,830 - #50 int
+INFO  20:46:56,831 - #50 inkrement
+INFO  20:46:56,832 - #41 (
+INFO  20:46:56,832 - #50 int
+INFO  20:46:56,832 - #50 a
+INFO  20:46:56,832 - #39 ,
+INFO  20:46:56,833 - #50 int
+INFO  20:46:56,833 - #50 inc
+INFO  20:46:56,833 - #42 )
+INFO  20:46:56,833 - #50 int
+INFO  20:46:56,834 - #50 pom
+INFO  20:46:56,834 - #37 ;
+INFO  20:46:56,835 - #45 {
+INFO  20:46:56,837 - #41 (
+INFO  20:46:56,837 - #50 inc
+INFO  20:46:56,838 - #26 ==
+INFO  20:46:56,838 - #47 1
+INFO  20:46:56,840 - #42 )
+INFO  20:46:56,842 - #50 pom
+INFO  20:46:56,842 - #34 =
+INFO  20:46:56,842 - #47 1
+INFO  20:46:56,843 - #37 ;
+INFO  20:46:56,843 - #41 (
+INFO  20:46:56,844 - #50 inc
+INFO  20:46:56,844 - #26 ==
+INFO  20:46:56,844 - #47 2
+INFO  20:46:56,844 - #42 )
+INFO  20:46:56,844 - #50 pom
+INFO  20:46:56,845 - #34 =
+INFO  20:46:56,846 - #50 a
+INFO  20:46:56,846 - #37 ;
+INFO  20:46:56,847 - #50 sum
+INFO  20:46:56,847 - #41 (
+INFO  20:46:56,847 - #50 a
+INFO  20:46:56,847 - #39 ,
+INFO  20:46:56,848 - #50 pom
+INFO  20:46:56,848 - #42 )
+INFO  20:46:56,849 - #37 ;
+INFO  20:46:56,849 - #46 }
+INFO  20:46:56,850 - #50 bool
+INFO  20:46:56,850 - #50 verify
+INFO  20:46:56,850 - #41 (
+INFO  20:46:56,850 - #42 )
+INFO  20:46:56,852 - #45 {
+INFO  20:46:56,852 - #48 false
+INFO  20:46:56,853 - #37 ;
+INFO  20:46:56,853 - #46 }
+INFO  20:46:56,853 - #50 int
+INFO  20:46:56,853 - #50 f1
+INFO  20:46:56,853 - #41 (
+INFO  20:46:56,853 - #50 int
+INFO  20:46:56,853 - #50 arg
+INFO  20:46:56,853 - #42 )
+INFO  20:46:56,855 - #45 {
+INFO  20:46:56,855 - #41 (
+INFO  20:46:56,855 - #50 arg
+INFO  20:46:56,855 - #42 )
+INFO  20:46:56,855 - #37 ;
+INFO  20:46:56,855 - #50 arg
+INFO  20:46:56,855 - #23 *
+INFO  20:46:56,855 - #47 2
+INFO  20:46:56,856 - #37 ;
+INFO  20:46:56,857 - #46 }
+INFO  20:46:56,857 - #50 main
+INFO  20:46:56,858 - #41 (
+INFO  20:46:56,858 - #42 )
+INFO  20:46:56,858 - #45 {
+INFO  20:46:56,858 - #41 (
+INFO  20:46:56,858 - #50 inkrement
+INFO  20:46:56,859 - #41 (
+INFO  20:46:56,859 - #47 0
+INFO  20:46:56,859 - #39 ,
+INFO  20:46:56,859 - #47 1
+INFO  20:46:56,859 - #42 )
+INFO  20:46:56,859 - #42 )
+INFO  20:46:56,860 - #37 ;
+INFO  20:46:56,860 - #41 (
+INFO  20:46:56,860 - #47 1
+INFO  20:46:56,861 - #42 )
+INFO  20:46:56,861 - #37 ;
+INFO  20:46:56,861 - #46 }
+INFO  20:46:56,861 - #46 }
+INFO  20:46:56,880 - Otvoren opseg za program test302 na liniji 1
+INFO  20:46:56,880 - Obradjuje se funkcija sum na liniji 11
+INFO  20:46:56,881 - Obradjuje se funkcija inkrement na liniji 15
+INFO  20:46:56,882 - Obradjuje se funkcija verify na liniji 24
+INFO  20:46:56,882 - Obradjuje se funkcija f1 na liniji 29
+INFO  20:46:56,882 - Obradjuje se funkcija main na liniji 34
+INFO  20:46:56,883 - Print calls = 2
+INFO  20:46:56,883 - Deklarisanih promenljivih = 4
+INFO  20:46:56,885 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  20:46:56,920 - Parsiranje uspesno zavrseno!

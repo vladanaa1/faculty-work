@@ -47,6 +47,8 @@ public class MJParserTest {
 			prog.traverseBottomUp(semanticCheck);
 			
 	        log.info("Print calls = " + semanticCheck.printCallCount);
+	        
+	        log.info("Deklarisanih promenljivih = " + semanticCheck.VarDeclCount);
 	        Tab.dump();
 	        
 	        if (!p.errorDetected  && semanticCheck.passed()) {
@@ -56,13 +58,13 @@ public class MJParserTest {
 	        		objFile.delete();
 	        	
 	        	// Code generation...
-	        	/*
+	        	
 	        	CodeGenerator codeGenerator = new CodeGenerator();
 	        	prog.traverseBottomUp(codeGenerator);
-	        	Code.dataSize = semanticCheck.nVars;
+	        	Code.dataSize = semanticCheck.VarDeclCount;
 	        	Code.mainPc = codeGenerator.getMainPc();
 	        	Code.write(new FileOutputStream(objFile));
-	        	*/
+	        	
 	        	log.info("Parsiranje uspesno zavrseno!");
 	        }
 	        else {

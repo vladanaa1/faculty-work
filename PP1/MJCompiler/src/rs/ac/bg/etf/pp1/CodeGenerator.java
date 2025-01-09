@@ -1,13 +1,14 @@
 package rs.ac.bg.etf.pp1;
 
-import rs.ac.bg.etf.pp1.CounterVisitor.FormParamCounter;
-import rs.ac.bg.etf.pp1.CounterVisitor.VarCounter;
+import rs.ac.bg.etf.pp1.CounterVisitor.*;
 import rs.ac.bg.etf.pp1.ast.*;
 import rs.ac.bg.etf.pp1.ast.SyntaxNode;
 import rs.ac.bg.etf.pp1.ast.VarDecl;
 import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
 import rs.etf.pp1.mj.runtime.Code;
+import rs.etf.pp1.symboltable.Tab;
 import rs.etf.pp1.symboltable.concepts.Obj;
+import rs.etf.pp1.symboltable.concepts.Struct;
 
 public class CodeGenerator extends VisitorAdaptor {
 	
@@ -21,88 +22,75 @@ public class CodeGenerator extends VisitorAdaptor {
 		return mainPc;
 	}
 	
-	@Override
-	public void visit(MethodTypeName MethodTypeName) {
-		if ("main".equalsIgnoreCase(MethodTypeName.getMethName())) {
+	public void visit(Print printStmt) {
+		Obj printObj = printStmt.getExpr2().obj;
+		
+		if(printObj == null) {
+			return;
+		}
+		
+		if(printObj.getType().equals(Tab.intType)) {
+			Code.loadConst(5);
+			Code.put(Code.print);
+		}
+		else if(printObj.getType().equals(Tab.charType)) {
+			Code.loadConst(1);
+			Code.put(Code.bprint);
+		}
+	}
+	
+	public void visit(NumberFactor numberFactor) {
+		Code.load(new Obj(Obj.Con, "$", numberFactor.obj.getType(), numberFactor.getValue(), 0));
+	}
+	
+	public void visit(CharFactor charFactor) {
+		Code.load(new Obj(Obj.Con, "$", charFactor.obj.getType(), charFactor.getValue(), 0));
+	}
+	
+	public void visit(BoolFactor boolFactor) {
+		Code.load(new Obj(Obj.Con, "$", boolFactor.obj.getType(), boolFactor.getValue() ? 1 : 0, 0));
+	}
+	
+	public void visit(MethodSignature2 methodSignature) {
+		
+		String ident = methodSignature.getName().getIdent();
+		
+		if(ident.equals("main")) {
 			mainPc = Code.pc;
 		}
-		MethodTypeName.obj.setAdr(Code.pc);
 		
-		// Collect arguments and local variables.
-		SyntaxNode methodNode = MethodTypeName.getParent();
+		// methodObj.setAdr(Code.pc);
+		
+		// Collect parameters and local variables (Broj parametara i lokalnih promenljivih)
+		SyntaxNode methodNode = methodSignature.getParent().getParent(); // MethodDeclaration
+		
 		VarCounter varCnt = new VarCounter();
 		methodNode.traverseTopDown(varCnt);
-		FormParamCounter fpCnt = new FormParamCounter();
-		methodNode.traverseTopDown(fpCnt);
 		
-		// Generate the entry.
+		FormParamCounter paramCnt = new FormParamCounter();
+		methodNode.traverseTopDown(varCnt);
+		
+		// Generate the entry
 		Code.put(Code.enter);
-		Code.put(fpCnt.getCount());
-		Code.put(varCnt.getCount() + fpCnt.getCount());
+		Code.put(paramCnt.getCount());
+		Code.put(varCnt.getCount() + paramCnt.getCount());
 	}
 	
-	@Override
-	public void visit(VarDecl VarDecl) {
-		varCount++;
-	}
-
-	@Override
-	public void visit(FormalParamDecl FormalParam) {
-		paramCnt++;
-	}	
-	
-	@Override
-	public void visit(MethodDecl MethodDecl) {
+	public void visit(MethodDeclaration methodDeclaration) {
 		Code.put(Code.exit);
 		Code.put(Code.return_);
 	}
 	
-	@Override
-	public void visit(ReturnExpr ReturnExpr) {
-		Code.put(Code.exit);
-		Code.put(Code.return_);
+	public void visit(DesignatorAssign designatorAssign) {
+		Code.store(designatorAssign.getDesignator().obj);
 	}
 	
-	@Override
-	public void visit(ReturnNoExpr ReturnNoExpr) {
-		Code.put(Code.exit);
-		Code.put(Code.return_);
-	}
-	
-	@Override
-	public void visit(Assignment Assignment) {
-		Code.store(Assignment.getDesignator().obj);
-	}
-	
-	@Override
-	public void visit(Const Const) {
-		Code.load(new Obj(Obj.Con, "$", Const.struct, Const.getN1(), 0));
-	}
-	
-	@Override
-	public void visit(Designator Designator) {
-		SyntaxNode parent = Designator.getParent();
-		if (Assignment.class != parent.getClass() && FuncCall.class != parent.getClass()) {
-			Code.load(Designator.obj);
+	public void visit(DesignatorIdent designatorIdent) {
+		SyntaxNode parent = designatorIdent.getParent();
+		
+		if(DesignatorAssign.class != parent.getClass() && FunctionCall.class != parent.getClass()) {
+			Code.load(designatorIdent.obj);
 		}
 	}
 	
-	@Override
-	public void visit(FuncCall FuncCall) {
-		Obj functionObj = FuncCall.getDesignator().obj;
-		int offset = functionObj.getAdr() - Code.pc; 
-		Code.put(Code.call);
-		Code.put2(offset);
-	}
-	
-	@Override
-	public void visit(PrintStmt PrintStmt) {
-		Code.put(Code.const_5);
-		Code.put(Code.print);
-	}
-	
-	@Override
-	public void visit(AddExpr AddExpr) {
-		Code.put(Code.add);
-	}
 }

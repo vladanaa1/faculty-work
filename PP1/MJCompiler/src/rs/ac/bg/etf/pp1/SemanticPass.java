@@ -443,6 +443,20 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(Print printStmt) {
+		Obj printObj = printStmt.getExpr2().obj;
+		
+		if(printObj == null) {
+			// DON'T CONTINUE
+			return;
+		}
+		
+		if(printObj.getType().equals(Tab.charType) || printObj.getType().equals(Tab.intType)) {
+			// OK, treba provera za argumente fje
+		}
+		else {
+			report_info("Operand print instrukcije mora biti tipa *int* ili *char*. Semantička greška", printStmt);
+			errorDetected = true;
+		}
 		printCallCount++;
 	}
 	
@@ -514,6 +528,7 @@ public class SemanticPass extends VisitorAdaptor {
 			else {
 				constantObj = Tab.insert(0, ident, currentType);
 				constantObj.setAdr(constant.getLiteral().obj.getAdr());
+				constantObj.setLevel(0);
 			}
 		}
 		else {
@@ -550,6 +565,7 @@ public class SemanticPass extends VisitorAdaptor {
 		
 		if(varObj == Tab.noObj) {
 			varObj = Tab.insert(1, ident, currentType);
+			// VarDeclCount++;
 		}
 		else {
 			report_info("Detektovana dvostruka deklaracija promenljive " + ident + " .Semantička greška", singleVarDecl);
@@ -566,6 +582,7 @@ public class SemanticPass extends VisitorAdaptor {
 		
 		if(varObj == Tab.noObj) {
 			varObj = Tab.insert(1, ident, new Struct(Struct.Array, currentType));
+			// VarDeclCount++;
 		}
 		else {
 			report_info("Detektovana dvostruka deklaracija promenljive " + ident + " .Semantička greška", singleVarDeclVector);
@@ -582,6 +599,7 @@ public class SemanticPass extends VisitorAdaptor {
 		
 		if(varObj == Tab.noObj) {
 			varObj = Tab.insert(1, ident, currentType);
+			// VarDeclCount++;
 		}
 		else {
 			report_info("Detektovana dvostruka deklaracija promenljive " + ident + " .Semantička greška", multipleVarDecl);
@@ -598,6 +616,7 @@ public class SemanticPass extends VisitorAdaptor {
 		
 		if(varObj == Tab.noObj) {
 			varObj = Tab.insert(1, ident, new Struct(Struct.Array, currentType));
+			// VarDeclCount++;
 		}
 		else {
 			report_info("Detektovana dvostruka deklaracija promenljive " + ident + " .Semantička greška", multipleVarDeclVector);
@@ -692,6 +711,7 @@ public class SemanticPass extends VisitorAdaptor {
 		Obj negObj = negTerm.getTerm().obj;
 		
 		if(negObj == null) {
+			// DON'T CONTINUE
 			return;
 		}
 		
@@ -816,8 +836,14 @@ public class SemanticPass extends VisitorAdaptor {
 			errorDetected  = true;
         }
         else {
-        	// OK
-        	queue.add(identObj.getType());
+        	if(identMethodArgument.getExpr2().obj.getType().equals(Tab.intType)) {
+        		// OK
+            	queue.add(identObj.getType());
+        	}
+        	else {
+        		report_info("Neispravno indeksiranje. Semantička greška", identMethodArgument);
+    			errorDetected  = true;
+        	}   	
         }
     }
     
@@ -844,6 +870,8 @@ public class SemanticPass extends VisitorAdaptor {
 			report_info("Neispravna upotreba 'continue' iskaza. Semantička greška", null);
 			errorDetected  = true;
 		}
+		
+		VarDeclCount = Tab.currentScope().getnVars();
 		
 		Tab.chainLocalSymbols(program.getProgramName().obj);
 		Tab.closeScope();
