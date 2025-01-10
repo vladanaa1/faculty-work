@@ -138,6 +138,13 @@ public class SemanticPass extends VisitorAdaptor {
 			return;
 		}
 		
+		if(designatorObj.getType().equals(Tab.noType)) {
+			// ERROR
+			report_info("Void metoda u izrazu. Semantička greška", methodCallFactor);
+			errorDetected = true;
+			return;
+		}
+		
 		int argumentsNeeded = designatorObj.getLevel();
 		
 		if(argumentsNeeded != currentMethodParameters) {

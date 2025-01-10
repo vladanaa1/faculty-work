@@ -1,0 +1,59 @@
+INFO  15:43:11,728 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  15:43:11,795 - #50 test302
+INFO  15:43:11,795 - #50 int
+INFO  15:43:11,797 - #50 i
+INFO  15:43:11,798 - #37 ;
+INFO  15:43:11,799 - #50 int
+INFO  15:43:11,800 - #50 a
+INFO  15:43:11,800 - #37 ;
+INFO  15:43:11,801 - #50 int
+INFO  15:43:11,801 - #50 x
+INFO  15:43:11,801 - #37 ;
+INFO  15:43:11,801 - #45 {
+INFO  15:43:11,801 - #50 bool
+INFO  15:43:11,802 - #50 verify
+INFO  15:43:11,803 - #41 (
+INFO  15:43:11,805 - #42 )
+INFO  15:43:11,806 - #45 {
+INFO  15:43:11,811 - #48 false
+INFO  15:43:11,811 - #37 ;
+INFO  15:43:11,811 - #46 }
+INFO  15:43:11,814 - #50 k
+INFO  15:43:11,815 - #41 (
+INFO  15:43:11,815 - #42 )
+INFO  15:43:11,818 - #45 {
+INFO  15:43:11,819 - #41 (
+INFO  15:43:11,820 - #47 0
+INFO  15:43:11,821 - #42 )
+INFO  15:43:11,822 - #37 ;
+INFO  15:43:11,822 - #46 }
+INFO  15:43:11,823 - #50 main
+INFO  15:43:11,824 - #41 (
+INFO  15:43:11,825 - #42 )
+INFO  15:43:11,826 - #45 {
+INFO  15:43:11,827 - #50 x
+INFO  15:43:11,827 - #34 =
+INFO  15:43:11,829 - #47 3
+INFO  15:43:11,829 - #37 ;
+INFO  15:43:11,830 - #41 (
+INFO  15:43:11,830 - #47 1
+INFO  15:43:11,831 - #42 )
+INFO  15:43:11,832 - #37 ;
+INFO  15:43:11,832 - #41 (
+INFO  15:43:11,832 - #50 x
+INFO  15:43:11,833 - #42 )
+INFO  15:43:11,834 - #37 ;
+INFO  15:43:11,834 - #50 k
+INFO  15:43:11,835 - #41 (
+INFO  15:43:11,835 - #42 )
+INFO  15:43:11,837 - #37 ;
+INFO  15:43:11,838 - #46 }
+INFO  15:43:11,838 - #46 }
+INFO  15:43:11,852 - Otvoren opseg za program test302 na liniji 1
+INFO  15:43:11,852 - Obradjuje se funkcija verify na liniji 8
+INFO  15:43:11,853 - Obradjuje se funkcija k na liniji 13
+INFO  15:43:11,854 - Obradjuje se funkcija main na liniji 17
+INFO  15:43:11,858 - Print calls = 3
+INFO  15:43:11,859 - Deklarisanih promenljivih = 3
+INFO  15:43:11,863 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  15:43:11,893 - Parsiranje uspesno zavrseno!

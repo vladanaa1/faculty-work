@@ -1,0 +1,61 @@
+INFO  23:33:27,819 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:33:27,898 - #50 test302
+INFO  23:33:27,898 - #50 int
+INFO  23:33:27,900 - #50 i
+INFO  23:33:27,901 - #37 ;
+INFO  23:33:27,902 - #50 int
+INFO  23:33:27,903 - #50 a
+INFO  23:33:27,903 - #37 ;
+INFO  23:33:27,903 - #50 int
+INFO  23:33:27,903 - #50 x
+INFO  23:33:27,904 - #37 ;
+INFO  23:33:27,904 - #45 {
+INFO  23:33:27,904 - #50 bool
+INFO  23:33:27,905 - #50 verify
+INFO  23:33:27,906 - #41 (
+INFO  23:33:27,907 - #42 )
+INFO  23:33:27,908 - #45 {
+INFO  23:33:27,911 - #48 false
+INFO  23:33:27,911 - #37 ;
+INFO  23:33:27,912 - #46 }
+INFO  23:33:27,914 - #50 voidMeth
+INFO  23:33:27,915 - #41 (
+INFO  23:33:27,918 - #42 )
+INFO  23:33:27,918 - #45 {
+INFO  23:33:27,918 - #46 }
+INFO  23:33:27,919 - #50 main
+INFO  23:33:27,919 - #41 (
+INFO  23:33:27,919 - #42 )
+INFO  23:33:27,919 - #45 {
+INFO  23:33:27,919 - #50 x
+INFO  23:33:27,920 - #34 =
+INFO  23:33:27,920 - #47 3
+INFO  23:33:27,920 - #37 ;
+INFO  23:33:27,922 - #50 x
+INFO  23:33:27,923 - #34 =
+INFO  23:33:27,924 - #47 4
+INFO  23:33:27,924 - #37 ;
+INFO  23:33:27,924 - #41 (
+INFO  23:33:27,925 - #47 1
+INFO  23:33:27,925 - #42 )
+INFO  23:33:27,925 - #37 ;
+INFO  23:33:27,926 - #41 (
+INFO  23:33:27,926 - #50 x
+INFO  23:33:27,928 - #42 )
+INFO  23:33:27,928 - #37 ;
+INFO  23:33:27,929 - #41 (
+INFO  23:33:27,929 - #50 voidMeth
+INFO  23:33:27,929 - #41 (
+INFO  23:33:27,930 - #42 )
+INFO  23:33:27,942 - #42 )
+INFO  23:33:27,944 - #37 ;
+INFO  23:33:27,944 - #46 }
+INFO  23:33:27,955 - #46 }
+INFO  23:33:27,988 - Otvoren opseg za program test302 na liniji 1
+INFO  23:33:27,988 - Obradjuje se funkcija verify na liniji 8
+INFO  23:33:27,989 - Obradjuje se funkcija voidMeth na liniji 13
+INFO  23:33:27,989 - Obradjuje se funkcija main na liniji 15
+INFO  23:33:27,990 - Void metoda u izrazu. Semantička greška na liniji 25
+INFO  23:33:27,991 - Print calls = 2
+INFO  23:33:27,992 - Deklarisanih promenljivih = 3
+ERROR 23:33:27,995 - Parsiranje NIJE uspesno zavrseno!

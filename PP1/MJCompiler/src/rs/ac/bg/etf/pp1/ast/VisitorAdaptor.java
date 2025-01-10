@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 9/0/2025 20:33:43
+// 10/0/2025 17:16:44
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -68,11 +68,11 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MethodSignature2 MethodSignature2) { visit(); }
     public void visit(MethodSignatureEnd MethodSignatureEnd) { visit(); }
     public void visit(MethodSignature MethodSignature) { visit(); }
-    public void visit(AddopDerived2 AddopDerived2) { visit(); }
-    public void visit(AddopDerived1 AddopDerived1) { visit(); }
-    public void visit(MulopDerived3 MulopDerived3) { visit(); }
-    public void visit(MulopDerived2 MulopDerived2) { visit(); }
-    public void visit(MulopDerived1 MulopDerived1) { visit(); }
+    public void visit(Plus Plus) { visit(); }
+    public void visit(Minus Minus) { visit(); }
+    public void visit(ModOp ModOp) { visit(); }
+    public void visit(DivOp DivOp) { visit(); }
+    public void visit(MultOp MultOp) { visit(); }
     public void visit(DelimitedFactor DelimitedFactor) { visit(); }
     public void visit(TypeConstructorFactor TypeConstructorFactor) { visit(); }
     public void visit(NewVectorFactor NewVectorFactor) { visit(); }
@@ -119,7 +119,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DoWhileWithCondNStmt DoWhileWithCondNStmt) { visit(); }
     public void visit(DoWhileWithCond DoWhileWithCond) { visit(); }
     public void visit(DoWhile DoWhile) { visit(); }
-    public void visit(If If) { visit(); }
+    public void visit(MatchedIf MatchedIf) { visit(); }
     public void visit(Break Break) { visit(); }
     public void visit(Continue Continue) { visit(); }
     public void visit(Read Read) { visit(); }
@@ -128,8 +128,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(PrintWithComma PrintWithComma) { visit(); }
     public void visit(Print Print) { visit(); }
     public void visit(DesignatorStatementMatched DesignatorStatementMatched) { visit(); }
-    public void visit(UnmatchedDerived2 UnmatchedDerived2) { visit(); }
-    public void visit(UnmatchedDerived1 UnmatchedDerived1) { visit(); }
+    public void visit(UnmatchedIfElse UnmatchedIfElse) { visit(); }
+    public void visit(UnmatchedIf UnmatchedIf) { visit(); }
     public void visit(UnmatchedStatement UnmatchedStatement) { visit(); }
     public void visit(MatchedStatement MatchedStatement) { visit(); }
     public void visit(EmptyStatementList EmptyStatementList) { visit(); }

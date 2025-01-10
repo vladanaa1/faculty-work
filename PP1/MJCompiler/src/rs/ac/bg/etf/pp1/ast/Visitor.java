@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 9/0/2025 20:33:43
+// 10/0/2025 17:16:44
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -68,11 +68,11 @@ public interface Visitor {
     public void visit(MethodSignature2 MethodSignature2);
     public void visit(MethodSignatureEnd MethodSignatureEnd);
     public void visit(MethodSignature MethodSignature);
-    public void visit(AddopDerived2 AddopDerived2);
-    public void visit(AddopDerived1 AddopDerived1);
-    public void visit(MulopDerived3 MulopDerived3);
-    public void visit(MulopDerived2 MulopDerived2);
-    public void visit(MulopDerived1 MulopDerived1);
+    public void visit(Plus Plus);
+    public void visit(Minus Minus);
+    public void visit(ModOp ModOp);
+    public void visit(DivOp DivOp);
+    public void visit(MultOp MultOp);
     public void visit(DelimitedFactor DelimitedFactor);
     public void visit(TypeConstructorFactor TypeConstructorFactor);
     public void visit(NewVectorFactor NewVectorFactor);
@@ -119,7 +119,7 @@ public interface Visitor {
     public void visit(DoWhileWithCondNStmt DoWhileWithCondNStmt);
     public void visit(DoWhileWithCond DoWhileWithCond);
     public void visit(DoWhile DoWhile);
-    public void visit(If If);
+    public void visit(MatchedIf MatchedIf);
     public void visit(Break Break);
     public void visit(Continue Continue);
     public void visit(Read Read);
@@ -128,8 +128,8 @@ public interface Visitor {
     public void visit(PrintWithComma PrintWithComma);
     public void visit(Print Print);
     public void visit(DesignatorStatementMatched DesignatorStatementMatched);
-    public void visit(UnmatchedDerived2 UnmatchedDerived2);
-    public void visit(UnmatchedDerived1 UnmatchedDerived1);
+    public void visit(UnmatchedIfElse UnmatchedIfElse);
+    public void visit(UnmatchedIf UnmatchedIf);
     public void visit(UnmatchedStatement UnmatchedStatement);
     public void visit(MatchedStatement MatchedStatement);
     public void visit(EmptyStatementList EmptyStatementList);

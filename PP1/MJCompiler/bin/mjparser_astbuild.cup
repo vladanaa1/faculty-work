@@ -221,8 +221,8 @@ StatementList         ::= (NonEmptyStatementList) StatementList:S1 Statement:S2 
 Statement             ::= (MatchedStatement) Matched:M1 {: RESULT=new MatchedStatement(M1); RESULT.setLine(M1left); :} 
                        |  (UnmatchedStatement) Unmatched:U1 {: RESULT=new UnmatchedStatement(U1); RESULT.setLine(U1left); :};
 
-Unmatched             ::= IF LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new UnmatchedDerived1(C1, S2); RESULT.setLine(C1left); :} 
-                       |  IF LPAREN Condition:C1 RPAREN Matched:M2 ELSE Unmatched:U3 {: RESULT=new UnmatchedDerived2(C1, M2, U3); RESULT.setLine(C1left); :};
+Unmatched             ::= (UnmatchedIf) IF LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new UnmatchedIf(C1, S2); RESULT.setLine(C1left); :} 
+                       |  (UnmatchedIfElse) IF LPAREN Condition:C1 RPAREN Matched:M2 ELSE Unmatched:U3 {: RESULT=new UnmatchedIfElse(C1, M2, U3); RESULT.setLine(C1left); :};
 
 Matched               ::= (DesignatorStatementMatched) DesignatorStatement:D1 SEMI {: RESULT=new DesignatorStatementMatched(D1); RESULT.setLine(D1left); :}
                        |  (Print) PRINT LPAREN Expr2:E1 RPAREN SEMI {: RESULT=new Print(E1); RESULT.setLine(E1left); :}
@@ -232,7 +232,7 @@ Matched               ::= (DesignatorStatementMatched) DesignatorStatement:D1 SE
                        |  (Read) READ LPAREN Designator:D1 RPAREN SEMI {: RESULT=new Read(D1); RESULT.setLine(D1left); :}
                        |  (Continue) CONTINUE SEMI {: RESULT=new Continue(); :}
                        |  (Break) BREAK SEMI {: RESULT=new Break(); :}
-                       |  (If) IF LPAREN Condition:C1 RPAREN Matched:M2 ELSE Matched:M3 {: RESULT=new If(C1, M2, M3); RESULT.setLine(C1left); :}
+                       |  (MatchedIf) IF LPAREN Condition:C1 RPAREN Matched:M2 ELSE Matched:M3 {: RESULT=new MatchedIf(C1, M2, M3); RESULT.setLine(C1left); :}
                        |  (DoWhile) DoStatement:D1 Statement:S2 WhileStatement:W3 LPAREN RPAREN SEMI {: RESULT=new DoWhile(D1, S2, W3); RESULT.setLine(D1left); :}
                        |  (DoWhileWithCond) DoStatement:D1 Statement:S2 WhileStatement:W3 LPAREN Condition:C4 RPAREN SEMI {: RESULT=new DoWhileWithCond(D1, S2, W3, C4); RESULT.setLine(D1left); :}
                        |  (DoWhileWithCondNStmt) DoStatement:D1 Statement:S2 WhileStatement:W3 LPAREN Condition:C4 COMMA DesignatorStatement:D5 RPAREN SEMI {: RESULT=new DoWhileWithCondNStmt(D1, S2, W3, C4, D5); RESULT.setLine(D1left); :}
@@ -295,12 +295,12 @@ Factor                ::= (DesignatorFactor) Designator:D1 {: RESULT=new Designa
                        |  (TypeConstructorFactor) NEW Type:T1 LPAREN MethodArgumentList:M2 RPAREN {: RESULT=new TypeConstructorFactor(T1, M2); RESULT.setLine(T1left); :}
                        |  (DelimitedFactor) LPAREN Expr2:E1 RPAREN {: RESULT=new DelimitedFactor(E1); RESULT.setLine(E1left); :};
 
-Mulop                 ::= MULT {: RESULT=new MulopDerived1(); :} 
-                       |  DIV {: RESULT=new MulopDerived2(); :} 
-                       |  MOD {: RESULT=new MulopDerived3(); :};
+Mulop                 ::= (MultOp) MULT {: RESULT=new MultOp(); :} 
+                       |  (DivOp) DIV {: RESULT=new DivOp(); :} 
+                       |  (ModOp) MOD {: RESULT=new ModOp(); :};
 
-Addop                 ::= MINUS {: RESULT=new AddopDerived1(); :} 
-                       |  PLUS {: RESULT=new AddopDerived2(); :};
+Addop                 ::= (Minus) MINUS {: RESULT=new Minus(); :} 
+                       |  (Plus) PLUS {: RESULT=new Plus(); :};
 
 MethodSignature       ::= (MethodSignature) MethodSignature2:M1 LPAREN MethodParametersOptional:M2 MethodSignatureEnd:M3 {: RESULT=new MethodSignature(M1, M2, M3); RESULT.setLine(M1left); :};
 

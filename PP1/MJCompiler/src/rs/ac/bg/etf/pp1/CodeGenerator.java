@@ -59,9 +59,11 @@ public class CodeGenerator extends VisitorAdaptor {
 			mainPc = Code.pc;
 		}
 		
-		// methodObj.setAdr(Code.pc);
+		Obj methodObj = methodSignature.obj;
 		
-		// Collect parameters and local variables (Broj parametara i lokalnih promenljivih)
+		methodObj.setAdr(Code.pc);
+		
+		// Collect parameters and local variables
 		SyntaxNode methodNode = methodSignature.getParent().getParent(); // MethodDeclaration
 		
 		VarCounter varCnt = new VarCounter();
@@ -88,9 +90,90 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(DesignatorIdent designatorIdent) {
 		SyntaxNode parent = designatorIdent.getParent();
 		
-		if(DesignatorAssign.class != parent.getClass() && FunctionCall.class != parent.getClass()) {
+		if(DesignatorAssign.class != parent.getClass() && MethodCallFactor.class != parent.getClass()) {
 			Code.load(designatorIdent.obj);
 		}
 	}
 	
+	public void visit(FunctionCall functionCall) {
+		Obj functionObj = functionCall.getDesignator().obj;
+		int offset = functionObj.getAdr() - Code.pc;
+		
+		Code.put(Code.call);
+		Code.put2(offset);
+		
+		
+		if(!functionObj.getType().equals(Tab.noType)) {
+			Code.put(Code.pop);
+		}
+	}
+	
+	public void visit(MethodCallFactor methodCallFactor) {
+		Obj functionObj = methodCallFactor.getDesignator().obj;
+		int offset = functionObj.getAdr() - Code.pc;
+		
+		Code.put(Code.call);
+		Code.put2(offset);
+	}
+	
+	public void visit(ReturnWithExpr returnWithExpr) {
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+	}
+	
+	public void visit(Return returnWithoutExpr) {
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+	}
+	
+	public void visit(AddopGroupTerm addopGroupTerm) {
+		if(addopGroupTerm.getAddop().getClass() == Minus.class) {
+			Code.put(Code.sub);
+		}
+		else {
+			Code.put(Code.add);
+		}
+	}
+	
+	public void visit(AddopTerm addopTerm) {
+		if(addopTerm.getAddop().getClass() == Minus.class) {
+			Code.put(Code.sub);
+		}
+		else {
+			Code.put(Code.add);
+		}
+	}
+	
+	public void visit(MulopTerm mulopTerm) {
+		if(mulopTerm.getMulop().getClass() == ModOp.class) {
+			Code.put(Code.rem);
+		}
+		else if(mulopTerm.getMulop().getClass() == DivOp.class) {
+			Code.put(Code.div);
+		}
+		else if(mulopTerm.getMulop().getClass() == MultOp.class) {
+			Code.put(Code.mul);
+		}
+	}
+	
+	public void visit(RelopCondFactor relopCondFactor) {
+		if(relopCondFactor.getRelop().getClass() == EqRelop.class) {
+			Code.put(Code.eq);
+		}
+		else if(relopCondFactor.getRelop().getClass() == NeqRelop.class) {
+			Code.put(Code.ne);
+		}
+		else if(relopCondFactor.getRelop().getClass() == GtRelop.class) {
+			Code.put(Code.gt);
+		}
+		else if(relopCondFactor.getRelop().getClass() == GteqRelop.class) {
+			Code.put(Code.ge);
+		}
+		else if(relopCondFactor.getRelop().getClass() == LsRelop.class) {
+			Code.put(Code.lt);
+		}
+		else if(relopCondFactor.getRelop().getClass() == LseqRelop.class) {
+			Code.put(Code.le);
+		}
+	}
 }

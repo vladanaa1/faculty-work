@@ -10,14 +10,20 @@ int x;
 		return false;
 	}
 	
+	int k() int c;{
+		print(0);
+		
+		c = 2;
+		
+		return c - 2;
+	}
+	
 	void main()
 	{
 		x = 3;
 		
-		x = 4;
-	
-		print(1);
+		x = x/3;
 		
-		print(x);
+		if(false) print(x);
 	}
 }
