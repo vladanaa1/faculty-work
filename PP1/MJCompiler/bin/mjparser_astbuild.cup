@@ -255,15 +255,15 @@ Designator            ::= (DesignatorIdent) IDENT:ident {: RESULT=new Designator
 Selector              ::= (DesignatorAttribute) DOT IDENT:I1 {: RESULT=new DesignatorAttribute(I1); RESULT.setLine(I1left); :} 
                        |  (DesignatorVector) LBRACKET Expr2:E1 RBRACKET {: RESULT=new DesignatorVector(E1); RESULT.setLine(E1left); :};
 
-Condition             ::= CondTerm:C1 CondTermList:C2 {: RESULT=new ConditionDerived1(C1, C2); RESULT.setLine(C1left); :};
+Condition             ::= (Condition) CondTermList:C1 {: RESULT=new Condition(C1); RESULT.setLine(C1left); :};
 
-CondTermList          ::= CondTermList:C1 OR CondTerm:C2 {: RESULT=new CondTermListDerived1(C1, C2); RESULT.setLine(C1left); :}
-                       | {: RESULT=new CondTermListDerived2(); :}  /*epsilon*/;
+CondTermList          ::= (MultipleCondTerms) CondTermList:C1 OR CondTerm:C2 {: RESULT=new MultipleCondTerms(C1, C2); RESULT.setLine(C1left); :}
+                       |  (SingleCondTerm) CondTerm:C1 {: RESULT=new SingleCondTerm(C1); RESULT.setLine(C1left); :};
 
 CondTerm              ::= (CondTerm) CondFactList:C1 {: RESULT=new CondTerm(C1); RESULT.setLine(C1left); :};
 
-CondFactList          ::= CondFactList:C1 AND CondFact:C2 {: RESULT=new CondFactListDerived1(C1, C2); RESULT.setLine(C1left); :} 
-                       |  CondFact:C1 {: RESULT=new CondFactListDerived2(C1); RESULT.setLine(C1left); :};
+CondFactList          ::= (MultipleCondFacts) CondFactList:C1 AND CondFact:C2 {: RESULT=new MultipleCondFacts(C1, C2); RESULT.setLine(C1left); :} 
+                       |  (SingleCondFact) CondFact:C1 {: RESULT=new SingleCondFact(C1); RESULT.setLine(C1left); :};
 
 CondFact              ::= (ExprCondFactor) Expr2:E1 {: RESULT=new ExprCondFactor(E1); RESULT.setLine(E1left); :} 
                        |  (RelopCondFactor) Expr2:E1 Relop:R2 Expr2:E3 {: RESULT=new RelopCondFactor(E1, R2, E3); RESULT.setLine(E1left); :};

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2025 22:55:58
+// 12/0/2025 0:19:33
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -28,7 +28,6 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Designator Designator) { }
     public void visit(MethodName MethodName) { }
     public void visit(Term Term) { }
-    public void visit(Condition Condition) { }
     public void visit(LocalVars LocalVars) { }
     public void visit(ConstDeclList ConstDeclList) { }
     public void visit(DesignatorsOptional DesignatorsOptional) { }
@@ -99,12 +98,12 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(NegativeTermExprSum NegativeTermExprSum) { visit(); }
     public void visit(RelopCondFactor RelopCondFactor) { visit(); }
     public void visit(ExprCondFactor ExprCondFactor) { visit(); }
-    public void visit(CondFactListDerived2 CondFactListDerived2) { visit(); }
-    public void visit(CondFactListDerived1 CondFactListDerived1) { visit(); }
+    public void visit(SingleCondFact SingleCondFact) { visit(); }
+    public void visit(MultipleCondFacts MultipleCondFacts) { visit(); }
     public void visit(CondTerm CondTerm) { visit(); }
-    public void visit(CondTermListDerived2 CondTermListDerived2) { visit(); }
-    public void visit(CondTermListDerived1 CondTermListDerived1) { visit(); }
-    public void visit(ConditionDerived1 ConditionDerived1) { visit(); }
+    public void visit(SingleCondTerm SingleCondTerm) { visit(); }
+    public void visit(MultipleCondTerms MultipleCondTerms) { visit(); }
+    public void visit(Condition Condition) { visit(); }
     public void visit(DesignatorVector DesignatorVector) { visit(); }
     public void visit(DesignatorAttribute DesignatorAttribute) { visit(); }
     public void visit(DesignatorSelect DesignatorSelect) { visit(); }

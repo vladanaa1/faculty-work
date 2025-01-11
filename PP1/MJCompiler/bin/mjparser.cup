@@ -254,15 +254,15 @@ Designator            ::= (DesignatorIdent) IDENT:ident
 Selector              ::= (DesignatorAttribute) DOT IDENT 
                        |  (DesignatorVector) LBRACKET Expr2 RBRACKET;
 
-Condition             ::= CondTerm CondTermList;
+Condition             ::= (Condition) CondTermList;
 
-CondTermList          ::= CondTermList OR CondTerm
-                       |  /*epsilon*/;
+CondTermList          ::= (MultipleCondTerms) CondTermList OR CondTerm
+                       |  (SingleCondTerm) CondTerm;
 
 CondTerm              ::= (CondTerm) CondFactList;
 
-CondFactList          ::= CondFactList AND CondFact 
-                       |  CondFact;
+CondFactList          ::= (MultipleCondFacts) CondFactList AND CondFact 
+                       |  (SingleCondFact) CondFact;
 
 CondFact              ::= (ExprCondFactor) Expr2 
                        |  (RelopCondFactor) Expr2 Relop Expr2;
