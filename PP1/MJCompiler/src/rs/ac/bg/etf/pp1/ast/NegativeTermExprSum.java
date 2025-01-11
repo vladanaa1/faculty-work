@@ -1,20 +1,31 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2025 17:16:44
+// 11/0/2025 22:55:58
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class NegativeTermExprSum extends Expr2 {
 
+    private NegOp NegOp;
     private Term Term;
     private AddopGroup AddopGroup;
 
-    public NegativeTermExprSum (Term Term, AddopGroup AddopGroup) {
+    public NegativeTermExprSum (NegOp NegOp, Term Term, AddopGroup AddopGroup) {
+        this.NegOp=NegOp;
+        if(NegOp!=null) NegOp.setParent(this);
         this.Term=Term;
         if(Term!=null) Term.setParent(this);
         this.AddopGroup=AddopGroup;
         if(AddopGroup!=null) AddopGroup.setParent(this);
+    }
+
+    public NegOp getNegOp() {
+        return NegOp;
+    }
+
+    public void setNegOp(NegOp NegOp) {
+        this.NegOp=NegOp;
     }
 
     public Term getTerm() {
@@ -38,17 +49,20 @@ public class NegativeTermExprSum extends Expr2 {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(NegOp!=null) NegOp.accept(visitor);
         if(Term!=null) Term.accept(visitor);
         if(AddopGroup!=null) AddopGroup.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(NegOp!=null) NegOp.traverseTopDown(visitor);
         if(Term!=null) Term.traverseTopDown(visitor);
         if(AddopGroup!=null) AddopGroup.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(NegOp!=null) NegOp.traverseBottomUp(visitor);
         if(Term!=null) Term.traverseBottomUp(visitor);
         if(AddopGroup!=null) AddopGroup.traverseBottomUp(visitor);
         accept(visitor);
@@ -58,6 +72,12 @@ public class NegativeTermExprSum extends Expr2 {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("NegativeTermExprSum(\n");
+
+        if(NegOp!=null)
+            buffer.append(NegOp.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
 
         if(Term!=null)
             buffer.append(Term.toString("  "+tab));

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/0/2025 17:16:44
+// 11/0/2025 22:55:58
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -17,12 +17,12 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(CondTermList CondTermList) { }
     public void visit(AddopGroup AddopGroup) { }
     public void visit(VarDeclOptional VarDeclOptional) { }
+    public void visit(NegOp NegOp) { }
     public void visit(StatementList StatementList) { }
     public void visit(MethodDeclarationList MethodDeclarationList) { }
     public void visit(LocalVar LocalVar) { }
     public void visit(Addop Addop) { }
     public void visit(Factor Factor) { }
-    public void visit(CondTerm CondTerm) { }
     public void visit(CondFactList CondFactList) { }
     public void visit(MethodParameter MethodParameter) { }
     public void visit(Designator Designator) { }
@@ -92,6 +92,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(EqRelop EqRelop) { visit(); }
     public void visit(AddopTerm AddopTerm) { visit(); }
     public void visit(AddopGroupTerm AddopGroupTerm) { visit(); }
+    public void visit(NegativeOperator NegativeOperator) { visit(); }
     public void visit(NegativeTermExpr NegativeTermExpr) { visit(); }
     public void visit(TermExpr TermExpr) { visit(); }
     public void visit(TermExprSum TermExprSum) { visit(); }
@@ -100,7 +101,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ExprCondFactor ExprCondFactor) { visit(); }
     public void visit(CondFactListDerived2 CondFactListDerived2) { visit(); }
     public void visit(CondFactListDerived1 CondFactListDerived1) { visit(); }
-    public void visit(CondTermDerived1 CondTermDerived1) { visit(); }
+    public void visit(CondTerm CondTerm) { visit(); }
     public void visit(CondTermListDerived2 CondTermListDerived2) { visit(); }
     public void visit(CondTermListDerived1 CondTermListDerived1) { visit(); }
     public void visit(ConditionDerived1 ConditionDerived1) { visit(); }

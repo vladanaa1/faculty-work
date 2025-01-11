@@ -20,10 +20,10 @@ int x;
 	
 	void main()
 	{
-		x = 3;
+		i = 2;
 		
-		x = x/3;
+		x = i - 2;
 		
-		if(false) print(x);
+		if(0) print(x);
 	}
 }

@@ -174,6 +174,7 @@ nonterminal MethodArgument;
 nonterminal LocalVars, LocalVar;
 nonterminal Type;
 nonterminal Name;
+nonterminal NegOp;
 
 
 Program               ::= (Program) PROGRAM ProgramName DeclarationsList LBRACE MethodDeclarationList RBRACE;
@@ -258,7 +259,7 @@ Condition             ::= CondTerm CondTermList;
 CondTermList          ::= CondTermList OR CondTerm
                        |  /*epsilon*/;
 
-CondTerm              ::= CondFactList;
+CondTerm              ::= (CondTerm) CondFactList;
 
 CondFactList          ::= CondFactList AND CondFact 
                        |  CondFact;
@@ -266,10 +267,12 @@ CondFactList          ::= CondFactList AND CondFact
 CondFact              ::= (ExprCondFactor) Expr2 
                        |  (RelopCondFactor) Expr2 Relop Expr2;
 
-Expr2                 ::= (NegativeTermExprSum) MINUS Term AddopGroup 
+Expr2                 ::= (NegativeTermExprSum) NegOp Term AddopGroup 
                        |  (TermExprSum) Term AddopGroup 
                        |  (TermExpr) Term 
-                       |  (NegativeTermExpr) MINUS Term;
+                       |  (NegativeTermExpr) NegOp Term;
+                       
+NegOp                 ::= (NegativeOperator) MINUS;
 
 AddopGroup            ::= (AddopGroupTerm) AddopGroup Addop Term 
                        |  (AddopTerm) Addop Term;

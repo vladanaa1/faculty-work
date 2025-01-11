@@ -1,5 +1,10 @@
 package rs.ac.bg.etf.pp1;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Stack;
+
 import rs.ac.bg.etf.pp1.CounterVisitor.*;
 import rs.ac.bg.etf.pp1.ast.*;
 import rs.ac.bg.etf.pp1.ast.SyntaxNode;
@@ -12,11 +17,23 @@ import rs.etf.pp1.symboltable.concepts.Struct;
 
 public class CodeGenerator extends VisitorAdaptor {
 	
+	// EQ = 0; NE = 1; LT = 2; LE = 3; GT = 4; GE = 5;
+	private int currentCondJump = 0;
+	
+	private boolean negativeExpr = false;
+	
 	private int varCount;
 	
 	private int paramCnt;
 	
+	// Main PC
 	private int mainPc;
+	
+	// Helpers for resolving and patching conditional jumps
+	private Stack<Integer> skipJumps = new Stack<>();
+	private Stack<Integer> skipConditions = new Stack<>();
+	private Stack<Integer> skipThen = new Stack<Integer>();
+	private Map<String, List<Integer>> patchAddrs = new HashMap<>();
 	
 	public int getMainPc() {
 		return mainPc;
@@ -41,6 +58,11 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	public void visit(NumberFactor numberFactor) {
 		Code.load(new Obj(Obj.Con, "$", numberFactor.obj.getType(), numberFactor.getValue(), 0));
+		
+		if(negativeExpr) {
+			Code.put(Code.neg);
+			negativeExpr = false;
+		}
 	}
 	
 	public void visit(CharFactor charFactor) {
@@ -92,6 +114,11 @@ public class CodeGenerator extends VisitorAdaptor {
 		
 		if(DesignatorAssign.class != parent.getClass() && MethodCallFactor.class != parent.getClass()) {
 			Code.load(designatorIdent.obj);
+			
+			if(negativeExpr) {
+				Code.put(Code.neg);
+				negativeExpr = false;
+			}
 		}
 	}
 	
@@ -156,24 +183,81 @@ public class CodeGenerator extends VisitorAdaptor {
 		}
 	}
 	
+	public void visit(ExprCondFactor exprCondFactor) {
+		// IF(EXPR) <=> IF(EXPR != 0)
+		Code.loadConst(0);
+		Code.putFalseJump(Code.ne, 0); // FALSE (EXPR == 0)
+		skipJumps.push(Code.pc - 2); // TRUE (EXPR != 0, NO JUMP)
+	}
+	
 	public void visit(RelopCondFactor relopCondFactor) {
 		if(relopCondFactor.getRelop().getClass() == EqRelop.class) {
-			Code.put(Code.eq);
+			currentCondJump = Code.eq;
 		}
 		else if(relopCondFactor.getRelop().getClass() == NeqRelop.class) {
-			Code.put(Code.ne);
+			currentCondJump = Code.ne;
 		}
 		else if(relopCondFactor.getRelop().getClass() == GtRelop.class) {
-			Code.put(Code.gt);
+			currentCondJump = Code.gt;
 		}
 		else if(relopCondFactor.getRelop().getClass() == GteqRelop.class) {
-			Code.put(Code.ge);
+			currentCondJump = Code.ge;
 		}
 		else if(relopCondFactor.getRelop().getClass() == LsRelop.class) {
-			Code.put(Code.lt);
+			currentCondJump = Code.lt;
 		}
 		else if(relopCondFactor.getRelop().getClass() == LseqRelop.class) {
-			Code.put(Code.le);
+			currentCondJump = Code.le;
+		}
+		
+		Code.putFalseJump(currentCondJump, 0); // FALSE
+		skipJumps.push(Code.pc - 2); // TRUE (NO JUMP)
+	}
+	
+	public void visit(CondTerm condTerm) {
+		Code.putJump(0);
+		
+		skipConditions.push(Code.pc - 2);
+		
+		while(!skipJumps.empty()) {
+			Code.fixup(skipJumps.pop());
 		}
 	}
+	
+	public void visit(Condition condition) {
+		Code.putJump(0);
+		skipThen.push(Code.pc - 2);
+		
+		while(!skipConditions.empty()) {
+			Code.fixup(skipConditions.pop());
+		}
+	}
+	
+	public void visit(DesignatorInc designatorInc) {
+		Obj designatorObj = designatorInc.getDesignator().obj;
+		
+		// Code.put(Code.dup2);
+		
+		Code.load(designatorObj);
+		Code.loadConst(1);
+		Code.put(Code.add);
+		Code.store(designatorObj);
+	}
+	
+	public void visit(DesignatorDec designatorDec) {
+		Obj designatorObj = designatorDec.getDesignator().obj;
+		
+		// Code.put(Code.dup2);
+		
+		Code.load(designatorObj);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		Code.store(designatorObj);
+	}
+	
+	public void visit(NegativeOperator negativeOperator) {
+		negativeExpr = true;
+	}
+	
+	
 }

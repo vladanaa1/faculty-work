@@ -1,0 +1,63 @@
+INFO  22:16:20,230 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:16:20,305 - #50 test302
+INFO  22:16:20,305 - #50 int
+INFO  22:16:20,307 - #50 i
+INFO  22:16:20,308 - #37 ;
+INFO  22:16:20,310 - #50 int
+INFO  22:16:20,310 - #50 a
+INFO  22:16:20,311 - #37 ;
+INFO  22:16:20,311 - #50 int
+INFO  22:16:20,311 - #50 x
+INFO  22:16:20,312 - #37 ;
+INFO  22:16:20,312 - #45 {
+INFO  22:16:20,312 - #50 bool
+INFO  22:16:20,314 - #50 verify
+INFO  22:16:20,314 - #41 (
+INFO  22:16:20,316 - #42 )
+INFO  22:16:20,318 - #45 {
+INFO  22:16:20,322 - #48 false
+INFO  22:16:20,324 - #37 ;
+INFO  22:16:20,325 - #46 }
+INFO  22:16:20,325 - #50 int
+INFO  22:16:20,327 - #50 k
+INFO  22:16:20,330 - #41 (
+INFO  22:16:20,331 - #42 )
+INFO  22:16:20,331 - #50 int
+INFO  22:16:20,331 - #50 c
+INFO  22:16:20,332 - #37 ;
+INFO  22:16:20,332 - #45 {
+INFO  22:16:20,332 - #41 (
+INFO  22:16:20,333 - #47 0
+INFO  22:16:20,333 - #42 )
+INFO  22:16:20,333 - #37 ;
+INFO  22:16:20,334 - #50 c
+INFO  22:16:20,334 - #34 =
+INFO  22:16:20,335 - #47 2
+INFO  22:16:20,335 - #37 ;
+INFO  22:16:20,336 - #50 c
+INFO  22:16:20,336 - #22 -
+INFO  22:16:20,337 - #47 2
+INFO  22:16:20,342 - #37 ;
+INFO  22:16:20,343 - #46 }
+INFO  22:16:20,344 - #50 main
+INFO  22:16:20,346 - #41 (
+INFO  22:16:20,349 - #42 )
+INFO  22:16:20,350 - #45 {
+INFO  22:16:20,350 - #50 i
+INFO  22:16:20,351 - #34 =
+INFO  22:16:20,351 - #47 2
+INFO  22:16:20,352 - #37 ;
+INFO  22:16:20,352 - #50 x
+INFO  22:16:20,353 - #34 =
+INFO  22:16:20,354 - #22 -
+INFO  22:16:20,356 - #47 1
+INFO  22:16:20,360 - #23 *
+INFO  22:16:20,361 - #47 3
+INFO  22:16:20,363 - #21 +
+INFO  22:16:20,364 - #22 -
+ERROR 22:16:20,365 - 
+Sintaksna greska na liniji 25
+ERROR 22:16:20,365 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 25
+INFO  22:16:20,387 - Print calls = 0
+INFO  22:16:20,387 - Deklarisanih promenljivih = 0
+ERROR 22:16:20,388 - Parsiranje NIJE uspesno zavrseno!

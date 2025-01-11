@@ -175,6 +175,7 @@ nonterminal LocalVars LocalVars;
 nonterminal LocalVar LocalVar;
 nonterminal Type Type;
 nonterminal Name Name;
+nonterminal NegOp NegOp;
 
 
 Program               ::= (Program) PROGRAM ProgramName:P1 DeclarationsList:D2 LBRACE MethodDeclarationList:M3 RBRACE {: RESULT=new Program(P1, D2, M3); RESULT.setLine(P1left); :};
@@ -259,7 +260,7 @@ Condition             ::= CondTerm:C1 CondTermList:C2 {: RESULT=new ConditionDer
 CondTermList          ::= CondTermList:C1 OR CondTerm:C2 {: RESULT=new CondTermListDerived1(C1, C2); RESULT.setLine(C1left); :}
                        | {: RESULT=new CondTermListDerived2(); :}  /*epsilon*/;
 
-CondTerm              ::= CondFactList:C1 {: RESULT=new CondTermDerived1(C1); RESULT.setLine(C1left); :};
+CondTerm              ::= (CondTerm) CondFactList:C1 {: RESULT=new CondTerm(C1); RESULT.setLine(C1left); :};
 
 CondFactList          ::= CondFactList:C1 AND CondFact:C2 {: RESULT=new CondFactListDerived1(C1, C2); RESULT.setLine(C1left); :} 
                        |  CondFact:C1 {: RESULT=new CondFactListDerived2(C1); RESULT.setLine(C1left); :};
@@ -267,10 +268,12 @@ CondFactList          ::= CondFactList:C1 AND CondFact:C2 {: RESULT=new CondFact
 CondFact              ::= (ExprCondFactor) Expr2:E1 {: RESULT=new ExprCondFactor(E1); RESULT.setLine(E1left); :} 
                        |  (RelopCondFactor) Expr2:E1 Relop:R2 Expr2:E3 {: RESULT=new RelopCondFactor(E1, R2, E3); RESULT.setLine(E1left); :};
 
-Expr2                 ::= (NegativeTermExprSum) MINUS Term:T1 AddopGroup:A2 {: RESULT=new NegativeTermExprSum(T1, A2); RESULT.setLine(T1left); :} 
+Expr2                 ::= (NegativeTermExprSum) NegOp:N1 Term:T2 AddopGroup:A3 {: RESULT=new NegativeTermExprSum(N1, T2, A3); RESULT.setLine(N1left); :} 
                        |  (TermExprSum) Term:T1 AddopGroup:A2 {: RESULT=new TermExprSum(T1, A2); RESULT.setLine(T1left); :} 
                        |  (TermExpr) Term:T1 {: RESULT=new TermExpr(T1); RESULT.setLine(T1left); :} 
-                       |  (NegativeTermExpr) MINUS Term:T1 {: RESULT=new NegativeTermExpr(T1); RESULT.setLine(T1left); :};
+                       |  (NegativeTermExpr) NegOp:N1 Term:T2 {: RESULT=new NegativeTermExpr(N1, T2); RESULT.setLine(N1left); :};
+                       
+NegOp                 ::= (NegativeOperator) MINUS {: RESULT=new NegativeOperator(); :};
 
 AddopGroup            ::= (AddopGroupTerm) AddopGroup:A1 Addop:A2 Term:T3 {: RESULT=new AddopGroupTerm(A1, A2, T3); RESULT.setLine(A1left); :} 
                        |  (AddopTerm) Addop:A1 Term:T2 {: RESULT=new AddopTerm(A1, T2); RESULT.setLine(A1left); :};
