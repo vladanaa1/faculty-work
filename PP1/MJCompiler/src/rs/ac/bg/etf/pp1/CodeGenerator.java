@@ -78,6 +78,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		String ident = methodSignature.getName().getIdent();
 		
 		if(ident.equals("main")) {
+			System.out.println("main funkcija deklarisana!");
 			mainPc = Code.pc;
 		}
 		
@@ -184,6 +185,8 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(ExprCondFactor exprCondFactor) {
+		System.out.println("exprcondfactor se desava");
+		
 		// IF(EXPR) <=> IF(EXPR != 0)
 		Code.loadConst(0);
 		Code.putFalseJump(Code.ne, 0); // FALSE (EXPR == 0)
@@ -191,6 +194,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(RelopCondFactor relopCondFactor) {
+		System.out.println("relopcondfactor se desava");
 		if(relopCondFactor.getRelop().getClass() == EqRelop.class) {
 			currentCondJump = Code.eq;
 		}
@@ -215,6 +219,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(CondTerm condTerm) {
+		System.out.println("condterm se desava");
 		Code.putJump(0);
 		
 		skipConditions.push(Code.pc - 2);
@@ -225,12 +230,18 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(Condition condition) {
+		System.out.println("condition se desava");
 		Code.putJump(0);
 		skipThen.push(Code.pc - 2);
 		
 		while(!skipConditions.empty()) {
 			Code.fixup(skipConditions.pop());
 		}
+	}
+	
+	public void visit(UnmatchedIf unmatchedIf) {
+		System.out.println("unmatchedif se desava");
+		if(!skipThen.empty()) Code.fixup(skipThen.pop());
 	}
 	
 	public void visit(DesignatorInc designatorInc) {
