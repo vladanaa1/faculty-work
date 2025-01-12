@@ -1,5 +1,6 @@
 package rs.ac.bg.etf.pp1;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -35,6 +36,9 @@ public class CodeGenerator extends VisitorAdaptor {
 	private Stack<Integer> skipThen = new Stack<Integer>();
 	private Stack<Integer> skipElseJump = new Stack<Integer>();
 	private Stack<Integer> doWhileStartAddress = new Stack<Integer>();
+	
+	private Stack<List<Integer>> breakJumps = new Stack<>();
+	private Stack<List<Integer>> continueJumps = new Stack<>();
 	
 	private Map<String, List<Integer>> patchAddrs = new HashMap<>();
 	
@@ -241,7 +245,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.fixup(skipThen.pop()); // fixing-up jump in condition
 	}
 	
-	public void visit(Else elseStmt) {
+	public void visit(Else elseStatement) {
 		Code.putJump(0);
 		
 		Code.fixup(skipThen.pop()); // fixing-up jump in condition
@@ -255,32 +259,48 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	
 	public void visit(DoStatement doStatement) {
-		/*
-		currentBreakJumps.push(new ArrayList<>());
-        currentContinueJumps.push(new ArrayList<>());
-        */
-		System.out.println("doStatement se desava!");
 		doWhileStartAddress.push(Code.pc);
+		
+		breakJumps.push(new ArrayList<Integer>());
+		continueJumps.push(new ArrayList<Integer>());
 	}
 	
 	public void visit(WhileStatement whileStatement) {
-		// currentContinueJumps
+		while(!continueJumps.peek().isEmpty()) {
+			Code.fixup(continueJumps.peek().remove(0));
+		}
+		continueJumps.pop();
 	}
 	
 	public void visit(DoWhileWithCond doWhileWithCond) {
-		System.out.println("doWhileWithCond se desava!");
 		
 		Code.putJump(doWhileStartAddress.pop());
 		Code.fixup(skipThen.pop());
 		
-		// currentBreakJumps
+		while(!breakJumps.peek().isEmpty()) {
+			Code.fixup(breakJumps.peek().remove(0));
+		}
+		breakJumps.pop();
 	}
 	
 	public void visit(DoWhileWithCondNStmt doWhileWithCondNStmt) {
 		Code.putJump(doWhileStartAddress.pop());
 		Code.fixup(skipThen.pop());
 		
-		// currentBreakJumps
+		while(!breakJumps.peek().isEmpty()) {
+			Code.fixup(breakJumps.peek().remove(0));
+		}
+		breakJumps.pop();
+	}
+	
+	public void visit(Continue continueStatement) {
+		Code.putJump(0);
+		continueJumps.peek().add(Code.pc - 2);
+	}
+	
+	public void visit(Break breakStatement) {
+		Code.putJump(0);
+		breakJumps.peek().add(Code.pc - 2);
 	}
 	
 	
