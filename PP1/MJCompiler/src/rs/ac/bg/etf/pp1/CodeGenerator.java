@@ -34,6 +34,8 @@ public class CodeGenerator extends VisitorAdaptor {
 	private Stack<Integer> skipConditions = new Stack<>();
 	private Stack<Integer> skipThen = new Stack<Integer>();
 	private Stack<Integer> skipElseJump = new Stack<Integer>();
+	private Stack<Integer> doWhileStartAddress = new Stack<Integer>();
+	
 	private Map<String, List<Integer>> patchAddrs = new HashMap<>();
 	
 	public int getMainPc() {
@@ -236,20 +238,52 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(UnmatchedIf unmatchedIf) {
-		Code.fixup(skipThen.pop());
+		Code.fixup(skipThen.pop()); // fixing-up jump in condition
 	}
 	
 	public void visit(Else elseStmt) {
 		Code.putJump(0);
 		
-		Code.fixup(skipThen.pop());
+		Code.fixup(skipThen.pop()); // fixing-up jump in condition
 		
 		skipElseJump.push(Code.pc - 2);
 	}
 	
 	public void visit(MatchedIf matchedIf) {
-		Code.fixup(skipElseJump.pop());
+		Code.fixup(skipElseJump.pop()); // fixing-up jump in elseStmt
 	}
+	
+	
+	public void visit(DoStatement doStatement) {
+		/*
+		currentBreakJumps.push(new ArrayList<>());
+        currentContinueJumps.push(new ArrayList<>());
+        */
+		System.out.println("doStatement se desava!");
+		doWhileStartAddress.push(Code.pc);
+	}
+	
+	public void visit(WhileStatement whileStatement) {
+		// currentContinueJumps
+	}
+	
+	public void visit(DoWhileWithCond doWhileWithCond) {
+		System.out.println("doWhileWithCond se desava!");
+		
+		Code.putJump(doWhileStartAddress.pop());
+		Code.fixup(skipThen.pop());
+		
+		// currentBreakJumps
+	}
+	
+	public void visit(DoWhileWithCondNStmt doWhileWithCondNStmt) {
+		Code.putJump(doWhileStartAddress.pop());
+		Code.fixup(skipThen.pop());
+		
+		// currentBreakJumps
+	}
+	
+	
 	
 	public void visit(DesignatorInc designatorInc) {
 		Obj designatorObj = designatorInc.getDesignator().obj;

@@ -1,0 +1,103 @@
+INFO  16:24:39,945 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:24:40,019 - #50 test302
+INFO  16:24:40,019 - #50 int
+INFO  16:24:40,021 - #50 i
+INFO  16:24:40,022 - #37 ;
+INFO  16:24:40,023 - #50 int
+INFO  16:24:40,023 - #50 a
+INFO  16:24:40,023 - #37 ;
+INFO  16:24:40,023 - #50 int
+INFO  16:24:40,024 - #50 x
+INFO  16:24:40,024 - #37 ;
+INFO  16:24:40,024 - #45 {
+INFO  16:24:40,024 - #50 bool
+INFO  16:24:40,025 - #50 verify
+INFO  16:24:40,026 - #41 (
+INFO  16:24:40,028 - #42 )
+INFO  16:24:40,029 - #45 {
+INFO  16:24:40,033 - #48 false
+INFO  16:24:40,033 - #37 ;
+INFO  16:24:40,034 - #46 }
+INFO  16:24:40,034 - #50 int
+INFO  16:24:40,035 - #50 k
+INFO  16:24:40,039 - #41 (
+INFO  16:24:40,039 - #42 )
+INFO  16:24:40,040 - #50 int
+INFO  16:24:40,040 - #50 c
+INFO  16:24:40,040 - #37 ;
+INFO  16:24:40,040 - #45 {
+INFO  16:24:40,040 - #41 (
+INFO  16:24:40,041 - #47 0
+INFO  16:24:40,041 - #42 )
+INFO  16:24:40,041 - #37 ;
+INFO  16:24:40,041 - #50 c
+INFO  16:24:40,041 - #34 =
+INFO  16:24:40,042 - #47 2
+INFO  16:24:40,042 - #37 ;
+INFO  16:24:40,042 - #50 c
+INFO  16:24:40,042 - #22 -
+INFO  16:24:40,043 - #47 2
+INFO  16:24:40,044 - #37 ;
+INFO  16:24:40,045 - #46 }
+INFO  16:24:40,046 - #50 main
+INFO  16:24:40,047 - #41 (
+INFO  16:24:40,047 - #42 )
+INFO  16:24:40,047 - #45 {
+INFO  16:24:40,048 - #50 i
+INFO  16:24:40,048 - #34 =
+INFO  16:24:40,048 - #47 2
+INFO  16:24:40,048 - #37 ;
+INFO  16:24:40,048 - #50 x
+INFO  16:24:40,048 - #34 =
+INFO  16:24:40,049 - #50 i
+INFO  16:24:40,049 - #22 -
+INFO  16:24:40,049 - #47 1
+INFO  16:24:40,050 - #37 ;
+INFO  16:24:40,050 - #41 (
+INFO  16:24:40,050 - #50 x
+INFO  16:24:40,050 - #26 ==
+INFO  16:24:40,051 - #47 0
+INFO  16:24:40,053 - #42 )
+INFO  16:24:40,055 - #45 {
+INFO  16:24:40,056 - #41 (
+INFO  16:24:40,056 - #49 r
+INFO  16:24:40,056 - #42 )
+INFO  16:24:40,057 - #37 ;
+INFO  16:24:40,057 - #41 (
+INFO  16:24:40,057 - #49 a
+INFO  16:24:40,058 - #42 )
+INFO  16:24:40,058 - #37 ;
+INFO  16:24:40,058 - #41 (
+INFO  16:24:40,059 - #49 d
+INFO  16:24:40,059 - #42 )
+INFO  16:24:40,059 - #37 ;
+INFO  16:24:40,059 - #41 (
+INFO  16:24:40,060 - #49 i
+INFO  16:24:40,060 - #42 )
+INFO  16:24:40,060 - #37 ;
+INFO  16:24:40,060 - #41 (
+INFO  16:24:40,060 - #49 !
+INFO  16:24:40,061 - #42 )
+INFO  16:24:40,061 - #37 ;
+INFO  16:24:40,061 - #46 }
+INFO  16:24:40,062 - #41 (
+INFO  16:24:40,062 - #50 x
+INFO  16:24:40,062 - #27 !=
+INFO  16:24:40,063 - #47 0
+INFO  16:24:40,064 - #42 )
+INFO  16:24:40,065 - #45 {
+INFO  16:24:40,066 - #41 (
+INFO  16:24:40,067 - #50 x
+INFO  16:24:40,067 - #42 )
+INFO  16:24:40,067 - #37 ;
+INFO  16:24:40,067 - #46 }
+INFO  16:24:40,068 - #46 }
+INFO  16:24:40,069 - #46 }
+INFO  16:24:40,085 - Otvoren opseg za program test302 na liniji 1
+INFO  16:24:40,085 - Obradjuje se funkcija verify na liniji 8
+INFO  16:24:40,086 - Obradjuje se funkcija k na liniji 13
+INFO  16:24:40,086 - Obradjuje se funkcija main na liniji 21
+INFO  16:24:40,087 - Print calls = 7
+INFO  16:24:40,087 - Deklarisanih promenljivih = 3
+INFO  16:24:40,088 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  16:24:40,098 - Parsiranje uspesno zavrseno!
