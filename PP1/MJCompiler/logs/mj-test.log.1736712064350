@@ -1,0 +1,50 @@
+INFO  20:54:28,179 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:54:28,246 - #50 test302
+INFO  20:54:28,247 - #50 int
+INFO  20:54:28,248 - #50 i
+INFO  20:54:28,250 - #37 ;
+INFO  20:54:28,251 - #50 int
+INFO  20:54:28,251 - #50 a
+INFO  20:54:28,252 - #37 ;
+INFO  20:54:28,252 - #50 int
+INFO  20:54:28,252 - #50 x
+INFO  20:54:28,252 - #37 ;
+INFO  20:54:28,252 - #45 {
+INFO  20:54:28,253 - #50 int
+INFO  20:54:28,254 - #50 verify
+INFO  20:54:28,254 - #41 (
+INFO  20:54:28,256 - #50 int
+INFO  20:54:28,256 - #50 a
+INFO  20:54:28,256 - #42 )
+INFO  20:54:28,257 - #45 {
+INFO  20:54:28,260 - #50 a
+INFO  20:54:28,261 - #34 =
+INFO  20:54:28,261 - #47 6
+INFO  20:54:28,262 - #37 ;
+INFO  20:54:28,265 - #50 a
+INFO  20:54:28,266 - #37 ;
+INFO  20:54:28,266 - #46 }
+INFO  20:54:28,267 - #50 main
+INFO  20:54:28,268 - #41 (
+INFO  20:54:28,269 - #42 )
+INFO  20:54:28,269 - #45 {
+INFO  20:54:28,270 - #50 i
+INFO  20:54:28,270 - #34 =
+INFO  20:54:28,271 - #47 6
+INFO  20:54:28,272 - #37 ;
+INFO  20:54:28,272 - #41 (
+INFO  20:54:28,272 - #50 verify
+INFO  20:54:28,272 - #41 (
+INFO  20:54:28,272 - #47 1
+INFO  20:54:28,273 - #42 )
+INFO  20:54:28,273 - #42 )
+INFO  20:54:28,274 - #37 ;
+INFO  20:54:28,274 - #46 }
+INFO  20:54:28,274 - #46 }
+INFO  20:54:28,313 - Otvoren opseg za program test302 na liniji 1
+INFO  20:54:28,313 - Obradjuje se funkcija verify na liniji 8
+INFO  20:54:28,314 - Obradjuje se funkcija main na liniji 13
+INFO  20:54:28,315 - Diskutabilan poziv funkcije. Semantička greška na liniji 17
+INFO  20:54:28,315 - Print calls = 0
+INFO  20:54:28,316 - Deklarisanih promenljivih = 3
+ERROR 20:54:28,317 - Parsiranje NIJE uspesno zavrseno!

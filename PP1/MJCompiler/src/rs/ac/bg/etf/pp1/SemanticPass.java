@@ -30,6 +30,7 @@ public class SemanticPass extends VisitorAdaptor {
 	boolean continueFound = false;
 	boolean doWhile = false;
 	boolean mainDeclared = false;
+	boolean methodCalledInFactor = false;
 	private Struct currentType = Tab.noType;
 	
 	Stack<Obj> constants = new Stack<Obj>(); // Not used
@@ -74,6 +75,19 @@ public class SemanticPass extends VisitorAdaptor {
 	private Obj findInCurrentOrSomeOuterScope(String identName) {
         return Tab.find(identName);
     }
+	
+	private boolean checkMethodArguments(Obj method) {
+		if(method.getKind() != Obj.Meth) {
+			return false;
+		}
+		
+		if(methodCalledInFactor == false) {
+			return false;
+		}
+		
+		methodCalledInFactor = false;
+		return true;
+	}
 
 	@Override
 	public void visit(ProgramName programName) {
@@ -133,6 +147,8 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(MethodCallFactor methodCallFactor) {
 		Obj designatorObj = methodCallFactor.getDesignator().obj;
 		
+		methodCallFactor.obj = designatorObj;
+		
 		if(designatorObj == null) {
 			// DON'T CONTINUE
 			return;
@@ -182,6 +198,10 @@ public class SemanticPass extends VisitorAdaptor {
 				}
 				size--;
 			}
+		}
+		
+		if(queue.isEmpty()) {
+			methodCalledInFactor = true;
 		}
 		
 		queue.clear();
@@ -457,18 +477,30 @@ public class SemanticPass extends VisitorAdaptor {
 			return;
 		}
 		
-		if(printObj.getType().equals(Tab.charType) || printObj.getType().equals(Tab.intType)) {
-			// OK, treba provera za argumente fje
-		}
-		else {
+		if(!printObj.getType().equals(Tab.charType) && !printObj.getType().equals(Tab.intType)) {
 			report_info("Operand print instrukcije mora biti tipa *int* ili *char*. Semantička greška", printStmt);
 			errorDetected = true;
+			return;
 		}
+		
 		printCallCount++;
 	}
 	
 	@Override
 	public void visit(PrintWithComma printStmt) {
+		Obj printObj = printStmt.getExpr2().obj;
+		
+		if(printObj == null) {
+			// DON'T CONTINUE
+			return;
+		}
+		
+		if(!printObj.getType().equals(Tab.charType) && !printObj.getType().equals(Tab.intType)) {
+			report_info("Operand print instrukcije mora biti tipa *int* ili *char*. Semantička greška", printStmt);
+			errorDetected = true;
+			return;
+		}
+		
 		printCallCount++;
 	}
 	
@@ -795,6 +827,13 @@ public class SemanticPass extends VisitorAdaptor {
     @Override
     public void visit(FactorTerm factorTerm) {
         factorTerm.obj = factorTerm.getFactor().obj;
+        
+        if(factorTerm.obj.getKind() == Obj.Meth) {
+        	if(checkMethodArguments(factorTerm.obj) == false) {
+        		report_info("Diskutabilan poziv funkcije. Semantička greška", factorTerm);
+    			errorDetected  = true;
+        	}
+        }
     }
     
     @Override

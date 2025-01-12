@@ -5,29 +5,16 @@ int a;
 int x;
 
 {
-	bool verify() {
-		// print(sum); // nije dobro!!!
-		return false;
-	}
-	
-	int k() int c;{
-		print(0);
-		
-		c = 2;
-		
-		return c - 2;
+	int verify(int a) {
+		a = 6;
+		return a;
 	}
 	
 	void main()
 	{
 		i = 6;
 		
-		x = i - 1;
+		print(verify(1), 1);
 		
-		do{
-			print(x);
-			x--;
-			if(x==3) break;
-		} while(x>0);
 	}
 }

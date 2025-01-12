@@ -1,0 +1,47 @@
+INFO  20:38:27,237 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:38:27,336 - #50 test302
+INFO  20:38:27,336 - #50 int
+INFO  20:38:27,339 - #50 i
+INFO  20:38:27,341 - #37 ;
+INFO  20:38:27,342 - #50 int
+INFO  20:38:27,344 - #50 a
+INFO  20:38:27,348 - #37 ;
+INFO  20:38:27,351 - #50 int
+INFO  20:38:27,354 - #50 x
+INFO  20:38:27,356 - #37 ;
+INFO  20:38:27,357 - #45 {
+INFO  20:38:27,358 - #50 int
+INFO  20:38:27,360 - #50 verify
+INFO  20:38:27,361 - #41 (
+INFO  20:38:27,365 - #50 int
+INFO  20:38:27,366 - #50 a
+INFO  20:38:27,367 - #42 )
+INFO  20:38:27,368 - #45 {
+INFO  20:38:27,373 - #50 a
+INFO  20:38:27,374 - #34 =
+INFO  20:38:27,375 - #47 6
+INFO  20:38:27,378 - #37 ;
+INFO  20:38:27,384 - #50 a
+INFO  20:38:27,385 - #37 ;
+INFO  20:38:27,385 - #46 }
+INFO  20:38:27,388 - #50 main
+INFO  20:38:27,390 - #41 (
+INFO  20:38:27,391 - #42 )
+INFO  20:38:27,396 - #45 {
+INFO  20:38:27,397 - #50 i
+INFO  20:38:27,398 - #34 =
+INFO  20:38:27,400 - #47 6
+INFO  20:38:27,402 - #37 ;
+INFO  20:38:27,404 - #41 (
+INFO  20:38:27,405 - #50 verify
+INFO  20:38:27,405 - #42 )
+INFO  20:38:27,406 - #37 ;
+INFO  20:38:27,406 - #46 }
+INFO  20:38:27,407 - #46 }
+INFO  20:38:27,462 - Otvoren opseg za program test302 na liniji 1
+INFO  20:38:27,463 - Obradjuje se funkcija verify na liniji 8
+INFO  20:38:27,470 - Obradjuje se funkcija main na liniji 13
+INFO  20:38:27,476 - Operand print instrukcije mora biti tipa *int* ili *char*. Semantička greška na liniji 17
+INFO  20:38:27,476 - Print calls = 0
+INFO  20:38:27,477 - Deklarisanih promenljivih = 3
+ERROR 20:38:27,492 - Parsiranje NIJE uspesno zavrseno!

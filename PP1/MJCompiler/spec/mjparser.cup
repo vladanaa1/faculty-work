@@ -274,7 +274,7 @@ CondFact              ::= (ExprCondFactor) Expr2
 
 Expr2                 ::= (NegativeTermExprSum) NegOp Term AddopGroup 
                        |  (TermExprSum) Term AddopGroup 
-                       |  (TermExpr) Term 
+                       |  (TermExpr) Term
                        |  (NegativeTermExpr) NegOp Term;
                        
 NegOp                 ::= (NegativeOperator) MINUS;
