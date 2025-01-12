@@ -152,6 +152,7 @@ nonterminal StatementList;
 nonterminal Statement;
 nonterminal Matched;
 nonterminal Unmatched;
+nonterminal Else;
 nonterminal DoStatement;
 nonterminal WhileStatement;
 nonterminal DesignatorStatement;
@@ -175,6 +176,8 @@ nonterminal LocalVars, LocalVar;
 nonterminal Type;
 nonterminal Name;
 nonterminal NegOp;
+
+precedence left ELSE;
 
 
 Program               ::= (Program) PROGRAM ProgramName DeclarationsList LBRACE MethodDeclarationList RBRACE;
@@ -222,7 +225,7 @@ Statement             ::= (MatchedStatement) Matched
                        |  (UnmatchedStatement) Unmatched;
 
 Unmatched             ::= (UnmatchedIf) IF LPAREN Condition RPAREN Statement 
-                       |  (UnmatchedIfElse) IF LPAREN Condition RPAREN Matched ELSE Unmatched;
+                       |  (UnmatchedIfElse) IF LPAREN Condition RPAREN Matched Else Unmatched;
 
 Matched               ::= (DesignatorStatementMatched) DesignatorStatement SEMI
                        |  (Print) PRINT LPAREN Expr2 RPAREN SEMI
@@ -232,11 +235,13 @@ Matched               ::= (DesignatorStatementMatched) DesignatorStatement SEMI
                        |  (Read) READ LPAREN Designator RPAREN SEMI
                        |  (Continue) CONTINUE SEMI
                        |  (Break) BREAK SEMI
-                       |  (MatchedIf) IF LPAREN Condition RPAREN Matched ELSE Matched
+                       |  (MatchedIf) IF LPAREN Condition RPAREN Matched Else Matched
                        |  (DoWhile) DoStatement Statement WhileStatement LPAREN RPAREN SEMI
                        |  (DoWhileWithCond) DoStatement Statement WhileStatement LPAREN Condition RPAREN SEMI
                        |  (DoWhileWithCondNStmt) DoStatement Statement WhileStatement LPAREN Condition COMMA DesignatorStatement RPAREN SEMI
                        |  (StatementListMatched) LBRACE StatementList RBRACE;
+
+Else                  ::= (Else) ELSE;
 
 DoStatement           ::= (DoStatement) DO;            
 

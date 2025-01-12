@@ -152,6 +152,7 @@ nonterminal StatementList StatementList;
 nonterminal Statement Statement;
 nonterminal Matched Matched;
 nonterminal Unmatched Unmatched;
+nonterminal Else Else;
 nonterminal DoStatement DoStatement;
 nonterminal WhileStatement WhileStatement;
 nonterminal DesignatorStatement DesignatorStatement;
@@ -176,6 +177,8 @@ nonterminal LocalVar LocalVar;
 nonterminal Type Type;
 nonterminal Name Name;
 nonterminal NegOp NegOp;
+
+precedence left ELSE;
 
 
 Program               ::= (Program) PROGRAM ProgramName:P1 DeclarationsList:D2 LBRACE MethodDeclarationList:M3 RBRACE {: RESULT=new Program(P1, D2, M3); RESULT.setLine(P1left); :};
@@ -223,7 +226,7 @@ Statement             ::= (MatchedStatement) Matched:M1 {: RESULT=new MatchedSta
                        |  (UnmatchedStatement) Unmatched:U1 {: RESULT=new UnmatchedStatement(U1); RESULT.setLine(U1left); :};
 
 Unmatched             ::= (UnmatchedIf) IF LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new UnmatchedIf(C1, S2); RESULT.setLine(C1left); :} 
-                       |  (UnmatchedIfElse) IF LPAREN Condition:C1 RPAREN Matched:M2 ELSE Unmatched:U3 {: RESULT=new UnmatchedIfElse(C1, M2, U3); RESULT.setLine(C1left); :};
+                       |  (UnmatchedIfElse) IF LPAREN Condition:C1 RPAREN Matched:M2 Else:E3 Unmatched:U4 {: RESULT=new UnmatchedIfElse(C1, M2, E3, U4); RESULT.setLine(C1left); :};
 
 Matched               ::= (DesignatorStatementMatched) DesignatorStatement:D1 SEMI {: RESULT=new DesignatorStatementMatched(D1); RESULT.setLine(D1left); :}
                        |  (Print) PRINT LPAREN Expr2:E1 RPAREN SEMI {: RESULT=new Print(E1); RESULT.setLine(E1left); :}
@@ -233,11 +236,13 @@ Matched               ::= (DesignatorStatementMatched) DesignatorStatement:D1 SE
                        |  (Read) READ LPAREN Designator:D1 RPAREN SEMI {: RESULT=new Read(D1); RESULT.setLine(D1left); :}
                        |  (Continue) CONTINUE SEMI {: RESULT=new Continue(); :}
                        |  (Break) BREAK SEMI {: RESULT=new Break(); :}
-                       |  (MatchedIf) IF LPAREN Condition:C1 RPAREN Matched:M2 ELSE Matched:M3 {: RESULT=new MatchedIf(C1, M2, M3); RESULT.setLine(C1left); :}
+                       |  (MatchedIf) IF LPAREN Condition:C1 RPAREN Matched:M2 Else:E3 Matched:M4 {: RESULT=new MatchedIf(C1, M2, E3, M4); RESULT.setLine(C1left); :}
                        |  (DoWhile) DoStatement:D1 Statement:S2 WhileStatement:W3 LPAREN RPAREN SEMI {: RESULT=new DoWhile(D1, S2, W3); RESULT.setLine(D1left); :}
                        |  (DoWhileWithCond) DoStatement:D1 Statement:S2 WhileStatement:W3 LPAREN Condition:C4 RPAREN SEMI {: RESULT=new DoWhileWithCond(D1, S2, W3, C4); RESULT.setLine(D1left); :}
                        |  (DoWhileWithCondNStmt) DoStatement:D1 Statement:S2 WhileStatement:W3 LPAREN Condition:C4 COMMA DesignatorStatement:D5 RPAREN SEMI {: RESULT=new DoWhileWithCondNStmt(D1, S2, W3, C4, D5); RESULT.setLine(D1left); :}
                        |  (StatementListMatched) LBRACE StatementList:S1 RBRACE {: RESULT=new StatementListMatched(S1); RESULT.setLine(S1left); :};
+
+Else                  ::= (Else) ELSE {: RESULT=new Else(); :};
 
 DoStatement           ::= (DoStatement) DO {: RESULT=new DoStatement(); :};            
 

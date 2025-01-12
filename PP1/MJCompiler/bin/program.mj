@@ -22,8 +22,17 @@ int x;
 	{
 		i = 2;
 		
-		x = i - 2;
+		x = i - 1;
 		
-		if(x==0) print(x);
+		if(x==0){
+			print('r');
+			print('a');
+			print('d');
+			print('i');
+			print('!');
+		}
+		else if(x!=0){
+			print(x);
+		}
 	}
 }
