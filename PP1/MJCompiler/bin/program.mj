@@ -2,7 +2,7 @@ program test302
 
 int i;
 int a;
-int x;
+int x[];
 
 {
 	int verify(int a) {
@@ -12,9 +12,16 @@ int x;
 	
 	void main()
 	{
-		i = 6;
+	
+		i = 1;
 		
-		print(verify(1), 1);
+		x = new int[3];
+	
+		x[0] = 5;
+		x[1] = 1;
 		
+		i = x[0];
+		
+		print(i);
 	}
 }

@@ -1,0 +1,71 @@
+INFO  16:59:59,807 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:59:59,869 - #50 test302
+INFO  16:59:59,869 - #50 int
+INFO  16:59:59,871 - #50 i
+INFO  16:59:59,872 - #37 ;
+INFO  16:59:59,874 - #50 int
+INFO  16:59:59,874 - #50 a
+INFO  16:59:59,874 - #37 ;
+INFO  16:59:59,875 - #50 int
+INFO  16:59:59,875 - #50 x
+INFO  16:59:59,875 - #43 [
+INFO  16:59:59,875 - #44 ]
+INFO  16:59:59,875 - #37 ;
+INFO  16:59:59,876 - #45 {
+INFO  16:59:59,876 - #50 int
+INFO  16:59:59,877 - #50 verify
+INFO  16:59:59,878 - #41 (
+INFO  16:59:59,879 - #50 int
+INFO  16:59:59,880 - #50 a
+INFO  16:59:59,880 - #42 )
+INFO  16:59:59,880 - #45 {
+INFO  16:59:59,884 - #50 a
+INFO  16:59:59,884 - #34 =
+INFO  16:59:59,888 - #47 6
+INFO  16:59:59,888 - #37 ;
+INFO  16:59:59,889 - #50 a
+INFO  16:59:59,889 - #37 ;
+INFO  16:59:59,889 - #46 }
+INFO  16:59:59,891 - #50 main
+INFO  16:59:59,892 - #41 (
+INFO  16:59:59,892 - #42 )
+INFO  16:59:59,893 - #45 {
+INFO  16:59:59,893 - #50 x
+INFO  16:59:59,894 - #43 [
+INFO  16:59:59,894 - #47 0
+INFO  16:59:59,894 - #44 ]
+INFO  16:59:59,894 - #34 =
+INFO  16:59:59,895 - #47 1
+INFO  16:59:59,895 - #37 ;
+INFO  16:59:59,895 - #50 x
+INFO  16:59:59,896 - #43 [
+INFO  16:59:59,896 - #47 1
+INFO  16:59:59,896 - #44 ]
+INFO  16:59:59,896 - #34 =
+INFO  16:59:59,897 - #47 3
+INFO  16:59:59,897 - #37 ;
+INFO  16:59:59,898 - #50 i
+INFO  16:59:59,898 - #34 =
+INFO  16:59:59,899 - #50 x
+INFO  16:59:59,899 - #43 [
+INFO  16:59:59,899 - #47 0
+INFO  16:59:59,899 - #44 ]
+INFO  16:59:59,900 - #21 +
+INFO  16:59:59,900 - #50 x
+INFO  16:59:59,902 - #43 [
+INFO  16:59:59,902 - #47 1
+INFO  16:59:59,902 - #44 ]
+INFO  16:59:59,903 - #37 ;
+INFO  16:59:59,903 - #41 (
+INFO  16:59:59,904 - #50 i
+INFO  16:59:59,904 - #42 )
+INFO  16:59:59,904 - #37 ;
+INFO  16:59:59,905 - #46 }
+INFO  16:59:59,905 - #46 }
+INFO  16:59:59,947 - Otvoren opseg za program test302 na liniji 1
+INFO  16:59:59,948 - Obradjuje se funkcija verify na liniji 8
+INFO  16:59:59,948 - Obradjuje se funkcija main na liniji 13
+INFO  16:59:59,949 - Nepoklapanje tipova u dodeli vrednosti. Semantička greška na liniji 18
+INFO  16:59:59,950 - Print calls = 1
+INFO  16:59:59,950 - Deklarisanih promenljivih = 3
+ERROR 16:59:59,952 - Parsiranje NIJE uspesno zavrseno!

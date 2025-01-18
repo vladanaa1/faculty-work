@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/0/2025 16:12:47
+// 17/0/2025 17:54:13
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,10 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class IdentVectorMethodArgument extends MethodArgument {
 
     private String ident;
+    private LBracket LBracket;
     private Expr2 Expr2;
 
-    public IdentVectorMethodArgument (String ident, Expr2 Expr2) {
+    public IdentVectorMethodArgument (String ident, LBracket LBracket, Expr2 Expr2) {
         this.ident=ident;
+        this.LBracket=LBracket;
+        if(LBracket!=null) LBracket.setParent(this);
         this.Expr2=Expr2;
         if(Expr2!=null) Expr2.setParent(this);
     }
@@ -22,6 +25,14 @@ public class IdentVectorMethodArgument extends MethodArgument {
 
     public void setIdent(String ident) {
         this.ident=ident;
+    }
+
+    public LBracket getLBracket() {
+        return LBracket;
+    }
+
+    public void setLBracket(LBracket LBracket) {
+        this.LBracket=LBracket;
     }
 
     public Expr2 getExpr2() {
@@ -37,15 +48,18 @@ public class IdentVectorMethodArgument extends MethodArgument {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(LBracket!=null) LBracket.accept(visitor);
         if(Expr2!=null) Expr2.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(LBracket!=null) LBracket.traverseTopDown(visitor);
         if(Expr2!=null) Expr2.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(LBracket!=null) LBracket.traverseBottomUp(visitor);
         if(Expr2!=null) Expr2.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -56,6 +70,12 @@ public class IdentVectorMethodArgument extends MethodArgument {
         buffer.append("IdentVectorMethodArgument(\n");
 
         buffer.append(" "+tab+ident);
+        buffer.append("\n");
+
+        if(LBracket!=null)
+            buffer.append(LBracket.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         if(Expr2!=null)

@@ -1,0 +1,47 @@
+INFO  15:58:04,443 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  15:58:05,078 - #50 test302
+INFO  15:58:05,078 - #50 int
+INFO  15:58:05,092 - #50 i
+INFO  15:58:05,104 - #37 ;
+INFO  15:58:05,116 - #50 int
+INFO  15:58:05,117 - #50 a
+INFO  15:58:05,117 - #37 ;
+INFO  15:58:05,117 - #50 int
+INFO  15:58:05,117 - #50 x
+INFO  15:58:05,118 - #37 ;
+INFO  15:58:05,118 - #45 {
+INFO  15:58:05,118 - #50 int
+INFO  15:58:05,121 - #50 verify
+INFO  15:58:05,121 - #41 (
+INFO  15:58:05,124 - #50 int
+INFO  15:58:05,124 - #50 a
+INFO  15:58:05,124 - #42 )
+INFO  15:58:05,125 - #45 {
+INFO  15:58:05,131 - #50 a
+INFO  15:58:05,142 - #34 =
+INFO  15:58:05,143 - #47 6
+INFO  15:58:05,143 - #37 ;
+INFO  15:58:05,147 - #50 a
+INFO  15:58:05,148 - #37 ;
+INFO  15:58:05,148 - #46 }
+INFO  15:58:05,151 - #50 main
+INFO  15:58:05,162 - #41 (
+INFO  15:58:05,163 - #42 )
+INFO  15:58:05,174 - #45 {
+INFO  15:58:05,174 - #50 i
+INFO  15:58:05,174 - #34 =
+INFO  15:58:05,175 - #47 6
+INFO  15:58:05,175 - #37 ;
+INFO  15:58:05,175 - #41 (
+INFO  15:58:05,175 - #50 verify
+INFO  15:58:05,175 - #41 (
+INFO  15:58:05,176 - #47 1
+INFO  15:58:05,176 - #42 )
+INFO  15:58:05,176 - #39 ,
+INFO  15:58:05,177 - #47 1
+INFO  15:58:05,177 - #42 )
+INFO  15:58:05,177 - #37 ;
+INFO  15:58:05,178 - #50 i
+ERROR 15:58:05,178 - 
+Sintaksna greska na liniji 19
+ERROR 15:58:05,178 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 19

@@ -1,0 +1,57 @@
+INFO  16:07:08,837 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:07:08,908 - #50 test302
+INFO  16:07:08,909 - #50 int
+INFO  16:07:08,910 - #50 i
+INFO  16:07:08,911 - #37 ;
+INFO  16:07:08,913 - #50 int
+INFO  16:07:08,913 - #50 a
+INFO  16:07:08,914 - #37 ;
+INFO  16:07:08,914 - #50 int
+INFO  16:07:08,914 - #50 x
+INFO  16:07:08,914 - #37 ;
+INFO  16:07:08,915 - #45 {
+INFO  16:07:08,915 - #50 int
+INFO  16:07:08,916 - #50 verify
+INFO  16:07:08,916 - #41 (
+INFO  16:07:08,917 - #50 int
+INFO  16:07:08,918 - #50 a
+INFO  16:07:08,918 - #42 )
+INFO  16:07:08,919 - #45 {
+INFO  16:07:08,922 - #50 a
+INFO  16:07:08,923 - #34 =
+INFO  16:07:08,924 - #47 6
+INFO  16:07:08,924 - #37 ;
+INFO  16:07:08,928 - #50 a
+INFO  16:07:08,928 - #37 ;
+INFO  16:07:08,929 - #46 }
+INFO  16:07:08,931 - #50 main
+INFO  16:07:08,932 - #41 (
+INFO  16:07:08,932 - #42 )
+INFO  16:07:08,933 - #45 {
+INFO  16:07:08,933 - #50 i
+INFO  16:07:08,933 - #34 =
+INFO  16:07:08,933 - #47 6
+INFO  16:07:08,934 - #37 ;
+INFO  16:07:08,934 - #41 (
+INFO  16:07:08,934 - #50 verify
+INFO  16:07:08,934 - #41 (
+INFO  16:07:08,935 - #47 1
+INFO  16:07:08,935 - #42 )
+INFO  16:07:08,935 - #39 ,
+INFO  16:07:08,936 - #47 1
+INFO  16:07:08,936 - #42 )
+INFO  16:07:08,936 - #37 ;
+INFO  16:07:08,937 - #41 (
+INFO  16:07:08,937 - #50 verify
+INFO  16:07:08,937 - #50 x
+INFO  16:07:08,937 - #42 )
+INFO  16:07:08,940 - #37 ;
+INFO  16:07:08,940 - #46 }
+INFO  16:07:08,942 - #46 }
+INFO  16:07:08,956 - Otvoren opseg za program test302 na liniji 1
+INFO  16:07:08,956 - Obradjuje se funkcija verify na liniji 8
+INFO  16:07:08,957 - Obradjuje se funkcija main na liniji 13
+INFO  16:07:08,959 - Semantička greška u map izrazu na liniji 19
+INFO  16:07:08,960 - Print calls = 1
+INFO  16:07:08,960 - Deklarisanih promenljivih = 3
+ERROR 16:07:08,961 - Parsiranje NIJE uspesno zavrseno!

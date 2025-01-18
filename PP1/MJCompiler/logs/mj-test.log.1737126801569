@@ -1,0 +1,64 @@
+INFO  16:13:01,513 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:13:01,616 - #50 test302
+INFO  16:13:01,616 - #50 int
+INFO  16:13:01,617 - #50 i
+INFO  16:13:01,619 - #37 ;
+INFO  16:13:01,620 - #50 int
+INFO  16:13:01,621 - #50 a
+INFO  16:13:01,621 - #37 ;
+INFO  16:13:01,621 - #50 int
+INFO  16:13:01,621 - #50 x
+INFO  16:13:01,621 - #43 [
+INFO  16:13:01,622 - #44 ]
+INFO  16:13:01,622 - #37 ;
+INFO  16:13:01,622 - #45 {
+INFO  16:13:01,623 - #50 int
+INFO  16:13:01,623 - #50 verify
+INFO  16:13:01,624 - #41 (
+INFO  16:13:01,625 - #50 int
+INFO  16:13:01,625 - #50 a
+INFO  16:13:01,625 - #39 ,
+INFO  16:13:01,626 - #50 int
+INFO  16:13:01,626 - #50 b
+INFO  16:13:01,626 - #42 )
+INFO  16:13:01,629 - #45 {
+INFO  16:13:01,631 - #50 a
+INFO  16:13:01,632 - #34 =
+INFO  16:13:01,632 - #47 6
+INFO  16:13:01,632 - #37 ;
+INFO  16:13:01,633 - #50 a
+INFO  16:13:01,633 - #37 ;
+INFO  16:13:01,633 - #46 }
+INFO  16:13:01,635 - #50 main
+INFO  16:13:01,635 - #41 (
+INFO  16:13:01,636 - #42 )
+INFO  16:13:01,636 - #45 {
+INFO  16:13:01,637 - #50 i
+INFO  16:13:01,637 - #34 =
+INFO  16:13:01,637 - #47 6
+INFO  16:13:01,637 - #37 ;
+INFO  16:13:01,637 - #41 (
+INFO  16:13:01,637 - #50 verify
+INFO  16:13:01,638 - #41 (
+INFO  16:13:01,638 - #47 1
+INFO  16:13:01,638 - #39 ,
+INFO  16:13:01,639 - #47 2
+INFO  16:13:01,639 - #42 )
+INFO  16:13:01,640 - #39 ,
+INFO  16:13:01,640 - #47 1
+INFO  16:13:01,640 - #42 )
+INFO  16:13:01,641 - #37 ;
+INFO  16:13:01,641 - #41 (
+INFO  16:13:01,641 - #50 verify
+INFO  16:13:01,641 - #50 x
+INFO  16:13:01,641 - #42 )
+INFO  16:13:01,644 - #37 ;
+INFO  16:13:01,644 - #46 }
+INFO  16:13:01,645 - #46 }
+INFO  16:13:01,670 - Otvoren opseg za program test302 na liniji 1
+INFO  16:13:01,671 - Obradjuje se funkcija verify na liniji 8
+INFO  16:13:01,671 - Obradjuje se funkcija main na liniji 13
+INFO  16:13:01,672 - Semantička greška u map izrazu na liniji 19
+INFO  16:13:01,672 - Print calls = 1
+INFO  16:13:01,672 - Deklarisanih promenljivih = 3
+ERROR 16:13:01,674 - Parsiranje NIJE uspesno zavrseno!

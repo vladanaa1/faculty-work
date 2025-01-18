@@ -1,0 +1,75 @@
+INFO  22:03:48,560 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  22:03:48,659 - #50 test302
+INFO  22:03:48,660 - #50 int
+INFO  22:03:48,662 - #50 i
+INFO  22:03:48,664 - #37 ;
+INFO  22:03:48,666 - #50 int
+INFO  22:03:48,666 - #50 a
+INFO  22:03:48,666 - #37 ;
+INFO  22:03:48,667 - #50 int
+INFO  22:03:48,667 - #50 x
+INFO  22:03:48,667 - #43 [
+INFO  22:03:48,668 - #44 ]
+INFO  22:03:48,668 - #37 ;
+INFO  22:03:48,668 - #45 {
+INFO  22:03:48,668 - #50 int
+INFO  22:03:48,670 - #50 verify
+INFO  22:03:48,670 - #41 (
+INFO  22:03:48,672 - #50 int
+INFO  22:03:48,672 - #50 a
+INFO  22:03:48,672 - #42 )
+INFO  22:03:48,673 - #45 {
+INFO  22:03:48,676 - #50 a
+INFO  22:03:48,677 - #34 =
+INFO  22:03:48,681 - #47 6
+INFO  22:03:48,681 - #37 ;
+INFO  22:03:48,682 - #50 a
+INFO  22:03:48,683 - #37 ;
+INFO  22:03:48,683 - #46 }
+INFO  22:03:48,685 - #50 main
+INFO  22:03:48,686 - #41 (
+INFO  22:03:48,686 - #42 )
+INFO  22:03:48,687 - #45 {
+INFO  22:03:48,687 - #50 i
+INFO  22:03:48,687 - #34 =
+INFO  22:03:48,687 - #47 1
+INFO  22:03:48,688 - #37 ;
+INFO  22:03:48,688 - #50 x
+INFO  22:03:48,688 - #34 =
+INFO  22:03:48,688 - #50 int
+INFO  22:03:48,689 - #43 [
+INFO  22:03:48,689 - #47 3
+INFO  22:03:48,689 - #44 ]
+INFO  22:03:48,689 - #37 ;
+INFO  22:03:48,690 - #50 x
+INFO  22:03:48,690 - #43 [
+INFO  22:03:48,690 - #47 0
+INFO  22:03:48,691 - #44 ]
+INFO  22:03:48,692 - #34 =
+INFO  22:03:48,692 - #47 5
+INFO  22:03:48,692 - #37 ;
+INFO  22:03:48,693 - #50 x
+INFO  22:03:48,693 - #43 [
+INFO  22:03:48,693 - #47 1
+INFO  22:03:48,693 - #44 ]
+INFO  22:03:48,693 - #34 =
+INFO  22:03:48,694 - #47 1
+INFO  22:03:48,694 - #37 ;
+INFO  22:03:48,694 - #50 i
+INFO  22:03:48,694 - #34 =
+INFO  22:03:48,694 - #22 -
+INFO  22:03:48,695 - #47 3
+INFO  22:03:48,698 - #37 ;
+INFO  22:03:48,699 - #41 (
+INFO  22:03:48,699 - #50 i
+INFO  22:03:48,699 - #42 )
+INFO  22:03:48,700 - #37 ;
+INFO  22:03:48,700 - #46 }
+INFO  22:03:48,700 - #46 }
+INFO  22:03:48,717 - Otvoren opseg za program test302 na liniji 1
+INFO  22:03:48,718 - Obradjuje se funkcija verify na liniji 8
+INFO  22:03:48,718 - Obradjuje se funkcija main na liniji 13
+INFO  22:03:48,719 - Print calls = 1
+INFO  22:03:48,719 - Deklarisanih promenljivih = 3
+INFO  22:03:48,720 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  22:03:48,760 - Parsiranje uspesno zavrseno!

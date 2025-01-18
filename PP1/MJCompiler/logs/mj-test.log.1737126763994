@@ -1,0 +1,59 @@
+INFO  16:07:22,308 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:07:22,386 - #50 test302
+INFO  16:07:22,386 - #50 int
+INFO  16:07:22,388 - #50 i
+INFO  16:07:22,389 - #37 ;
+INFO  16:07:22,391 - #50 int
+INFO  16:07:22,391 - #50 a
+INFO  16:07:22,392 - #37 ;
+INFO  16:07:22,392 - #50 int
+INFO  16:07:22,392 - #50 x
+INFO  16:07:22,392 - #43 [
+INFO  16:07:22,392 - #44 ]
+INFO  16:07:22,393 - #37 ;
+INFO  16:07:22,393 - #45 {
+INFO  16:07:22,393 - #50 int
+INFO  16:07:22,394 - #50 verify
+INFO  16:07:22,395 - #41 (
+INFO  16:07:22,396 - #50 int
+INFO  16:07:22,396 - #50 a
+INFO  16:07:22,396 - #42 )
+INFO  16:07:22,397 - #45 {
+INFO  16:07:22,400 - #50 a
+INFO  16:07:22,401 - #34 =
+INFO  16:07:22,404 - #47 6
+INFO  16:07:22,404 - #37 ;
+INFO  16:07:22,405 - #50 a
+INFO  16:07:22,405 - #37 ;
+INFO  16:07:22,406 - #46 }
+INFO  16:07:22,407 - #50 main
+INFO  16:07:22,409 - #41 (
+INFO  16:07:22,409 - #42 )
+INFO  16:07:22,410 - #45 {
+INFO  16:07:22,410 - #50 i
+INFO  16:07:22,411 - #34 =
+INFO  16:07:22,411 - #47 6
+INFO  16:07:22,411 - #37 ;
+INFO  16:07:22,412 - #41 (
+INFO  16:07:22,412 - #50 verify
+INFO  16:07:22,412 - #41 (
+INFO  16:07:22,412 - #47 1
+INFO  16:07:22,413 - #42 )
+INFO  16:07:22,414 - #39 ,
+INFO  16:07:22,416 - #47 1
+INFO  16:07:22,416 - #42 )
+INFO  16:07:22,416 - #37 ;
+INFO  16:07:22,417 - #41 (
+INFO  16:07:22,417 - #50 verify
+INFO  16:07:22,418 - #50 x
+INFO  16:07:22,418 - #42 )
+INFO  16:07:22,421 - #37 ;
+INFO  16:07:22,421 - #46 }
+INFO  16:07:22,425 - #46 }
+INFO  16:07:22,443 - Otvoren opseg za program test302 na liniji 1
+INFO  16:07:22,444 - Obradjuje se funkcija verify na liniji 8
+INFO  16:07:22,445 - Obradjuje se funkcija main na liniji 13
+INFO  16:07:22,446 - Print calls = 1
+INFO  16:07:22,449 - Deklarisanih promenljivih = 3
+INFO  16:07:22,451 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  16:07:22,462 - Parsiranje uspesno zavrseno!

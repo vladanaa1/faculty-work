@@ -8,9 +8,6 @@ import java.util.Stack;
 
 import rs.ac.bg.etf.pp1.CounterVisitor.*;
 import rs.ac.bg.etf.pp1.ast.*;
-import rs.ac.bg.etf.pp1.ast.SyntaxNode;
-import rs.ac.bg.etf.pp1.ast.VarDecl;
-import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
 import rs.etf.pp1.mj.runtime.Code;
 import rs.etf.pp1.symboltable.Tab;
 import rs.etf.pp1.symboltable.concepts.Obj;
@@ -40,7 +37,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	private Stack<List<Integer>> breakJumps = new Stack<>();
 	private Stack<List<Integer>> continueJumps = new Stack<>();
 	
-	private Map<String, List<Integer>> patchAddrs = new HashMap<>();
+	private Stack<Obj> thisParameterObjs = new Stack<>();
 	
 	public int getMainPc() {
 		return mainPc;
@@ -62,6 +59,24 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.put(Code.bprint);
 		}
 	}
+	
+	public void visit(PrintWithComma printWithComma) {
+		Obj printObj = printWithComma.getExpr2().obj;
+		
+		if(printObj == null) {
+			return;
+		}
+		
+		if(printObj.getType().equals(Tab.intType)) {
+			Code.loadConst(5);
+			Code.put(Code.print);
+		}
+		else if(printObj.getType().equals(Tab.charType)) {
+			Code.loadConst(1);
+			Code.put(Code.bprint);
+		}
+	}
+	
 	
 	public void visit(NumberFactor numberFactor) {
 		Code.load(new Obj(Obj.Con, "$", numberFactor.obj.getType(), numberFactor.getValue(), 0));
@@ -113,7 +128,15 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(DesignatorAssign designatorAssign) {
-		Code.store(designatorAssign.getDesignator().obj);
+		Designator designator = designatorAssign.getDesignator();
+		
+		if(designator.getClass() == DesignatorSelect.class) {
+			Code.put(Code.astore);
+		}
+		else {
+			Code.store(designatorAssign.getDesignator().obj);
+		}
+		
 	}
 	
 	public void visit(DesignatorIdent designatorIdent) {
@@ -148,6 +171,22 @@ public class CodeGenerator extends VisitorAdaptor {
 		
 		Code.put(Code.call);
 		Code.put2(offset);
+		
+		if(!functionObj.getType().equals(Tab.noType)) {
+			Code.put(Code.pop);
+		}
+	}
+	
+	public void visit(NewVectorFactor newVectorFactor) {
+		Code.put(Code.newarray);
+		
+		Obj arrayFactor = newVectorFactor.obj;
+		
+		if(arrayFactor.getType().getElemType().equals(Tab.intType)) {
+			Code.put(1);
+		}
+		else
+			Code.put(0);
 	}
 	
 	public void visit(ReturnWithExpr returnWithExpr) {
@@ -158,6 +197,16 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(Return returnWithoutExpr) {
 		Code.put(Code.exit);
 		Code.put(Code.return_);
+	}
+	
+	public void visit(DesignatorMapExpr designatorMapExpr) {
+		/*
+		Funkcija predstavljena levim neterminalom Designator se poziva za sve elemente niza 
+		predstavljenim desnim neterminalom Designator. Dobijeni neterminal Expr predstavlja zbir povratnih 
+		vrednosti svih izvršenih poziva funkcije.
+		*/
+		
+		
 	}
 	
 	public void visit(AddopGroupTerm addopGroupTerm) {
@@ -302,8 +351,6 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.putJump(0);
 		breakJumps.peek().add(Code.pc - 2);
 	}
-	
-	
 	
 	public void visit(DesignatorInc designatorInc) {
 		Obj designatorObj = designatorInc.getDesignator().obj;

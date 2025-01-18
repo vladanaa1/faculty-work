@@ -176,6 +176,7 @@ nonterminal LocalVars, LocalVar;
 nonterminal Type;
 nonterminal Name;
 nonterminal NegOp;
+nonterminal LBracket;
 
 precedence left ELSE;
 
@@ -256,8 +257,8 @@ DesignatorStatement   ::= (DesignatorAssign) Designator ASSIGN Expr2
 Designator            ::= (DesignatorIdent) IDENT:ident
                        |  (DesignatorSelect) Designator Selector;
 
-Selector              ::= (DesignatorAttribute) DOT IDENT 
-                       |  (DesignatorVector) LBRACKET Expr2 RBRACKET;
+Selector              ::= (DesignatorAttribute) DOT IDENT
+                       |  (DesignatorVector) LBracket Expr2 RBRACKET;
 
 Condition             ::= (Condition) CondTermList;
 
@@ -275,7 +276,8 @@ CondFact              ::= (ExprCondFactor) Expr2
 Expr2                 ::= (NegativeTermExprSum) NegOp Term AddopGroup 
                        |  (TermExprSum) Term AddopGroup 
                        |  (TermExpr) Term
-                       |  (NegativeTermExpr) NegOp Term;
+                       |  (NegativeTermExpr) NegOp Term
+                       |  (DesignatorMapExpr) Designator MAP Designator;
                        
 NegOp                 ::= (NegativeOperator) MINUS;
 
@@ -334,8 +336,10 @@ MethodArgumentList    ::= (MultipleMethodArguments) MethodArgumentList COMMA Met
                        |  (SingleMethodArgument) MethodArgument;
 
 MethodArgument        ::= (IdentMethodArgument) IDENT:ident
-                       |  (IdentVectorMethodArgument) IDENT:ident LBRACKET Expr2 RBRACKET
+                       |  (IdentVectorMethodArgument) IDENT:ident LBracket Expr2 RBRACKET
                        |  (LiteralMethodArgument) Literal;
+                       
+LBracket              ::= (LBracket) LBRACKET;
 
 
 

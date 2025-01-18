@@ -177,6 +177,7 @@ nonterminal LocalVar LocalVar;
 nonterminal Type Type;
 nonterminal Name Name;
 nonterminal NegOp NegOp;
+nonterminal LBracket LBracket;
 
 precedence left ELSE;
 
@@ -258,7 +259,7 @@ Designator            ::= (DesignatorIdent) IDENT:ident {: RESULT=new Designator
                        |  (DesignatorSelect) Designator:D1 Selector:S2 {: RESULT=new DesignatorSelect(D1, S2); RESULT.setLine(D1left); :};
 
 Selector              ::= (DesignatorAttribute) DOT IDENT:I1 {: RESULT=new DesignatorAttribute(I1); RESULT.setLine(I1left); :} 
-                       |  (DesignatorVector) LBRACKET Expr2:E1 RBRACKET {: RESULT=new DesignatorVector(E1); RESULT.setLine(E1left); :};
+                       |  (DesignatorVector) LBracket:L1 Expr2:E2 RBRACKET {: RESULT=new DesignatorVector(L1, E2); RESULT.setLine(L1left); :};
 
 Condition             ::= (Condition) CondTermList:C1 {: RESULT=new Condition(C1); RESULT.setLine(C1left); :};
 
@@ -275,8 +276,9 @@ CondFact              ::= (ExprCondFactor) Expr2:E1 {: RESULT=new ExprCondFactor
 
 Expr2                 ::= (NegativeTermExprSum) NegOp:N1 Term:T2 AddopGroup:A3 {: RESULT=new NegativeTermExprSum(N1, T2, A3); RESULT.setLine(N1left); :} 
                        |  (TermExprSum) Term:T1 AddopGroup:A2 {: RESULT=new TermExprSum(T1, A2); RESULT.setLine(T1left); :} 
-                       |  (TermExpr) Term:T1 {: RESULT=new TermExpr(T1); RESULT.setLine(T1left); :} 
-                       |  (NegativeTermExpr) NegOp:N1 Term:T2 {: RESULT=new NegativeTermExpr(N1, T2); RESULT.setLine(N1left); :};
+                       |  (TermExpr) Term:T1 {: RESULT=new TermExpr(T1); RESULT.setLine(T1left); :}
+                       |  (NegativeTermExpr) NegOp:N1 Term:T2 {: RESULT=new NegativeTermExpr(N1, T2); RESULT.setLine(N1left); :}
+                       |  (DesignatorMapExpr) Designator:D1 MAP Designator:D2 {: RESULT=new DesignatorMapExpr(D1, D2); RESULT.setLine(D1left); :};
                        
 NegOp                 ::= (NegativeOperator) MINUS {: RESULT=new NegativeOperator(); :};
 
@@ -335,8 +337,10 @@ MethodArgumentList    ::= (MultipleMethodArguments) MethodArgumentList:M1 COMMA 
                        |  (SingleMethodArgument) MethodArgument:M1 {: RESULT=new SingleMethodArgument(M1); RESULT.setLine(M1left); :};
 
 MethodArgument        ::= (IdentMethodArgument) IDENT:ident {: RESULT=new IdentMethodArgument(ident); RESULT.setLine(identleft); :}
-                       |  (IdentVectorMethodArgument) IDENT:ident LBRACKET Expr2:E1 RBRACKET {: RESULT=new IdentVectorMethodArgument(ident, E1); RESULT.setLine(identleft); :}
+                       |  (IdentVectorMethodArgument) IDENT:ident LBracket:L1 Expr2:E2 RBRACKET {: RESULT=new IdentVectorMethodArgument(ident, L1, E2); RESULT.setLine(identleft); :}
                        |  (LiteralMethodArgument) Literal:L1 {: RESULT=new LiteralMethodArgument(L1); RESULT.setLine(L1left); :};
+                       
+LBracket              ::= (LBracket) LBRACKET {: RESULT=new LBracket(); :};
 
 
 

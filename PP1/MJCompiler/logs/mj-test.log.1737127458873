@@ -1,0 +1,55 @@
+INFO  16:21:48,719 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:21:48,794 - #50 test302
+INFO  16:21:48,795 - #50 int
+INFO  16:21:48,796 - #50 i
+INFO  16:21:48,797 - #37 ;
+INFO  16:21:48,798 - #50 int
+INFO  16:21:48,799 - #50 a
+INFO  16:21:48,799 - #37 ;
+INFO  16:21:48,799 - #50 int
+INFO  16:21:48,800 - #50 x
+INFO  16:21:48,800 - #43 [
+INFO  16:21:48,800 - #44 ]
+INFO  16:21:48,800 - #37 ;
+INFO  16:21:48,801 - #45 {
+INFO  16:21:48,801 - #50 int
+INFO  16:21:48,802 - #50 verify
+INFO  16:21:48,802 - #41 (
+INFO  16:21:48,804 - #50 int
+INFO  16:21:48,804 - #50 a
+INFO  16:21:48,804 - #42 )
+INFO  16:21:48,805 - #45 {
+INFO  16:21:48,808 - #50 a
+INFO  16:21:48,809 - #34 =
+INFO  16:21:48,812 - #47 6
+INFO  16:21:48,812 - #37 ;
+INFO  16:21:48,813 - #50 a
+INFO  16:21:48,814 - #37 ;
+INFO  16:21:48,814 - #46 }
+INFO  16:21:48,815 - #50 main
+INFO  16:21:48,817 - #41 (
+INFO  16:21:48,817 - #42 )
+INFO  16:21:48,818 - #45 {
+INFO  16:21:48,818 - #50 x
+INFO  16:21:48,818 - #43 [
+INFO  16:21:48,818 - #47 0
+INFO  16:21:48,819 - #44 ]
+INFO  16:21:48,819 - #34 =
+INFO  16:21:48,819 - #47 1
+INFO  16:21:48,820 - #37 ;
+INFO  16:21:48,820 - #41 (
+INFO  16:21:48,820 - #50 x
+INFO  16:21:48,820 - #43 [
+INFO  16:21:48,820 - #47 0
+INFO  16:21:48,821 - #44 ]
+INFO  16:21:48,821 - #42 )
+INFO  16:21:48,821 - #37 ;
+INFO  16:21:48,821 - #46 }
+INFO  16:21:48,822 - #46 }
+INFO  16:21:48,835 - Otvoren opseg za program test302 na liniji 1
+INFO  16:21:48,836 - Obradjuje se funkcija verify na liniji 8
+INFO  16:21:48,836 - Obradjuje se funkcija main na liniji 13
+INFO  16:21:48,837 - Operand print instrukcije mora biti tipa *int* ili *char*. Semantička greška na liniji 17
+INFO  16:21:48,838 - Print calls = 0
+INFO  16:21:48,838 - Deklarisanih promenljivih = 3
+ERROR 16:21:48,841 - Parsiranje NIJE uspesno zavrseno!

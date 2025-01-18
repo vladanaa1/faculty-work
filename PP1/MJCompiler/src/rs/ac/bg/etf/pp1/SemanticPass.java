@@ -20,8 +20,8 @@ public class SemanticPass extends VisitorAdaptor {
 	Struct boolType = new Struct(Struct.Bool);
 	
 	int printCallCount = 0;
-	int VarDeclCount = 0; // Global Vars Count
-	int ConstDeclCount = 0; // Global Constants Count
+	int VarDeclCount = 0; // Global Variable Count
+	int ConstDeclCount = 0; // Global Constant Count
 	Obj currentMethod = null;
 	Struct currentMethodReturnType = Tab.noType;
 	int currentMethodParameters = 0;
@@ -274,7 +274,8 @@ public class SemanticPass extends VisitorAdaptor {
 			}
 		}
 		else {
-			if(designatorType.getKind() == Struct.Array && expressionType.equals(designatorType.getElemType())) {
+			if((designatorType.getKind() == Struct.Array && expressionType.equals(designatorType.getElemType())) ||
+					(expressionType.getKind() == Struct.Array && designatorType.equals(expressionType.getElemType()))) {
 				// Ok
 			}
 			else {
@@ -477,7 +478,14 @@ public class SemanticPass extends VisitorAdaptor {
 			return;
 		}
 		
-		if(!printObj.getType().equals(Tab.charType) && !printObj.getType().equals(Tab.intType)) {
+		if(printObj.getType().equals(Tab.charType) || printObj.getType().equals(Tab.intType)) {
+			// OK
+		}
+		else if(printObj.getType().getKind() == Struct.Array &&
+				(printObj.getType().getElemType().equals(Tab.charType) || printObj.getType().getElemType().equals(Tab.intType))) {
+			// OK
+		}
+		else {
 			report_info("Operand print instrukcije mora biti tipa *int* ili *char*. Semantička greška", printStmt);
 			errorDetected = true;
 			return;
@@ -495,7 +503,14 @@ public class SemanticPass extends VisitorAdaptor {
 			return;
 		}
 		
-		if(!printObj.getType().equals(Tab.charType) && !printObj.getType().equals(Tab.intType)) {
+		if(printObj.getType().equals(Tab.charType) || printObj.getType().equals(Tab.intType)) {
+			// OK
+		}
+		else if(printObj.getType().getKind() == Struct.Array &&
+				(printObj.getType().getElemType().equals(Tab.charType) || printObj.getType().getElemType().equals(Tab.intType))) {
+			// OK
+		}
+		else {
 			report_info("Operand print instrukcije mora biti tipa *int* ili *char*. Semantička greška", printStmt);
 			errorDetected = true;
 			return;
@@ -607,7 +622,7 @@ public class SemanticPass extends VisitorAdaptor {
 			// VarDeclCount++;
 		}
 		else {
-			report_info("Detektovana dvostruka deklaracija promenljive " + ident + " .Semantička greška", singleVarDecl);
+			report_info("Detektovana dvostruka deklaracija promenljive " + ident + ". Semantička greška", singleVarDecl);
 			errorDetected  = true;
 		}
 	}
@@ -624,7 +639,7 @@ public class SemanticPass extends VisitorAdaptor {
 			// VarDeclCount++;
 		}
 		else {
-			report_info("Detektovana dvostruka deklaracija promenljive " + ident + " .Semantička greška", singleVarDeclVector);
+			report_info("Detektovana dvostruka deklaracija promenljive " + ident + ". Semantička greška", singleVarDeclVector);
 			errorDetected  = true;
 		}
 	}
@@ -641,7 +656,7 @@ public class SemanticPass extends VisitorAdaptor {
 			// VarDeclCount++;
 		}
 		else {
-			report_info("Detektovana dvostruka deklaracija promenljive " + ident + " .Semantička greška", multipleVarDecl);
+			report_info("Detektovana dvostruka deklaracija promenljive " + ident + ". Semantička greška", multipleVarDecl);
 			errorDetected  = true;
 		}
 	}
@@ -658,7 +673,7 @@ public class SemanticPass extends VisitorAdaptor {
 			// VarDeclCount++;
 		}
 		else {
-			report_info("Detektovana dvostruka deklaracija promenljive " + ident + " .Semantička greška", multipleVarDeclVector);
+			report_info("Detektovana dvostruka deklaracija promenljive " + ident + ". Semantička greška", multipleVarDeclVector);
 			errorDetected  = true;
 		}
 	}
@@ -766,6 +781,30 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	@Override
+	public void visit(DesignatorMapExpr designatorMapExpr) {
+		Obj funDesignator = designatorMapExpr.getDesignator().obj;
+		
+		Obj arrDesignator = designatorMapExpr.getDesignator1().obj;
+		
+		if(funDesignator == null || arrDesignator == null) {
+			report_info("neki od ovih je null", designatorMapExpr);
+			return;
+		}
+		
+		if(funDesignator.getKind() != Obj.Meth || !funDesignator.getType().equals(Tab.intType) || funDesignator.getLevel() != 1) {
+			report_info("Semantička greška u map izrazu", designatorMapExpr);
+			errorDetected  = true;
+			return;
+		}
+		
+		if(arrDesignator.getType().getKind() != Struct.Array || !arrDesignator.getType().getElemType().equals(Tab.intType)) {
+			report_info("Semantička greška u map izrazu", designatorMapExpr);
+			errorDetected  = true;
+			return;
+		}
+	}
+	
+	@Override
 	public void visit(AddopTerm addopTerm) {
 		Obj addopTermObj = addopTerm.getTerm().obj;
 		
@@ -850,6 +889,13 @@ public class SemanticPass extends VisitorAdaptor {
     @Override
     public void visit(BoolFactor boolFactor) {
         boolFactor.obj = new Obj(Obj.Con, "", boolType, boolFactor.getValue() ? 1 : 0, 1);
+    }
+    
+    @Override
+    public void visit(NewVectorFactor newVectorFactor) {
+    	Struct arrayType = new Struct(Struct.Array);
+    	arrayType.setElementType(currentType);
+    	newVectorFactor.obj = new Obj(Obj.Var, "", arrayType);
     }
     
     @Override
