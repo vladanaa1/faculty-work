@@ -264,7 +264,7 @@ public class SemanticPass extends VisitorAdaptor {
 		Struct expressionType = expressionObj.getType();
 		
 		if(designatorType.equals(expressionType)) {
-			if(designatorObj.getKind() != Obj.Var) {
+			if(designatorObj.getKind() != Obj.Var && designatorObj.getKind() != Obj.Elem) {
 				// Error
 				report_info("Na levoj strani dodele mora biti promenljiva ili niz. Semantička greška", designatorAssign);
 				errorDetected = true;
@@ -288,7 +288,20 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(DesignatorSelect desSelect) {
-		desSelect.obj = desSelect.getDesignator().obj;
+		Obj arrObj = desSelect.getDesignator().obj;
+		
+		if(arrObj == Tab.noObj) {
+			desSelect.obj = Tab.noObj;
+		}
+		else if(!desSelect.getSelector().getExpr2().obj.getType().equals(Tab.intType)) {
+			report_info("Indeks niza mora biti *int* tipa. Semantička greška", desSelect);
+			errorDetected = true;
+			desSelect.obj = Tab.noObj;
+			return;
+		}
+		else {
+			desSelect.obj = new Obj(Obj.Elem, arrObj.getName() + "[$]", arrObj.getType().getElemType());
+		}
 	}
 	
 	@Override
@@ -418,11 +431,25 @@ public class SemanticPass extends VisitorAdaptor {
 			}
 			else {
 				// Found in global scope
+				/*
+				if(designatorObj.getType().getKind() == Struct.Array && designatorIdent.getParent().getClass() == DesignatorSelect.class) {
+					// Found in global scope, Elem of an Array
+					designatorIdent.obj = new Obj(Obj.Elem, ident, designatorObj.getType().getElemType());
+				}
+				else designatorIdent.obj = designatorObj;
+				*/
 				designatorIdent.obj = designatorObj;
 			}
 		}
 		else {
 			// Found in local scope
+			/*
+			if(designatorObj.getType().getKind() == Struct.Array && designatorIdent.getParent().getClass() == DesignatorSelect.class) {
+				// Found in global scope, Elem of an Array
+				designatorIdent.obj = new Obj(Obj.Elem, ident, designatorObj.getType().getElemType());
+			}
+			else designatorIdent.obj = designatorObj;
+			*/
 			designatorIdent.obj = designatorObj;
 		}
 	}
@@ -550,6 +577,7 @@ public class SemanticPass extends VisitorAdaptor {
 		}
 	}
 	
+	/*
 	@Override
 	public void visit(DesignatorVector vector) {
 		Obj vectorObj = vector.getExpr2().obj;
@@ -564,6 +592,7 @@ public class SemanticPass extends VisitorAdaptor {
 			errorDetected = true;
 		}
 	}
+	*/
 	
 	@Override
 	public void visit(Const constant) {
@@ -812,7 +841,8 @@ public class SemanticPass extends VisitorAdaptor {
 		
 		if((addopTermObj.getKind() == Obj.Con && addopTermObj.getType().equals(Tab.intType)) ||
 				(addopTermObj.getKind() == Obj.Var && addopTermObj.getType().equals(Tab.intType)) ||
-				(addopTermObj.getType().getKind() == Struct.Array && addopTermObj.getType().getElemType().equals(Tab.intType))) {
+				(addopTermObj.getType().getKind() == Struct.Array && addopTermObj.getType().getElemType().equals(Tab.intType)) ||
+				(addopTermObj.getKind() == Obj.Elem && addopTermObj.getType().equals(Tab.intType))) {
 			// OK
 			// addopTerm.obj = addopTermObj;
 		}
@@ -833,7 +863,8 @@ public class SemanticPass extends VisitorAdaptor {
 		
 		if((factor.getKind() == Obj.Con && factor.getType().equals(Tab.intType)) ||
 				(factor.getKind() == Obj.Var && factor.getType().equals(Tab.intType)) ||
-				(factor.getType().getKind() == Struct.Array && factor.getType().getElemType().equals(Tab.intType))) {
+				(factor.getType().getKind() == Struct.Array && factor.getType().getElemType().equals(Tab.intType)) ||
+				(factor.getKind() == Obj.Elem && factor.getType().equals(Tab.intType))) {
 			// OK
 			mulopTerm.obj = factor;
 		}
@@ -893,8 +924,7 @@ public class SemanticPass extends VisitorAdaptor {
     
     @Override
     public void visit(NewVectorFactor newVectorFactor) {
-    	Struct arrayType = new Struct(Struct.Array);
-    	arrayType.setElementType(currentType);
+    	Struct arrayType = new Struct(Struct.Array, currentType);
     	newVectorFactor.obj = new Obj(Obj.Var, "", arrayType);
     }
     

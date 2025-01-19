@@ -1,0 +1,78 @@
+INFO  23:06:41,630 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:06:42,623 - #50 test302
+INFO  23:06:42,623 - #50 int
+INFO  23:06:42,646 - #50 i
+INFO  23:06:42,659 - #37 ;
+INFO  23:06:42,671 - #50 int
+INFO  23:06:42,672 - #50 a
+INFO  23:06:42,672 - #37 ;
+INFO  23:06:42,672 - #50 int
+INFO  23:06:42,672 - #50 x
+INFO  23:06:42,672 - #43 [
+INFO  23:06:42,673 - #44 ]
+INFO  23:06:42,673 - #37 ;
+INFO  23:06:42,673 - #45 {
+INFO  23:06:42,674 - #50 int
+INFO  23:06:42,685 - #50 verify
+INFO  23:06:42,685 - #41 (
+INFO  23:06:42,701 - #50 int
+INFO  23:06:42,701 - #50 a
+INFO  23:06:42,702 - #42 )
+INFO  23:06:42,702 - #45 {
+INFO  23:06:42,735 - #50 a
+INFO  23:06:42,738 - #34 =
+INFO  23:06:42,742 - #47 6
+INFO  23:06:42,742 - #37 ;
+INFO  23:06:42,744 - #50 a
+INFO  23:06:42,744 - #37 ;
+INFO  23:06:42,744 - #46 }
+INFO  23:06:42,747 - #50 main
+INFO  23:06:42,759 - #41 (
+INFO  23:06:42,759 - #42 )
+INFO  23:06:42,762 - #45 {
+INFO  23:06:42,762 - #50 i
+INFO  23:06:42,762 - #34 =
+INFO  23:06:42,762 - #47 1
+INFO  23:06:42,762 - #37 ;
+INFO  23:06:42,763 - #50 x
+INFO  23:06:42,763 - #34 =
+INFO  23:06:42,763 - #50 int
+INFO  23:06:42,763 - #43 [
+INFO  23:06:42,764 - #47 3
+INFO  23:06:42,764 - #44 ]
+INFO  23:06:42,764 - #37 ;
+INFO  23:06:42,765 - #50 x
+INFO  23:06:42,765 - #43 [
+INFO  23:06:42,765 - #47 0
+INFO  23:06:42,767 - #44 ]
+INFO  23:06:42,768 - #34 =
+INFO  23:06:42,768 - #47 5
+INFO  23:06:42,769 - #37 ;
+INFO  23:06:42,769 - #50 x
+INFO  23:06:42,769 - #43 [
+INFO  23:06:42,769 - #47 1
+INFO  23:06:42,769 - #44 ]
+INFO  23:06:42,770 - #34 =
+INFO  23:06:42,770 - #47 1
+INFO  23:06:42,770 - #37 ;
+INFO  23:06:42,770 - #50 i
+INFO  23:06:42,770 - #34 =
+INFO  23:06:42,771 - #50 x
+INFO  23:06:42,771 - #43 [
+INFO  23:06:42,771 - #47 0
+INFO  23:06:42,771 - #44 ]
+INFO  23:06:42,771 - #37 ;
+INFO  23:06:42,772 - #41 (
+INFO  23:06:42,772 - #50 i
+INFO  23:06:42,772 - #42 )
+INFO  23:06:42,773 - #37 ;
+INFO  23:06:42,773 - #46 }
+INFO  23:06:42,774 - #46 }
+INFO  23:06:42,834 - Otvoren opseg za program test302 na liniji 1
+INFO  23:06:42,834 - Obradjuje se funkcija verify na liniji 8
+INFO  23:06:42,835 - Obradjuje se funkcija main na liniji 13
+INFO  23:06:42,836 - Na levoj strani dodele mora biti promenljiva ili niz. Semantička greška na liniji 20
+INFO  23:06:42,836 - Na levoj strani dodele mora biti promenljiva ili niz. Semantička greška na liniji 21
+INFO  23:06:42,837 - Print calls = 1
+INFO  23:06:42,838 - Deklarisanih promenljivih = 3
+ERROR 23:06:42,841 - Parsiranje NIJE uspesno zavrseno!

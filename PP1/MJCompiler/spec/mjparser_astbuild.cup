@@ -258,8 +258,7 @@ DesignatorStatement   ::= (DesignatorAssign) Designator:D1 ASSIGN Expr2:E2 {: RE
 Designator            ::= (DesignatorIdent) IDENT:ident {: RESULT=new DesignatorIdent(ident); RESULT.setLine(identleft); :}
                        |  (DesignatorSelect) Designator:D1 Selector:S2 {: RESULT=new DesignatorSelect(D1, S2); RESULT.setLine(D1left); :};
 
-Selector              ::= (DesignatorAttribute) DOT IDENT:I1 {: RESULT=new DesignatorAttribute(I1); RESULT.setLine(I1left); :} 
-                       |  (DesignatorVector) LBracket:L1 Expr2:E2 RBRACKET {: RESULT=new DesignatorVector(L1, E2); RESULT.setLine(L1left); :};
+Selector              ::= (Selector) LBracket:L1 Expr2:E2 RBRACKET {: RESULT=new Selector(L1, E2); RESULT.setLine(L1left); :};
 
 Condition             ::= (Condition) CondTermList:C1 {: RESULT=new Condition(C1); RESULT.setLine(C1left); :};
 

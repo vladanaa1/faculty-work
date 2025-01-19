@@ -257,8 +257,7 @@ DesignatorStatement   ::= (DesignatorAssign) Designator ASSIGN Expr2
 Designator            ::= (DesignatorIdent) IDENT:ident
                        |  (DesignatorSelect) Designator Selector;
 
-Selector              ::= (DesignatorAttribute) DOT IDENT
-                       |  (DesignatorVector) LBracket Expr2 RBRACKET;
+Selector              ::= (Selector) LBracket Expr2 RBRACKET;
 
 Condition             ::= (Condition) CondTermList;
 

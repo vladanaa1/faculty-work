@@ -1,0 +1,23 @@
+INFO  15:46:08,474 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  15:46:08,564 - #50 test302
+INFO  15:46:08,564 - #50 int
+INFO  15:46:08,567 - #50 i
+INFO  15:46:08,568 - #37 ;
+INFO  15:46:08,570 - #50 int
+INFO  15:46:08,571 - #50 a
+INFO  15:46:08,572 - #37 ;
+INFO  15:46:08,573 - #50 int
+INFO  15:46:08,574 - #50 x
+INFO  15:46:08,574 - #43 [
+INFO  15:46:08,574 - #44 ]
+INFO  15:46:08,575 - #37 ;
+INFO  15:46:08,575 - #50 int
+INFO  15:46:08,576 - #50 c
+INFO  15:46:08,576 - #34 =
+INFO  15:46:08,576 - #22 -
+ERROR 15:46:08,577 - 
+Sintaksna greska na liniji 7
+ERROR 15:46:08,579 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 7
+INFO  15:46:08,599 - Print calls = 0
+INFO  15:46:08,602 - Deklarisanih promenljivih = 0
+ERROR 15:46:08,604 - Parsiranje NIJE uspesno zavrseno!

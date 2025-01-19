@@ -4,6 +4,7 @@ int i;
 int a;
 int x[];
 
+
 {
 	int verify(int a) {
 		a = 6;
@@ -18,9 +19,10 @@ int x[];
 		x = new int[3];
 	
 		x[0] = 5;
-		x[1] = 1;
+		x[1] = 2;
+		x[2] = 10;
 		
-		i = x[0];
+		i = x[0] + x[1] * x[2];
 		
 		print(i);
 	}

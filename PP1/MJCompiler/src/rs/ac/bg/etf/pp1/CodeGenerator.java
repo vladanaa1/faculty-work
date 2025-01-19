@@ -15,9 +15,10 @@ import rs.etf.pp1.symboltable.concepts.Struct;
 
 public class CodeGenerator extends VisitorAdaptor {
 	
-	// EQ = 0; NE = 1; LT = 2; LE = 3; GT = 4; GE = 5;
+	// EQ = 0, NE = 1, LT = 2, LE = 3, GT = 4, GE = 5;
 	private int currentCondJump = 0;
 	
+	// Unary operator "-" flag
 	private boolean negativeExpr = false;
 	
 	private int varCount;
@@ -36,8 +37,6 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	private Stack<List<Integer>> breakJumps = new Stack<>();
 	private Stack<List<Integer>> continueJumps = new Stack<>();
-	
-	private Stack<Obj> thisParameterObjs = new Stack<>();
 	
 	public int getMainPc() {
 		return mainPc;
@@ -76,7 +75,6 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.put(Code.bprint);
 		}
 	}
-	
 	
 	public void visit(NumberFactor numberFactor) {
 		Code.load(new Obj(Obj.Con, "$", numberFactor.obj.getType(), numberFactor.getValue(), 0));
@@ -128,28 +126,33 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(DesignatorAssign designatorAssign) {
-		Designator designator = designatorAssign.getDesignator();
-		
-		if(designator.getClass() == DesignatorSelect.class) {
-			Code.put(Code.astore);
-		}
-		else {
-			Code.store(designatorAssign.getDesignator().obj);
-		}
-		
+		Code.store(designatorAssign.getDesignator().obj);
 	}
 	
+	/*
 	public void visit(DesignatorIdent designatorIdent) {
 		SyntaxNode parent = designatorIdent.getParent();
 		
+		// SyntaxNode grandparent = parent.getParent();
+		
 		if(DesignatorAssign.class != parent.getClass() && MethodCallFactor.class != parent.getClass()) {
 			Code.load(designatorIdent.obj);
-			
 			if(negativeExpr) {
 				Code.put(Code.neg);
 				negativeExpr = false;
 			}
 		}
+	}
+	*/
+	
+	public void visit(DesignatorIdent designatorIdent) {
+		if(designatorIdent.getParent().getClass() == DesignatorSelect.class) {
+			Code.load(designatorIdent.obj);
+		}
+	}
+	
+	public void visit(DesignatorFactor designatorFactor) {
+		Code.load(designatorFactor.getDesignator().obj);
 	}
 	
 	public void visit(FunctionCall functionCall) {
@@ -190,6 +193,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(ReturnWithExpr returnWithExpr) {
+		// ne valja
 		Code.put(Code.exit);
 		Code.put(Code.return_);
 	}
@@ -305,7 +309,6 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(MatchedIf matchedIf) {
 		Code.fixup(skipElseJump.pop()); // fixing-up jump in elseStmt
 	}
-	
 	
 	public void visit(DoStatement doStatement) {
 		doWhileStartAddress.push(Code.pc);
