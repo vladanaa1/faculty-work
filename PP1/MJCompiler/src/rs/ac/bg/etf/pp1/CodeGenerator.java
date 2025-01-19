@@ -12,6 +12,7 @@ import rs.etf.pp1.mj.runtime.Code;
 import rs.etf.pp1.symboltable.Tab;
 import rs.etf.pp1.symboltable.concepts.Obj;
 import rs.etf.pp1.symboltable.concepts.Struct;
+import rs.ac.bg.etf.pp1.SemanticPass;
 
 public class CodeGenerator extends VisitorAdaptor {
 	
@@ -94,6 +95,9 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(MethodSignature2 methodSignature) {
+		// enter b1, b2
+		// b1 -> formal parameters
+		// b2 -> formal parameters + local variables (sizeof(locals))
 		
 		String ident = methodSignature.getName().getIdent();
 		
@@ -112,7 +116,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		methodNode.traverseTopDown(varCnt);
 		
 		FormParamCounter paramCnt = new FormParamCounter();
-		methodNode.traverseTopDown(varCnt);
+		methodNode.traverseTopDown(paramCnt);
 		
 		// Generate the entry
 		Code.put(Code.enter);
@@ -152,6 +156,10 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(DesignatorFactor designatorFactor) {
+		if(negativeExpr) {
+			Code.put(Code.neg);
+			negativeExpr = false;
+		}
 		Code.load(designatorFactor.getDesignator().obj);
 	}
 	
@@ -193,7 +201,8 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(ReturnWithExpr returnWithExpr) {
-		// ne valja
+		// NE VALJA!!!
+		Code.load(returnWithExpr.getExpr2().obj);
 		Code.put(Code.exit);
 		Code.put(Code.return_);
 	}
@@ -209,8 +218,6 @@ public class CodeGenerator extends VisitorAdaptor {
 		predstavljenim desnim neterminalom Designator. Dobijeni neterminal Expr predstavlja zbir povratnih 
 		vrednosti svih izvršenih poziva funkcije.
 		*/
-		
-		
 	}
 	
 	public void visit(AddopGroupTerm addopGroupTerm) {
@@ -355,6 +362,8 @@ public class CodeGenerator extends VisitorAdaptor {
 		breakJumps.peek().add(Code.pc - 2);
 	}
 	
+	/* Ne koristimo inc i dec jer oni rade samo sa lokalnim promenljivama */
+	
 	public void visit(DesignatorInc designatorInc) {
 		Obj designatorObj = designatorInc.getDesignator().obj;
 		
@@ -379,6 +388,20 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	public void visit(NegativeOperator negativeOperator) {
 		negativeExpr = true;
+	}
+	
+	// NE VALJA!!!
+	
+	public void visit(IdentMethodArgument ident) {
+		Code.load(new Obj(Obj.Var, ident.getIdent(), Tab.noType));
+	}
+	
+	public void visit(IdentVectorMethodArgument ident) {
+		Code.load(new Obj(Obj.Var, ident.getIdent(), Tab.noType));
+	}
+	
+	public void visit(LiteralMethodArgument literal) {
+		Code.load(new Obj(Obj.Var, literal.getLiteral().obj.getName(), literal.getLiteral().obj.getType()));
 	}
 	
 	
