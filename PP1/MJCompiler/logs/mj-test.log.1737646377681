@@ -1,0 +1,65 @@
+INFO  16:32:14,999 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:32:15,072 - #50 test302
+INFO  16:32:15,072 - #50 int
+INFO  16:32:15,074 - #50 i
+INFO  16:32:15,075 - #37 ;
+INFO  16:32:15,076 - #50 int
+INFO  16:32:15,076 - #50 a
+INFO  16:32:15,076 - #37 ;
+INFO  16:32:15,077 - #50 int
+INFO  16:32:15,077 - #50 x
+INFO  16:32:15,077 - #43 [
+INFO  16:32:15,078 - #44 ]
+INFO  16:32:15,078 - #37 ;
+INFO  16:32:15,078 - #45 {
+INFO  16:32:15,079 - #50 main
+INFO  16:32:15,080 - #41 (
+INFO  16:32:15,082 - #42 )
+INFO  16:32:15,083 - #45 {
+INFO  16:32:15,086 - #50 x
+INFO  16:32:15,086 - #43 [
+INFO  16:32:15,087 - #47 0
+INFO  16:32:15,088 - #44 ]
+INFO  16:32:15,088 - #34 =
+INFO  16:32:15,093 - #47 1
+INFO  16:32:15,093 - #37 ;
+INFO  16:32:15,093 - #50 x
+INFO  16:32:15,094 - #43 [
+INFO  16:32:15,094 - #47 1
+INFO  16:32:15,094 - #44 ]
+INFO  16:32:15,094 - #34 =
+INFO  16:32:15,094 - #47 2
+INFO  16:32:15,094 - #37 ;
+INFO  16:32:15,095 - #50 x
+INFO  16:32:15,095 - #43 [
+INFO  16:32:15,095 - #47 2
+INFO  16:32:15,095 - #44 ]
+INFO  16:32:15,096 - #34 =
+INFO  16:32:15,096 - #47 3
+INFO  16:32:15,096 - #37 ;
+INFO  16:32:15,097 - #50 x
+INFO  16:32:15,097 - #43 [
+INFO  16:32:15,097 - #47 3
+INFO  16:32:15,097 - #44 ]
+INFO  16:32:15,097 - #34 =
+INFO  16:32:15,098 - #47 4
+INFO  16:32:15,098 - #37 ;
+INFO  16:32:15,098 - #50 i
+INFO  16:32:15,099 - #34 =
+INFO  16:32:15,099 - #47 0
+INFO  16:32:15,099 - #37 ;
+INFO  16:32:15,100 - #41 (
+INFO  16:32:15,100 - #50 x
+INFO  16:32:15,100 - #43 [
+INFO  16:32:15,100 - #50 i
+INFO  16:32:15,100 - #44 ]
+INFO  16:32:15,101 - #42 )
+INFO  16:32:15,101 - #37 ;
+INFO  16:32:15,101 - #46 }
+INFO  16:32:15,102 - #46 }
+INFO  16:32:15,114 - Otvoren opseg za program test302 na liniji 1
+INFO  16:32:15,114 - Obradjuje se funkcija main na liniji 9
+INFO  16:32:15,115 - Print calls = 1
+INFO  16:32:15,115 - Deklarisanih promenljivih = 3
+INFO  16:32:15,117 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  16:32:15,126 - Parsiranje uspesno zavrseno!

@@ -1,22 +1,19 @@
 program test302
 
-int i;
-int a;
-int x[];
-
-
+int x;
 {
-	int verify(int a) {
-		return a;
-	}
-	
 	void main()
 	{
 	
-		i = 3 - 2;
+	// arrays: ok
+	// function calls: dobro se prenese samo prvi param, popravi
+	// do while: ok
+	// break/continue: ok
+	// if else jumps: ok
+	// addAll, eol, read... fale
+	
+		x = 1;
 		
-		a = i;
-		
-		print(verify(6));
+		print(x);
 	}
 }

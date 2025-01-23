@@ -898,6 +898,11 @@ public class SemanticPass extends VisitorAdaptor {
     public void visit(FactorTerm factorTerm) {
         factorTerm.obj = factorTerm.getFactor().obj;
         
+        if(factorTerm.obj == null) {
+        	// ERROR
+        	return;
+        }
+        
         if(factorTerm.obj.getKind() == Obj.Meth) {
         	if(checkMethodArguments(factorTerm.obj) == false) {
         		report_info("Diskutabilan poziv funkcije. Semantička greška", factorTerm);
@@ -941,6 +946,7 @@ public class SemanticPass extends VisitorAdaptor {
         }
         else {
         	// OK
+        	identMethodArgument.obj = identObj;
         	queue.add(identObj.getType());
         }
     }
@@ -960,6 +966,7 @@ public class SemanticPass extends VisitorAdaptor {
         else {
         	if(identMethodArgument.getExpr2().obj.getType().equals(Tab.intType)) {
         		// OK
+        		identMethodArgument.obj = identObj;
             	queue.add(identObj.getType());
         	}
         	else {

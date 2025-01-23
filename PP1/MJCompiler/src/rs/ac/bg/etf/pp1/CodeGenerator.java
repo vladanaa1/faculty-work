@@ -39,6 +39,18 @@ public class CodeGenerator extends VisitorAdaptor {
 	private Stack<List<Integer>> breakJumps = new Stack<>();
 	private Stack<List<Integer>> continueJumps = new Stack<>();
 	
+	private Stack<Obj> parameters = new Stack<Obj>();
+	
+	private void init() {
+		// da li ovo da realizujem ovde ili u SemanticPass?
+		Obj eolObj = Tab.insert(Obj.Con, "eol", Tab.charType);
+		eolObj.setAdr('\n');
+	}
+	
+	public CodeGenerator() {
+		init();
+	}
+	
 	public int getMainPc() {
 		return mainPc;
 	}
@@ -170,7 +182,6 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.put(Code.call);
 		Code.put2(offset);
 		
-		
 		if(!functionObj.getType().equals(Tab.noType)) {
 			Code.put(Code.pop);
 		}
@@ -201,7 +212,6 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(ReturnWithExpr returnWithExpr) {
-		// NE VALJA!!!
 		Code.load(returnWithExpr.getExpr2().obj);
 		Code.put(Code.exit);
 		Code.put(Code.return_);
@@ -390,19 +400,21 @@ public class CodeGenerator extends VisitorAdaptor {
 		negativeExpr = true;
 	}
 	
-	// NE VALJA!!!
-	
 	public void visit(IdentMethodArgument ident) {
-		Code.load(new Obj(Obj.Var, ident.getIdent(), Tab.noType));
+		parameters.add(ident.obj);
 	}
 	
 	public void visit(IdentVectorMethodArgument ident) {
-		Code.load(new Obj(Obj.Var, ident.getIdent(), Tab.noType));
+		parameters.add(ident.obj);
 	}
 	
 	public void visit(LiteralMethodArgument literal) {
-		Code.load(new Obj(Obj.Var, literal.getLiteral().obj.getName(), literal.getLiteral().obj.getType()));
+		parameters.add(literal.getLiteral().obj);
 	}
 	
-	
+	public void visit(NonEmptyMethodArguments nonEmptyMethodArguments) {
+		while(!parameters.empty()) {
+			Code.load(parameters.pop());
+		}
+	}
 }

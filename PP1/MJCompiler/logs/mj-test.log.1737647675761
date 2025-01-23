@@ -1,0 +1,61 @@
+INFO  16:54:11,254 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:54:11,330 - #50 test302
+INFO  16:54:11,330 - #50 int
+INFO  16:54:11,332 - #50 i
+INFO  16:54:11,333 - #37 ;
+INFO  16:54:11,334 - #50 int
+INFO  16:54:11,334 - #50 a
+INFO  16:54:11,334 - #37 ;
+INFO  16:54:11,335 - #50 int
+INFO  16:54:11,335 - #50 x
+INFO  16:54:11,335 - #37 ;
+INFO  16:54:11,336 - #50 int
+INFO  16:54:11,336 - #50 y
+INFO  16:54:11,336 - #37 ;
+INFO  16:54:11,336 - #45 {
+INFO  16:54:11,337 - #50 verify
+INFO  16:54:11,339 - #41 (
+INFO  16:54:11,340 - #50 int
+INFO  16:54:11,340 - #50 x
+INFO  16:54:11,340 - #39 ,
+INFO  16:54:11,340 - #50 int
+INFO  16:54:11,340 - #50 i
+INFO  16:54:11,341 - #42 )
+INFO  16:54:11,344 - #45 {
+INFO  16:54:11,348 - #41 (
+INFO  16:54:11,348 - #50 x
+INFO  16:54:11,348 - #42 )
+INFO  16:54:11,349 - #37 ;
+INFO  16:54:11,349 - #41 (
+INFO  16:54:11,349 - #50 i
+INFO  16:54:11,350 - #42 )
+INFO  16:54:11,350 - #37 ;
+INFO  16:54:11,350 - #46 }
+INFO  16:54:11,351 - #50 main
+INFO  16:54:11,351 - #41 (
+INFO  16:54:11,352 - #42 )
+INFO  16:54:11,353 - #45 {
+INFO  16:54:11,353 - #50 x
+INFO  16:54:11,353 - #34 =
+INFO  16:54:11,354 - #47 1
+INFO  16:54:11,354 - #37 ;
+INFO  16:54:11,355 - #50 y
+INFO  16:54:11,355 - #34 =
+INFO  16:54:11,355 - #47 2
+INFO  16:54:11,355 - #37 ;
+INFO  16:54:11,355 - #50 verify
+INFO  16:54:11,356 - #41 (
+INFO  16:54:11,356 - #50 x
+INFO  16:54:11,356 - #39 ,
+INFO  16:54:11,357 - #50 y
+INFO  16:54:11,357 - #42 )
+INFO  16:54:11,357 - #37 ;
+INFO  16:54:11,358 - #46 }
+INFO  16:54:11,358 - #46 }
+INFO  16:54:11,373 - Otvoren opseg za program test302 na liniji 1
+INFO  16:54:11,373 - Obradjuje se funkcija verify na liniji 9
+INFO  16:54:11,374 - Obradjuje se funkcija main na liniji 15
+INFO  16:54:11,375 - Print calls = 2
+INFO  16:54:11,375 - Deklarisanih promenljivih = 4
+INFO  16:54:11,376 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  16:54:11,385 - Parsiranje uspesno zavrseno!

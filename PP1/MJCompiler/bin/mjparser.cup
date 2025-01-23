@@ -123,6 +123,8 @@ nonterminal rs.etf.pp1.symboltable.concepts.Obj Literal;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj MethodSignature2;
 
+nonterminal rs.etf.pp1.symboltable.concepts.Obj MethodArgument;
+
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Expr2;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Term;
@@ -171,7 +173,6 @@ nonterminal Mulop;
 nonterminal Addop;
 nonterminal MethodArgumentsOptional;
 nonterminal MethodArgumentList;
-nonterminal MethodArgument;
 nonterminal LocalVars, LocalVar;
 nonterminal Type;
 nonterminal Name;

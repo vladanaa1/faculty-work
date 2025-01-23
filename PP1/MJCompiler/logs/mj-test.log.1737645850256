@@ -1,0 +1,54 @@
+INFO  16:17:44,705 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:17:44,777 - #50 test302
+INFO  16:17:44,778 - #50 int
+INFO  16:17:44,779 - #50 i
+INFO  16:17:44,780 - #37 ;
+INFO  16:17:44,781 - #50 int
+INFO  16:17:44,782 - #50 a
+INFO  16:17:44,782 - #37 ;
+INFO  16:17:44,782 - #50 int
+INFO  16:17:44,782 - #50 x
+INFO  16:17:44,783 - #43 [
+INFO  16:17:44,783 - #44 ]
+INFO  16:17:44,783 - #37 ;
+INFO  16:17:44,784 - #45 {
+INFO  16:17:44,784 - #50 int
+INFO  16:17:44,785 - #50 verify
+INFO  16:17:44,785 - #41 (
+INFO  16:17:44,787 - #50 int
+INFO  16:17:44,787 - #50 a
+INFO  16:17:44,788 - #42 )
+INFO  16:17:44,788 - #45 {
+INFO  16:17:44,792 - #47 2
+INFO  16:17:44,792 - #23 *
+INFO  16:17:44,795 - #50 a
+INFO  16:17:44,797 - #37 ;
+INFO  16:17:44,798 - #46 }
+INFO  16:17:44,799 - #50 main
+INFO  16:17:44,800 - #41 (
+INFO  16:17:44,800 - #42 )
+INFO  16:17:44,801 - #45 {
+INFO  16:17:44,802 - #50 a
+INFO  16:17:44,802 - #34 =
+INFO  16:17:44,802 - #47 7
+INFO  16:17:44,802 - #37 ;
+INFO  16:17:44,802 - #41 (
+INFO  16:17:44,803 - #50 verify
+INFO  16:17:44,803 - #41 (
+INFO  16:17:44,803 - #50 a
+INFO  16:17:44,803 - #42 )
+INFO  16:17:44,805 - #42 )
+INFO  16:17:44,805 - #37 ;
+INFO  16:17:44,806 - #41 (
+INFO  16:17:44,806 - #50 eol
+INFO  16:17:44,806 - #42 )
+INFO  16:17:44,806 - #37 ;
+INFO  16:17:44,806 - #46 }
+INFO  16:17:44,806 - #46 }
+INFO  16:17:44,821 - Otvoren opseg za program test302 na liniji 1
+INFO  16:17:44,822 - Obradjuje se funkcija verify na liniji 9
+INFO  16:17:44,822 - Obradjuje se funkcija main na liniji 13
+INFO  16:17:44,823 - Promenljiva eol mora biti deklarisana pre upotrebe. Semantička greška na liniji 19
+INFO  16:17:44,825 - Print calls = 1
+INFO  16:17:44,826 - Deklarisanih promenljivih = 3
+ERROR 16:17:44,828 - Parsiranje NIJE uspesno zavrseno!

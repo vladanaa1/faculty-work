@@ -1,0 +1,93 @@
+INFO  16:24:10,261 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:24:10,386 - #50 test302
+INFO  16:24:10,386 - #50 int
+INFO  16:24:10,388 - #50 i
+INFO  16:24:10,389 - #37 ;
+INFO  16:24:10,390 - #50 int
+INFO  16:24:10,391 - #50 a
+INFO  16:24:10,391 - #37 ;
+INFO  16:24:10,392 - #50 int
+INFO  16:24:10,392 - #50 x
+INFO  16:24:10,392 - #43 [
+INFO  16:24:10,393 - #44 ]
+INFO  16:24:10,393 - #37 ;
+INFO  16:24:10,394 - #45 {
+INFO  16:24:10,394 - #50 int
+INFO  16:24:10,395 - #50 verify
+INFO  16:24:10,396 - #41 (
+INFO  16:24:10,398 - #50 int
+INFO  16:24:10,398 - #50 a
+INFO  16:24:10,398 - #43 [
+INFO  16:24:10,398 - #44 ]
+INFO  16:24:10,399 - #39 ,
+INFO  16:24:10,400 - #50 int
+INFO  16:24:10,492 - #50 i
+INFO  16:24:10,492 - #42 )
+INFO  16:24:10,493 - #45 {
+INFO  16:24:10,496 - #45 {
+INFO  16:24:10,508 - #41 (
+INFO  16:24:10,508 - #50 x
+INFO  16:24:10,508 - #43 [
+INFO  16:24:10,509 - #50 i
+INFO  16:24:10,524 - #44 ]
+INFO  16:24:10,525 - #42 )
+INFO  16:24:10,545 - #37 ;
+INFO  16:24:10,545 - #46 }
+INFO  16:24:10,546 - #41 (
+INFO  16:24:10,574 - #50 i
+INFO  16:24:10,574 - #30 <
+INFO  16:24:10,574 - #47 3
+INFO  16:24:10,597 - #42 )
+INFO  16:24:10,625 - #37 ;
+INFO  16:24:10,625 - #46 }
+INFO  16:24:10,629 - #50 main
+INFO  16:24:10,632 - #41 (
+INFO  16:24:10,633 - #42 )
+INFO  16:24:10,635 - #45 {
+INFO  16:24:10,635 - #50 x
+INFO  16:24:10,636 - #43 [
+INFO  16:24:10,637 - #47 0
+INFO  16:24:10,637 - #44 ]
+INFO  16:24:10,637 - #34 =
+INFO  16:24:10,638 - #47 1
+INFO  16:24:10,638 - #37 ;
+INFO  16:24:10,639 - #50 x
+INFO  16:24:10,640 - #43 [
+INFO  16:24:10,640 - #47 1
+INFO  16:24:10,640 - #44 ]
+INFO  16:24:10,641 - #34 =
+INFO  16:24:10,641 - #47 2
+INFO  16:24:10,642 - #37 ;
+INFO  16:24:10,643 - #50 x
+INFO  16:24:10,643 - #43 [
+INFO  16:24:10,643 - #47 3
+INFO  16:24:10,644 - #44 ]
+INFO  16:24:10,647 - #34 =
+INFO  16:24:10,647 - #47 3
+INFO  16:24:10,648 - #37 ;
+INFO  16:24:10,650 - #50 x
+INFO  16:24:10,652 - #43 [
+INFO  16:24:10,652 - #47 4
+INFO  16:24:10,652 - #44 ]
+INFO  16:24:10,653 - #34 =
+INFO  16:24:10,653 - #47 4
+INFO  16:24:10,654 - #37 ;
+INFO  16:24:10,655 - #41 (
+INFO  16:24:10,655 - #50 verify
+INFO  16:24:10,656 - #41 (
+INFO  16:24:10,656 - #50 x
+INFO  16:24:10,656 - #42 )
+INFO  16:24:10,657 - #39 ,
+INFO  16:24:10,658 - #47 0
+INFO  16:24:10,658 - #42 )
+INFO  16:24:10,659 - #37 ;
+INFO  16:24:10,660 - #46 }
+INFO  16:24:10,661 - #46 }
+INFO  16:24:10,675 - Otvoren opseg za program test302 na liniji 1
+INFO  16:24:10,675 - Obradjuje se funkcija verify na liniji 9
+INFO  16:24:10,676 - Nepostojeca return naredba u funkciji verify. Semantička greška na liniji 9
+INFO  16:24:10,676 - Obradjuje se funkcija main na liniji 15
+INFO  16:24:10,677 - Neodgovarajući broj parametara u pozivu funkcije. Semantička greška na liniji 23
+INFO  16:24:10,679 - Print calls = 2
+INFO  16:24:10,679 - Deklarisanih promenljivih = 3
+ERROR 16:24:10,681 - Parsiranje NIJE uspesno zavrseno!
