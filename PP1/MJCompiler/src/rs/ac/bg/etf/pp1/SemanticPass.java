@@ -18,9 +18,10 @@ public class SemanticPass extends VisitorAdaptor {
 	boolean errorDetected = false;
 	
 	Struct boolType = new Struct(Struct.Bool);
+	Struct setType = new Struct(Struct.Enum);
 	
 	int printCallCount = 0;
-	int VarDeclCount = 0; // Global Variable Count
+	int VarDeclCount = 0; // Global Variable Count, package modifier so it can be accessed in MJParserTest
 	int ConstDeclCount = 0; // Global Constant Count
 	Obj currentMethod = null;
 	Struct currentMethodReturnType = Tab.noType;
@@ -38,6 +39,33 @@ public class SemanticPass extends VisitorAdaptor {
 	Queue<Struct> queue = new LinkedList<>(); // Used for parameters in function calls
 
 	Logger log = Logger.getLogger(getClass()); // Not used
+	
+	SemanticPass(){
+		setType.setElementType(Tab.intType);
+		
+		
+		// add
+		Obj add = new Obj(Obj.Meth, "add", Tab.noType, 0, 2);
+		Tab.openScope();
+		Tab.currentScope.addToLocals(new Obj(Obj.Var, "s", setType, 0, 1));
+		Tab.currentScope.addToLocals(new Obj(Obj.Var, "i", Tab.intType, 0, 1));
+		add.setLocals(Tab.currentScope.getLocals());
+		Tab.closeScope();
+		
+		Tab.currentScope.addToLocals(add);
+		
+		// addAll
+		
+		Obj addAll = new Obj(Obj.Meth, "addAll", Tab.noType, 0, 2);
+		Tab.openScope();
+		Tab.currentScope.addToLocals(new Obj(Obj.Var, "s", setType, 0, 1));
+		Struct arrayStruct = new Struct(Struct.Array, Tab.intType);
+		Tab.currentScope.addToLocals(new Obj(Obj.Var, "arr", arrayStruct, 0, 1));
+		addAll.setLocals(Tab.currentScope.getLocals());
+		Tab.closeScope();
+		
+		Tab.currentScope.addToLocals(addAll);
+	}
 
 	public void report_error(String message, SyntaxNode info) {
 		errorDetected = true;
@@ -417,9 +445,32 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	@Override
+	public void visit(DesignatorUnion designatorUnion) {
+		Obj set1 = designatorUnion.getDesignator().obj;
+		Obj set2 = designatorUnion.getDesignator1().obj;
+		Obj set3 = designatorUnion.getDesignator2().obj;
+		
+		if(!set1.getType().equals(setType) || !set2.getType().equals(setType) || !set3.getType().equals(setType)) {
+			report_error("Nepoklapanje tipova u union iskazu. Semantička greška", designatorUnion);
+		}
+	}
+	
+	@Override
 	public void visit(DesignatorIdent designatorIdent) {
 		String ident = designatorIdent.getIdent();
 		
+		Obj designatorObj = Tab.find(ident);
+		
+		if(designatorObj == Tab.noObj) {
+			// Not Found
+			report_error("Promenljiva " + ident + " mora biti deklarisana pre upotrebe. Semantička greška", designatorIdent);
+		}
+		else {
+			// Found
+			designatorIdent.obj = designatorObj;
+		}
+		
+		/*
 		Obj designatorObj = findInCurrentScope(ident);
 		
 		if(designatorObj == Tab.noObj) {
@@ -431,27 +482,14 @@ public class SemanticPass extends VisitorAdaptor {
 			}
 			else {
 				// Found in global scope
-				/*
-				if(designatorObj.getType().getKind() == Struct.Array && designatorIdent.getParent().getClass() == DesignatorSelect.class) {
-					// Found in global scope, Elem of an Array
-					designatorIdent.obj = new Obj(Obj.Elem, ident, designatorObj.getType().getElemType());
-				}
-				else designatorIdent.obj = designatorObj;
-				*/
 				designatorIdent.obj = designatorObj;
 			}
 		}
 		else {
 			// Found in local scope
-			/*
-			if(designatorObj.getType().getKind() == Struct.Array && designatorIdent.getParent().getClass() == DesignatorSelect.class) {
-				// Found in global scope, Elem of an Array
-				designatorIdent.obj = new Obj(Obj.Elem, ident, designatorObj.getType().getElemType());
-			}
-			else designatorIdent.obj = designatorObj;
-			*/
 			designatorIdent.obj = designatorObj;
 		}
+		*/
 	}
 	
 	@Override
@@ -577,6 +615,26 @@ public class SemanticPass extends VisitorAdaptor {
 		}
 	}
 	
+	@Override
+	public void visit(Read read) {
+		Obj readObj = read.getDesignator().obj;
+		
+		if(readObj == null) {
+			return;
+		}
+		
+		if(readObj.getKind() != Obj.Var && readObj.getKind() != Obj.Elem) {
+			report_error("Neodgovarajući tip u read iskazu. Semantička greška", read);
+			return;
+		}
+		
+		if(!readObj.getType().equals(Tab.intType) && !readObj.getType().equals(Tab.charType) &&
+				readObj.getType().getKind() != Struct.Array) {
+			report_error("Neodgovarajući tip u read iskazu. Semantička greška", read);
+			return;
+		}
+	}
+	
 	/*
 	@Override
 	public void visit(DesignatorVector vector) {
@@ -637,6 +695,11 @@ public class SemanticPass extends VisitorAdaptor {
 			report_info("Nedefinisan tip " + typeName + ". Semantička greška", type);
 			errorDetected = true;
 		}
+	}
+	
+	@Override
+	public void visit(Set set) {
+		currentType = setType;
 	}
 	
 	@Override
@@ -934,6 +997,11 @@ public class SemanticPass extends VisitorAdaptor {
     }
     
     @Override
+    public void visit(NewSetFactor newSetFactor) {
+    	newSetFactor.obj = new Obj(Obj.Var, "", setType);
+    }
+    
+    @Override
     public void visit(IdentMethodArgument identMethodArgument) {
         String ident = identMethodArgument.getIdent();
         
@@ -986,18 +1054,15 @@ public class SemanticPass extends VisitorAdaptor {
 
 	public void visit(Program program) {
 		if(!mainDeclared) {
-			report_info("Semantička greška: Funkcija main nije definisana", program);
-			errorDetected  = true;
+			report_error("Funkcija main nije definisana. Semantička greška", program);
 		}
 		
 		if(breakFound) {
-			report_info("Neispravna upotreba 'break' iskaza. Semantička greška", null);
-			errorDetected  = true;
+			report_error("Neispravna upotreba 'break' iskaza. Semantička greška", null);
 		}
 		
 		if(continueFound) {
-			report_info("Neispravna upotreba 'continue' iskaza. Semantička greška", null);
-			errorDetected  = true;
+			report_error("Neispravna upotreba 'continue' iskaza. Semantička greška", null);
 		}
 		
 		VarDeclCount = Tab.currentScope().getnVars();

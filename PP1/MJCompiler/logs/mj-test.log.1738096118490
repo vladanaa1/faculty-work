@@ -1,0 +1,12 @@
+INFO  21:28:29,062 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  21:28:29,144 - #50 test302
+INFO  21:28:29,144 - #45 {
+INFO  21:28:29,147 - #50 main
+INFO  21:28:29,148 - #41 (
+INFO  21:28:29,150 - #42 )
+ERROR 21:28:29,151 - 
+Sintaksna greska na liniji 5
+ERROR 21:28:29,151 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5
+INFO  21:28:29,163 - Print calls = 0
+INFO  21:28:29,163 - Deklarisanih promenljivih = 0
+ERROR 21:28:29,164 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,33 @@
+INFO  23:39:49,514 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:39:49,597 - #50 test302
+INFO  23:39:49,600 - #50 s1
+INFO  23:39:49,601 - #39 ,
+INFO  23:39:49,603 - #50 s2
+INFO  23:39:49,603 - #39 ,
+INFO  23:39:49,610 - #50 s3
+INFO  23:39:49,610 - #37 ;
+INFO  23:39:49,611 - #50 int
+INFO  23:39:49,612 - #50 a
+INFO  23:39:49,630 - #37 ;
+INFO  23:39:49,630 - #45 {
+INFO  23:39:49,633 - #50 main
+INFO  23:39:49,634 - #41 (
+INFO  23:39:49,636 - #42 )
+INFO  23:39:49,638 - #45 {
+INFO  23:39:49,643 - #50 s1
+INFO  23:39:49,645 - #34 =
+INFO  23:39:49,645 - #50 s2
+INFO  23:39:49,648 - #50 a
+INFO  23:39:49,649 - #37 ;
+INFO  23:39:49,651 - #41 (
+INFO  23:39:49,651 - #47 6
+INFO  23:39:49,654 - #42 )
+INFO  23:39:49,656 - #37 ;
+INFO  23:39:49,656 - #46 }
+INFO  23:39:49,658 - #46 }
+INFO  23:39:49,680 - Otvoren opseg za program test302 na liniji 1
+INFO  23:39:49,680 - Obradjuje se funkcija main na liniji 8
+ERROR 23:39:49,681 - Nepoklapanje tipova u union iskazu. Semantička greška na liniji 11
+INFO  23:39:49,682 - Print calls = 1
+INFO  23:39:49,682 - Deklarisanih promenljivih = 4
+ERROR 23:39:49,686 - Parsiranje NIJE uspesno zavrseno!

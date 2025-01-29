@@ -1,0 +1,43 @@
+INFO  00:05:03,411 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  00:05:03,483 - #50 test302
+INFO  00:05:03,484 - #50 s1
+INFO  00:05:03,485 - #39 ,
+INFO  00:05:03,487 - #50 s2
+INFO  00:05:03,487 - #39 ,
+INFO  00:05:03,487 - #50 s3
+INFO  00:05:03,488 - #37 ;
+INFO  00:05:03,488 - #50 int
+INFO  00:05:03,488 - #50 a
+INFO  00:05:03,489 - #37 ;
+INFO  00:05:03,489 - #45 {
+INFO  00:05:03,490 - #50 main
+INFO  00:05:03,491 - #41 (
+INFO  00:05:03,493 - #42 )
+INFO  00:05:03,495 - #45 {
+INFO  00:05:03,498 - #50 s1
+INFO  00:05:03,499 - #34 =
+INFO  00:05:03,499 - #43 [
+INFO  00:05:03,499 - #47 1
+INFO  00:05:03,499 - #44 ]
+INFO  00:05:03,500 - #37 ;
+INFO  00:05:03,500 - #50 s1
+INFO  00:05:03,503 - #34 =
+INFO  00:05:03,503 - #50 s2
+INFO  00:05:03,504 - #50 s3
+INFO  00:05:03,504 - #37 ;
+INFO  00:05:03,504 - #41 (
+INFO  00:05:03,504 - #47 6
+INFO  00:05:03,504 - #42 )
+INFO  00:05:03,504 - #37 ;
+INFO  00:05:03,505 - #41 (
+INFO  00:05:03,505 - #50 eol
+INFO  00:05:03,505 - #42 )
+INFO  00:05:03,505 - #37 ;
+INFO  00:05:03,505 - #46 }
+INFO  00:05:03,505 - #46 }
+INFO  00:05:03,519 - Otvoren opseg za program test302 na liniji 1
+INFO  00:05:03,520 - Obradjuje se funkcija main na liniji 8
+INFO  00:05:03,520 - Promenljiva eol mora biti deklarisana pre upotrebe. Semantička greška na liniji 16
+INFO  00:05:03,521 - Print calls = 1
+INFO  00:05:03,521 - Deklarisanih promenljivih = 4
+ERROR 00:05:03,523 - Parsiranje NIJE uspesno zavrseno!

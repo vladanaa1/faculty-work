@@ -1,0 +1,46 @@
+INFO  23:58:42,738 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:58:42,807 - #50 test302
+INFO  23:58:42,809 - #50 s1
+INFO  23:58:42,810 - #39 ,
+INFO  23:58:42,811 - #50 s2
+INFO  23:58:42,812 - #39 ,
+INFO  23:58:42,812 - #50 s3
+INFO  23:58:42,812 - #37 ;
+INFO  23:58:42,812 - #50 int
+INFO  23:58:42,813 - #50 a
+INFO  23:58:42,814 - #37 ;
+INFO  23:58:42,814 - #45 {
+INFO  23:58:42,815 - #50 main
+INFO  23:58:42,816 - #41 (
+INFO  23:58:42,817 - #42 )
+INFO  23:58:42,819 - #45 {
+INFO  23:58:42,821 - #50 s1
+INFO  23:58:42,822 - #34 =
+INFO  23:58:42,823 - #43 [
+INFO  23:58:42,823 - #47 1
+INFO  23:58:42,823 - #44 ]
+INFO  23:58:42,824 - #37 ;
+INFO  23:58:42,824 - #50 add
+INFO  23:58:42,828 - #41 (
+INFO  23:58:42,828 - #50 s1
+INFO  23:58:42,829 - #39 ,
+INFO  23:58:42,829 - #47 1
+INFO  23:58:42,829 - #42 )
+INFO  23:58:42,830 - #37 ;
+INFO  23:58:42,830 - #50 s1
+INFO  23:58:42,830 - #34 =
+INFO  23:58:42,830 - #50 s2
+INFO  23:58:42,830 - #50 s3
+INFO  23:58:42,831 - #37 ;
+INFO  23:58:42,831 - #41 (
+INFO  23:58:42,831 - #47 6
+INFO  23:58:42,831 - #42 )
+INFO  23:58:42,832 - #37 ;
+INFO  23:58:42,832 - #46 }
+INFO  23:58:42,832 - #46 }
+INFO  23:58:42,847 - Otvoren opseg za program test302 na liniji 1
+INFO  23:58:42,847 - Obradjuje se funkcija main na liniji 8
+INFO  23:58:42,848 - Promenljiva add mora biti deklarisana pre upotrebe. Semantička greška na liniji 13
+INFO  23:58:42,849 - Print calls = 1
+INFO  23:58:42,850 - Deklarisanih promenljivih = 4
+ERROR 23:58:42,852 - Parsiranje NIJE uspesno zavrseno!

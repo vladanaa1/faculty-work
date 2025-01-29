@@ -1,0 +1,63 @@
+INFO  19:59:30,952 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:59:31,039 - #50 test302
+INFO  19:59:31,040 - #45 {
+INFO  19:59:31,041 - #50 int
+INFO  19:59:31,042 - #50 fun
+INFO  19:59:31,043 - #41 (
+INFO  19:59:31,045 - #50 int
+INFO  19:59:31,045 - #50 a
+INFO  19:59:31,046 - #39 ,
+INFO  19:59:31,046 - #50 int
+INFO  19:59:31,046 - #50 b
+INFO  19:59:31,047 - #39 ,
+INFO  19:59:31,047 - #50 int
+INFO  19:59:31,047 - #50 c
+INFO  19:59:31,047 - #39 ,
+INFO  19:59:31,048 - #50 int
+INFO  19:59:31,048 - #50 d
+INFO  19:59:31,048 - #42 )
+INFO  19:59:31,048 - #45 {
+INFO  19:59:31,052 - #41 (
+INFO  19:59:31,052 - #50 d
+INFO  19:59:31,052 - #39 ,
+INFO  19:59:31,053 - #47 1
+INFO  19:59:31,056 - #42 )
+INFO  19:59:31,056 - #37 ;
+INFO  19:59:31,057 - #50 a
+INFO  19:59:31,057 - #23 *
+INFO  19:59:31,057 - #50 b
+INFO  19:59:31,059 - #23 *
+INFO  19:59:31,059 - #50 c
+INFO  19:59:31,059 - #37 ;
+INFO  19:59:31,059 - #46 }
+INFO  19:59:31,060 - #50 main
+INFO  19:59:31,062 - #41 (
+INFO  19:59:31,062 - #42 )
+INFO  19:59:31,064 - #50 int
+INFO  19:59:31,064 - #50 a
+INFO  19:59:31,064 - #43 [
+INFO  19:59:31,064 - #44 ]
+INFO  19:59:31,065 - #37 ;
+INFO  19:59:31,065 - #45 {
+INFO  19:59:31,066 - #41 (
+INFO  19:59:31,066 - #50 fun
+INFO  19:59:31,066 - #41 (
+INFO  19:59:31,067 - #47 1
+INFO  19:59:31,067 - #39 ,
+INFO  19:59:31,067 - #47 2
+INFO  19:59:31,068 - #39 ,
+INFO  19:59:31,068 - #47 3
+INFO  19:59:31,068 - #39 ,
+INFO  19:59:31,068 - #47 4
+INFO  19:59:31,069 - #42 )
+INFO  19:59:31,069 - #42 )
+INFO  19:59:31,069 - #37 ;
+INFO  19:59:31,070 - #46 }
+INFO  19:59:31,070 - #46 }
+INFO  19:59:31,089 - Otvoren opseg za program test302 na liniji 1
+INFO  19:59:31,090 - Obradjuje se funkcija fun na liniji 3
+INFO  19:59:31,090 - Obradjuje se funkcija main na liniji 8
+INFO  19:59:31,091 - Print calls = 2
+INFO  19:59:31,092 - Deklarisanih promenljivih = 0
+INFO  19:59:31,093 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  19:59:31,104 - Parsiranje uspesno zavrseno!

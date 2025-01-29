@@ -1,0 +1,60 @@
+INFO  15:59:13,654 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  15:59:13,727 - #50 test302
+INFO  15:59:13,728 - #50 int
+INFO  15:59:13,730 - #50 x
+INFO  15:59:13,731 - #43 [
+INFO  15:59:13,732 - #44 ]
+INFO  15:59:13,732 - #37 ;
+INFO  15:59:13,732 - #45 {
+INFO  15:59:13,733 - #50 int
+INFO  15:59:13,735 - #50 fun
+INFO  15:59:13,735 - #41 (
+INFO  15:59:13,737 - #50 int
+INFO  15:59:13,738 - #50 a1
+INFO  15:59:13,738 - #42 )
+INFO  15:59:13,739 - #50 int
+INFO  15:59:13,742 - #50 a2
+INFO  15:59:13,742 - #37 ;
+INFO  15:59:13,742 - #45 {
+INFO  15:59:13,744 - #50 a1
+INFO  15:59:13,744 - #23 *
+INFO  15:59:13,745 - #50 a2
+INFO  15:59:13,746 - #37 ;
+INFO  15:59:13,747 - #46 }
+INFO  15:59:13,752 - #50 main
+INFO  15:59:13,754 - #41 (
+INFO  15:59:13,754 - #42 )
+INFO  15:59:13,755 - #50 int
+INFO  15:59:13,755 - #50 a
+INFO  15:59:13,756 - #39 ,
+INFO  15:59:13,756 - #50 b
+INFO  15:59:13,756 - #39 ,
+INFO  15:59:13,757 - #50 c
+INFO  15:59:13,758 - #37 ;
+INFO  15:59:13,759 - #45 {
+INFO  15:59:13,759 - #50 x
+INFO  15:59:13,759 - #34 =
+INFO  15:59:13,759 - #50 int
+INFO  15:59:13,760 - #43 [
+INFO  15:59:13,760 - #47 2
+INFO  15:59:13,760 - #44 ]
+INFO  15:59:13,761 - #37 ;
+INFO  15:59:13,761 - #50 x
+INFO  15:59:13,762 - #43 [
+INFO  15:59:13,762 - #47 0
+INFO  15:59:13,776 - #44 ]
+INFO  15:59:13,776 - #36 --
+INFO  15:59:13,789 - #37 ;
+INFO  15:59:13,790 - #41 (
+INFO  15:59:13,790 - #50 x
+INFO  15:59:13,790 - #42 )
+INFO  15:59:13,790 - #37 ;
+INFO  15:59:13,790 - #46 }
+INFO  15:59:13,791 - #46 }
+INFO  15:59:13,806 - Otvoren opseg za program test302 na liniji 1
+INFO  15:59:13,806 - Obradjuje se funkcija fun na liniji 6
+INFO  15:59:13,807 - Obradjuje se funkcija main na liniji 12
+INFO  15:59:13,809 - Print calls = 1
+INFO  15:59:13,809 - Deklarisanih promenljivih = 1
+INFO  15:59:13,811 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  15:59:13,823 - Parsiranje uspesno zavrseno!

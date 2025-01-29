@@ -1,0 +1,70 @@
+INFO  01:13:39,346 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  01:13:39,412 - #50 test302
+INFO  01:13:39,413 - #50 s1
+INFO  01:13:39,414 - #39 ,
+INFO  01:13:39,416 - #50 s2
+INFO  01:13:39,416 - #39 ,
+INFO  01:13:39,416 - #50 s3
+INFO  01:13:39,417 - #37 ;
+INFO  01:13:39,417 - #50 int
+INFO  01:13:39,418 - #50 a
+INFO  01:13:39,419 - #37 ;
+INFO  01:13:39,419 - #50 int
+INFO  01:13:39,420 - #50 arr
+INFO  01:13:39,420 - #43 [
+INFO  01:13:39,420 - #44 ]
+INFO  01:13:39,421 - #37 ;
+INFO  01:13:39,421 - #45 {
+INFO  01:13:39,422 - #50 fun
+INFO  01:13:39,423 - #41 (
+INFO  01:13:39,425 - #50 int
+INFO  01:13:39,425 - #50 a
+INFO  01:13:39,425 - #43 [
+INFO  01:13:39,425 - #44 ]
+INFO  01:13:39,429 - #39 ,
+INFO  01:13:39,429 - #50 int
+INFO  01:13:39,429 - #50 b
+INFO  01:13:39,430 - #42 )
+INFO  01:13:39,430 - #45 {
+INFO  01:13:39,433 - #50 a
+INFO  01:13:39,433 - #43 [
+INFO  01:13:39,434 - #47 0
+INFO  01:13:39,435 - #44 ]
+INFO  01:13:39,436 - #34 =
+INFO  01:13:39,437 - #50 b
+INFO  01:13:39,437 - #37 ;
+INFO  01:13:39,438 - #46 }
+INFO  01:13:39,440 - #50 main
+INFO  01:13:39,440 - #41 (
+INFO  01:13:39,440 - #42 )
+INFO  01:13:39,441 - #45 {
+INFO  01:13:39,442 - #50 arr
+INFO  01:13:39,442 - #34 =
+INFO  01:13:39,442 - #50 int
+INFO  01:13:39,443 - #43 [
+INFO  01:13:39,443 - #47 3
+INFO  01:13:39,443 - #44 ]
+INFO  01:13:39,444 - #37 ;
+INFO  01:13:39,444 - #50 fun
+INFO  01:13:39,445 - #41 (
+INFO  01:13:39,445 - #50 arr
+INFO  01:13:39,445 - #39 ,
+INFO  01:13:39,445 - #47 2
+INFO  01:13:39,445 - #42 )
+INFO  01:13:39,446 - #37 ;
+INFO  01:13:39,447 - #41 (
+INFO  01:13:39,447 - #50 arr
+INFO  01:13:39,447 - #43 [
+INFO  01:13:39,447 - #47 0
+INFO  01:13:39,448 - #44 ]
+INFO  01:13:39,448 - #42 )
+INFO  01:13:39,448 - #37 ;
+INFO  01:13:39,449 - #46 }
+INFO  01:13:39,449 - #46 }
+INFO  01:13:39,462 - Otvoren opseg za program test302 na liniji 1
+INFO  01:13:39,463 - Obradjuje se funkcija fun na liniji 9
+INFO  01:13:39,463 - Obradjuje se funkcija main na liniji 13
+INFO  01:13:39,464 - Print calls = 1
+INFO  01:13:39,464 - Deklarisanih promenljivih = 5
+INFO  01:13:39,466 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  01:13:39,495 - Parsiranje uspesno zavrseno!

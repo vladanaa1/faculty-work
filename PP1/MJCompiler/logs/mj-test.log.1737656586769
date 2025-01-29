@@ -1,0 +1,26 @@
+INFO  18:48:15,210 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  18:48:15,295 - #50 test302
+INFO  18:48:15,295 - #50 int
+INFO  18:48:15,297 - #50 x
+INFO  18:48:15,299 - #37 ;
+INFO  18:48:15,300 - #45 {
+INFO  18:48:15,301 - #50 m
+INFO  18:48:15,302 - #41 (
+INFO  18:48:15,304 - #42 )
+INFO  18:48:15,305 - #45 {
+INFO  18:48:15,308 - #50 x
+INFO  18:48:15,309 - #34 =
+INFO  18:48:15,310 - #47 1
+INFO  18:48:15,310 - #37 ;
+INFO  18:48:15,311 - #41 (
+INFO  18:48:15,312 - #50 x
+INFO  18:48:15,313 - #42 )
+INFO  18:48:15,313 - #37 ;
+INFO  18:48:15,313 - #46 }
+INFO  18:48:15,314 - #46 }
+INFO  18:48:15,351 - Otvoren opseg za program test302 na liniji 1
+INFO  18:48:15,351 - Obradjuje se funkcija m na liniji 5
+ERROR 18:48:15,355 - Funkcija main nije definisana. Semantička greška na liniji 1
+INFO  18:48:15,355 - Print calls = 1
+INFO  18:48:15,356 - Deklarisanih promenljivih = 1
+ERROR 18:48:15,357 - Parsiranje NIJE uspesno zavrseno!

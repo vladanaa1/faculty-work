@@ -1,0 +1,65 @@
+INFO  20:00:08,004 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:00:08,089 - #50 test302
+INFO  20:00:08,089 - #45 {
+INFO  20:00:08,091 - #50 int
+INFO  20:00:08,093 - #50 fun
+INFO  20:00:08,094 - #41 (
+INFO  20:00:08,097 - #50 int
+INFO  20:00:08,097 - #50 a
+INFO  20:00:08,098 - #39 ,
+INFO  20:00:08,099 - #50 int
+INFO  20:00:08,099 - #50 b
+INFO  20:00:08,099 - #39 ,
+INFO  20:00:08,100 - #50 int
+INFO  20:00:08,100 - #50 c
+INFO  20:00:08,100 - #39 ,
+INFO  20:00:08,101 - #50 int
+INFO  20:00:08,101 - #50 d
+INFO  20:00:08,101 - #42 )
+INFO  20:00:08,102 - #45 {
+INFO  20:00:08,107 - #41 (
+INFO  20:00:08,107 - #50 d
+INFO  20:00:08,108 - #39 ,
+INFO  20:00:08,109 - #47 1
+INFO  20:00:08,112 - #42 )
+INFO  20:00:08,113 - #37 ;
+INFO  20:00:08,114 - #50 a
+INFO  20:00:08,114 - #23 *
+INFO  20:00:08,114 - #50 b
+INFO  20:00:08,116 - #23 *
+INFO  20:00:08,117 - #50 c
+INFO  20:00:08,117 - #37 ;
+INFO  20:00:08,117 - #46 }
+INFO  20:00:08,119 - #50 main
+INFO  20:00:08,120 - #41 (
+INFO  20:00:08,121 - #42 )
+INFO  20:00:08,122 - #50 int
+INFO  20:00:08,122 - #50 a
+INFO  20:00:08,122 - #43 [
+INFO  20:00:08,123 - #44 ]
+INFO  20:00:08,123 - #37 ;
+INFO  20:00:08,123 - #45 {
+INFO  20:00:08,124 - #41 (
+INFO  20:00:08,125 - #50 fun
+INFO  20:00:08,125 - #41 (
+INFO  20:00:08,126 - #47 1
+INFO  20:00:08,126 - #39 ,
+INFO  20:00:08,127 - #47 2
+INFO  20:00:08,127 - #39 ,
+INFO  20:00:08,128 - #47 3
+INFO  20:00:08,128 - #39 ,
+INFO  20:00:08,128 - #47 4
+INFO  20:00:08,130 - #42 )
+INFO  20:00:08,130 - #39 ,
+INFO  20:00:08,131 - #47 1
+INFO  20:00:08,131 - #42 )
+INFO  20:00:08,132 - #37 ;
+INFO  20:00:08,132 - #46 }
+INFO  20:00:08,133 - #46 }
+INFO  20:00:08,152 - Otvoren opseg za program test302 na liniji 1
+INFO  20:00:08,153 - Obradjuje se funkcija fun na liniji 3
+INFO  20:00:08,154 - Obradjuje se funkcija main na liniji 8
+INFO  20:00:08,155 - Print calls = 2
+INFO  20:00:08,155 - Deklarisanih promenljivih = 0
+INFO  20:00:08,159 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  20:00:08,173 - Parsiranje uspesno zavrseno!

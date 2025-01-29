@@ -1,0 +1,22 @@
+INFO  21:54:28,056 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  21:54:28,123 - #50 test302
+INFO  21:54:28,123 - #50 tr
+INFO  21:54:28,125 - #50 s1
+INFO  21:54:28,127 - #37 ;
+INFO  21:54:28,128 - #45 {
+INFO  21:54:28,130 - #50 main
+INFO  21:54:28,132 - #41 (
+INFO  21:54:28,133 - #42 )
+INFO  21:54:28,134 - #45 {
+INFO  21:54:28,138 - #41 (
+INFO  21:54:28,139 - #47 6
+INFO  21:54:28,139 - #42 )
+INFO  21:54:28,140 - #37 ;
+INFO  21:54:28,140 - #46 }
+INFO  21:54:28,141 - #46 }
+INFO  21:54:28,181 - Otvoren opseg za program test302 na liniji 1
+INFO  21:54:28,181 - Nedefinisan tip tr. Semantička greška na liniji 3
+INFO  21:54:28,182 - Obradjuje se funkcija main na liniji 7
+INFO  21:54:28,185 - Print calls = 1
+INFO  21:54:28,185 - Deklarisanih promenljivih = 1
+ERROR 21:54:28,187 - Parsiranje NIJE uspesno zavrseno!

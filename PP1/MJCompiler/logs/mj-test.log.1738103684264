@@ -1,0 +1,30 @@
+INFO  23:30:08,588 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:30:08,666 - #50 test302
+INFO  23:30:08,668 - #50 s1
+INFO  23:30:08,668 - #39 ,
+INFO  23:30:08,669 - #50 s2
+INFO  23:30:08,670 - #39 ,
+INFO  23:30:08,670 - #50 s3
+INFO  23:30:08,670 - #37 ;
+INFO  23:30:08,671 - #45 {
+INFO  23:30:08,672 - #50 main
+INFO  23:30:08,673 - #41 (
+INFO  23:30:08,674 - #42 )
+INFO  23:30:08,676 - #45 {
+INFO  23:30:08,678 - #50 s1
+INFO  23:30:08,679 - #34 =
+INFO  23:30:08,680 - #50 s2
+INFO  23:30:08,680 - #50 s3
+INFO  23:30:08,680 - #37 ;
+INFO  23:30:08,681 - #41 (
+INFO  23:30:08,681 - #47 6
+INFO  23:30:08,682 - #42 )
+INFO  23:30:08,682 - #37 ;
+INFO  23:30:08,682 - #46 }
+INFO  23:30:08,686 - #46 }
+INFO  23:30:08,700 - Otvoren opseg za program test302 na liniji 1
+INFO  23:30:08,700 - Obradjuje se funkcija main na liniji 7
+INFO  23:30:08,701 - Print calls = 1
+INFO  23:30:08,701 - Deklarisanih promenljivih = 3
+INFO  23:30:08,702 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  23:30:08,709 - Parsiranje uspesno zavrseno!

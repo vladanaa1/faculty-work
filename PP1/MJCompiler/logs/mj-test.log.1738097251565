@@ -1,0 +1,5 @@
+INFO  21:47:21,435 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  21:47:21,521 - #50 test302
+ERROR 21:47:21,522 - 
+Sintaksna greska na liniji 3
+ERROR 21:47:21,522 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 3

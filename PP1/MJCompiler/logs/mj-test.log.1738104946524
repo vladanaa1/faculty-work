@@ -1,0 +1,40 @@
+INFO  23:55:08,938 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:55:09,038 - #50 test302
+INFO  23:55:09,042 - #50 s1
+INFO  23:55:09,043 - #39 ,
+INFO  23:55:09,045 - #50 s2
+INFO  23:55:09,045 - #39 ,
+INFO  23:55:09,046 - #50 s3
+INFO  23:55:09,046 - #37 ;
+INFO  23:55:09,047 - #50 int
+INFO  23:55:09,047 - #50 a
+INFO  23:55:09,049 - #37 ;
+INFO  23:55:09,049 - #45 {
+INFO  23:55:09,051 - #50 main
+INFO  23:55:09,052 - #41 (
+INFO  23:55:09,053 - #42 )
+INFO  23:55:09,056 - #45 {
+INFO  23:55:09,061 - #50 s1
+INFO  23:55:09,062 - #34 =
+INFO  23:55:09,063 - #50 int
+INFO  23:55:09,063 - #43 [
+INFO  23:55:09,063 - #47 1
+INFO  23:55:09,064 - #44 ]
+INFO  23:55:09,064 - #37 ;
+INFO  23:55:09,067 - #50 s1
+INFO  23:55:09,068 - #34 =
+INFO  23:55:09,068 - #50 s2
+INFO  23:55:09,068 - #50 s3
+INFO  23:55:09,068 - #37 ;
+INFO  23:55:09,069 - #41 (
+INFO  23:55:09,069 - #47 6
+INFO  23:55:09,069 - #42 )
+INFO  23:55:09,069 - #37 ;
+INFO  23:55:09,069 - #46 }
+INFO  23:55:09,070 - #46 }
+INFO  23:55:09,085 - Otvoren opseg za program test302 na liniji 1
+INFO  23:55:09,085 - Obradjuje se funkcija main na liniji 8
+INFO  23:55:09,085 - Nepoklapanje tipova u dodeli vrednosti. Semantička greška na liniji 11
+INFO  23:55:09,086 - Print calls = 1
+INFO  23:55:09,086 - Deklarisanih promenljivih = 4
+ERROR 23:55:09,088 - Parsiranje NIJE uspesno zavrseno!

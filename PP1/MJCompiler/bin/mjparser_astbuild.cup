@@ -176,6 +176,7 @@ nonterminal MethodArgumentList MethodArgumentList;
 nonterminal LocalVars LocalVars;
 nonterminal LocalVar LocalVar;
 nonterminal Type Type;
+nonterminal Set Set;
 nonterminal Name Name;
 nonterminal NegOp NegOp;
 nonterminal LBracket LBracket;
@@ -191,7 +192,8 @@ DeclarationsList      ::= (NonEmptyDeclList) DeclarationsList:D1 Declaration:D2 
                        |  (EmptyDeclList) {: RESULT=new EmptyDeclList(); :} /*epsilon*/;
 
 Declaration           ::= (ConstDecl) CONST Type:T1 ConstDeclList:C2 SEMI {: RESULT=new ConstDecl(T1, C2); RESULT.setLine(T1left); :}
-                       |  (GlobalVarDecl) Type:T1 VarDeclList:V2 SEMI {: RESULT=new GlobalVarDecl(T1, V2); RESULT.setLine(T1left); :};
+                       |  (GlobalVarDecl) Type:T1 VarDeclList:V2 SEMI {: RESULT=new GlobalVarDecl(T1, V2); RESULT.setLine(T1left); :}
+                       |  (GlobalSetDecl) Set:S1 VarDeclList:V2 SEMI {: RESULT=new GlobalSetDecl(S1, V2); RESULT.setLine(S1left); :};
 
 ConstDeclList         ::= (SingleConstDecl) Const:C1 {: RESULT=new SingleConstDecl(C1); RESULT.setLine(C1left); :}
                        |  (MultipleConstDecl) ConstDeclList:C1 COMMA Const:C2 {: RESULT=new MultipleConstDecl(C1, C2); RESULT.setLine(C1left); :};
@@ -201,6 +203,8 @@ Const                 ::= (Const) Name:N1 ASSIGN Literal:L2 {: RESULT=new Const(
 Name                  ::= (Name) IDENT:ident {: RESULT=new Name(ident); RESULT.setLine(identleft); :};
 
 Type                  ::= (Type) IDENT:typeName {: RESULT=new Type(typeName); RESULT.setLine(typeNameleft); :};
+
+Set                   ::= (Set) SET {: RESULT=new Set(); :};
 
 VarDeclList           ::= (SingleVarDecl) Name:N1 {: RESULT=new SingleVarDecl(N1); RESULT.setLine(N1left); :}
                        |  (SingleVarDeclVector) Name:N1 LBRACKET RBRACKET {: RESULT=new SingleVarDeclVector(N1); RESULT.setLine(N1left); :}
@@ -302,6 +306,7 @@ Factor                ::= (DesignatorFactor) Designator:D1 {: RESULT=new Designa
                        |  (CharFactor) CHAR:value {: RESULT=new CharFactor(value); RESULT.setLine(valueleft); :}
                        |  (BoolFactor) BOOL:value {: RESULT=new BoolFactor(value); RESULT.setLine(valueleft); :}
                        |  (NewVectorFactor) NEW Type:T1 LBRACKET Expr2:E2 RBRACKET {: RESULT=new NewVectorFactor(T1, E2); RESULT.setLine(T1left); :}
+                       |  (NewSetFactor) NEW SET LBRACKET Expr2:E1 RBRACKET {: RESULT=new NewSetFactor(E1); RESULT.setLine(E1left); :}
                        |  (TypeConstructorFactor) NEW Type:T1 LPAREN MethodArgumentList:M2 RPAREN {: RESULT=new TypeConstructorFactor(T1, M2); RESULT.setLine(T1left); :}
                        |  (DelimitedFactor) LPAREN Expr2:E1 RPAREN {: RESULT=new DelimitedFactor(E1); RESULT.setLine(E1left); :};
 

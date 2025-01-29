@@ -1,7 +1,9 @@
 package rs.ac.bg.etf.pp1;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Stack;
@@ -12,6 +14,7 @@ import rs.etf.pp1.mj.runtime.Code;
 import rs.etf.pp1.symboltable.Tab;
 import rs.etf.pp1.symboltable.concepts.Obj;
 import rs.etf.pp1.symboltable.concepts.Struct;
+import rs.etf.pp1.symboltable.structure.SymbolDataStructure;
 import rs.ac.bg.etf.pp1.SemanticPass;
 
 public class CodeGenerator extends VisitorAdaptor {
@@ -39,16 +42,32 @@ public class CodeGenerator extends VisitorAdaptor {
 	private Stack<List<Integer>> breakJumps = new Stack<>();
 	private Stack<List<Integer>> continueJumps = new Stack<>();
 	
-	private Stack<Obj> parameters = new Stack<Obj>();
-	
-	private void init() {
-		// da li ovo da realizujem ovde ili u SemanticPass?
-		Obj eolObj = Tab.insert(Obj.Con, "eol", Tab.charType);
-		eolObj.setAdr('\n');
+	private void initializePredeclaredMethods() {
+		Obj addMethod = Tab.find("add");
+		
+		addMethod.setAdr(Code.pc);
+		Code.put(Code.enter);
+		Collection<Obj> paramethers = addMethod.getLocalSymbols();
+		
+		Iterator<Obj> iterator = paramethers.iterator();
+		
+		Obj setObj = iterator.next();
+		Obj valueObj = iterator.next();
+		
+		int index = setObj.getLocalSymbols().size();
+		
+		Obj indexObj = new Obj(Obj.Con, "", Tab.intType, index, 0);
+		
+		Code.put(setObj.getAdr());
+		Code.put(index);
+		Code.put(valueObj.getAdr());
+		Code.put(Code.astore);
+		
+		// overwrite SymbolDataStructure
 	}
 	
 	public CodeGenerator() {
-		init();
+		// initializePredeclaredMethods();
 	}
 	
 	public int getMainPc() {
@@ -62,12 +81,13 @@ public class CodeGenerator extends VisitorAdaptor {
 			return;
 		}
 		
+		// Width
+		Code.loadConst(0);
+		
 		if(printObj.getType().equals(Tab.intType)) {
-			Code.loadConst(5);
 			Code.put(Code.print);
 		}
 		else if(printObj.getType().equals(Tab.charType)) {
-			Code.loadConst(1);
 			Code.put(Code.bprint);
 		}
 	}
@@ -79,12 +99,13 @@ public class CodeGenerator extends VisitorAdaptor {
 			return;
 		}
 		
+		// Width
+		Code.loadConst(printWithComma.getN2());
+		
 		if(printObj.getType().equals(Tab.intType)) {
-			Code.loadConst(5);
 			Code.put(Code.print);
 		}
 		else if(printObj.getType().equals(Tab.charType)) {
-			Code.loadConst(1);
 			Code.put(Code.bprint);
 		}
 	}
@@ -131,8 +152,14 @@ public class CodeGenerator extends VisitorAdaptor {
 		methodNode.traverseTopDown(paramCnt);
 		
 		// Generate the entry
+		
+		// enter
 		Code.put(Code.enter);
+		
+		// b1
 		Code.put(paramCnt.getCount());
+		
+		// b2
 		Code.put(varCnt.getCount() + paramCnt.getCount());
 	}
 	
@@ -144,22 +171,6 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(DesignatorAssign designatorAssign) {
 		Code.store(designatorAssign.getDesignator().obj);
 	}
-	
-	/*
-	public void visit(DesignatorIdent designatorIdent) {
-		SyntaxNode parent = designatorIdent.getParent();
-		
-		// SyntaxNode grandparent = parent.getParent();
-		
-		if(DesignatorAssign.class != parent.getClass() && MethodCallFactor.class != parent.getClass()) {
-			Code.load(designatorIdent.obj);
-			if(negativeExpr) {
-				Code.put(Code.neg);
-				negativeExpr = false;
-			}
-		}
-	}
-	*/
 	
 	public void visit(DesignatorIdent designatorIdent) {
 		if(designatorIdent.getParent().getClass() == DesignatorSelect.class) {
@@ -181,10 +192,6 @@ public class CodeGenerator extends VisitorAdaptor {
 		
 		Code.put(Code.call);
 		Code.put2(offset);
-		
-		if(!functionObj.getType().equals(Tab.noType)) {
-			Code.put(Code.pop);
-		}
 	}
 	
 	public void visit(MethodCallFactor methodCallFactor) {
@@ -193,10 +200,6 @@ public class CodeGenerator extends VisitorAdaptor {
 		
 		Code.put(Code.call);
 		Code.put2(offset);
-		
-		if(!functionObj.getType().equals(Tab.noType)) {
-			Code.put(Code.pop);
-		}
 	}
 	
 	public void visit(NewVectorFactor newVectorFactor) {
@@ -212,7 +215,6 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(ReturnWithExpr returnWithExpr) {
-		Code.load(returnWithExpr.getExpr2().obj);
 		Code.put(Code.exit);
 		Code.put(Code.return_);
 	}
@@ -220,6 +222,17 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(Return returnWithoutExpr) {
 		Code.put(Code.exit);
 		Code.put(Code.return_);
+	}
+	
+	public void visit(Read read) {
+		if(read.getDesignator().obj.getType().equals(Tab.charType)) {
+			Code.put(Code.bread);
+		}
+		else if(read.getDesignator().obj.getType().equals(Tab.intType)) {
+			Code.put(Code.read);
+		}
+		
+		Code.store(read.getDesignator().obj);
 	}
 	
 	public void visit(DesignatorMapExpr designatorMapExpr) {
@@ -372,12 +385,12 @@ public class CodeGenerator extends VisitorAdaptor {
 		breakJumps.peek().add(Code.pc - 2);
 	}
 	
-	/* Ne koristimo inc i dec jer oni rade samo sa lokalnim promenljivama */
-	
 	public void visit(DesignatorInc designatorInc) {
 		Obj designatorObj = designatorInc.getDesignator().obj;
 		
-		// Code.put(Code.dup2);
+		if(designatorObj.getKind() == Obj.Elem) {
+			Code.put(Code.dup2);
+		}
 		
 		Code.load(designatorObj);
 		Code.loadConst(1);
@@ -388,11 +401,14 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(DesignatorDec designatorDec) {
 		Obj designatorObj = designatorDec.getDesignator().obj;
 		
-		// Code.put(Code.dup2);
+		if(designatorObj.getKind() == Obj.Elem) {
+			Code.put(Code.dup2);
+		}
 		
 		Code.load(designatorObj);
 		Code.loadConst(1);
 		Code.put(Code.sub);
+		
 		Code.store(designatorObj);
 	}
 	
@@ -401,20 +417,15 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(IdentMethodArgument ident) {
-		parameters.add(ident.obj);
+		Code.load(ident.obj);
 	}
 	
 	public void visit(IdentVectorMethodArgument ident) {
-		parameters.add(ident.obj);
+		Code.load(ident.obj);
 	}
 	
 	public void visit(LiteralMethodArgument literal) {
-		parameters.add(literal.getLiteral().obj);
+		Code.load(literal.getLiteral().obj);
 	}
 	
-	public void visit(NonEmptyMethodArguments nonEmptyMethodArguments) {
-		while(!parameters.empty()) {
-			Code.load(parameters.pop());
-		}
-	}
 }

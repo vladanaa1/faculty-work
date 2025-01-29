@@ -1,0 +1,25 @@
+INFO  21:32:00,193 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  21:32:00,261 - #50 test302
+INFO  21:32:00,262 - #50 lopta
+INFO  21:32:00,264 - #50 s1
+INFO  21:32:00,265 - #37 ;
+INFO  21:32:00,266 - #50 int
+INFO  21:32:00,267 - #50 a
+INFO  21:32:00,267 - #37 ;
+INFO  21:32:00,268 - #45 {
+INFO  21:32:00,270 - #50 main
+INFO  21:32:00,271 - #41 (
+INFO  21:32:00,273 - #42 )
+INFO  21:32:00,274 - #45 {
+INFO  21:32:00,278 - #41 (
+INFO  21:32:00,278 - #47 6
+INFO  21:32:00,279 - #42 )
+INFO  21:32:00,280 - #37 ;
+INFO  21:32:00,280 - #46 }
+INFO  21:32:00,281 - #46 }
+INFO  21:32:00,296 - Otvoren opseg za program test302 na liniji 1
+INFO  21:32:00,296 - Nedefinisan tip lopta. Semantička greška na liniji 3
+INFO  21:32:00,299 - Obradjuje se funkcija main na liniji 9
+INFO  21:32:00,299 - Print calls = 1
+INFO  21:32:00,300 - Deklarisanih promenljivih = 2
+ERROR 21:32:00,301 - Parsiranje NIJE uspesno zavrseno!

@@ -1,19 +1,17 @@
 program test302
 
-int x;
+set s1, s2, s3;
+
+int a;
+
+int arr[];
 {
+	
 	void main()
 	{
-	
-	// arrays: ok
-	// function calls: dobro se prenese samo prvi param, popravi
-	// do while: ok
-	// break/continue: ok
-	// if else jumps: ok
-	// addAll, eol, read... fale
-	
-		x = 1;
+		s1 = new set[1];
 		
-		print(x);
+		print(1);
+		
 	}
 }

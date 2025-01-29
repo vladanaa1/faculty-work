@@ -1,0 +1,54 @@
+INFO  17:20:38,190 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  17:20:38,280 - #50 test302
+INFO  17:20:38,281 - #50 int
+INFO  17:20:38,283 - #50 x
+INFO  17:20:38,284 - #43 [
+INFO  17:20:38,285 - #44 ]
+INFO  17:20:38,286 - #37 ;
+INFO  17:20:38,286 - #45 {
+INFO  17:20:38,287 - #50 int
+INFO  17:20:38,288 - #50 fun
+INFO  17:20:38,289 - #41 (
+INFO  17:20:38,291 - #50 int
+INFO  17:20:38,292 - #50 a1
+INFO  17:20:38,292 - #42 )
+INFO  17:20:38,293 - #50 int
+INFO  17:20:38,296 - #50 a2
+INFO  17:20:38,296 - #37 ;
+INFO  17:20:38,297 - #45 {
+INFO  17:20:38,299 - #50 a1
+INFO  17:20:38,299 - #23 *
+INFO  17:20:38,300 - #50 a2
+INFO  17:20:38,302 - #37 ;
+INFO  17:20:38,302 - #46 }
+INFO  17:20:38,307 - #50 main
+INFO  17:20:38,309 - #41 (
+INFO  17:20:38,309 - #42 )
+INFO  17:20:38,310 - #50 int
+INFO  17:20:38,310 - #50 a
+INFO  17:20:38,311 - #39 ,
+INFO  17:20:38,311 - #50 b
+INFO  17:20:38,311 - #39 ,
+INFO  17:20:38,311 - #50 c
+INFO  17:20:38,312 - #37 ;
+INFO  17:20:38,312 - #45 {
+INFO  17:20:38,312 - #50 x
+INFO  17:20:38,312 - #34 =
+INFO  17:20:38,312 - #50 int
+INFO  17:20:38,313 - #43 [
+INFO  17:20:38,313 - #47 2
+INFO  17:20:38,313 - #44 ]
+INFO  17:20:38,314 - #37 ;
+INFO  17:20:38,315 - #41 (
+INFO  17:20:38,315 - #50 x
+INFO  17:20:38,315 - #42 )
+INFO  17:20:38,315 - #37 ;
+INFO  17:20:38,316 - #46 }
+INFO  17:20:38,316 - #46 }
+INFO  17:20:38,365 - Otvoren opseg za program test302 na liniji 1
+INFO  17:20:38,366 - Obradjuje se funkcija fun na liniji 6
+INFO  17:20:38,367 - Obradjuje se funkcija main na liniji 12
+ERROR 17:20:38,367 - Neodgovarajući tip u read iskazu. Semantička greška na liniji 18
+INFO  17:20:38,367 - Print calls = 0
+INFO  17:20:38,368 - Deklarisanih promenljivih = 1
+ERROR 17:20:38,370 - Parsiranje NIJE uspesno zavrseno!

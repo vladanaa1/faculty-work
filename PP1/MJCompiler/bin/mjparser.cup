@@ -175,6 +175,7 @@ nonterminal MethodArgumentsOptional;
 nonterminal MethodArgumentList;
 nonterminal LocalVars, LocalVar;
 nonterminal Type;
+nonterminal Set;
 nonterminal Name;
 nonterminal NegOp;
 nonterminal LBracket;
@@ -190,7 +191,8 @@ DeclarationsList      ::= (NonEmptyDeclList) DeclarationsList Declaration
                        |  (EmptyDeclList) /*epsilon*/;
 
 Declaration           ::= (ConstDecl) CONST Type ConstDeclList SEMI
-                       |  (GlobalVarDecl) Type VarDeclList SEMI;
+                       |  (GlobalVarDecl) Type VarDeclList SEMI
+                       |  (GlobalSetDecl) Set VarDeclList SEMI;
 
 ConstDeclList         ::= (SingleConstDecl) Const
                        |  (MultipleConstDecl) ConstDeclList COMMA Const;
@@ -200,6 +202,8 @@ Const                 ::= (Const) Name ASSIGN Literal;
 Name                  ::= (Name) IDENT:ident;
 
 Type                  ::= (Type) IDENT:typeName;
+
+Set                   ::= (Set) SET;
 
 VarDeclList           ::= (SingleVarDecl) Name
                        |  (SingleVarDeclVector) Name LBRACKET RBRACKET
@@ -301,6 +305,7 @@ Factor                ::= (DesignatorFactor) Designator
                        |  (CharFactor) CHAR:value
                        |  (BoolFactor) BOOL:value
                        |  (NewVectorFactor) NEW Type LBRACKET Expr2 RBRACKET
+                       |  (NewSetFactor) NEW SET LBRACKET Expr2 RBRACKET
                        |  (TypeConstructorFactor) NEW Type LPAREN MethodArgumentList RPAREN
                        |  (DelimitedFactor) LPAREN Expr2 RPAREN;
 

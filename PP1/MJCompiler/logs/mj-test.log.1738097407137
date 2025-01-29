@@ -1,0 +1,25 @@
+INFO  21:49:08,568 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  21:49:08,635 - #50 test302
+INFO  21:49:08,635 - #50 volim
+INFO  21:49:08,638 - #50 te
+INFO  21:49:08,640 - #37 ;
+INFO  21:49:08,641 - #50 int
+INFO  21:49:08,642 - #50 a
+INFO  21:49:08,642 - #37 ;
+INFO  21:49:08,642 - #45 {
+INFO  21:49:08,643 - #50 main
+INFO  21:49:08,644 - #41 (
+INFO  21:49:08,646 - #42 )
+INFO  21:49:08,647 - #45 {
+INFO  21:49:08,652 - #41 (
+INFO  21:49:08,652 - #47 6
+INFO  21:49:08,653 - #42 )
+INFO  21:49:08,654 - #37 ;
+INFO  21:49:08,654 - #46 }
+INFO  21:49:08,655 - #46 }
+INFO  21:49:08,694 - Otvoren opseg za program test302 na liniji 1
+INFO  21:49:08,695 - Nedefinisan tip volim. Semantička greška na liniji 3
+INFO  21:49:08,698 - Obradjuje se funkcija main na liniji 9
+INFO  21:49:08,698 - Print calls = 1
+INFO  21:49:08,698 - Deklarisanih promenljivih = 2
+ERROR 21:49:08,701 - Parsiranje NIJE uspesno zavrseno!

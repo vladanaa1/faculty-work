@@ -13,18 +13,11 @@ public class CounterVisitor extends VisitorAdaptor {
 	
 	public static class FormParamCounter extends CounterVisitor{
 		
-		/*
-		public void visit(ScalarMethodParameter methodParameter) {
-			System.out.println("da lis e ovo uopste poziva");
-			count++;
-		}
-		
-		public void visit(VectorMethodParameter methodParameter) {
-			count++;
-		}
-		*/
-		
 		public void visit(SingleMethodParameter singleMethodParameter) {
+			count++;
+		}
+		
+		public void visit(MultipleMethodParameters multipleMethodParameters) {
 			count++;
 		}
 	}
