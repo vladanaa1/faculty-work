@@ -1,0 +1,60 @@
+INFO  19:40:35,217 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:40:35,315 - #50 test302
+INFO  19:40:35,317 - #50 s1
+INFO  19:40:35,318 - #39 ,
+INFO  19:40:35,319 - #50 s2
+INFO  19:40:35,319 - #39 ,
+INFO  19:40:35,321 - #50 s3
+INFO  19:40:35,321 - #37 ;
+INFO  19:40:35,321 - #50 int
+INFO  19:40:35,321 - #50 a
+INFO  19:40:35,322 - #37 ;
+INFO  19:40:35,323 - #50 int
+INFO  19:40:35,325 - #50 arr
+INFO  19:40:35,325 - #43 [
+INFO  19:40:35,325 - #44 ]
+INFO  19:40:35,326 - #37 ;
+INFO  19:40:35,326 - #45 {
+INFO  19:40:35,327 - #50 main
+INFO  19:40:35,329 - #41 (
+INFO  19:40:35,330 - #42 )
+INFO  19:40:35,332 - #45 {
+INFO  19:40:35,335 - #50 s1
+INFO  19:40:35,337 - #34 =
+INFO  19:40:35,337 - #43 [
+INFO  19:40:35,338 - #47 5
+INFO  19:40:35,338 - #44 ]
+INFO  19:40:35,338 - #37 ;
+INFO  19:40:35,340 - #50 add
+INFO  19:40:35,340 - #41 (
+INFO  19:40:35,341 - #50 s1
+INFO  19:40:35,341 - #39 ,
+INFO  19:40:35,341 - #47 1
+INFO  19:40:35,341 - #42 )
+INFO  19:40:35,342 - #37 ;
+INFO  19:40:35,343 - #50 add
+INFO  19:40:35,343 - #41 (
+INFO  19:40:35,343 - #50 s1
+INFO  19:40:35,343 - #39 ,
+INFO  19:40:35,344 - #47 2
+INFO  19:40:35,344 - #42 )
+INFO  19:40:35,344 - #37 ;
+INFO  19:40:35,344 - #50 add
+INFO  19:40:35,345 - #41 (
+INFO  19:40:35,345 - #50 s1
+INFO  19:40:35,345 - #39 ,
+INFO  19:40:35,345 - #47 3
+INFO  19:40:35,346 - #42 )
+INFO  19:40:35,346 - #37 ;
+INFO  19:40:35,346 - #41 (
+INFO  19:40:35,346 - #50 s1
+INFO  19:40:35,347 - #42 )
+INFO  19:40:35,347 - #37 ;
+INFO  19:40:35,347 - #46 }
+INFO  19:40:35,348 - #46 }
+INFO  19:40:35,366 - Otvoren opseg za program test302 na liniji 1
+INFO  19:40:35,366 - Obradjuje se funkcija main na liniji 10
+INFO  19:40:35,368 - Print calls = 1
+INFO  19:40:35,369 - Deklarisanih promenljivih = 5
+INFO  19:40:35,371 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  19:40:35,417 - Parsiranje uspesno zavrseno!

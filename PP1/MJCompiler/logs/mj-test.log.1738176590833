@@ -1,0 +1,62 @@
+INFO  19:49:14,806 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  19:49:14,869 - #50 test302
+INFO  19:49:14,871 - #50 s1
+INFO  19:49:14,872 - #39 ,
+INFO  19:49:14,873 - #50 s2
+INFO  19:49:14,873 - #39 ,
+INFO  19:49:14,874 - #50 s3
+INFO  19:49:14,874 - #37 ;
+INFO  19:49:14,874 - #50 int
+INFO  19:49:14,875 - #50 a
+INFO  19:49:14,876 - #37 ;
+INFO  19:49:14,877 - #50 int
+INFO  19:49:14,877 - #50 arr
+INFO  19:49:14,877 - #43 [
+INFO  19:49:14,877 - #44 ]
+INFO  19:49:14,878 - #37 ;
+INFO  19:49:14,878 - #45 {
+INFO  19:49:14,879 - #50 main
+INFO  19:49:14,880 - #41 (
+INFO  19:49:14,881 - #42 )
+INFO  19:49:14,883 - #45 {
+INFO  19:49:14,886 - #50 s1
+INFO  19:49:14,887 - #34 =
+INFO  19:49:14,890 - #43 [
+INFO  19:49:14,891 - #47 5
+INFO  19:49:14,892 - #44 ]
+INFO  19:49:14,892 - #37 ;
+INFO  19:49:14,893 - #50 add
+INFO  19:49:14,893 - #41 (
+INFO  19:49:14,894 - #50 s1
+INFO  19:49:14,894 - #39 ,
+INFO  19:49:14,894 - #47 1
+INFO  19:49:14,895 - #42 )
+INFO  19:49:14,896 - #37 ;
+INFO  19:49:14,896 - #50 add
+INFO  19:49:14,896 - #41 (
+INFO  19:49:14,897 - #50 s1
+INFO  19:49:14,897 - #39 ,
+INFO  19:49:14,897 - #47 2
+INFO  19:49:14,897 - #42 )
+INFO  19:49:14,899 - #37 ;
+INFO  19:49:14,899 - #50 add
+INFO  19:49:14,900 - #41 (
+INFO  19:49:14,901 - #50 s1
+INFO  19:49:14,901 - #39 ,
+INFO  19:49:14,902 - #47 3
+INFO  19:49:14,902 - #42 )
+INFO  19:49:14,903 - #37 ;
+INFO  19:49:14,903 - #41 (
+INFO  19:49:14,903 - #50 s1
+INFO  19:49:14,903 - #42 )
+INFO  19:49:14,904 - #37 ;
+INFO  19:49:14,904 - #46 }
+INFO  19:49:14,905 - #46 }
+INFO  19:49:14,949 - Otvoren opseg za program test302 na liniji 1
+INFO  19:49:14,949 - Obradjuje se funkcija main na liniji 10
+INFO  19:49:14,958 - Neodgovarajući broj parametara u pozivu funkcije. Semantička greška na liniji 14
+INFO  19:49:14,958 - Neodgovarajući broj parametara u pozivu funkcije. Semantička greška na liniji 15
+INFO  19:49:14,959 - Neodgovarajući broj parametara u pozivu funkcije. Semantička greška na liniji 16
+INFO  19:49:14,961 - Print calls = 1
+INFO  19:49:14,961 - Deklarisanih promenljivih = 5
+ERROR 19:49:14,964 - Parsiranje NIJE uspesno zavrseno!

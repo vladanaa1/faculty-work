@@ -42,32 +42,77 @@ public class CodeGenerator extends VisitorAdaptor {
 	private Stack<List<Integer>> breakJumps = new Stack<>();
 	private Stack<List<Integer>> continueJumps = new Stack<>();
 	
+	private HashMap<Obj, Integer> setToSize = new HashMap<>();
+	private HashMap<Obj, Integer> arrayToSize = new HashMap<>();
+	
+	private Stack<Obj> arguments = new Stack<Obj>();
+	
 	private void initializePredeclaredMethods() {
+		Obj chrMeth = Tab.find("chr");
+		Obj ordMeth = Tab.find("ord");
+		
+		ordMeth.setAdr(Code.pc);
+		chrMeth.setAdr(Code.pc);
+		Code.put(Code.enter);
+		Code.put(1);
+		Code.put(1);
+		Code.put(Code.load_n);
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+		
+		Obj lenMeth = Tab.find("len");
+	
+		lenMeth.setAdr(Code.pc);
+		Code.put(Code.enter);
+		Code.put(1);
+		Code.put(1);
+		Code.put(Code.load_n);
+		Code.put(Code.arraylength);
+		Code.put(Code.exit);
+		Code.put(Code.return_);	
+		
 		Obj addMethod = Tab.find("add");
 		
 		addMethod.setAdr(Code.pc);
 		Code.put(Code.enter);
+		Code.put(3);
+		Code.put(3);
 		Collection<Obj> paramethers = addMethod.getLocalSymbols();
 		
 		Iterator<Obj> iterator = paramethers.iterator();
 		
 		Obj setObj = iterator.next();
 		Obj valueObj = iterator.next();
+		Obj indexObj = iterator.next();
 		
-		int index = setObj.getLocalSymbols().size();
-		
-		Obj indexObj = new Obj(Obj.Con, "", Tab.intType, index, 0);
-		
-		Code.put(setObj.getAdr());
-		Code.put(index);
-		Code.put(valueObj.getAdr());
+		Code.load(setObj);
+		Code.load(indexObj);
+		Code.load(valueObj);
 		Code.put(Code.astore);
+		Code.put(Code.exit);
+		Code.put(Code.return_);
 		
-		// overwrite SymbolDataStructure
+		Obj addAllMethod = Tab.find("addAll");
+		
+		addAllMethod.setAdr(Code.pc);
+		Code.put(Code.enter);
+		Code.put(2);
+		Code.put(2);
+		
+		paramethers = addAllMethod.getLocalSymbols();
+		iterator = paramethers.iterator();
+		
+		setObj = iterator.next();
+		Obj arrayObj = iterator.next();
+		
+		// ...
+		
+		Code.put(Code.exit);
+		Code.put(Code.return_);
 	}
 	
 	public CodeGenerator() {
-		// initializePredeclaredMethods();
+		initializePredeclaredMethods();
 	}
 	
 	public int getMainPc() {
@@ -80,6 +125,23 @@ public class CodeGenerator extends VisitorAdaptor {
 		if(printObj == null) {
 			return;
 		}
+		
+		if(printObj.getType().getKind() == Struct.Array && printObj.getType().getElemType().equals(Tab.intType)) {
+			int size = setToSize.get(printObj);
+			for(int i = 0; i <= size; i++) {
+				Code.load(printObj);
+				Code.loadConst(i);
+				
+				// adr, index -> val
+				Code.put(Code.aload);
+				
+				// val, width
+				Code.loadConst(2);
+				Code.put(Code.print);
+			}
+			return;
+		}
+		
 		
 		// Width
 		Code.loadConst(0);
@@ -96,6 +158,23 @@ public class CodeGenerator extends VisitorAdaptor {
 		Obj printObj = printWithComma.getExpr2().obj;
 		
 		if(printObj == null) {
+			return;
+		}
+		
+		if(printObj.getType().getKind() == Struct.Array && printObj.getType().getElemType().equals(Tab.intType)) {
+			int size = setToSize.get(printObj);
+			for(int i = 0; i <= size; i++) {
+				Code.load(printObj);
+				Code.loadConst(i);
+				
+				// adr, index -> val
+				Code.put(Code.aload);
+				
+				// val, width
+				if(i!=0) Code.loadConst(2);
+				else Code.loadConst(printWithComma.getN2());
+				Code.put(Code.print);
+			}
 			return;
 		}
 		
@@ -169,6 +248,15 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(DesignatorAssign designatorAssign) {
+		/*
+		if(designatorAssign.getDesignator().getClass().equals(DesignatorSelect.class)) {
+			String elemName = designatorAssign.getDesignator().obj.getName();
+			
+			// from arr[$] to arr
+			String arrayName = elemName.replace("[$]", "");
+			
+		}
+		*/
 		Code.store(designatorAssign.getDesignator().obj);
 	}
 	
@@ -188,10 +276,25 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	public void visit(FunctionCall functionCall) {
 		Obj functionObj = functionCall.getDesignator().obj;
+		
+		
+		if(functionObj.getName().equals("add")) {
+			Obj valObj = arguments.pop();
+			Obj setObj = arguments.pop();
+
+			int newSize = setToSize.getOrDefault(setObj, -1) + 1;
+			setToSize.put(setObj, newSize);
+
+			// Passing index as third argument for add method
+			Code.load(new Obj(Obj.Con, "", Tab.intType, newSize, 0));
+		}
+		
 		int offset = functionObj.getAdr() - Code.pc;
 		
 		Code.put(Code.call);
 		Code.put2(offset);
+		
+		arguments.clear();
 	}
 	
 	public void visit(MethodCallFactor methodCallFactor) {
@@ -212,6 +315,11 @@ public class CodeGenerator extends VisitorAdaptor {
 		}
 		else
 			Code.put(0);
+	}
+	
+	public void visit(NewSetFactor newSetFactor) {
+		Code.put(Code.newarray);
+		Code.put(1);
 	}
 	
 	public void visit(ReturnWithExpr returnWithExpr) {
@@ -418,14 +526,17 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	public void visit(IdentMethodArgument ident) {
 		Code.load(ident.obj);
+		arguments.add(ident.obj);
 	}
 	
 	public void visit(IdentVectorMethodArgument ident) {
 		Code.load(ident.obj);
+		arguments.add(ident.obj);
 	}
 	
 	public void visit(LiteralMethodArgument literal) {
 		Code.load(literal.getLiteral().obj);
+		arguments.add(literal.getLiteral().obj);
 	}
 	
 }

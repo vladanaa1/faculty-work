@@ -1,0 +1,42 @@
+INFO  16:42:38,995 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  16:42:39,067 - #50 test302
+INFO  16:42:39,069 - #50 s1
+INFO  16:42:39,071 - #39 ,
+INFO  16:42:39,072 - #50 s2
+INFO  16:42:39,073 - #39 ,
+INFO  16:42:39,073 - #50 s3
+INFO  16:42:39,073 - #37 ;
+INFO  16:42:39,073 - #50 int
+INFO  16:42:39,074 - #50 a
+INFO  16:42:39,075 - #37 ;
+INFO  16:42:39,075 - #50 int
+INFO  16:42:39,075 - #50 arr
+INFO  16:42:39,075 - #43 [
+INFO  16:42:39,076 - #44 ]
+INFO  16:42:39,076 - #37 ;
+INFO  16:42:39,076 - #45 {
+INFO  16:42:39,077 - #50 main
+INFO  16:42:39,078 - #41 (
+INFO  16:42:39,079 - #42 )
+INFO  16:42:39,080 - #45 {
+INFO  16:42:39,083 - #50 s1
+INFO  16:42:39,084 - #34 =
+INFO  16:42:39,087 - #43 [
+INFO  16:42:39,088 - #47 1
+INFO  16:42:39,088 - #44 ]
+INFO  16:42:39,089 - #37 ;
+INFO  16:42:39,089 - #50 add
+INFO  16:42:39,090 - #41 (
+INFO  16:42:39,090 - #50 s1
+INFO  16:42:39,090 - #39 ,
+INFO  16:42:39,091 - #47 1
+INFO  16:42:39,091 - #42 )
+INFO  16:42:39,092 - #37 ;
+INFO  16:42:39,092 - #46 }
+INFO  16:42:39,092 - #46 }
+INFO  16:42:39,111 - Otvoren opseg za program test302 na liniji 1
+INFO  16:42:39,112 - Obradjuje se funkcija main na liniji 10
+INFO  16:42:39,112 - Print calls = 0
+INFO  16:42:39,112 - Deklarisanih promenljivih = 5
+INFO  16:42:39,114 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  16:42:39,155 - Parsiranje uspesno zavrseno!

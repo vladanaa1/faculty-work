@@ -9,9 +9,13 @@ int arr[];
 	
 	void main()
 	{
-		s1 = new set[1];
+		s1 = new set[10];
 		
-		print(1);
+		add(s1,1);
+		
+		add(s1,2);
+		
+		print(s1);
 		
 	}
 }

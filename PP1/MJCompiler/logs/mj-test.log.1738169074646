@@ -1,0 +1,56 @@
+INFO  17:43:01,047 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  17:43:01,109 - #50 test302
+INFO  17:43:01,111 - #50 s1
+INFO  17:43:01,113 - #39 ,
+INFO  17:43:01,114 - #50 s2
+INFO  17:43:01,114 - #39 ,
+INFO  17:43:01,114 - #50 s3
+INFO  17:43:01,115 - #37 ;
+INFO  17:43:01,115 - #50 int
+INFO  17:43:01,115 - #50 a
+INFO  17:43:01,116 - #37 ;
+INFO  17:43:01,117 - #50 int
+INFO  17:43:01,117 - #50 arr
+INFO  17:43:01,117 - #43 [
+INFO  17:43:01,117 - #44 ]
+INFO  17:43:01,118 - #37 ;
+INFO  17:43:01,118 - #45 {
+INFO  17:43:01,119 - #50 main
+INFO  17:43:01,120 - #41 (
+INFO  17:43:01,121 - #42 )
+INFO  17:43:01,122 - #45 {
+INFO  17:43:01,125 - #50 s1
+INFO  17:43:01,126 - #34 =
+INFO  17:43:01,129 - #43 [
+INFO  17:43:01,129 - #47 5
+INFO  17:43:01,129 - #44 ]
+INFO  17:43:01,130 - #37 ;
+INFO  17:43:01,130 - #50 add
+INFO  17:43:01,130 - #41 (
+INFO  17:43:01,131 - #50 s1
+INFO  17:43:01,131 - #39 ,
+INFO  17:43:01,131 - #47 1
+INFO  17:43:01,131 - #42 )
+INFO  17:43:01,132 - #37 ;
+INFO  17:43:01,132 - #50 add
+INFO  17:43:01,132 - #41 (
+INFO  17:43:01,132 - #50 s1
+INFO  17:43:01,133 - #39 ,
+INFO  17:43:01,133 - #47 2
+INFO  17:43:01,133 - #42 )
+INFO  17:43:01,133 - #37 ;
+INFO  17:43:01,134 - #50 add
+INFO  17:43:01,134 - #41 (
+INFO  17:43:01,134 - #50 s1
+INFO  17:43:01,135 - #39 ,
+INFO  17:43:01,135 - #47 3
+INFO  17:43:01,135 - #42 )
+INFO  17:43:01,135 - #37 ;
+INFO  17:43:01,135 - #46 }
+INFO  17:43:01,136 - #46 }
+INFO  17:43:01,150 - Otvoren opseg za program test302 na liniji 1
+INFO  17:43:01,151 - Obradjuje se funkcija main na liniji 10
+INFO  17:43:01,152 - Print calls = 0
+INFO  17:43:01,152 - Deklarisanih promenljivih = 5
+INFO  17:43:01,154 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  17:43:01,182 - Parsiranje uspesno zavrseno!

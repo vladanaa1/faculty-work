@@ -18,7 +18,7 @@ public class SemanticPass extends VisitorAdaptor {
 	boolean errorDetected = false;
 	
 	Struct boolType = new Struct(Struct.Bool);
-	Struct setType = new Struct(Struct.Enum);
+	Struct setType = new Struct(Struct.Array, Tab.intType); // Representing sets as arrays of int
 	
 	int printCallCount = 0;
 	int VarDeclCount = 0; // Global Variable Count, package modifier so it can be accessed in MJParserTest
@@ -41,14 +41,14 @@ public class SemanticPass extends VisitorAdaptor {
 	Logger log = Logger.getLogger(getClass()); // Not used
 	
 	SemanticPass(){
-		setType.setElementType(Tab.intType);
-		
 		
 		// add
+		
 		Obj add = new Obj(Obj.Meth, "add", Tab.noType, 0, 2);
 		Tab.openScope();
 		Tab.currentScope.addToLocals(new Obj(Obj.Var, "s", setType, 0, 1));
-		Tab.currentScope.addToLocals(new Obj(Obj.Var, "i", Tab.intType, 0, 1));
+		Tab.currentScope.addToLocals(new Obj(Obj.Var, "val", Tab.intType, 0, 1));
+		Tab.currentScope.addToLocals(new Obj(Obj.Var, "index", Tab.intType, 0, 1));
 		add.setLocals(Tab.currentScope.getLocals());
 		Tab.closeScope();
 		
@@ -127,7 +127,6 @@ public class SemanticPass extends VisitorAdaptor {
 	@Override
 	public void visit(MethodSignature2 methodSignature) {
 		String ident = methodSignature.getName().getIdent();
-		Struct retType = currentMethodReturnType;
 		
 		Obj methodObj = findInCurrentScope(ident);
 		// Pretražuju se PROGRAM i UNIVERSE opsezi.
@@ -493,15 +492,15 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	@Override
-	public void visit(DesignatorFactor desfact) {
-		Obj desfactObj = desfact.getDesignator().obj;
+	public void visit(DesignatorFactor designatorFactor) {
+		Obj designatorFactorObj = designatorFactor.getDesignator().obj;
 		
-		if(desfactObj == null) {
+		if(designatorFactorObj == null) {
 			// ERROR
 			return;
 		}
 		
-		desfact.obj = desfactObj;
+		designatorFactor.obj = designatorFactorObj;
 	}
 	
 	@Override
