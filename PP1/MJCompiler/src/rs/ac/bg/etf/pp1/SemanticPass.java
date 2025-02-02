@@ -61,6 +61,8 @@ public class SemanticPass extends VisitorAdaptor {
 		Tab.currentScope.addToLocals(new Obj(Obj.Var, "s", setType, 0, 1));
 		Struct arrayStruct = new Struct(Struct.Array, Tab.intType);
 		Tab.currentScope.addToLocals(new Obj(Obj.Var, "arr", arrayStruct, 0, 1));
+		Tab.currentScope.addToLocals(new Obj(Obj.Var, "i", Tab.intType, 0, 1));
+		Tab.currentScope.addToLocals(new Obj(Obj.Var, "j", Tab.intType, 0, 1));
 		addAll.setLocals(Tab.currentScope.getLocals());
 		Tab.closeScope();
 		
@@ -542,15 +544,11 @@ public class SemanticPass extends VisitorAdaptor {
 			return;
 		}
 		
-		if(printObj.getType().equals(Tab.charType) || printObj.getType().equals(Tab.intType)) {
-			// OK
-		}
-		else if(printObj.getType().getKind() == Struct.Array &&
-				(printObj.getType().getElemType().equals(Tab.charType) || printObj.getType().getElemType().equals(Tab.intType))) {
+		if(printObj.getType().equals(Tab.charType) || printObj.getType().equals(Tab.intType) || printObj.getType().equals(setType)) {
 			// OK
 		}
 		else {
-			report_info("Operand print instrukcije mora biti tipa *int* ili *char*. Semantička greška", printStmt);
+			report_info("Operand print instrukcije mora biti tipa *int*, *char* ili *set*. Semantička greška", printStmt);
 			errorDetected = true;
 			return;
 		}

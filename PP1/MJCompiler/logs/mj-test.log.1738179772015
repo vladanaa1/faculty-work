@@ -1,0 +1,50 @@
+INFO  20:40:27,941 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:40:28,015 - #50 test302
+INFO  20:40:28,016 - #50 s1
+INFO  20:40:28,018 - #39 ,
+INFO  20:40:28,019 - #50 s2
+INFO  20:40:28,019 - #39 ,
+INFO  20:40:28,020 - #50 s3
+INFO  20:40:28,020 - #37 ;
+INFO  20:40:28,020 - #50 int
+INFO  20:40:28,021 - #50 a
+INFO  20:40:28,021 - #37 ;
+INFO  20:40:28,022 - #50 int
+INFO  20:40:28,022 - #50 arr
+INFO  20:40:28,022 - #43 [
+INFO  20:40:28,023 - #44 ]
+INFO  20:40:28,023 - #37 ;
+INFO  20:40:28,023 - #45 {
+INFO  20:40:28,024 - #50 main
+INFO  20:40:28,025 - #41 (
+INFO  20:40:28,026 - #42 )
+INFO  20:40:28,026 - #45 {
+INFO  20:40:28,029 - #50 arr
+INFO  20:40:28,030 - #34 =
+INFO  20:40:28,034 - #50 int
+INFO  20:40:28,034 - #43 [
+INFO  20:40:28,034 - #47 5
+INFO  20:40:28,035 - #44 ]
+INFO  20:40:28,035 - #37 ;
+INFO  20:40:28,035 - #50 arr
+INFO  20:40:28,036 - #43 [
+INFO  20:40:28,036 - #47 0
+INFO  20:40:28,037 - #44 ]
+INFO  20:40:28,037 - #34 =
+INFO  20:40:28,039 - #47 1
+INFO  20:40:28,039 - #37 ;
+INFO  20:40:28,039 - #50 vladana
+INFO  20:40:28,039 - #34 =
+INFO  20:40:28,040 - #47 16
+INFO  20:40:28,040 - #37 ;
+INFO  20:40:28,040 - #41 (
+INFO  20:40:28,040 - #50 vladana
+INFO  20:40:28,040 - #42 )
+INFO  20:40:28,041 - #37 ;
+INFO  20:40:28,041 - #50 a
+INFO  20:40:28,041 - #46 }
+ERROR 20:40:28,042 - 
+Sintaksna greska na liniji 19
+ERROR 20:40:28,042 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 19
+ERROR 20:40:28,055 - Promenljiva arr mora biti deklarisana pre upotrebe. Semantička greška na liniji 12
+ERROR 20:40:28,055 - Promenljiva arr mora biti deklarisana pre upotrebe. Semantička greška na liniji 14

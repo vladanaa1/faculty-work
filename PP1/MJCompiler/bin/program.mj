@@ -9,13 +9,21 @@ int arr[];
 	
 	void main()
 	{
-		s1 = new set[10];
+		s1 = new set[5];
 		
-		add(s1,1);
+		arr = new int[5];
 		
-		add(s1,2);
+		arr[0] = 1;
+		arr[1] = 4;
+		
+		addAll(s1,arr);
+		
+		add(s1, 7);
+		add(s1, 7);
+		add(s1, 7);
+		
+		addAll(s1,arr);
 		
 		print(s1);
-		
 	}
 }

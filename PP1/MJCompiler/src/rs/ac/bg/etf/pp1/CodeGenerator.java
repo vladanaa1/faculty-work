@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.Stack;
 
 import rs.ac.bg.etf.pp1.CounterVisitor.*;
@@ -14,20 +13,29 @@ import rs.etf.pp1.mj.runtime.Code;
 import rs.etf.pp1.symboltable.Tab;
 import rs.etf.pp1.symboltable.concepts.Obj;
 import rs.etf.pp1.symboltable.concepts.Struct;
-import rs.etf.pp1.symboltable.structure.SymbolDataStructure;
-import rs.ac.bg.etf.pp1.SemanticPass;
 
 public class CodeGenerator extends VisitorAdaptor {
+	
+	// PC addresses relevant for add method
+	private final static int BRANCH_ON_EQUAL_TO_ZERO = 28;
+	private final static int BRANCH_ON_EQUAL_VALUES = 39;
+	
+	// PC addresses relevant for addAll method
+	private final static int METHOD_BEGIN = 48;
+	private final static int WHILE_BEGIN = 55;
+	private final static int LABEL1 = 78;
+	private final static int LABEL2 = 91;
+	private final static int EXIT = 98;
+	
+	// PC addresses relevant for print set
+	private final static int LABEL_OFFSET = 12;
+	private final static int PRINT_BEGIN_OFFSET = -12;
 	
 	// EQ = 0, NE = 1, LT = 2, LE = 3, GT = 4, GE = 5;
 	private int currentCondJump = 0;
 	
 	// Unary operator "-" flag
 	private boolean negativeExpr = false;
-	
-	private int varCount;
-	
-	private int paramCnt;
 	
 	// Main PC
 	private int mainPc;
@@ -43,7 +51,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	private Stack<List<Integer>> continueJumps = new Stack<>();
 	
 	private HashMap<Obj, Integer> setToSize = new HashMap<>();
-	private HashMap<Obj, Integer> arrayToSize = new HashMap<>();
+	// private HashMap<Obj, Integer> arrayToSize = new HashMap<>();
 	
 	private Stack<Obj> arguments = new Stack<Obj>();
 	
@@ -85,30 +93,164 @@ public class CodeGenerator extends VisitorAdaptor {
 		Obj valueObj = iterator.next();
 		Obj indexObj = iterator.next();
 		
+		// adr, ind -> val
+		Code.load(setObj);
+		Code.loadConst(0);
+		
+		// adr, ind, adr, ind
+		int methodBeginPc = Code.pc;
+		Code.put(Code.dup2);
+		
+		// adr, ind, adr, ind -> adr, ind, val
+		Code.put(Code.aload);
+		
+		// adr, ind, val, 0
+		Code.loadConst(0);
+		
+		// IF(val != 0)
+		Code.putFalseJump(Code.eq, BRANCH_ON_EQUAL_TO_ZERO);
+		
+		// adr, ind, val
+		Code.load(valueObj);
+		Code.put(Code.astore);
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+		
+		// adr, ind -> adr, ind, adr, ind
+		Code.put(Code.dup2);
+		
+		// adr, ind, val
+		Code.put(Code.aload);
+		
+		// adr, ind, val1, val2
+		Code.load(valueObj);
+		
+		// IF(val1 == val2)
+		Code.putFalseJump(Code.ne, BRANCH_ON_EQUAL_VALUES);
+		
+		// adr, ind, 1
+		Code.loadConst(1);
+		Code.put(Code.add);
+		
+		Code.putJump(methodBeginPc);
+		
+		Code.put(Code.pop);
+		Code.put(Code.pop);
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+		
+		/*
 		Code.load(setObj);
 		Code.load(indexObj);
 		Code.load(valueObj);
 		Code.put(Code.astore);
 		Code.put(Code.exit);
 		Code.put(Code.return_);
+		*/
 		
 		Obj addAllMethod = Tab.find("addAll");
 		
 		addAllMethod.setAdr(Code.pc);
 		Code.put(Code.enter);
-		Code.put(2);
-		Code.put(2);
+		Code.put(4);
+		Code.put(4);
 		
 		paramethers = addAllMethod.getLocalSymbols();
 		iterator = paramethers.iterator();
 		
 		setObj = iterator.next();
 		Obj arrayObj = iterator.next();
+		Obj i = iterator.next();
+		Obj j = iterator.next();
 		
-		// ...
+		// METHOD BEGIN
+		
+		// i = 0
+		
+		Code.loadConst(0);
+		Code.store(i);
+		
+		// arrAdr, i
+		Code.load(arrayObj);
+		Code.load(i);
+		
+		// arrVal, 0
+		Code.put(Code.aload);
+		Code.loadConst(0);
+		
+		// IF(arrVal != 0) ... ELSE EXIT
+		Code.putFalseJump(Code.ne, EXIT);
+		
+		// WHILE BEGIN
+		
+		// setAdr, j
+		Code.load(setObj);
+		Code.load(j);
+		
+		// setVal, 0
+		Code.put(Code.aload);
+		Code.loadConst(0);
+		
+		// IF(setVal != 0) ... ELSE LABEL1
+		Code.putFalseJump(Code.ne, LABEL1);
+		
+		Code.load(arrayObj);
+		Code.load(i);
+		Code.put(Code.aload);
+		
+		Code.load(setObj);
+		Code.load(j);
+		Code.put(Code.aload);
+		
+		// IF(setVal != arrVal) ... ELSE LABEL1
+		Code.putFalseJump(Code.ne, LABEL1);
+		
+		// j++
+		Code.load(j);
+		Code.loadConst(1);
+		Code.put(Code.add);
+		
+		Code.store(j);
+		
+		// JUMP TO WHILE BEGIN
+		Code.putJump(WHILE_BEGIN);
+		
+		// LABEL1
+		
+		Code.load(setObj);
+		Code.load(j);
+		Code.put(Code.aload);
+		
+		Code.loadConst(0);
+		
+		// IF(setVal == 0) ... ELSE LABEL2
+		Code.putFalseJump(Code.eq, LABEL2);
+		
+		// set[j] = array[i]
+		Code.load(setObj);
+		Code.load(j);
+		Code.load(arrayObj);
+		Code.load(i);
+		Code.put(Code.aload);
+		Code.put(Code.astore);
+		
+		// LABEL2
+		
+		// i++
+		Code.load(i);
+		Code.loadConst(1);
+		Code.put(Code.add);
+		
+		Code.store(i);
+		
+		// JUMP TO METHOD BEGIN
+		Code.putJump(METHOD_BEGIN);
+		
+		// EXIT
 		
 		Code.put(Code.exit);
 		Code.put(Code.return_);
+		
 	}
 	
 	public CodeGenerator() {
@@ -127,21 +269,45 @@ public class CodeGenerator extends VisitorAdaptor {
 		}
 		
 		if(printObj.getType().getKind() == Struct.Array && printObj.getType().getElemType().equals(Tab.intType)) {
-			int size = setToSize.get(printObj);
-			for(int i = 0; i <= size; i++) {
-				Code.load(printObj);
-				Code.loadConst(i);
-				
-				// adr, index -> val
-				Code.put(Code.aload);
-				
-				// val, width
-				Code.loadConst(2);
-				Code.put(Code.print);
-			}
+			// set, i
+			Code.loadConst(0);
+			
+			// PRINT BEGIN
+			
+			// set, i, set, i
+			Code.put(Code.dup2);
+			
+			// set, i, val
+			Code.put(Code.aload);
+			
+			// ..., val, 0
+			Code.loadConst(0);
+			
+			// IF(set[i] != 0) ... ELSE LABEL
+			Code.putFalseJump(Code.ne, Code.pc + LABEL_OFFSET);
+			
+			// set, i, val
+			Code.put(Code.dup2);
+			Code.put(Code.aload);
+			
+			// ..., val, 2
+			Code.loadConst(2);
+			Code.put(Code.print);
+			
+			// ..., i++
+			Code.loadConst(1);
+			Code.put(Code.add);
+			
+			// GOTO PRINT BEGIN
+			Code.putJump(Code.pc + PRINT_BEGIN_OFFSET);
+			
+			// LABEL
+			
+			Code.put(Code.pop);
+			Code.put(Code.pop);
+			
 			return;
 		}
-		
 		
 		// Width
 		Code.loadConst(0);
@@ -162,19 +328,43 @@ public class CodeGenerator extends VisitorAdaptor {
 		}
 		
 		if(printObj.getType().getKind() == Struct.Array && printObj.getType().getElemType().equals(Tab.intType)) {
-			int size = setToSize.get(printObj);
-			for(int i = 0; i <= size; i++) {
-				Code.load(printObj);
-				Code.loadConst(i);
-				
-				// adr, index -> val
-				Code.put(Code.aload);
-				
-				// val, width
-				if(i!=0) Code.loadConst(2);
-				else Code.loadConst(printWithComma.getN2());
-				Code.put(Code.print);
-			}
+			// set, i
+			Code.loadConst(0);
+			
+			// PRINT BEGIN
+			
+			// set, i, set, i
+			Code.put(Code.dup2);
+			
+			// set, i, val
+			Code.put(Code.aload);
+			
+			// ..., val, 0
+			Code.loadConst(0);
+			
+			// IF(set[i] != 0) ... ELSE LABEL
+			Code.putFalseJump(Code.ne, Code.pc + LABEL_OFFSET);
+			
+			// set, i, val
+			Code.put(Code.dup2);
+			Code.put(Code.aload);
+			
+			// ..., val, 2
+			Code.loadConst(2);
+			Code.put(Code.print);
+			
+			// ..., i++
+			Code.loadConst(1);
+			Code.put(Code.add);
+			
+			// GOTO PRINT BEGIN
+			Code.putJump(Code.pc + PRINT_BEGIN_OFFSET);
+			
+			// LABEL
+			
+			Code.put(Code.pop);
+			Code.put(Code.pop);
+			
 			return;
 		}
 		
@@ -187,23 +377,6 @@ public class CodeGenerator extends VisitorAdaptor {
 		else if(printObj.getType().equals(Tab.charType)) {
 			Code.put(Code.bprint);
 		}
-	}
-	
-	public void visit(NumberFactor numberFactor) {
-		Code.load(new Obj(Obj.Con, "$", numberFactor.obj.getType(), numberFactor.getValue(), 0));
-		
-		if(negativeExpr) {
-			Code.put(Code.neg);
-			negativeExpr = false;
-		}
-	}
-	
-	public void visit(CharFactor charFactor) {
-		Code.load(new Obj(Obj.Con, "$", charFactor.obj.getType(), charFactor.getValue(), 0));
-	}
-	
-	public void visit(BoolFactor boolFactor) {
-		Code.load(new Obj(Obj.Con, "$", boolFactor.obj.getType(), boolFactor.getValue() ? 1 : 0, 0));
 	}
 	
 	public void visit(MethodSignature2 methodSignature) {
@@ -248,16 +421,71 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(DesignatorAssign designatorAssign) {
-		/*
 		if(designatorAssign.getDesignator().getClass().equals(DesignatorSelect.class)) {
 			String elemName = designatorAssign.getDesignator().obj.getName();
-			
 			// from arr[$] to arr
 			String arrayName = elemName.replace("[$]", "");
-			
+			// ...
 		}
-		*/
+		
 		Code.store(designatorAssign.getDesignator().obj);
+	}
+	
+	public void visit(FunctionCall functionCall) {
+		Obj functionObj = functionCall.getDesignator().obj;
+		
+		if(functionObj.getName().equals("add") || functionObj.getName().equals("addAll")) {
+			arguments.pop();
+			Obj setObj = arguments.pop();
+
+			int newSize = setToSize.getOrDefault(setObj, -1) + 1;
+			setToSize.put(setObj, newSize);
+
+			// Passing i as third argument for add/addAll method
+			Code.load(new Obj(Obj.Var, "i", Tab.intType, 0, 0));
+		}
+		if(functionObj.getName().equals("addAll")) {
+			// Passing j as fourth argument for addAll method
+			Code.load(new Obj(Obj.Var, "j", Tab.intType, 1, 0));
+		}
+		
+		int offset = functionObj.getAdr() - Code.pc;
+		
+		Code.put(Code.call);
+		Code.put2(offset);
+		
+		arguments.clear();
+	}
+	
+	public void visit(DesignatorInc designatorInc) {
+		Obj designatorObj = designatorInc.getDesignator().obj;
+		
+		if(designatorObj.getKind() == Obj.Elem) {
+			Code.put(Code.dup2);
+		}
+		
+		Code.load(designatorObj);
+		Code.loadConst(1);
+		Code.put(Code.add);
+		Code.store(designatorObj);
+	}
+	
+	public void visit(DesignatorDec designatorDec) {
+		Obj designatorObj = designatorDec.getDesignator().obj;
+		
+		if(designatorObj.getKind() == Obj.Elem) {
+			Code.put(Code.dup2);
+		}
+		
+		Code.load(designatorObj);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		
+		Code.store(designatorObj);
+	}
+	
+	public void visit(DesignatorUnion designatorUnion) {
+		
 	}
 	
 	public void visit(DesignatorIdent designatorIdent) {
@@ -272,29 +500,6 @@ public class CodeGenerator extends VisitorAdaptor {
 			negativeExpr = false;
 		}
 		Code.load(designatorFactor.getDesignator().obj);
-	}
-	
-	public void visit(FunctionCall functionCall) {
-		Obj functionObj = functionCall.getDesignator().obj;
-		
-		
-		if(functionObj.getName().equals("add")) {
-			Obj valObj = arguments.pop();
-			Obj setObj = arguments.pop();
-
-			int newSize = setToSize.getOrDefault(setObj, -1) + 1;
-			setToSize.put(setObj, newSize);
-
-			// Passing index as third argument for add method
-			Code.load(new Obj(Obj.Con, "", Tab.intType, newSize, 0));
-		}
-		
-		int offset = functionObj.getAdr() - Code.pc;
-		
-		Code.put(Code.call);
-		Code.put2(offset);
-		
-		arguments.clear();
 	}
 	
 	public void visit(MethodCallFactor methodCallFactor) {
@@ -320,6 +525,24 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(NewSetFactor newSetFactor) {
 		Code.put(Code.newarray);
 		Code.put(1);
+	}
+	
+	
+	public void visit(NumberFactor numberFactor) {
+		Code.load(new Obj(Obj.Con, "$", numberFactor.obj.getType(), numberFactor.getValue(), 0));
+		
+		if(negativeExpr) {
+			Code.put(Code.neg);
+			negativeExpr = false;
+		}
+	}
+	
+	public void visit(CharFactor charFactor) {
+		Code.load(new Obj(Obj.Con, "$", charFactor.obj.getType(), charFactor.getValue(), 0));
+	}
+	
+	public void visit(BoolFactor boolFactor) {
+		Code.load(new Obj(Obj.Con, "$", boolFactor.obj.getType(), boolFactor.getValue() ? 1 : 0, 0));
 	}
 	
 	public void visit(ReturnWithExpr returnWithExpr) {
@@ -493,32 +716,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		breakJumps.peek().add(Code.pc - 2);
 	}
 	
-	public void visit(DesignatorInc designatorInc) {
-		Obj designatorObj = designatorInc.getDesignator().obj;
-		
-		if(designatorObj.getKind() == Obj.Elem) {
-			Code.put(Code.dup2);
-		}
-		
-		Code.load(designatorObj);
-		Code.loadConst(1);
-		Code.put(Code.add);
-		Code.store(designatorObj);
-	}
-	
-	public void visit(DesignatorDec designatorDec) {
-		Obj designatorObj = designatorDec.getDesignator().obj;
-		
-		if(designatorObj.getKind() == Obj.Elem) {
-			Code.put(Code.dup2);
-		}
-		
-		Code.load(designatorObj);
-		Code.loadConst(1);
-		Code.put(Code.sub);
-		
-		Code.store(designatorObj);
-	}
+
 	
 	public void visit(NegativeOperator negativeOperator) {
 		negativeExpr = true;

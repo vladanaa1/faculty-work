@@ -1,0 +1,54 @@
+INFO  20:38:25,927 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  20:38:26,001 - #50 test302
+INFO  20:38:26,003 - #50 s1
+INFO  20:38:26,004 - #39 ,
+INFO  20:38:26,005 - #50 s2
+INFO  20:38:26,005 - #39 ,
+INFO  20:38:26,006 - #50 s3
+INFO  20:38:26,006 - #37 ;
+INFO  20:38:26,006 - #50 int
+INFO  20:38:26,006 - #50 a
+INFO  20:38:26,008 - #37 ;
+INFO  20:38:26,008 - #50 int
+INFO  20:38:26,008 - #50 arr
+INFO  20:38:26,009 - #43 [
+INFO  20:38:26,009 - #44 ]
+INFO  20:38:26,009 - #37 ;
+INFO  20:38:26,009 - #45 {
+INFO  20:38:26,010 - #50 main
+INFO  20:38:26,011 - #41 (
+INFO  20:38:26,013 - #42 )
+INFO  20:38:26,014 - #45 {
+INFO  20:38:26,016 - #50 arr
+INFO  20:38:26,017 - #34 =
+INFO  20:38:26,020 - #50 int
+INFO  20:38:26,020 - #43 [
+INFO  20:38:26,020 - #47 5
+INFO  20:38:26,020 - #44 ]
+INFO  20:38:26,020 - #37 ;
+INFO  20:38:26,022 - #50 arr
+INFO  20:38:26,022 - #43 [
+INFO  20:38:26,022 - #47 0
+INFO  20:38:26,023 - #44 ]
+INFO  20:38:26,023 - #34 =
+INFO  20:38:26,025 - #47 1
+INFO  20:38:26,025 - #37 ;
+INFO  20:38:26,025 - #50 vladana
+INFO  20:38:26,025 - #34 =
+INFO  20:38:26,026 - #47 16
+INFO  20:38:26,026 - #37 ;
+INFO  20:38:26,026 - #41 (
+INFO  20:38:26,026 - #50 arr
+INFO  20:38:26,027 - #43 [
+INFO  20:38:26,027 - #47 0
+INFO  20:38:26,027 - #44 ]
+INFO  20:38:26,027 - #42 )
+INFO  20:38:26,028 - #37 ;
+INFO  20:38:26,028 - #46 }
+INFO  20:38:26,028 - #46 }
+INFO  20:38:26,044 - Otvoren opseg za program test302 na liniji 1
+INFO  20:38:26,045 - Obradjuje se funkcija main na liniji 10
+ERROR 20:38:26,046 - Promenljiva vladana mora biti deklarisana pre upotrebe. Semantička greška na liniji 16
+INFO  20:38:26,046 - Print calls = 1
+INFO  20:38:26,047 - Deklarisanih promenljivih = 5
+ERROR 20:38:26,049 - Parsiranje NIJE uspesno zavrseno!
