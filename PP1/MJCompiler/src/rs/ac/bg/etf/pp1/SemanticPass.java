@@ -49,6 +49,7 @@ public class SemanticPass extends VisitorAdaptor {
 		Tab.currentScope.addToLocals(new Obj(Obj.Var, "s", setType, 0, 1));
 		Tab.currentScope.addToLocals(new Obj(Obj.Var, "val", Tab.intType, 0, 1));
 		Tab.currentScope.addToLocals(new Obj(Obj.Var, "index", Tab.intType, 0, 1));
+		Tab.currentScope.addToLocals(new Obj(Obj.Var, "len", Tab.intType, 0, 1));
 		add.setLocals(Tab.currentScope.getLocals());
 		Tab.closeScope();
 		
@@ -67,6 +68,21 @@ public class SemanticPass extends VisitorAdaptor {
 		Tab.closeScope();
 		
 		Tab.currentScope.addToLocals(addAll);
+		
+		// union
+		
+		Obj union = new Obj(Obj.Meth, "union", Tab.noType, 0, 3);
+		Tab.openScope();
+		Tab.currentScope.addToLocals(new Obj(Obj.Var, "s1", arrayStruct, 0, 1));
+		Tab.currentScope.addToLocals(new Obj(Obj.Var, "s2", arrayStruct, 0, 1));
+		Tab.currentScope.addToLocals(new Obj(Obj.Var, "s3", arrayStruct, 0, 1));
+		Tab.currentScope.addToLocals(new Obj(Obj.Var, "i", Tab.intType, 0, 1));
+		Tab.currentScope.addToLocals(new Obj(Obj.Var, "j", Tab.intType, 0, 1));
+		Tab.currentScope.addToLocals(new Obj(Obj.Var, "t", Tab.intType, 0, 1));
+		union.setLocals(Tab.currentScope.getLocals());
+		Tab.closeScope();
+		
+		Tab.currentScope.addToLocals(union);
 	}
 
 	public void report_error(String message, SyntaxNode info) {

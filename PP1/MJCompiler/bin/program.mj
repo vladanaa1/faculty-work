@@ -6,24 +6,24 @@ int a;
 
 int arr[];
 {
-	
 	void main()
 	{
+
 		s1 = new set[5];
 		
-		arr = new int[5];
+		s2 = new set[2];
+		s3 = new set[3];
 		
-		arr[0] = 1;
-		arr[1] = 4;
+		add(s2,3);
+		add(s3,2);
+		add(s3,1);
+		add(s2,1);
+		add(s2,1);
+
 		
-		addAll(s1,arr);
-		
-		add(s1, 7);
-		add(s1, 7);
-		add(s1, 7);
-		
-		addAll(s1,arr);
+		s1 = s2 union s3;
 		
 		print(s1);
+
 	}
 }

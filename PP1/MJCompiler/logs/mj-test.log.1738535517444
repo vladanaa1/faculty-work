@@ -1,0 +1,54 @@
+INFO  23:28:59,235 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:28:59,318 - #50 test302
+INFO  23:28:59,319 - #50 s1
+INFO  23:28:59,320 - #39 ,
+INFO  23:28:59,322 - #50 s2
+INFO  23:28:59,322 - #39 ,
+INFO  23:28:59,323 - #50 s3
+INFO  23:28:59,323 - #37 ;
+INFO  23:28:59,324 - #50 int
+INFO  23:28:59,324 - #50 a
+INFO  23:28:59,326 - #37 ;
+INFO  23:28:59,326 - #50 int
+INFO  23:28:59,327 - #50 arr
+INFO  23:28:59,327 - #43 [
+INFO  23:28:59,327 - #44 ]
+INFO  23:28:59,327 - #37 ;
+INFO  23:28:59,328 - #45 {
+INFO  23:28:59,330 - #50 main
+INFO  23:28:59,332 - #41 (
+INFO  23:28:59,333 - #42 )
+INFO  23:28:59,335 - #45 {
+INFO  23:28:59,339 - #50 s1
+INFO  23:28:59,340 - #34 =
+INFO  23:28:59,341 - #43 [
+INFO  23:28:59,341 - #47 5
+INFO  23:28:59,341 - #44 ]
+INFO  23:28:59,342 - #37 ;
+INFO  23:28:59,343 - #50 add
+INFO  23:28:59,343 - #41 (
+INFO  23:28:59,344 - #50 s1
+INFO  23:28:59,344 - #39 ,
+INFO  23:28:59,344 - #47 1
+INFO  23:28:59,345 - #42 )
+INFO  23:28:59,347 - #37 ;
+INFO  23:28:59,347 - #50 add
+INFO  23:28:59,347 - #41 (
+INFO  23:28:59,348 - #50 s1
+INFO  23:28:59,348 - #39 ,
+INFO  23:28:59,348 - #47 3
+INFO  23:28:59,348 - #42 )
+INFO  23:28:59,349 - #37 ;
+INFO  23:28:59,349 - #50 add
+INFO  23:28:59,349 - #41 (
+INFO  23:28:59,350 - #50 s1
+INFO  23:28:59,350 - #39 ,
+INFO  23:28:59,350 - #47 2
+INFO  23:28:59,350 - #23 *
+ERROR 23:28:59,350 - 
+Sintaksna greska na liniji 18
+ERROR 23:28:59,351 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 18
+INFO  23:28:59,368 - Argument funkcije nije definisan. Semantička greška na liniji 18
+INFO  23:28:59,368 - Print calls = 0
+INFO  23:28:59,369 - Deklarisanih promenljivih = 0
+ERROR 23:28:59,372 - Parsiranje NIJE uspesno zavrseno!

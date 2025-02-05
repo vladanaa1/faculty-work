@@ -1,0 +1,46 @@
+INFO  23:31:57,448 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  23:31:57,525 - #50 test302
+INFO  23:31:57,527 - #50 s1
+INFO  23:31:57,528 - #39 ,
+INFO  23:31:57,529 - #50 s2
+INFO  23:31:57,529 - #39 ,
+INFO  23:31:57,529 - #50 s3
+INFO  23:31:57,529 - #37 ;
+INFO  23:31:57,530 - #50 int
+INFO  23:31:57,530 - #50 a
+INFO  23:31:57,532 - #37 ;
+INFO  23:31:57,533 - #50 int
+INFO  23:31:57,534 - #50 arr
+INFO  23:31:57,534 - #43 [
+INFO  23:31:57,535 - #44 ]
+INFO  23:31:57,535 - #37 ;
+INFO  23:31:57,536 - #45 {
+INFO  23:31:57,538 - #50 fun1
+INFO  23:31:57,540 - #41 (
+INFO  23:31:57,541 - #50 int
+INFO  23:31:57,542 - #50 a
+INFO  23:31:57,544 - #42 )
+INFO  23:31:57,545 - #45 {
+INFO  23:31:57,552 - #41 (
+INFO  23:31:57,552 - #49 a
+INFO  23:31:57,553 - #42 )
+INFO  23:31:57,553 - #37 ;
+INFO  23:31:57,553 - #46 }
+INFO  23:31:57,556 - #50 main
+INFO  23:31:57,556 - #41 (
+INFO  23:31:57,556 - #42 )
+INFO  23:31:57,557 - #45 {
+INFO  23:31:57,558 - #50 fun1
+INFO  23:31:57,558 - #41 (
+INFO  23:31:57,559 - #47 3
+INFO  23:31:57,560 - #42 )
+INFO  23:31:57,561 - #37 ;
+INFO  23:31:57,561 - #46 }
+INFO  23:31:57,562 - #46 }
+INFO  23:31:57,579 - Otvoren opseg za program test302 na liniji 1
+INFO  23:31:57,581 - Obradjuje se funkcija fun1 na liniji 9
+INFO  23:31:57,583 - Obradjuje se funkcija main na liniji 13
+INFO  23:31:57,584 - Print calls = 1
+INFO  23:31:57,588 - Deklarisanih promenljivih = 5
+INFO  23:31:57,595 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  23:31:57,608 - Parsiranje uspesno zavrseno!

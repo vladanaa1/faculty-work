@@ -21,11 +21,11 @@ public class CodeGenerator extends VisitorAdaptor {
 	private final static int BRANCH_ON_EQUAL_VALUES = 39;
 	
 	// PC addresses relevant for addAll method
-	private final static int METHOD_BEGIN = 48;
-	private final static int WHILE_BEGIN = 55;
-	private final static int LABEL1 = 78;
-	private final static int LABEL2 = 91;
-	private final static int EXIT = 98;
+	private final static int METHOD_BEGIN = 75;
+	private final static int WHILE_BEGIN = 86;
+	private final static int LABEL1 = 109;
+	private final static int LABEL2 = 122;
+	private final static int EXIT = 129;
 	
 	// PC addresses relevant for print set
 	private final static int LABEL_OFFSET = 12;
@@ -83,8 +83,8 @@ public class CodeGenerator extends VisitorAdaptor {
 		
 		addMethod.setAdr(Code.pc);
 		Code.put(Code.enter);
-		Code.put(3);
-		Code.put(3);
+		Code.put(4);
+		Code.put(4);
 		Collection<Obj> paramethers = addMethod.getLocalSymbols();
 		
 		Iterator<Obj> iterator = paramethers.iterator();
@@ -92,61 +92,90 @@ public class CodeGenerator extends VisitorAdaptor {
 		Obj setObj = iterator.next();
 		Obj valueObj = iterator.next();
 		Obj indexObj = iterator.next();
+		Obj lenObj = iterator.next();
 		
-		// adr, ind -> val
+		// i = 0
+		Code.loadConst(0);
+		Code.store(indexObj);
+		
+		// len = set[arraylen - 1]
 		Code.load(setObj);
-		Code.loadConst(0);
-		
-		// adr, ind, adr, ind
-		int methodBeginPc = Code.pc;
-		Code.put(Code.dup2);
-		
-		// adr, ind, adr, ind -> adr, ind, val
+		Code.load(setObj);
+		Code.put(Code.arraylength);
+		Code.loadConst(1);
+		Code.put(Code.sub);
 		Code.put(Code.aload);
+		Code.store(lenObj);
 		
-		// adr, ind, val, 0
-		Code.loadConst(0);
+		// WHILE_BEGIN, PC = 25
 		
-		// IF(val != 0)
-		Code.putFalseJump(Code.eq, BRANCH_ON_EQUAL_TO_ZERO);
+		// index, len
+		Code.load(indexObj);
+		Code.load(lenObj);
 		
-		// adr, ind, val
-		Code.load(valueObj);
-		Code.put(Code.astore);
-		Code.put(Code.exit);
-		Code.put(Code.return_);
+		// IF(index != len) ... ELSE BRANCH_ON_EQUAL_VALUES
+		Code.putFalseJump(Code.ne, 44);
 		
-		// adr, ind -> adr, ind, adr, ind
-		Code.put(Code.dup2);
-		
-		// adr, ind, val
+		// set[index], value
+		Code.load(setObj);
+		Code.load(indexObj);
 		Code.put(Code.aload);
-		
-		// adr, ind, val1, val2
 		Code.load(valueObj);
 		
-		// IF(val1 == val2)
-		Code.putFalseJump(Code.ne, BRANCH_ON_EQUAL_VALUES);
+		// IF(set[index] != value) ... ELSE EXIT
+		Code.putFalseJump(Code.ne, 70);
 		
-		// adr, ind, 1
+		Code.load(indexObj);
 		Code.loadConst(1);
 		Code.put(Code.add);
+		Code.store(indexObj);
 		
-		Code.putJump(methodBeginPc);
+		// GOTO WHILE_BEGIN
+		Code.putJump(25);
 		
-		Code.put(Code.pop);
-		Code.put(Code.pop);
-		Code.put(Code.exit);
-		Code.put(Code.return_);
+		// BRANCH_ON_EQUAL_VALUES, PC = 44
 		
-		/*
+		Code.load(indexObj);
+		Code.load(setObj);
+		Code.put(Code.arraylength);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		
+		// IF(i != arraylen - 1) ... ELSE EXIT
+		Code.putFalseJump(Code.ne, 70);
+		
+		// set[index] = value
 		Code.load(setObj);
 		Code.load(indexObj);
 		Code.load(valueObj);
 		Code.put(Code.astore);
+		
+		// set
+		Code.load(setObj);
+		
+		// set, index
+		Code.load(setObj);
+		Code.put(Code.arraylength);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		
+		// set, index, value
+		Code.load(setObj);
+		Code.load(setObj);
+		Code.put(Code.arraylength);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		Code.put(Code.aload);
+		Code.loadConst(1);
+		Code.put(Code.add);
+		
+		// len++
+		Code.put(Code.astore);
+		
+		// EXIT, PC = 70
+		
 		Code.put(Code.exit);
 		Code.put(Code.return_);
-		*/
 		
 		Obj addAllMethod = Tab.find("addAll");
 		
@@ -163,90 +192,217 @@ public class CodeGenerator extends VisitorAdaptor {
 		Obj i = iterator.next();
 		Obj j = iterator.next();
 		
-		// METHOD BEGIN
+		// METHOD BEGIN, PC = 75
 		
 		// i = 0
-		
 		Code.loadConst(0);
 		Code.store(i);
 		
-		// arrAdr, i
-		Code.load(arrayObj);
-		Code.load(i);
-		
-		// arrVal, 0
-		Code.put(Code.aload);
+		// j = 0
 		Code.loadConst(0);
-		
-		// IF(arrVal != 0) ... ELSE EXIT
-		Code.putFalseJump(Code.ne, EXIT);
-		
-		// WHILE BEGIN
-		
-		// setAdr, j
-		Code.load(setObj);
-		Code.load(j);
-		
-		// setVal, 0
-		Code.put(Code.aload);
-		Code.loadConst(0);
-		
-		// IF(setVal != 0) ... ELSE LABEL1
-		Code.putFalseJump(Code.ne, LABEL1);
-		
-		Code.load(arrayObj);
-		Code.load(i);
-		Code.put(Code.aload);
-		
-		Code.load(setObj);
-		Code.load(j);
-		Code.put(Code.aload);
-		
-		// IF(setVal != arrVal) ... ELSE LABEL1
-		Code.putFalseJump(Code.ne, LABEL1);
-		
-		// j++
-		Code.load(j);
-		Code.loadConst(1);
-		Code.put(Code.add);
-		
 		Code.store(j);
 		
-		// JUMP TO WHILE BEGIN
-		Code.putJump(WHILE_BEGIN);
-		
-		// LABEL1
-		
-		Code.load(setObj);
+		// arr[j], 0
+		Code.load(arrayObj);
 		Code.load(j);
 		Code.put(Code.aload);
-		
 		Code.loadConst(0);
 		
-		// IF(setVal == 0) ... ELSE LABEL2
-		Code.putFalseJump(Code.eq, LABEL2);
+		// IF(arr[j] != 0) ... ELSE GOTO LABEL
+		Code.putFalseJump(Code.ne, 0);
 		
-		// set[j] = array[i]
-		Code.load(setObj);
-		Code.load(j);
-		Code.load(arrayObj);
+		// EXIT
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+		
+		Obj unionMethod = Tab.find("union");
+		
+		unionMethod.setAdr(Code.pc);
+		Code.put(Code.enter);
+		Code.put(6);
+		Code.put(6);
+		paramethers = unionMethod.getLocalSymbols();
+		
+		iterator = paramethers.iterator();
+		
+		Obj set1 = iterator.next();
+		Obj set2 = iterator.next();
+		Obj set3 = iterator.next();
+		i = iterator.next();
+		j = iterator.next();
+		Obj t = iterator.next();
+		
+		// set1 = set2 union set3;
+		
+		// i = 0
+		Code.loadConst(0);
+		Code.store(i);
+		
+		// j = 0
+		Code.loadConst(0);
+		Code.store(j);
+		
+		// I_LOOP, PC = 96
+		
+		// load length(set2)
+		Code.load(set2);
+		Code.load(set2);
+		Code.put(Code.arraylength);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		Code.put(Code.aload);
+		
+		// load i
+		Code.load(i);
+		
+		// IF(i != length(set2)) ... ELSE GOTO S3, PC = 103
+		Code.putFalseJump(Code.ne, Code.pc + 30);
+		
+		// set1[i] = set2[i]
+		Code.load(set1);
+		Code.load(i);
+		Code.load(set2);
 		Code.load(i);
 		Code.put(Code.aload);
 		Code.put(Code.astore);
 		
-		// LABEL2
+		// set1[arraylength-1]++
+		
+		// load adr
+		Code.load(set1);
+		
+		// load index
+		Code.load(set1);
+		Code.put(Code.arraylength);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		
+		// load value
+		Code.load(set1);
+		Code.load(set1);
+		Code.put(Code.arraylength);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		Code.put(Code.aload);
+		Code.loadConst(1);
+		Code.put(Code.add);
+		
+		Code.put(Code.astore);
 		
 		// i++
 		Code.load(i);
 		Code.loadConst(1);
 		Code.put(Code.add);
-		
 		Code.store(i);
 		
-		// JUMP TO METHOD BEGIN
-		Code.putJump(METHOD_BEGIN);
+		// GOTO I_LOOP, PC = 130
+		Code.putJump(Code.pc - 34);
 		
-		// EXIT
+		// S3, PC = 133
+		
+		// load length(set3)
+		Code.load(set3);
+		Code.load(set3);
+		Code.put(Code.arraylength);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		Code.put(Code.aload);
+		
+		// load j
+		Code.load(j);
+		
+		// IF(j != length(set3)) ... ELSE EXIT, PC = 141
+		Code.putFalseJump(Code.ne, Code.pc + 71);
+		
+		// t = 0
+		Code.loadConst(0);
+		Code.store(t);
+		
+		// T_LOOP, PC = 147
+		
+		Code.load(set1);
+		Code.load(set1);
+		Code.put(Code.arraylength);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		Code.put(Code.aload);
+		
+		Code.load(t);
+		
+		// IF(t != length(set1)) ... ELSE STORE, PC = 155
+		Code.putFalseJump(Code.ne, Code.pc + 23);
+		
+		Code.load(set1);
+		Code.load(t);
+		Code.put(Code.aload);
+		
+		Code.load(set3);
+		Code.load(j);
+		Code.put(Code.aload);
+		
+		// IF(set1[t] != set3[j]) ... ELSE J++, PC = 166
+		Code.putFalseJump(Code.ne, Code.pc + 37);
+		
+		Code.load(t);
+		Code.loadConst(1);
+		Code.put(Code.add);
+		
+		Code.store(t);
+		
+		// GOTO T_LOOP, PC = 175
+		Code.putJump(Code.pc - 28);
+		
+		// STORE, PC = 178
+		
+		// set1[i] = set3[j]
+		Code.load(set1);
+		Code.load(i);
+		Code.load(set3);
+		Code.load(j);
+		Code.put(Code.aload);
+		Code.put(Code.astore);
+		
+		// set1[arraylength-1]++
+		
+		// load adr
+		Code.load(set1);
+		
+		// load index
+		Code.load(set1);
+		Code.put(Code.arraylength);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		
+		// load value
+		Code.load(set1);
+		Code.load(set1);
+		Code.put(Code.arraylength);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		Code.put(Code.aload);
+		Code.loadConst(1);
+		Code.put(Code.add);
+		
+		Code.put(Code.astore);
+		
+		// i++
+		Code.load(i);
+		Code.loadConst(1);
+		Code.put(Code.add);
+		Code.store(i);
+		
+		// J_INC, PC = 203
+		
+		// j++
+		Code.load(j);
+		Code.loadConst(1);
+		Code.put(Code.add);
+		Code.store(j);
+		
+		// GOTO S3, PC = 209
+		Code.putJump(Code.pc - 76);
+		
+		// EXIT, PC = 212
 		
 		Code.put(Code.exit);
 		Code.put(Code.return_);
@@ -272,37 +428,46 @@ public class CodeGenerator extends VisitorAdaptor {
 			// set, i
 			Code.loadConst(0);
 			
-			// PRINT BEGIN
+			// WHILE BEGIN, PC = 157
+			
+			// set, i, set, i, set
+			Code.put(Code.dup2);
+			Code.load(printObj);
+			
+			// ..., i, set, arraylength - 1
+			Code.load(printObj);
+			Code.put(Code.arraylength);
+			Code.loadConst(1);
+			Code.put(Code.sub);
+			
+			// set, i, set, i, len
+			Code.put(Code.aload);
+			
+			// IF(i != len) ... ELSE EXIT, PC = 168
+			Code.putFalseJump(Code.ne, Code.pc + 13);
+			
+			// set, i, set -> set, i
+			Code.put(Code.pop);
 			
 			// set, i, set, i
 			Code.put(Code.dup2);
 			
-			// set, i, val
+			// set, i, val, width
 			Code.put(Code.aload);
-			
-			// ..., val, 0
-			Code.loadConst(0);
-			
-			// IF(set[i] != 0) ... ELSE LABEL
-			Code.putFalseJump(Code.ne, Code.pc + LABEL_OFFSET);
-			
-			// set, i, val
-			Code.put(Code.dup2);
-			Code.put(Code.aload);
-			
-			// ..., val, 2
 			Code.loadConst(2);
+			
+			// set, i
 			Code.put(Code.print);
 			
-			// ..., i++
+			// i++
 			Code.loadConst(1);
 			Code.put(Code.add);
 			
-			// GOTO PRINT BEGIN
-			Code.putJump(Code.pc + PRINT_BEGIN_OFFSET);
+			// GOTO WHILE BEGIN, PC = 178
+			Code.putJump(Code.pc - 21);
 			
-			// LABEL
-			
+			// EXIT, PC = 181
+			Code.put(Code.pop);
 			Code.put(Code.pop);
 			Code.put(Code.pop);
 			
@@ -331,37 +496,46 @@ public class CodeGenerator extends VisitorAdaptor {
 			// set, i
 			Code.loadConst(0);
 			
-			// PRINT BEGIN
+			// WHILE BEGIN
+			
+			// set, i, set, i, set
+			Code.put(Code.dup2);
+			Code.load(printObj);
+			
+			// ..., i, set, arraylength - 1
+			Code.load(printObj);
+			Code.put(Code.arraylength);
+			Code.loadConst(1);
+			Code.put(Code.sub);
+			
+			// set, i, set, i, len
+			Code.put(Code.aload);
+			
+			// IF(i != len) ... ELSE EXIT
+			Code.putFalseJump(Code.ne, Code.pc + 13);
+			
+			// set, i, set -> set, i
+			Code.put(Code.pop);
 			
 			// set, i, set, i
 			Code.put(Code.dup2);
 			
-			// set, i, val
+			// set, i, val, width
 			Code.put(Code.aload);
-			
-			// ..., val, 0
-			Code.loadConst(0);
-			
-			// IF(set[i] != 0) ... ELSE LABEL
-			Code.putFalseJump(Code.ne, Code.pc + LABEL_OFFSET);
-			
-			// set, i, val
-			Code.put(Code.dup2);
-			Code.put(Code.aload);
-			
-			// ..., val, 2
 			Code.loadConst(2);
+			
+			// set, i
 			Code.put(Code.print);
 			
-			// ..., i++
+			// i++
 			Code.loadConst(1);
 			Code.put(Code.add);
 			
-			// GOTO PRINT BEGIN
-			Code.putJump(Code.pc + PRINT_BEGIN_OFFSET);
+			// GOTO WHILE BEGIN
+			Code.putJump(Code.pc - 21);
 			
-			// LABEL
-			
+			// EXIT
+			Code.put(Code.pop);
 			Code.put(Code.pop);
 			Code.put(Code.pop);
 			
@@ -421,13 +595,6 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(DesignatorAssign designatorAssign) {
-		if(designatorAssign.getDesignator().getClass().equals(DesignatorSelect.class)) {
-			String elemName = designatorAssign.getDesignator().obj.getName();
-			// from arr[$] to arr
-			String arrayName = elemName.replace("[$]", "");
-			// ...
-		}
-		
 		Code.store(designatorAssign.getDesignator().obj);
 	}
 	
@@ -435,17 +602,10 @@ public class CodeGenerator extends VisitorAdaptor {
 		Obj functionObj = functionCall.getDesignator().obj;
 		
 		if(functionObj.getName().equals("add") || functionObj.getName().equals("addAll")) {
-			arguments.pop();
-			Obj setObj = arguments.pop();
-
-			int newSize = setToSize.getOrDefault(setObj, -1) + 1;
-			setToSize.put(setObj, newSize);
-
 			// Passing i as third argument for add/addAll method
 			Code.load(new Obj(Obj.Var, "i", Tab.intType, 0, 0));
-		}
-		if(functionObj.getName().equals("addAll")) {
-			// Passing j as fourth argument for addAll method
+			
+			// Passing j as fourth argument for add/addAll method
 			Code.load(new Obj(Obj.Var, "j", Tab.intType, 1, 0));
 		}
 		
@@ -453,8 +613,6 @@ public class CodeGenerator extends VisitorAdaptor {
 		
 		Code.put(Code.call);
 		Code.put2(offset);
-		
-		arguments.clear();
 	}
 	
 	public void visit(DesignatorInc designatorInc) {
@@ -485,7 +643,19 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(DesignatorUnion designatorUnion) {
+		Code.load(designatorUnion.getDesignator().obj);
+		Code.load(designatorUnion.getDesignator1().obj);
+		Code.load(designatorUnion.getDesignator2().obj);
+		Code.load(new Obj(Obj.Var, "i", Tab.intType, 0, 0));
+		Code.load(new Obj(Obj.Var, "j", Tab.intType, 0, 0));
+		Code.load(new Obj(Obj.Var, "t", Tab.intType, 0, 0));
 		
+		Obj functionObj = Tab.find("union");
+		
+		int offset = functionObj.getAdr() - Code.pc;
+		
+		Code.put(Code.call);
+		Code.put2(offset);
 	}
 	
 	public void visit(DesignatorIdent designatorIdent) {
@@ -523,6 +693,9 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(NewSetFactor newSetFactor) {
+		Code.loadConst(1);
+		Code.put(Code.add);
+		
 		Code.put(Code.newarray);
 		Code.put(1);
 	}
@@ -724,17 +897,14 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	public void visit(IdentMethodArgument ident) {
 		Code.load(ident.obj);
-		arguments.add(ident.obj);
 	}
 	
 	public void visit(IdentVectorMethodArgument ident) {
 		Code.load(ident.obj);
-		arguments.add(ident.obj);
 	}
 	
 	public void visit(LiteralMethodArgument literal) {
 		Code.load(literal.getLiteral().obj);
-		arguments.add(literal.getLiteral().obj);
 	}
 	
 }
