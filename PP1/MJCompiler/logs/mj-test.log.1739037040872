@@ -1,0 +1,84 @@
+INFO  18:49:39,742 - Compiling source file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.mj
+INFO  18:49:39,806 - #50 test301
+INFO  18:49:39,806 - #50 int
+INFO  18:49:39,808 - #50 x
+INFO  18:49:39,809 - #37 ;
+INFO  18:49:39,810 - #45 {
+INFO  18:49:39,810 - #50 int
+INFO  18:49:39,812 - #50 fun
+INFO  18:49:39,812 - #41 (
+INFO  18:49:39,813 - #50 int
+INFO  18:49:39,813 - #50 a
+INFO  18:49:39,814 - #42 )
+INFO  18:49:39,814 - #45 {
+INFO  18:49:39,818 - #47 2
+INFO  18:49:39,818 - #23 *
+INFO  18:49:39,819 - #50 a
+INFO  18:49:39,820 - #37 ;
+INFO  18:49:39,821 - #46 }
+INFO  18:49:39,823 - #50 main
+INFO  18:49:39,824 - #41 (
+INFO  18:49:39,824 - #42 )
+INFO  18:49:39,825 - #50 int
+INFO  18:49:39,826 - #50 c
+INFO  18:49:39,829 - #43 [
+INFO  18:49:39,829 - #44 ]
+INFO  18:49:39,829 - #39 ,
+INFO  18:49:39,830 - #50 d
+INFO  18:49:39,830 - #43 [
+INFO  18:49:39,830 - #44 ]
+INFO  18:49:39,830 - #37 ;
+INFO  18:49:39,830 - #45 {
+INFO  18:49:39,831 - #50 c
+INFO  18:49:39,831 - #34 =
+INFO  18:49:39,832 - #50 int
+INFO  18:49:39,832 - #43 [
+INFO  18:49:39,832 - #47 4
+INFO  18:49:39,832 - #44 ]
+INFO  18:49:39,832 - #37 ;
+INFO  18:49:39,833 - #50 c
+INFO  18:49:39,834 - #43 [
+INFO  18:49:39,834 - #47 0
+INFO  18:49:39,835 - #44 ]
+INFO  18:49:39,835 - #34 =
+INFO  18:49:39,838 - #47 1
+INFO  18:49:39,838 - #37 ;
+INFO  18:49:39,838 - #50 c
+INFO  18:49:39,838 - #43 [
+INFO  18:49:39,838 - #47 1
+INFO  18:49:39,839 - #44 ]
+INFO  18:49:39,839 - #34 =
+INFO  18:49:39,839 - #47 2
+INFO  18:49:39,840 - #37 ;
+INFO  18:49:39,840 - #50 c
+INFO  18:49:39,841 - #43 [
+INFO  18:49:39,841 - #47 2
+INFO  18:49:39,841 - #44 ]
+INFO  18:49:39,842 - #34 =
+INFO  18:49:39,842 - #47 3
+INFO  18:49:39,843 - #37 ;
+INFO  18:49:39,843 - #50 c
+INFO  18:49:39,843 - #43 [
+INFO  18:49:39,843 - #47 3
+INFO  18:49:39,844 - #44 ]
+INFO  18:49:39,844 - #34 =
+INFO  18:49:39,845 - #47 4
+INFO  18:49:39,845 - #37 ;
+INFO  18:49:39,845 - #50 x
+INFO  18:49:39,846 - #34 =
+INFO  18:49:39,846 - #50 fun
+INFO  18:49:39,847 - #50 c
+INFO  18:49:39,847 - #37 ;
+INFO  18:49:39,848 - #41 (
+INFO  18:49:39,848 - #50 x
+INFO  18:49:39,848 - #42 )
+INFO  18:49:39,848 - #37 ;
+INFO  18:49:39,849 - #46 }
+INFO  18:49:39,849 - #46 }
+INFO  18:49:39,861 - Otvoren opseg za program test301 na liniji 1
+INFO  18:49:39,861 - Obradjuje se funkcija fun na liniji 4
+INFO  18:49:39,861 - Obradjuje se funkcija main na liniji 8
+INFO  18:49:39,862 - Print calls = 1
+INFO  18:49:39,862 - Deklarisanih promenljivih = 1
+INFO  18:49:39,863 - Generating bytecode file: C:\faks\7. semestar\pp\projekat 4\workspace\MJCompiler\test\program.obj
+INFO  18:49:39,893 - Parsiranje uspesno zavrseno!

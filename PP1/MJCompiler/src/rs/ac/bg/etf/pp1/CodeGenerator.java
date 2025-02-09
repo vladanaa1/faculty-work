@@ -16,21 +16,6 @@ import rs.etf.pp1.symboltable.concepts.Struct;
 
 public class CodeGenerator extends VisitorAdaptor {
 	
-	// PC addresses relevant for add method
-	private final static int BRANCH_ON_EQUAL_TO_ZERO = 28;
-	private final static int BRANCH_ON_EQUAL_VALUES = 39;
-	
-	// PC addresses relevant for addAll method
-	private final static int METHOD_BEGIN = 75;
-	private final static int WHILE_BEGIN = 86;
-	private final static int LABEL1 = 109;
-	private final static int LABEL2 = 122;
-	private final static int EXIT = 129;
-	
-	// PC addresses relevant for print set
-	private final static int LABEL_OFFSET = 12;
-	private final static int PRINT_BEGIN_OFFSET = -12;
-	
 	// EQ = 0, NE = 1, LT = 2, LE = 3, GT = 4, GE = 5;
 	private int currentCondJump = 0;
 	
@@ -49,11 +34,6 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	private Stack<List<Integer>> breakJumps = new Stack<>();
 	private Stack<List<Integer>> continueJumps = new Stack<>();
-	
-	private HashMap<Obj, Integer> setToSize = new HashMap<>();
-	// private HashMap<Obj, Integer> arrayToSize = new HashMap<>();
-	
-	private Stack<Obj> arguments = new Stack<Obj>();
 	
 	private void initializePredeclaredMethods() {
 		Obj chrMeth = Tab.find("chr");
@@ -192,26 +172,111 @@ public class CodeGenerator extends VisitorAdaptor {
 		Obj i = iterator.next();
 		Obj j = iterator.next();
 		
-		// METHOD BEGIN, PC = 75
-		
 		// i = 0
 		Code.loadConst(0);
 		Code.store(i);
 		
+		// I_LOOP, PC = 77
+		
+		Code.load(i);
+		
+		// length(array)
+		Code.load(arrayObj);
+		Code.put(Code.arraylength);
+		
+		// IF(i != length(array)) ... ELSE EXIT, PC = 80
+		Code.putFalseJump(Code.ne, Code.pc + 63);
+		
 		// j = 0
 		Code.loadConst(0);
 		Code.store(j);
-		
-		// arr[j], 0
-		Code.load(arrayObj);
+
+		// J_LOOP, PC = 85
+
+		Code.load(setObj);
+		Code.load(setObj);
+		Code.put(Code.arraylength);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		Code.put(Code.aload);
+
+		Code.load(j);
+
+		// IF(j != length(set)) ... ELSE STORE, PC = 92
+		Code.putFalseJump(Code.ne, Code.pc + 19);
+
+		Code.load(setObj);
 		Code.load(j);
 		Code.put(Code.aload);
-		Code.loadConst(0);
+
+		Code.load(arrayObj);
+		Code.load(i);
+		Code.put(Code.aload);
+
+		// IF(set[j] != array[i]) ... ELSE I++, PC = 101
+		Code.putFalseJump(Code.ne, Code.pc + 35);
+
+		Code.load(j);
+		Code.loadConst(1);
+		Code.put(Code.add);
+
+		Code.store(j);
+
+		// GOTO J_LOOP, PC = 108
+		Code.putJump(Code.pc - 23);
 		
-		// IF(arr[j] != 0) ... ELSE GOTO LABEL
-		Code.putFalseJump(Code.ne, 0);
+		// STORE, PC = 111
 		
-		// EXIT
+		Code.load(setObj);
+		
+		Code.load(setObj);
+		Code.load(setObj);
+		Code.put(Code.arraylength);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		Code.put(Code.aload);
+		
+		Code.load(arrayObj);
+		Code.load(i);
+		Code.put(Code.aload);
+		
+		Code.put(Code.astore);
+		
+		// set[arraylength-1]++
+		
+		// load adr
+		Code.load(setObj);
+
+		// load index
+		Code.load(setObj);
+		Code.put(Code.arraylength);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+
+		// load value
+		Code.load(setObj);
+		Code.load(setObj);
+		Code.put(Code.arraylength);
+		Code.loadConst(1);
+		Code.put(Code.sub);
+		Code.put(Code.aload);
+		Code.loadConst(1);
+		Code.put(Code.add);
+
+		Code.put(Code.astore);
+		
+		// I++, PC = 136
+		
+		Code.load(i);
+		Code.loadConst(1);
+		Code.put(Code.add);
+		Code.store(i);
+		
+		// GOTO I_LOOP, PC = 140
+		Code.putJump(Code.pc - 63);
+		
+		// EXIT, PC = 143
+		
 		Code.put(Code.exit);
 		Code.put(Code.return_);
 		
@@ -406,7 +471,6 @@ public class CodeGenerator extends VisitorAdaptor {
 		
 		Code.put(Code.exit);
 		Code.put(Code.return_);
-		
 	}
 	
 	public CodeGenerator() {
@@ -740,11 +804,70 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(DesignatorMapExpr designatorMapExpr) {
-		/*
-		Funkcija predstavljena levim neterminalom Designator se poziva za sve elemente niza 
-		predstavljenim desnim neterminalom Designator. Dobijeni neterminal Expr predstavlja zbir povratnih 
-		vrednosti svih izvršenih poziva funkcije.
-		*/
+		Obj funDesignator = designatorMapExpr.getDesignator().obj;
+		
+		Obj arrDesignator = designatorMapExpr.getDesignator1().obj;
+		
+		// sum = 0
+		Code.loadConst(0);
+		
+		// i = 0
+		Code.loadConst(0);
+		
+		// LOOP, PC = 308
+		
+		Code.put(Code.dup);
+		
+		// arraylength
+		Code.load(arrDesignator);
+		Code.put(Code.arraylength);
+		
+		// IF(i != arraylength) ... ELSE BREAK, PC = 311
+		Code.putFalseJump(Code.ne, Code.pc + 23);
+		
+		// sum, i, i
+		Code.put(Code.dup);
+		
+		// sum, i, i, array
+		Code.load(arrDesignator);
+		
+		// sum, i, array, i
+		Code.put(Code.dup_x1);
+		Code.put(Code.pop);
+		
+		// sum, i, val
+		Code.put(Code.aload);
+		
+		int offset = funDesignator.getAdr() - Code.pc;
+		
+		// sum, i, return_value
+		Code.put(Code.call);
+		Code.put2(offset);
+		
+		// sum, return_value, i
+		Code.put(Code.dup_x1);
+		Code.put(Code.pop);
+		
+		// i, sum, return_value
+		Code.put(Code.dup_x2);
+		Code.put(Code.pop);
+		
+		// sum += return_value
+		Code.put(Code.add);
+		
+		// i, sum -> sum, i
+		Code.put(Code.dup_x1);
+		Code.put(Code.pop);
+		
+		// i++
+		Code.loadConst(1);
+		Code.put(Code.add);
+		
+		// GOTO LOOP, PC = 331
+		Code.putJump(Code.pc - 23);
+		
+		// BREAK, PC = 334
+		Code.put(Code.pop);
 	}
 	
 	public void visit(AddopGroupTerm addopGroupTerm) {

@@ -1,29 +1,27 @@
-program test302
-
-set s1, s2, s3;
-
-int a;
-
-int arr[];
+program test301
+int x;
+set s1;
 {
-	void main()
-	{
-
-		s1 = new set[5];
-		
-		s2 = new set[2];
-		s3 = new set[3];
-		
-		add(s2,3);
-		add(s3,2);
-		add(s3,1);
-		add(s2,1);
-		add(s2,1);
-
-		
-		s1 = s2 union s3;
-		
-		print(s1);
-
+	int fun(int a){
+		return 2*a+1;
 	}
+
+    void main() int c[], d[]; {
+    c = new int[4];
+    c[0] = 1;
+    c[1] = 2;
+    c[2] = 3;
+    c[3] = 4;
+    
+    x = fun map c;
+    
+    print(x);
+    
+    s1 = new set[5];
+    
+    addAll(s1,c);
+    
+    print(s1);
+    
+    }
 }
